@@ -28,7 +28,8 @@ around within the AR enviornment and still be represented properly by the radar.
 Instead of setting up the subview layout, we just load in the teapot vertices and normals
 and we are able to draw the teapot model in the proper location.
 
-5. Big Radar - 
+Note: At the moment this is throw-away code. Plans to make things nice-and-pretty 
+will happen very soon.
 
 ================================================================================
 BUILD REQUIREMENTS:
