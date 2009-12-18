@@ -1,24 +1,12 @@
 //
 //  SGDistressedDamselAnnotationView.m
-//  SGiPhoneSDK
+//  ARViewStyles
 //
 //  Created by Derek Smith on 10/13/09.
 //  Copyright 2009 SimpleGeo. All rights reserved.
 //
 
 #import "SGDistressedDamselAnnotationView.h"
-
-enum SGDamsel {
-    
-    kSGDamsel_Cinderella = 0,
-    kSGDamsel_SnowWhite,
-    kSGDamsel_Jasmine,
-    kSGDamsel_Meg,
-    
-    kSGDamsel_Amount
-};
-
-typedef NSInteger SGDamsel;
 
 @interface SGDistressedDamselAnnotationView (Private)
 
@@ -38,10 +26,11 @@ typedef NSInteger SGDamsel;
              
         [self.radarTargetButton setImage:[UIImage imageNamed:@"YellowExclamationMark.png"] forState:UIControlStateNormal];
         
-        self.detailedLabel.textColor = [UIColor redColor];
+        self.titleLabel.text = @"Help!!!";
+        self.titleLabel.textColor = [UIColor redColor];
         
-        // Put the view at eye-level
-        self.altitude = 3.0;
+        // Put the view at ~eye-level
+        self.altitude = 1.734;
         
         showingStats = NO;
         
@@ -54,26 +43,16 @@ typedef NSInteger SGDamsel;
 - (void) prepareForReuse
 {
     [super prepareForReuse];
-    damsel = rand() % kSGDamsel_Amount;
     
+    // Reset the damsel
+    damsel = rand() % kSGDamsel_Amount;
     self.targetImageView.image = [self imageForDamsel:damsel];
 }
 
 - (void) showStats
 {
     showingStats = !showingStats;
-    
-    if(showingStats) {
-     
-        self.targetType = kSGAnnotationViewTargetType_Custom;
-        
-    } else {
-        
-        self.targetType = kSGAnnotationViewTargetType_Glass;
-        
-    }
-    
-    [self inspectView:NO];
+    [self inspectView:showingStats];
 }
 
 - (UIImage*) imageForDamsel:(SGDamsel)desiredDamsel

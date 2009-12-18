@@ -1,33 +1,12 @@
 //
 //  SGForestAnnotationView.m
-//  SGiPhoneSDK
+//  ARViewStyles
 //
 //  Created by Derek Smith on 10/13/09.
 //  Copyright 2009 SimpleGeo. All rights reserved.
 //
 
 #import "SGForestAnnotationView.h"
-
-enum SGForestCreature {
-    
-    kSGForestCreature_Bat = 0,
-    kSGForestCreature_Dog,
-    kSGForestCreature_Duck, 
-    kSGForestCreature_Elephant,
-    kSGForestCreature_Fox,
-    kSGForestCreature_Frog,
-    kSGForestCreature_Kitty,
-    kSGForestCreature_Lion,    
-    kSGForestCreature_Panda,
-    kSGForestCreature_Penguin,
-    kSGForestCreature_Rat,
-    kSGForestCreature_Tuqui,
-    
-    kSGForestCreature_Amount
-};
-
-typedef NSInteger SGForestCreature;
-
 
 @interface SGForestAnnotationView (Private)
 
@@ -60,12 +39,22 @@ typedef NSInteger SGForestCreature;
 #pragma mark Accessor methods 
 //////////////////////////////////////////////////////////////////////////////////////////////// 
 
+/*
+ * We want to be able to update the detailedLabel with the correct
+ * distance of the device's location to the annotation.
+ *
+ * Since we know that this method is called everytime in order to properly
+ * display the view in the AR environment, we can update the label here.
+ */
 - (id<SGAnnotation>) annotation
 {
     self.detailedLabel.text = [NSString stringWithFormat:@"%.1fm", self.distance / 10.0];
     
+    // Calling this method will assure the label is reload
+    // with the proper text in the AR environment.
     [self setNeedsLayout];
     
+    // Make sure to return the annotation associated with this view.
     return [super annotation];
 }
 
@@ -101,7 +90,6 @@ typedef NSInteger SGForestCreature;
     [super prepareForReuse];
         
     [self makeCreature];
-
     [self inspectView:YES];        
 }
 

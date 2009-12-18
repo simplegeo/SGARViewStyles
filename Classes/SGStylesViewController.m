@@ -1,6 +1,6 @@
 //
 //  SGStylesViewController.m
-//  SGiPhoneSDK
+//  ARViewStyles
 //
 //  Created by Derek Smith on 10/8/09.
 //  Copyright 2009 SimpleGeo. All rights reserved.
@@ -8,21 +8,30 @@
 
 #import "SGStylesViewController.h"
 
+/* 
+ * Used for interacting with the OpenGLES portion of the AR
+ * environment.
+ */
 #import <OpenGLES/EAGL.h>
 #import <OpenGLES/ES1/gl.h>
 #import <OpenGLES/ES1/glext.h>
 
+/*
+ * The annotation views that are used in the AR environment.
+ */
+#import "SGSimpleAnnotation.h"
 #import "SGForestAnnotationView.h"
 #import "SGDistressedDamselAnnotationView.h"
 #import "SGKettleAnnotationView.h"
 #import "SGPersonAnnotationView.h"
 
-#import "SGSimpleAnnotation.h"
-
 #define DEGREES_TO_RADIANS(__ANGLE__) ((__ANGLE__) / 180.0 * M_PI)
 
-#define AMOUNT_OF_LOCATIONS             50
+#define AMOUNT_OF_LOCATIONS             50          // Total amount of locations to use.
 
+/*
+ * The styles that the applications shows off.
+ */
 enum SGARStyle {
 
     kSGARStyle_Default = 0,
@@ -52,6 +61,7 @@ typedef NSInteger SGARStyle;
 - (void) stackLeftContainer:(id)c;
 - (void) stackEnteredContainer:(id)c;
 
+- (void) changeCardinalDirectionColor:(UIColor*)color font:(UIFont*)font;
 - (void) reloadAnnotations;
 
 @end
@@ -62,6 +72,7 @@ typedef NSInteger SGARStyle;
 {
     if(self = [super init]) {
         
+        // This table will be used to allow the user to switch styles.
         stylesTableView = [[UITableView alloc] initWithFrame:CGRectMake(0.0, 50.0, 320.0, 250.0) style:UITableViewStyleGrouped];
         stylesTableView.backgroundColor = [UIColor clearColor];
         stylesTableView.delegate = self;
@@ -69,8 +80,12 @@ typedef NSInteger SGARStyle;
         
         arNavController = [[SGARNavigationViewController alloc] init];
         arNavController.dataSource = self;
-        arNavController.navigationItem.rightBarButtonItem = nil;        // Remove the default "Done" bar button
-        [arNavController.arView addResponder:self];   
+        
+        // Remove the default "Done" bar button
+        arNavController.navigationItem.rightBarButtonItem = nil;
+        
+        // We want to be notified when touch events occur within the AR environment.
+        [arNavController.arView addResponder:self];
         
         locationManager = [[CLLocationManager alloc] init];
         locationManager.delegate = self;
@@ -121,8 +136,14 @@ typedef NSInteger SGARStyle;
     button.tag = !button.tag;
 }
 
+////////////////////////////////////////////////////////////////////////////////////////////////
+#pragma mark -
+#pragma mark SGAnnotationViewContainer callbacks 
+//////////////////////////////////////////////////////////////////////////////////////////////// 
+
 - (void) stackEnteredContainer:(id)c
 {
+    // Highlight the container
     SGAnnotationViewContainer* container = (SGAnnotationViewContainer*)c;    
     [container setBackgroundImage:[UIImage imageNamed:@"SafeSignHighlighted.png"] forState:UIControlStateNormal];
 
@@ -130,14 +151,15 @@ typedef NSInteger SGARStyle;
 
 - (void) stackLeftContainer:(id)c
 {
+    // Remove the unhighlight the container
     SGAnnotationViewContainer* container = (SGAnnotationViewContainer*)c;
     [container setBackgroundImage:[UIImage imageNamed:@"SafeSign.png"] forState:UIControlStateNormal];    
 }
 
 - (void) containerDoubleTouch:(id)c
 {
+    // Present a simple "Thank you" message.
     SGAnnotationViewContainer* container = (SGAnnotationViewContainer*)c;
-    
     if(![container isEmpty]) {
         
         [self showMessage];
@@ -180,7 +202,7 @@ typedef NSInteger SGARStyle;
 - (void) viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-        
+    
     [self presentModalViewController:arNavController animated:NO];
     [self reloadAnnotations];
 }
@@ -192,6 +214,7 @@ typedef NSInteger SGARStyle;
 
 - (void) locationManager:(CLLocationManager*)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation
 {
+    // Only use the first locations as a basis to build the random points.
     if(!oldLocation) {
         
         [self createLocationPointsBasedOnLocation:newLocation];
@@ -202,6 +225,7 @@ typedef NSInteger SGARStyle;
 
 -  (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
 {
+    // Don't really care if the location manager fails.
     ;
 }
 
@@ -212,11 +236,11 @@ typedef NSInteger SGARStyle;
 
 - (void) tableView:(UITableView*)tableView didSelectRowAtIndexPath:(NSIndexPath*)indexPath
 {
-    NSInteger row = indexPath.row;
+    NSInteger style = indexPath.row;
     
     [self resetAREnvironment];
     
-    switch (row) {
+    switch (style) {
         case kSGARStyle_Default:
             [self configureDefaultStyle];
             break;
@@ -235,7 +259,7 @@ typedef NSInteger SGARStyle;
             break;
     }
     
-    currentStyle = row;
+    currentStyle = style;
     
     [self changeStyles:arNavController.navigationItem.rightBarButtonItem];
     [self reloadAnnotations];    
@@ -247,7 +271,7 @@ typedef NSInteger SGARStyle;
 #pragma mark UITableView delegate methods 
 ////////////////////////////////////////////////////////////////////////////////////////////////
 
-- (UITableViewCell*)tableView:(UITableView*)tableView cellForRowAtIndexPath:(NSIndexPath*)indexPath
+- (UITableViewCell*) tableView:(UITableView*)tableView cellForRowAtIndexPath:(NSIndexPath*)indexPath
 {
     UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:@"StyleCell"];
     
@@ -289,6 +313,7 @@ typedef NSInteger SGARStyle;
 
 - (NSInteger) tableView:(UITableView*)tableView numberOfRowsInSection:(NSInteger)section
 {
+    // Removing the "Big Radar" style for now.
     return kSGARStyle_Amount - 1;
 }
 
@@ -301,7 +326,7 @@ typedef NSInteger SGARStyle;
                    viewForAnnotation:(id<SGRecordAnnotation>)annotation 
                        atBucketIndex:(NSInteger)bucketIndex
 {
-    
+    // Use the annotation views that are specific to the style.
     SGAnnotationView* annotationView = nil;
     switch (currentStyle) {
         case kSGARStyle_Default:
@@ -417,8 +442,6 @@ typedef NSInteger SGARStyle;
         
     }
     
-    // Annotations have been configured, start the reloading
-    // process.
     [arNavController reloadAllBuckets];
 }
 
@@ -427,32 +450,30 @@ typedef NSInteger SGARStyle;
 #pragma mark Style configure methods 
 //////////////////////////////////////////////////////////////////////////////////////////////// 
 
+/*
+ * The default style will use many of the default style settings
+ * within the AR environment. A simple pin image will be used for
+ * SGAnnotationViews.
+ */
 - (void) configureDefaultStyle
 {
     numberOfAnnotations = 10;
     
-    // Setup chrome manager
     SGARView* arView = arNavController.arView;
     arView.enableGridLines = YES;
     arView.gridLineColor = [UIColor blueColor];
     arView.movableStack.maxStackAmount = 0;
     
-    // Setup the radar
     SGRadar* radar = arView.radar;
     radar.shouldShowCardinalDirections = YES;
     radar.rotatable = NO;
     
-    UILabel* label = nil;
-    for(SGCardinalDirection direction = 0; direction < 4; direction++) {
-        
-        label = [radar labelForCardinalDirection:direction];
-        label.font = [UIFont boldSystemFontOfSize:12.0];
-        label.textColor = [UIColor whiteColor];
-    }
-    
+    [self changeCardinalDirectionColor:[UIColor whiteColor] font:[UIFont boldSystemFontOfSize:12.0]];
+
     radar.frame = CGRectMake(180.0, 125.0, 100.0, 100.0);
     
-    // Setup enviornment
+    // This will assure that all annotation views are appear to 
+    // be within 50 meters.
     SGSetEnvironmentMaximumAnnotationDistance(50.0f);
     SGSetEnvironmentMinimumAnnotationDistance(50.0f);
     
@@ -464,26 +485,25 @@ typedef NSInteger SGARStyle;
     arNavController.toolbar.translucent = YES;
 }
 
+/*
+ * Shows off a different target style for annotation views.
+ */
 - (void) configureForestStyle
 {
     numberOfAnnotations = 10;
     
     SGARView* arView = arNavController.arView;
+    
+    // Disable the movable staack
     arView.movableStack.maxStackAmount = 0;
     SGRadar* radar = arView.radar;
     radar.rotatable = NO;
-        
-    UILabel* label = nil;
-    for(SGCardinalDirection direction = 0; direction < 4; direction++) {
-        
-        label = [radar labelForCardinalDirection:direction];
-        label.font = [UIFont boldSystemFontOfSize:20.0];
-        label.textColor = [UIColor brownColor];
-    }
     
     // Since we make the font bigger we want to reduce the offset
     radar.frame = CGRectMake(180.0, 135.0, radar.frame.size.width,
                              radar.frame.size.height);
+    radar.cardinalDirectionOffset = 5.0f;
+    [self changeCardinalDirectionColor:[UIColor brownColor] font:[UIFont boldSystemFontOfSize:24.0]];
     
     SGSetEnvironmentMinimumAnnotationDistance(10.0f);
     
@@ -495,6 +515,10 @@ typedef NSInteger SGARStyle;
     arNavController.toolbar.translucent = NO;
 }
 
+/*
+ * Displays annotations that dynamically update their posititon while
+ * enabling the movable stack and container.
+ */
 - (void) configureDIDStyle
 {
     numberOfAnnotations = 20;
@@ -502,8 +526,10 @@ typedef NSInteger SGARStyle;
     SGARView* arView = arNavController.arView;
     arView.movableStack.maxStackAmount = 3;
     arView.enableWalking = YES;
+    
     [arView addContainer:safeZone];
     
+    // Updgrade the radar to reflect the style.
     SGRadar* radar = arView.radar;
     radar.shouldShowCardinalDirections = NO;
     radar.rotatable = NO;
@@ -517,6 +543,7 @@ typedef NSInteger SGARStyle;
                              100.0,
                              100.0);
     
+    // Create a boundary of 10 meters.
     SGSetEnvironmentMinimumAnnotationDistance(10.0f);
     
     arNavController.title = @"Damsels in Distress";
@@ -530,7 +557,7 @@ typedef NSInteger SGARStyle;
 
 - (void) configureKettleEscherStyle
 {
-    numberOfAnnotations = 10;
+    numberOfAnnotations = 20;
     
     SGARView* arView = arNavController.arView;
     arView.enableWalking = YES;
@@ -541,8 +568,11 @@ typedef NSInteger SGARStyle;
                              100.0,
                              100.0);
     
-    SGSetEnvironmentMaximumAnnotationDistance(20.0f);
-        
+    // We don't want our teapots getting too far away from us.
+    SGSetEnvironmentMaximumAnnotationDistance(70.0f);
+    
+    // Setup a simple lightin environment to give the teapots
+    // a little shininess.
     const GLfloat lightAmbient[] = {0.2, 0.2, 0.2, 1.0};
 	const GLfloat lightDiffuse[] = {1.0, 0.6, 0.0, 1.0};
 	const GLfloat matAmbient[] = {0.6, 0.6, 0.6, 1.0};
@@ -551,7 +581,6 @@ typedef NSInteger SGARStyle;
 	const GLfloat lightPosition[] = {0.0, 0.0, 1.0, 0.0}; 
 	const GLfloat lightShininess = 100.0;
 	
-	//Configure OpenGL lighting
 	glEnable(GL_LIGHTING);
 	glEnable(GL_LIGHT0);
 	glMaterialfv(GL_FRONT_AND_BACK, GL_AMBIENT, matAmbient);
@@ -571,6 +600,7 @@ typedef NSInteger SGARStyle;
 
 - (void) configureBigRadar
 {
+    /*
     numberOfAnnotations = 4;
     
     SGARView* arView = arNavController.arView;
@@ -596,6 +626,7 @@ typedef NSInteger SGARStyle;
     [arNavController setToolbarHidden:NO animated:YES];
     
     glDisable(GL_LIGHTING);
+     */
 }
  
 ////////////////////////////////////////////////////////////////////////////////////////////////
@@ -610,6 +641,18 @@ typedef NSInteger SGARStyle;
         
         ((SGForestAnnotationView*)annotationView).big = YES;
         viewToInspect = annotationView;
+        
+    } else if(currentStyle == kSGARStyle_DID) {
+        
+        if([annotationView isKindOfClass:[SGDistressedDamselAnnotationView class]]) {
+            
+            SGDistressedDamselAnnotationView* did = (SGDistressedDamselAnnotationView*)annotationView;
+            [did showStats];
+            
+            // Notice how we do not return this view.
+            // We still want this view to reside in the AR environment
+            // and not as a subview of ARView.
+        }
     }
     
     return viewToInspect;
@@ -623,7 +666,6 @@ typedef NSInteger SGARStyle;
         
     }
     
-    
     return YES;
 }
 
@@ -634,6 +676,8 @@ typedef NSInteger SGARStyle;
 
 - (void) viewDidShake
 {
+    // Release all of the captured annotation views from
+    // the container.
     if(currentStyle == kSGARStyle_DID) {
 
         NSArray* containers = [arNavController.arView getContainers];
@@ -641,45 +685,26 @@ typedef NSInteger SGARStyle;
         for(SGAnnotationViewContainer* container in  containers)
             [container removeAllAnnotationViews];
             
-     
     }    
             
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////
 #pragma mark -
-#pragma mark SGAnnotationViewContainer delegate methods 
-//////////////////////////////////////////////////////////////////////////////////////////////// 
-
-- (void) showMessage
-{
-    
-    NSArray* containers = [arNavController.arView getContainers];
-    
-    BOOL showMessage = NO;
-    for(SGAnnotationViewContainer* container in  containers)
-        showMessage |= ![container isEmpty];
-    
-     
-    if(showMessage) {
-    
-        // A little foreplay...
-        NSString* title = rand() % 2 ? (rand() % 2 ? @"My Hero!": @"Dreams do come true!") : (rand() % 2 ? @"Praise be to Disney!" : @"I owe you one.");
-        
-        UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:title
-                                                            message:@""
-                                                           delegate:nil 
-                                                  cancelButtonTitle:@"OK"
-                                                  otherButtonTitles:nil];
-        [alertView show];
-        [alertView release];
-    }
-}
-
-////////////////////////////////////////////////////////////////////////////////////////////////
-#pragma mark -
 #pragma mark Utility methods 
 //////////////////////////////////////////////////////////////////////////////////////////////// 
+
+- (void) changeCardinalDirectionColor:(UIColor*)color font:(UIFont*)font
+{
+    UILabel* label = nil;
+    SGRadar* radar = arNavController.arView.radar;
+    for(SGCardinalDirection direction = 0; direction < 4; direction++) {
+        
+        label = [radar labelForCardinalDirection:direction];
+        label.font = font;
+        label.textColor = color;
+    }
+}    
 
 - (void) createLocationPointsBasedOnLocation:(CLLocation*)location
 {
@@ -691,9 +716,6 @@ typedef NSInteger SGARStyle;
      
         latitude = ((rand() % 100) * 0.00001) * ((rand() % 2 ? -1.0 : 1.0)) + location.coordinate.latitude;
         longitude = ((rand() % 100) * 0.00001) * ((rand() % 2 ? -1.0 : 1.0)) + location.coordinate.longitude;
-
-//        latitude = location.coordinate.latitude + 0.2006;
-//        longitude = location.coordinate.longitude;
         
         [locationPoints addObject:[[[CLLocation alloc] initWithLatitude:latitude
                                                              longitude:longitude] 
@@ -718,15 +740,39 @@ typedef NSInteger SGARStyle;
     SGSetEnvironmentViewingRadius(100.0f);    
     SGSetEnvironmentMinimumAnnotationDistance(3.0);
     SGSetEnvironmentMaximumAnnotationDistance(100.0f);
+    
+    
+    [self changeCardinalDirectionColor:[UIColor whiteColor] font:[UIFont boldSystemFontOfSize:12.0]];
+}
+
+- (void) showMessage
+{
+    NSArray* containers = [arNavController.arView getContainers];
+    
+    BOOL showMessage = NO;
+    for(SGAnnotationViewContainer* container in  containers)
+        showMessage |= ![container isEmpty];
+    
+    if(showMessage) {
+        
+        // A little foreplay...
+        NSString* title = rand() % 2 ? (rand() % 2 ? @"My Hero!": @"Dreams do come true!") : (rand() % 2 ? @"Praise be to Disney!" : @"I owe you one.");
+        
+        UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:title
+                                                            message:@""
+                                                           delegate:nil 
+                                                  cancelButtonTitle:@"OK"
+                                                  otherButtonTitles:nil];
+        [alertView show];
+        [alertView release];
+    }
 }
 
 - (void) dealloc
 {
     [arNavController release];
-    
     [locationPoints release];
     [annotations release];
-    
     [stylesTableView release];
     
     [super dealloc];

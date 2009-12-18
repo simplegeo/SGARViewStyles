@@ -1,6 +1,6 @@
 //
 //  SGARViewStylesAppDelegate.m
-//  SGiPhoneSDK
+//  ARViewStyles
 //
 //  Created by Derek Smith on 10/8/09.
 //  Copyright 2009 SimpleGeo. All rights reserved.
@@ -19,7 +19,7 @@
 #pragma mark UIApplication delegate methods 
 //////////////////////////////////////////////////////////////////////////////////////////////// 
 
-- (void) applicationDidFinishLaunching:(UIApplication *)application
+- (void) applicationDidFinishLaunching:(UIApplication*)application
 {
     SGStylesViewController* viewController = [[SGStylesViewController alloc] init];
     [window addSubview:viewController.view];
@@ -30,7 +30,6 @@
 - (void) dealloc
 {
     [window release];
-    
     [super dealloc];
 }
 

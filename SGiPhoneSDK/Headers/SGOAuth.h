@@ -1,6 +1,6 @@
 //
 // SGOAuth.h
-// SGiPhoneSDK
+// ARViewStyles
 //
 // Created by Derek Smith on 10/31/09.
 // Copyright 2009 SimpleGeo. All rights reserved.

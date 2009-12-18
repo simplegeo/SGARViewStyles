@@ -1,14 +1,10 @@
 //
 //  SGSimpleAnnotation.h
-//  SGiPhoneSDK
+//  ARViewStyles
 //
 //  Created by Derek Smith on 10/9/09.
 //  Copyright 2009 SimpleGeo. All rights reserved.
 //
-
-#import <Foundation/Foundation.h>
-
-#import "SimpleGeo.h"
 
 @interface SGSimpleAnnotation : NSObject <SGAnnotation> {
 

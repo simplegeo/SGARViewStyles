@@ -1,6 +1,6 @@
 //
 //  SGStylesViewController.h
-//  SGiPhoneSDK
+//  ARViewStyles
 //
 //  Created by Derek Smith on 10/8/09.
 //  Copyright 2009 SimpleGeo. All rights reserved.

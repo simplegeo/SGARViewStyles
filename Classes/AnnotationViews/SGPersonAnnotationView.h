@@ -1,6 +1,6 @@
 //
 //  SGPersonAnnotationView.h
-//  SGiPhoneSDK
+//  ARViewStyles
 //
 //  Created by Derek Smith on 11/10/09.
 //  Copyright 2009 SimpleGeo. All rights reserved.
@@ -10,7 +10,6 @@
 
 @interface SGPersonAnnotationView : SGAnnotationView {
 
-    
 }
 
 @end

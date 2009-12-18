@@ -1,16 +1,29 @@
 //
 //  SGDistressedDamselAnnotationView.h
-//  SGiPhoneSDK
+//  ARViewStyles
 //
 //  Created by Derek Smith on 10/13/09.
 //  Copyright 2009 SimpleGeo. All rights reserved.
 //
 
-#import "SGAnnotationView.h"
+/*
+ * The different types of damsels.
+ */
+enum SGDamsel {
+    
+    kSGDamsel_Cinderella = 0,
+    kSGDamsel_SnowWhite,
+    kSGDamsel_Jasmine,
+    kSGDamsel_Meg,
+    
+    kSGDamsel_Amount
+};
+
+typedef NSInteger SGDamsel;
 
 @interface SGDistressedDamselAnnotationView : SGAnnotationView {
 
-    NSInteger damsel;
+    SGDamsel damsel;
     
     @private
     BOOL showingStats;

@@ -1,6 +1,6 @@
 //
 //  SGKettleAnnotationView.m
-//  SGiPhoneSDK
+//  ARViewStyles
 //
 //  Created by Derek Smith on 10/14/09.
 //  Copyright 2009 SimpleGeo. All rights reserved.
@@ -49,13 +49,20 @@
 
 - (void) resetGround
 {
+    // This will judge which axises
+    // to rotate about.
     x = rand() % 2;
     y = rand() % 2;
     z = rand() % 2;
     
+    // The initial amount of rotation
+    // of the teapot.
     rotation = rand() % 360;    
 }
 
+/*
+ * There are probably more effecient ways of going about this.
+ */
 - (void) drawAnnotationView
 {
     glPushMatrix();

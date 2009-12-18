@@ -1,6 +1,6 @@
 /*
  *  SimpleGeo
- *  SGiPhoneSDK
+ *  ARViewStyles
  *
  *  Created by Derek Smith on 7/5/09.
  *  Copyright 2009 SimpleGeo. All rights reserved.

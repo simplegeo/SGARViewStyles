@@ -1,6 +1,6 @@
 //
 //  SGGargoyleAnnotationView.m
-//  SGiPhoneSDK
+//  ARStylesView
 //
 //  Created by Derek Smith on 10/22/09.
 //  Copyright 2009 SimpleGeo. All rights reserved.
@@ -9,6 +9,8 @@
 #import "SGGargoyleAnnotationView.h"
 #import "SGSimpleAnnotation.h"
 
+// The distance to update the the view
+// when moving it in the AR environment.
 static double delta = 0.000005;
 
 @implementation SGGargoyleAnnotationView
@@ -20,7 +22,6 @@ static double delta = 0.000005;
     if(self = [super initAtPoint:point reuseIdentifier:reuseIdentifier]) {
         
         self.targetType = kSGAnnotationViewTargetType_Custom;
-        self.inspectorType = kSGAnnotationViewTargetType_Custom;
         
         UIImageView* gargoyleImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Gargoyle.png"]];
         [self addSubview:gargoyleImageView];
@@ -31,8 +32,8 @@ static double delta = 0.000005;
         [self.radarTargetButton setImage:[UIImage imageNamed:@"GargoyleTarget.png"] forState:UIControlStateNormal];
         anchorManager = nil;
         
-        count = 0;
-        
+        // Make this view invicible, i.e. do not let the user
+        // capture it.
         self.isCapturable = NO;
         
         up = rand() % 2;
@@ -42,9 +43,11 @@ static double delta = 0.000005;
     return self;
 }
 
-// Override this puppy so we can adjust the location of the annotation
-// everytime it is accessed in the AR view; which is essentially everytime
-// it needs to be drawn.
+/*
+ * Override this method so we can adjust the location of the annotation
+ * everytime it is accessed in the AR view; which is essentially everytime
+ * it needs to be drawn.
+ */
 - (id<SGAnnotation>) annotation
 {
     SGSimpleAnnotation* simpleAnnotation = (SGSimpleAnnotation*)[super annotation];
@@ -63,7 +66,7 @@ static double delta = 0.000005;
                                                                              longitude:simpleAnnotation.coordinate.longitude] autorelease]];
         
         // Views do not get drawn if they are above the maximum, in this case
-        // the max is 100m. So we stop short so we don't get the flashy effect.
+        // the max is 100m. So we stop short so we don't get stuck in a boundary.
         if(anchorDistance > 99.0) {
          
             left = !left;
@@ -79,7 +82,6 @@ static double delta = 0.000005;
 - (void) dealloc
 {
     [anchorManager release];
-    
     [super dealloc];    
 }
 

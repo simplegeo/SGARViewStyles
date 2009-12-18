@@ -86,6 +86,7 @@
 		4A2426FC10DB13BE005D1CB1 /* libSGiPhoneSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A24269010DB13BE005D1CB1 /* libSGiPhoneSDK.a */; };
 		4A2426FD10DB13BE005D1CB1 /* libSGiPhoneSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A24269210DB13BE005D1CB1 /* libSGiPhoneSDK.a */; };
 		4A2426FE10DB13BE005D1CB1 /* README in Resources */ = {isa = PBXBuildFile; fileRef = 4A24269310DB13BE005D1CB1 /* README */; };
+		4A24270210DB154B005D1CB1 /* README in Resources */ = {isa = PBXBuildFile; fileRef = 4A24270110DB154B005D1CB1 /* README */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -199,6 +200,7 @@
 		4A24269010DB13BE005D1CB1 /* libSGiPhoneSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libSGiPhoneSDK.a; sourceTree = "<group>"; };
 		4A24269210DB13BE005D1CB1 /* libSGiPhoneSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libSGiPhoneSDK.a; sourceTree = "<group>"; };
 		4A24269310DB13BE005D1CB1 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
+		4A24270110DB154B005D1CB1 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -234,6 +236,7 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				4A24270110DB154B005D1CB1 /* README */,
 				4A2425CC10DB13BE005D1CB1 /* SGiPhoneSDK */,
 				4A24255610DB1290005D1CB1 /* Resources */,
 				4A24252F10DB1242005D1CB1 /* Classes */,
@@ -537,6 +540,7 @@
 				4A2426FA10DB13BE005D1CB1 /* SGRedPin.png in Resources */,
 				4A2426FB10DB13BE005D1CB1 /* SGTopInspectorBackground.png in Resources */,
 				4A2426FE10DB13BE005D1CB1 /* README in Resources */,
+				4A24270210DB154B005D1CB1 /* README in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
