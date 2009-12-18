@@ -1,0 +1,265 @@
+// !$*UTF8*$!
+{
+	1D6058900D05DD3D006BFB54 /* ARViewStyles */ = {
+		activeExec = 0;
+		executables = (
+			4A24252D10DB122A005D1CB1 /* ARViewStyles */,
+		);
+	};
+	29B97313FDCFA39411CA2CEA /* Project object */ = {
+		activeBuildConfigurationName = Debug;
+		activeExecutable = 4A24252D10DB122A005D1CB1 /* ARViewStyles */;
+		activeTarget = 1D6058900D05DD3D006BFB54 /* ARViewStyles */;
+		addToTargets = (
+			1D6058900D05DD3D006BFB54 /* ARViewStyles */,
+		);
+		codeSenseManager = 4A24252310DB11D6005D1CB1 /* Code sense */;
+		executables = (
+			4A24252D10DB122A005D1CB1 /* ARViewStyles */,
+		);
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					844,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXConfiguration.PBXTargetDataSource.PBXTargetDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					804,
+					60,
+					20,
+					48.16259765625,
+					43,
+					43,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXTargetDataSource_PrimaryAttribute,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 282792479;
+			PBXWorkspaceStateSaveDate = 282792479;
+		};
+		perUserProjectItems = {
+			4A2425BC10DB1366005D1CB1 /* PBXTextBookmark */ = 4A2425BC10DB1366005D1CB1 /* PBXTextBookmark */;
+			4A2425BD10DB1366005D1CB1 /* PBXTextBookmark */ = 4A2425BD10DB1366005D1CB1 /* PBXTextBookmark */;
+			4A2425BE10DB1366005D1CB1 /* PBXTextBookmark */ = 4A2425BE10DB1366005D1CB1 /* PBXTextBookmark */;
+			4A2425BF10DB1366005D1CB1 /* PBXTextBookmark */ = 4A2425BF10DB1366005D1CB1 /* PBXTextBookmark */;
+			4A2425C010DB1366005D1CB1 /* PBXBookmark */ = 4A2425C010DB1366005D1CB1 /* PBXBookmark */;
+			4A2425C110DB1366005D1CB1 /* PlistBookmark */ = 4A2425C110DB1366005D1CB1 /* PlistBookmark */;
+			4A2425C710DB1393005D1CB1 /* XCBuildMessageTextBookmark */ = 4A2425C710DB1393005D1CB1 /* XCBuildMessageTextBookmark */;
+			4A2425C810DB1393005D1CB1 /* PBXTextBookmark */ = 4A2425C810DB1393005D1CB1 /* PBXTextBookmark */;
+			4A2425C910DB1396005D1CB1 /* PlistBookmark */ = 4A2425C910DB1396005D1CB1 /* PlistBookmark */;
+			4A2425CA10DB1396005D1CB1 /* XCBuildMessageTextBookmark */ = 4A2425CA10DB1396005D1CB1 /* XCBuildMessageTextBookmark */;
+			4A2425CB10DB1396005D1CB1 /* PBXTextBookmark */ = 4A2425CB10DB1396005D1CB1 /* PBXTextBookmark */;
+		};
+		sourceControlManager = 4A24252210DB11D6005D1CB1 /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	4A24252210DB11D6005D1CB1 /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+			repositoryNamesForRoots = {
+				"" = "";
+			};
+		};
+	};
+	4A24252310DB11D6005D1CB1 /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	4A24252D10DB122A005D1CB1 /* ARViewStyles */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 0;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		dataTipCustomDataFormattersEnabled = 1;
+		dataTipShowTypeColumn = 1;
+		dataTipSortType = 0;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = ARViewStyles;
+		showTypeColumn = 0;
+		sourceDirectories = (
+		);
+	};
+	4A24253D10DB1243005D1CB1 /* SGARViewStylesAppDelegate.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1022, 502}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 346}";
+		};
+	};
+	4A24253E10DB1243005D1CB1 /* SGARViewStylesAppDelegate.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1022, 502}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 857}";
+		};
+	};
+	4A24254010DB1243005D1CB1 /* SGSimpleAnnotation.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1022, 520}}";
+			sepNavSelRange = "{132, 0}";
+			sepNavVisRange = "{0, 708}";
+		};
+	};
+	4A24254110DB1243005D1CB1 /* SGStylesViewController.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1022, 502}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 874}";
+		};
+	};
+	4A2425BC10DB1366005D1CB1 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4A24253E10DB1243005D1CB1 /* SGARViewStylesAppDelegate.m */;
+		name = "SGARViewStylesAppDelegate.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 857;
+		vrLoc = 0;
+	};
+	4A2425BD10DB1366005D1CB1 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4A24253D10DB1243005D1CB1 /* SGARViewStylesAppDelegate.h */;
+		name = "SGARViewStylesAppDelegate.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 346;
+		vrLoc = 0;
+	};
+	4A2425BE10DB1366005D1CB1 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4A24254110DB1243005D1CB1 /* SGStylesViewController.h */;
+		name = "SGStylesViewController.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 874;
+		vrLoc = 0;
+	};
+	4A2425BF10DB1366005D1CB1 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4A24254010DB1243005D1CB1 /* SGSimpleAnnotation.m */;
+		name = "SGSimpleAnnotation.m: 6";
+		rLen = 0;
+		rLoc = 132;
+		rType = 0;
+		vrLen = 708;
+		vrLoc = 0;
+	};
+	4A2425C010DB1366005D1CB1 /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = 4A24255710DB1290005D1CB1 /* ARViewStyles-Info.plist */;
+	};
+	4A2425C110DB1366005D1CB1 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 4A24255710DB1290005D1CB1 /* ARViewStyles-Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = "/Users/dsmith/workspace/SimpleGeo/SGiPhoneSDK/DemoApps/ARViewStyles/Resources/ARViewStyles-Info.plist";
+		rLen = 0;
+		rLoc = 9223372036854775807;
+	};
+	4A2425C410DB138B005D1CB1 /* ARViewStyles_Prefix.pch */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1022, 502}}";
+			sepNavSelRange = "{322, 0}";
+			sepNavVisRange = "{0, 355}";
+		};
+	};
+	4A2425C710DB1393005D1CB1 /* XCBuildMessageTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "SimpleGeo.h: No such file or directory";
+		fRef = 4A2425C410DB138B005D1CB1 /* ARViewStyles_Prefix.pch */;
+		fallbackIsa = XCBuildMessageTextBookmark;
+		rLen = 1;
+		rLoc = 12;
+		rType = 1;
+	};
+	4A2425C810DB1393005D1CB1 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4A2425C410DB138B005D1CB1 /* ARViewStyles_Prefix.pch */;
+		name = "ARViewStyles_Prefix.pch: 9";
+		rLen = 0;
+		rLoc = 239;
+		rType = 0;
+		vrLen = 355;
+		vrLoc = 0;
+	};
+	4A2425C910DB1396005D1CB1 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 4A24255710DB1290005D1CB1 /* ARViewStyles-Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = "/Users/dsmith/workspace/SimpleGeo/SGiPhoneSDK/DemoApps/ARViewStyles/Resources/ARViewStyles-Info.plist";
+		rLen = 0;
+		rLoc = 9223372036854775807;
+	};
+	4A2425CA10DB1396005D1CB1 /* XCBuildMessageTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "SimpleGeo.h: No such file or directory";
+		fRef = 4A2425C410DB138B005D1CB1 /* ARViewStyles_Prefix.pch */;
+		fallbackIsa = XCBuildMessageTextBookmark;
+		rLen = 1;
+		rLoc = 12;
+		rType = 1;
+	};
+	4A2425CB10DB1396005D1CB1 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4A2425C410DB138B005D1CB1 /* ARViewStyles_Prefix.pch */;
+		name = "ARViewStyles_Prefix.pch: 13";
+		rLen = 0;
+		rLoc = 322;
+		rType = 0;
+		vrLen = 355;
+		vrLoc = 0;
+	};
+}

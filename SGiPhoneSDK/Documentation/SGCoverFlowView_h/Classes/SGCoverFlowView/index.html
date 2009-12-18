@@ -1,0 +1,325 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/1998/REC-html40-19980424/loose.dtd">
+<html>
+<head>
+<title>SGCoverFlowView</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf8">
+<meta name="generator" content="HeaderDoc">
+<meta name="xcode-display" content="render">
+<style><!--
+#tocMenu {
+		display: block;
+		position:fixed;
+		top:0px;
+		left:0px;
+		width:210px;
+		height:100%;
+		background:transparent;
+}
+#bodyText {
+		margin-left: 210px;
+}
+--></style>
+<script language="JavaScript" type="text/javascript"><!--
+function hidetoc() {
+	var origURL = parent.document.URL;
+	var contentURL = origURL.substring(origURL.indexOf('?')+1, origURL.length);
+	if (contentURL.length == origURL.length) {
+		jumpPos = origURL.substring(origURL.indexOf('#')+1, origURL.length);
+	}
+	if (contentURL == "hidetoc") {
+		var toc = document.getElementById('tocMenu');
+		var body = document.getElementById('bodyText');
+		if (toc && body) {
+			toc.style.display = 'none';
+			body.style.marginLeft = '0px';
+		}
+	}
+}
+--></script><style type="text/css"><!--.keyword {background:#ffffff; color:#761550;}.template {background:#ffffff; color:#761550;}.number {background: #ffffff; color:#0000ff;}.function {background:#ffffff; color:#000000;}.string {background: #ffffff; color:#891315;}.preprocessor {background:#ffffff; color:#236e25}.comment {background:#ffffff; color:#236e25}.char {background: #ffffff; color:#0000ff;}.var {background:#ffffff; color:#000000;}.type {background:#ffffff; color:#761550;}.param {background:#ffffff; color:#000000;}a:link {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #0000ff;}a:visited {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #0000ff;}a:visited:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}a:active {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}a:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}h4 {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: tiny; font-weight: bold;}body {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: 10pt;}.list_indent { margin-left: 40px; }.declaration_indent { margin-left: 40px; }.param_indent { margin-left: 40px; }.group_indent { margin-left: 40px; }.group_desc_indent { margin-left: 20px; }.warning_indent { margin-left: 40px; }.important_indent { margin-left: 40px; }.hd_tocAccess { font-style: italic; font-size: 10px; font-weight: normal; color: #303030; }--></style>
+</head>
+<body bgcolor="#ffffff" onload="hidetoc();">
+
+<!-- headerDoc=cl; uid=//simplegeo/occ/cl/SGCoverFlowView;  name=SGCoverFlowView-->
+<a name="//simplegeo/occ/cl/SGCoverFlowView"></a><div id="tocMenu">
+<iframe id="toc_content" name="toc_content" src="toc.html" width="210" height="100%" align="left" frameborder="0">This document set is best viewed in a browser that supports iFrames.</iframe>
+</div>
+<div id="bodyText">
+<!-- start of header -->
+
+<!-- end of header -->
+<a name="top"></a>
+<hr>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h1><a name="SGCoverFlowView">SGCoverFlowView</a></h1>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --></p>
+<p>Displays images along with small descriptions in a manner that resembles Apple's cover flow.
+<!-- end abstract --></p>
+<p><b>Superclass:</b> <!-- a logicalPath="//simplegeo/occ/cl/UIView" -->UIView<!-- /a --><br><b>Declared In:</b> <a href="../../index.html" target="_top">SGCoverFlowView.h</a><br></p>
+<div class="declaration_indent">
+</div>
+<h5 class="tight">
+<font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5>
+<!-- begin discussion --><p>This view recieves its data from <a href="../../../../Documentation/SGCoverFlowView_h/Classes/SGCoverFlowView/index.html#//simplegeo/occ/instm/SGCoverFlowView/addAlbum:" logicalPath="//simplegeo/occ/instm/SGCoverFlowView/addAlbum:">addAlbum:</a> . All albums that are added
+to the view must conform to <!-- a logicalPath="//simplegeo/ooc/intf/SGAlbum." --></p>
+<p>To recieves a notificaiton when an album is selected within the view, you must add a delegate that conforms
+to <a href="../../../../Documentation/SGCoverFlowView_h/Protocols/SGCoverFlowViewDelegate/index.html#//simplegeo/occ/intf/SGCoverFlowViewDelegate" logicalPath="//simplegeo/occ/intf/SGCoverFlowViewDelegate">SGCoverFlowViewDelegate</a> .
+</p>
+<p>The <a href="../../../../Documentation/SGCoverFlowView_h/Classes/SGCoverFlowView/index.html#//simplegeo/occ/instp/SGCoverFlowView/sliderBar" logicalPath="//simplegeo/occ/instp/SGCoverFlowView/sliderBar">sliderBar</a> is exposed to allow customization. The current bar is set to the default
+style. The cover flow view will only display 6 albums at a time, applying the proper transformations.
+<!-- end discussion -->
+</p>
+<p></p>
+<hr>
+<br><a name="HeaderDoc_methods"></a>
+<h2>Methods</h2>
+<dl>
+<dt><tt><a href="index.html#//simplegeo/occ/instm/SGCoverFlowView/addAlbum:" target="_top">-addAlbum:</a></tt></dt>
+<dd><p>&#65532;Adds an album to the cover flow view.
+</p></dd>
+<dt><tt><a href="index.html#//simplegeo/occ/instm/SGCoverFlowView/addAlbums:" target="_top">-addAlbums:</a></tt></dt>
+<dd><p>&#65532;Adds an array of albums to the cover flow view.
+</p></dd>
+<dt><tt><a href="index.html#//simplegeo/occ/instm/SGCoverFlowView/initWithFrame:maximumAlbums:" target="_top">-initWithFrame:maximumAlbums:</a></tt></dt>
+<dd><p>&#65532;Initializes a new cover flow view.
+</p></dd>
+<dt><tt><a href="index.html#//simplegeo/occ/instm/SGCoverFlowView/removeAlbum:" target="_top">-removeAlbum:</a></tt></dt>
+<dd><p>&#65532;Removes an album from the cover flow view.
+</p></dd>
+<dt><tt><a href="index.html#//simplegeo/occ/instm/SGCoverFlowView/removeAllAlbums" target="_top">-removeAllAlbums</a></tt></dt>
+<dd><p>&#65532; Removes all albums contained in the cover flow view.
+</p></dd>
+</dl>
+<hr>
+<!-- headerDoc=instm;  uid=//simplegeo/occ/instm/SGCoverFlowView/addAlbum:;   name=SGCoverFlowView::addAlbum: --><a name="//simplegeo/occ/instm/SGCoverFlowView/addAlbum:"></a>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="addAlbum:">addAlbum:</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --></p>
+<p>&#65532;Adds an album to the cover flow view.
+<!-- end abstract --></p>
+<p></p>
+<div class="declaration_indent">
+<pre>- (<!-- a logicalPath="//simplegeo/occ/cl/void //simplegeo/occ/tdef/void //simplegeo/occ/tag/void //simplegeo/occ/econst/void //simplegeo/occ/struct/void //simplegeo/occ/clconst/void //simplegeo/occ/intf/void" --><span class="type">void</span><!-- /a -->) <!-- a logicalPath="//simplegeo/occ/instm/addAlbum //simplegeo/occ/clm/addAlbum //simplegeo/occ/intfcm/addAlbum //simplegeo/occ/intfm/addAlbum //simplegeo/occ/func/addAlbum //simplegeo/occ/ftmplt/addAlbum //simplegeo/occ/defn/addAlbum //simplegeo/occ/macro/addAlbum" --><span class="function">addAlbum</span><!-- /a -->:(<!-- a logicalPath="//simplegeo/occ/cl/id //simplegeo/occ/tdef/id //simplegeo/occ/tag/id //simplegeo/occ/econst/id //simplegeo/occ/struct/id //simplegeo/occ/clconst/id //simplegeo/occ/intf/id" --><span class="type">id</span><!-- /a -->&lt;<span class="param">SGAlbum</span>&gt;)<!-- a logicalPath="//simplegeo/occ/econst/album //simplegeo/occ/data/album" --><span class="var">album</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt><code>album</code></dt>
+<dd><p>&#65532;The album to add.</p></dd>
+</dl>
+</div>
+<p></p>
+<hr>
+<!-- headerDoc=instm;  uid=//simplegeo/occ/instm/SGCoverFlowView/addAlbums:;   name=SGCoverFlowView::addAlbums: --><a name="//simplegeo/occ/instm/SGCoverFlowView/addAlbums:"></a>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="addAlbums:">addAlbums:</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --></p>
+<p>&#65532;Adds an array of albums to the cover flow view.
+<!-- end abstract --></p>
+<p></p>
+<div class="declaration_indent">
+<pre>- (<!-- a logicalPath="//simplegeo/occ/cl/void //simplegeo/occ/tdef/void //simplegeo/occ/tag/void //simplegeo/occ/econst/void //simplegeo/occ/struct/void //simplegeo/occ/clconst/void //simplegeo/occ/intf/void" --><span class="type">void</span><!-- /a -->) <!-- a logicalPath="//simplegeo/occ/instm/addAlbums //simplegeo/occ/clm/addAlbums //simplegeo/occ/intfcm/addAlbums //simplegeo/occ/intfm/addAlbums //simplegeo/occ/func/addAlbums //simplegeo/occ/ftmplt/addAlbums //simplegeo/occ/defn/addAlbums //simplegeo/occ/macro/addAlbums" --><span class="function">addAlbums</span><!-- /a -->:(<!-- a logicalPath="//simplegeo/occ/cl/NSArray //simplegeo/occ/tdef/NSArray //simplegeo/occ/tag/NSArray //simplegeo/occ/econst/NSArray //simplegeo/occ/struct/NSArray //simplegeo/occ/clconst/NSArray //simplegeo/occ/intf/NSArray" --><span class="type">NSArray</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//simplegeo/occ/econst/albums //simplegeo/occ/data/albums" --><span class="var">albums</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt><code>albums</code></dt>
+<dd><p>&#65532;The array to add to the view.</p></dd>
+</dl>
+</div>
+<p></p>
+<hr>
+<!-- headerDoc=instm;  uid=//simplegeo/occ/instm/SGCoverFlowView/initWithFrame:maximumAlbums:;   name=SGCoverFlowView::initWithFrame:maximumAlbums: --><a name="//simplegeo/occ/instm/SGCoverFlowView/initWithFrame:maximumAlbums:"></a>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="initWithFrame:maximumAlbums:">initWithFrame:maximumAlbums:</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --></p>
+<p>&#65532;Initializes a new cover flow view.
+<!-- end abstract --></p>
+<p></p>
+<div class="declaration_indent">
+<pre>- (<!-- a logicalPath="//simplegeo/occ/cl/id //simplegeo/occ/tdef/id //simplegeo/occ/tag/id //simplegeo/occ/econst/id //simplegeo/occ/struct/id //simplegeo/occ/clconst/id //simplegeo/occ/intf/id" --><span class="type">id</span><!-- /a -->) <!-- a logicalPath="//simplegeo/occ/instm/initWithFrame //simplegeo/occ/clm/initWithFrame //simplegeo/occ/intfcm/initWithFrame //simplegeo/occ/intfm/initWithFrame //simplegeo/occ/func/initWithFrame //simplegeo/occ/ftmplt/initWithFrame //simplegeo/occ/defn/initWithFrame //simplegeo/occ/macro/initWithFrame" --><span class="function">initWithFrame</span><!-- /a -->:(<!-- a logicalPath="//simplegeo/occ/cl/CGRect //simplegeo/occ/tdef/CGRect //simplegeo/occ/tag/CGRect //simplegeo/occ/econst/CGRect //simplegeo/occ/struct/CGRect //simplegeo/occ/clconst/CGRect //simplegeo/occ/intf/CGRect" --><span class="type">CGRect</span><!-- /a -->)<span class="param">frame</span> <!-- a logicalPath="//simplegeo/occ/instm/maximumAlbums //simplegeo/occ/clm/maximumAlbums //simplegeo/occ/intfcm/maximumAlbums //simplegeo/occ/intfm/maximumAlbums //simplegeo/occ/func/maximumAlbums //simplegeo/occ/ftmplt/maximumAlbums //simplegeo/occ/defn/maximumAlbums //simplegeo/occ/macro/maximumAlbums" --><span class="function">maximumAlbums</span><!-- /a -->:(<!-- a logicalPath="//simplegeo/occ/cl/NSInteger //simplegeo/occ/tdef/NSInteger //simplegeo/occ/tag/NSInteger //simplegeo/occ/econst/NSInteger //simplegeo/occ/struct/NSInteger //simplegeo/occ/clconst/NSInteger //simplegeo/occ/intf/NSInteger" --><span class="type">NSInteger</span><!-- /a -->)<!-- a logicalPath="//simplegeo/occ/econst/albumAmount //simplegeo/occ/data/albumAmount" --><span class="var">albumAmount</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt><code>frame</code></dt>
+<dd><p>&#65532;The frame of the view.</p></dd>
+<dt><code>albumAmount</code></dt>
+<dd><p>&#65532;The maximum amount of albums to display at one time.</p></dd>
+</dl>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5>
+<p><!-- begin return value -->&#65532;The cover flow view.
+
+<!-- end return value --></p>
+<p></p>
+<hr>
+<!-- headerDoc=instm;  uid=//simplegeo/occ/instm/SGCoverFlowView/removeAlbum:;   name=SGCoverFlowView::removeAlbum: --><a name="//simplegeo/occ/instm/SGCoverFlowView/removeAlbum:"></a>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="removeAlbum:">removeAlbum:</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --></p>
+<p>&#65532;Removes an album from the cover flow view.
+<!-- end abstract --></p>
+<p></p>
+<div class="declaration_indent">
+<pre>- (<!-- a logicalPath="//simplegeo/occ/cl/void //simplegeo/occ/tdef/void //simplegeo/occ/tag/void //simplegeo/occ/econst/void //simplegeo/occ/struct/void //simplegeo/occ/clconst/void //simplegeo/occ/intf/void" --><span class="type">void</span><!-- /a -->) <!-- a logicalPath="//simplegeo/occ/instm/removeAlbum //simplegeo/occ/clm/removeAlbum //simplegeo/occ/intfcm/removeAlbum //simplegeo/occ/intfm/removeAlbum //simplegeo/occ/func/removeAlbum //simplegeo/occ/ftmplt/removeAlbum //simplegeo/occ/defn/removeAlbum //simplegeo/occ/macro/removeAlbum" --><span class="function">removeAlbum</span><!-- /a -->:(<!-- a logicalPath="//simplegeo/occ/cl/id //simplegeo/occ/tdef/id //simplegeo/occ/tag/id //simplegeo/occ/econst/id //simplegeo/occ/struct/id //simplegeo/occ/clconst/id //simplegeo/occ/intf/id" --><span class="type">id</span><!-- /a -->&lt;<span class="param">SGAlbum</span>&gt;)<!-- a logicalPath="//simplegeo/occ/econst/album //simplegeo/occ/data/album" --><span class="var">album</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt><code>album</code></dt>
+<dd><p>&#65532;The album to remove.</p></dd>
+</dl>
+</div>
+<p></p>
+<hr>
+<!-- headerDoc=instm;  uid=//simplegeo/occ/instm/SGCoverFlowView/removeAllAlbums;   name=SGCoverFlowView::removeAllAlbums --><a name="//simplegeo/occ/instm/SGCoverFlowView/removeAllAlbums"></a>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="removeAllAlbums">removeAllAlbums</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --></p>
+<p>&#65532; Removes all albums contained in the cover flow view.
+<!-- end abstract --></p>
+<p></p>
+<div class="declaration_indent">
+<pre>- (<!-- a logicalPath="//simplegeo/occ/cl/void //simplegeo/occ/tdef/void //simplegeo/occ/tag/void //simplegeo/occ/econst/void //simplegeo/occ/struct/void //simplegeo/occ/clconst/void //simplegeo/occ/intf/void" --><span class="type">void</span><!-- /a -->) <!-- a logicalPath="//simplegeo/occ/econst/removeAllAlbums //simplegeo/occ/data/removeAllAlbums" --><span class="var">removeAllAlbums</span><!-- /a -->; </pre>
+</div>
+<p></p>
+<a name="HeaderDoc_props"></a>
+<h2>Properties</h2>
+<dl>
+<dt><tt><a href="index.html#//simplegeo/occ/instp/SGCoverFlowView/amountOfViews" target="_top">amountOfViews</a></tt></dt>
+<dd><p>The amount of albums the SGCoverFlowView can contain.
+</p></dd>
+<dt><tt><a href="index.html#//simplegeo/occ/instp/SGCoverFlowView/closeButton" target="_top">closeButton</a></tt></dt>
+<dd><p>The close button that is in charge of removing the view.
+</p></dd>
+<dt><tt><a href="index.html#//simplegeo/occ/instp/SGCoverFlowView/delegate" target="_top">delegate</a></tt></dt>
+<dd><p>The delegate that is notified when a user selects an album.
+</p></dd>
+<dt><tt><a href="index.html#//simplegeo/occ/instp/SGCoverFlowView/sliderBar" target="_top">sliderBar</a></tt></dt>
+<dd><p>The slider bar that affects which cover is centered within the view.
+</p></dd>
+<dt><tt><a href="index.html#//simplegeo/occ/instp/SGCoverFlowView/subtitleLabel" target="_top">subtitleLabel</a></tt></dt>
+<dd><p>The label that is located directly under the title label.
+</p></dd>
+<dt><tt><a href="index.html#//simplegeo/occ/instp/SGCoverFlowView/titleLabel" target="_top">titleLabel</a></tt></dt>
+<dd><p>The label that is located directly under the cover.
+</p></dd>
+</dl>
+<hr>
+<!-- headerDoc=instp;  uid=//simplegeo/occ/instp/SGCoverFlowView/amountOfViews;   name=SGCoverFlowView::amountOfViews --><a name="//simplegeo/occ/instp/SGCoverFlowView/amountOfViews"></a>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="amountOfViews">amountOfViews</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --></p>
+<p>The amount of albums the SGCoverFlowView can contain.
+<!-- end abstract --></p>
+<p></p>
+<div class="declaration_indent">
+<pre>@property (
+    <span class="param">nonatomic</span>,
+    <span class="param">assign</span>) <!-- a logicalPath="//simplegeo/occ/cl/NSInteger //simplegeo/occ/tdef/NSInteger //simplegeo/occ/tag/NSInteger //simplegeo/occ/econst/NSInteger //simplegeo/occ/struct/NSInteger //simplegeo/occ/clconst/NSInteger //simplegeo/occ/intf/NSInteger" --><span class="type">NSInteger</span><!-- /a --> <!-- a logicalPath="//simplegeo/occ/econst/amountOfViews //simplegeo/occ/data/amountOfViews" --><span class="var">amountOfViews</span><!-- /a -->; </pre>
+</div>
+<p></p>
+<hr>
+<!-- headerDoc=instp;  uid=//simplegeo/occ/instp/SGCoverFlowView/closeButton;   name=SGCoverFlowView::closeButton --><a name="//simplegeo/occ/instp/SGCoverFlowView/closeButton"></a>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="closeButton">closeButton</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --></p>
+<p>The close button that is in charge of removing the view.
+<!-- end abstract --></p>
+<p></p>
+<div class="declaration_indent">
+<pre>@property (
+    <span class="param">nonatomic</span>,
+    <span class="param">readonly</span>) <!-- a logicalPath="//simplegeo/occ/cl/UIButton //simplegeo/occ/tdef/UIButton //simplegeo/occ/tag/UIButton //simplegeo/occ/econst/UIButton //simplegeo/occ/struct/UIButton //simplegeo/occ/clconst/UIButton //simplegeo/occ/intf/UIButton" --><span class="type">UIButton</span><!-- /a --><span class="type">*</span> <!-- a logicalPath="//simplegeo/occ/econst/closeButton //simplegeo/occ/data/closeButton" --><span class="var">closeButton</span><!-- /a -->; </pre>
+</div>
+<p></p>
+<hr>
+<!-- headerDoc=instp;  uid=//simplegeo/occ/instp/SGCoverFlowView/delegate;   name=SGCoverFlowView::delegate --><a name="//simplegeo/occ/instp/SGCoverFlowView/delegate"></a>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="delegate">delegate</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --></p>
+<p>The delegate that is notified when a user selects an album.
+<!-- end abstract --></p>
+<p></p>
+<div class="declaration_indent">
+<pre>@property (
+    <span class="param">nonatomic</span>,
+    <span class="param">assign</span>) <!-- a logicalPath="//simplegeo/occ/cl/id //simplegeo/occ/tdef/id //simplegeo/occ/tag/id //simplegeo/occ/econst/id //simplegeo/occ/struct/id //simplegeo/occ/clconst/id //simplegeo/occ/intf/id" --><span class="type">id</span><!-- /a -->&lt;<span class="template">SGCoverFlowViewDelegate</span>&gt; <!-- a logicalPath="//simplegeo/occ/econst/delegate //simplegeo/occ/data/delegate" --><span class="var">delegate</span><!-- /a -->; </pre>
+</div>
+<p></p>
+<hr>
+<!-- headerDoc=instp;  uid=//simplegeo/occ/instp/SGCoverFlowView/sliderBar;   name=SGCoverFlowView::sliderBar --><a name="//simplegeo/occ/instp/SGCoverFlowView/sliderBar"></a>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="sliderBar">sliderBar</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --></p>
+<p>The slider bar that affects which cover is centered within the view.
+<!-- end abstract --></p>
+<p></p>
+<div class="declaration_indent">
+<pre>@property (
+    <span class="param">nonatomic</span>,
+    <span class="param">readonly</span>) <!-- a logicalPath="//simplegeo/occ/cl/UISlider //simplegeo/occ/tdef/UISlider //simplegeo/occ/tag/UISlider //simplegeo/occ/econst/UISlider //simplegeo/occ/struct/UISlider //simplegeo/occ/clconst/UISlider //simplegeo/occ/intf/UISlider" --><span class="type">UISlider</span><!-- /a --><span class="type">*</span> <!-- a logicalPath="//simplegeo/occ/econst/sliderBar //simplegeo/occ/data/sliderBar" --><span class="var">sliderBar</span><!-- /a -->; </pre>
+</div>
+<p></p>
+<hr>
+<!-- headerDoc=instp;  uid=//simplegeo/occ/instp/SGCoverFlowView/subtitleLabel;   name=SGCoverFlowView::subtitleLabel --><a name="//simplegeo/occ/instp/SGCoverFlowView/subtitleLabel"></a>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="subtitleLabel">subtitleLabel</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --></p>
+<p>The label that is located directly under the title label.
+<!-- end abstract --></p>
+<p></p>
+<div class="declaration_indent">
+<pre>@property (
+    <span class="param">nonatomic</span>,
+    <span class="param">readonly</span>) <!-- a logicalPath="//simplegeo/occ/cl/UILabel //simplegeo/occ/tdef/UILabel //simplegeo/occ/tag/UILabel //simplegeo/occ/econst/UILabel //simplegeo/occ/struct/UILabel //simplegeo/occ/clconst/UILabel //simplegeo/occ/intf/UILabel" --><span class="type">UILabel</span><!-- /a --><span class="type">*</span> <!-- a logicalPath="//simplegeo/occ/econst/subtitleLabel //simplegeo/occ/data/subtitleLabel" --><span class="var">subtitleLabel</span><!-- /a -->; </pre>
+</div>
+<p></p>
+<hr>
+<!-- headerDoc=instp;  uid=//simplegeo/occ/instp/SGCoverFlowView/titleLabel;   name=SGCoverFlowView::titleLabel --><a name="//simplegeo/occ/instp/SGCoverFlowView/titleLabel"></a>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="titleLabel">titleLabel</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --></p>
+<p>The label that is located directly under the cover.
+<!-- end abstract --></p>
+<p></p>
+<div class="declaration_indent">
+<pre>@property (
+    <span class="param">nonatomic</span>,
+    <span class="param">readonly</span>) <!-- a logicalPath="//simplegeo/occ/cl/UILabel //simplegeo/occ/tdef/UILabel //simplegeo/occ/tag/UILabel //simplegeo/occ/econst/UILabel //simplegeo/occ/struct/UILabel //simplegeo/occ/clconst/UILabel //simplegeo/occ/intf/UILabel" --><span class="type">UILabel</span><!-- /a --><span class="type">*</span> <!-- a logicalPath="//simplegeo/occ/econst/titleLabel //simplegeo/occ/data/titleLabel" --><span class="var">titleLabel</span><!-- /a -->; </pre>
+</div>
+<p></p>
+<p><!-- start of footer -->
+
+<!-- end of footer -->
+</p>
+<p>&copy; SimpleGeo Last Updated: 12/17/2009
+</p>
+</div>
+</body>
+</html>

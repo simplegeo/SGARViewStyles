@@ -1,0 +1,246 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/1998/REC-html40-19980424/loose.dtd">
+<html>
+<head>
+<title>SGLayerMapView</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf8">
+<meta name="generator" content="HeaderDoc">
+<meta name="xcode-display" content="render">
+<style><!--
+#tocMenu {
+		display: block;
+		position:fixed;
+		top:0px;
+		left:0px;
+		width:210px;
+		height:100%;
+		background:transparent;
+}
+#bodyText {
+		margin-left: 210px;
+}
+--></style>
+<script language="JavaScript" type="text/javascript"><!--
+function hidetoc() {
+	var origURL = parent.document.URL;
+	var contentURL = origURL.substring(origURL.indexOf('?')+1, origURL.length);
+	if (contentURL.length == origURL.length) {
+		jumpPos = origURL.substring(origURL.indexOf('#')+1, origURL.length);
+	}
+	if (contentURL == "hidetoc") {
+		var toc = document.getElementById('tocMenu');
+		var body = document.getElementById('bodyText');
+		if (toc && body) {
+			toc.style.display = 'none';
+			body.style.marginLeft = '0px';
+		}
+	}
+}
+--></script><style type="text/css"><!--.keyword {background:#ffffff; color:#761550;}.template {background:#ffffff; color:#761550;}.number {background: #ffffff; color:#0000ff;}.function {background:#ffffff; color:#000000;}.string {background: #ffffff; color:#891315;}.preprocessor {background:#ffffff; color:#236e25}.comment {background:#ffffff; color:#236e25}.char {background: #ffffff; color:#0000ff;}.var {background:#ffffff; color:#000000;}.type {background:#ffffff; color:#761550;}.param {background:#ffffff; color:#000000;}a:link {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #0000ff;}a:visited {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #0000ff;}a:visited:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}a:active {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}a:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}h4 {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: tiny; font-weight: bold;}body {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: 10pt;}.list_indent { margin-left: 40px; }.declaration_indent { margin-left: 40px; }.param_indent { margin-left: 40px; }.group_indent { margin-left: 40px; }.group_desc_indent { margin-left: 20px; }.warning_indent { margin-left: 40px; }.important_indent { margin-left: 40px; }.hd_tocAccess { font-style: italic; font-size: 10px; font-weight: normal; color: #303030; }--></style>
+</head>
+<body bgcolor="#ffffff" onload="hidetoc();">
+
+<!-- headerDoc=cl; uid=//simplegeo/occ/cl/SGLayerMapView;  name=SGLayerMapView-->
+<a name="//simplegeo/occ/cl/SGLayerMapView"></a><div id="tocMenu">
+<iframe id="toc_content" name="toc_content" src="toc.html" width="210" height="100%" align="left" frameborder="0">This document set is best viewed in a browser that supports iFrames.</iframe>
+</div>
+<div id="bodyText">
+<!-- start of header -->
+
+<!-- end of header -->
+<a name="top"></a>
+<hr>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h1><a name="SGLayerMapView">SGLayerMapView</a></h1>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --></p>
+<p>Displays records from a layer on a MKMapView.
+<!-- end abstract --></p>
+<p><b>Conforms&nbsp;to:</b> <!-- a logicalPath="//simplegeo/occ/intf/MKMapViewDelegate" -->MKMapViewDelegate<!-- /a -->, <a href="../../../../Documentation/SGLocationService_h/Protocols/SGLocationServiceDelegate/index.html#//simplegeo/occ/intf/SGLocationServiceDelegate" logicalPath="//simplegeo/occ/intf/SGLocationServiceDelegate">SGLocationServiceDelegate</a><br><b>Superclass:</b> <!-- a logicalPath="//simplegeo/occ/cl/MKMapView" -->MKMapView<!-- /a --><br><b>Declared In:</b> <a href="../../index.html" target="_top">SGLayerMapView.h</a><br></p>
+<div class="declaration_indent">
+</div>
+<h5 class="tight">
+<font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5>
+<!-- begin discussion --><p>&#65532;This is just a simple subclass of MKMapView which uses the records 
+for each registered layer as annotations. SGLayerMapView will automatically
+load more records from SimpleGeo when the view is animated. Just add <!-- a logicalPath="//simplegeo/ooc/cl/SGLayer" -->SGLayer<!-- /a --> 
+object to the map view. You can disable this feature
+by calling <a href="../../../../Documentation/SGLayerMapView_h/Classes/SGLayerMapView/index.html#//simplegeo/occ/instm/SGLayerMapView/stopRetrieving" logicalPath="//simplegeo/occ/instm/SGLayerMapView/stopRetrieving">stopRetrieving</a>  since every record retrieval requires
+an HTTP request.
+</p>
+<p>The map view will build records based on the SGLayers <!-- a logicalPath="//simplegeo/ooc/instm/recordFromDicitonary:" -->recordFromDictionary:<!-- /a --> 
+method. Records are not automatically added to their layer when they are retrieved. In order to add retrieved records to their SGLayer object,
+<!-- a logicalPath="addRetrievedRecrodsToLayer" -->addRetrievedRecrodsToLayer<!-- /a --> should be set to YES.
+<!-- end discussion -->
+</p>
+<p></p>
+<hr>
+<br><a name="HeaderDoc_methods"></a>
+<h2>Methods</h2>
+<dl>
+<dt><tt><a href="index.html#//simplegeo/occ/instm/SGLayerMapView/addLayer:" target="_top">-addLayer:</a></tt></dt>
+<dd><p>&#65532;Adds a layer to the map view.
+</p></dd>
+<dt><tt><a href="index.html#//simplegeo/occ/instm/SGLayerMapView/addLayers:" target="_top">-addLayers:</a></tt></dt>
+<dd><p>&#65532;Adds an array of layers to be displayed in the map view.
+</p></dd>
+<dt><tt><a href="index.html#//simplegeo/occ/instm/SGLayerMapView/removeLayer:" target="_top">-removeLayer:</a></tt></dt>
+<dd><p>&#65532;Removes a layer from the map view.
+</p></dd>
+<dt><tt><a href="index.html#//simplegeo/occ/instm/SGLayerMapView/removeLayers:" target="_top">-removeLayers:</a></tt></dt>
+<dd><p>&#65532;Removes an array of layers from the map view.
+</p></dd>
+<dt><tt><a href="index.html#//simplegeo/occ/instm/SGLayerMapView/startRetrieving" target="_top">-startRetrieving</a></tt></dt>
+<dd><p>&#65532; Enables fetching records for each layer from SimpleGeo when the map view's region changes.
+</p></dd>
+<dt><tt><a href="index.html#//simplegeo/occ/instm/SGLayerMapView/stopRetrieving" target="_top">-stopRetrieving</a></tt></dt>
+<dd><p>&#65532; Disables fetching records for each layer from SimpleGeo when the map view's region changes.
+</p></dd>
+</dl>
+<hr>
+<!-- headerDoc=instm;  uid=//simplegeo/occ/instm/SGLayerMapView/addLayer:;   name=SGLayerMapView::addLayer: --><a name="//simplegeo/occ/instm/SGLayerMapView/addLayer:"></a>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="addLayer:">addLayer:</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --></p>
+<p>&#65532;Adds a layer to the map view.
+<!-- end abstract --></p>
+<p></p>
+<div class="declaration_indent">
+<pre>- (<!-- a logicalPath="//simplegeo/occ/cl/void //simplegeo/occ/tdef/void //simplegeo/occ/tag/void //simplegeo/occ/econst/void //simplegeo/occ/struct/void //simplegeo/occ/clconst/void //simplegeo/occ/intf/void" --><span class="type">void</span><!-- /a -->) <!-- a logicalPath="//simplegeo/occ/instm/addLayer //simplegeo/occ/clm/addLayer //simplegeo/occ/intfcm/addLayer //simplegeo/occ/intfm/addLayer //simplegeo/occ/func/addLayer //simplegeo/occ/ftmplt/addLayer //simplegeo/occ/defn/addLayer //simplegeo/occ/macro/addLayer" --><span class="function">addLayer</span><!-- /a -->:(<a href="../../../../Documentation/SGLayer_h/Classes/SGLayer/index.html#//simplegeo/occ/cl/SGLayer" logicalPath="//simplegeo/occ/cl/SGLayer"><span class="type">SGLayer</span></a><span class="type">*</span>)<!-- a logicalPath="//simplegeo/occ/econst/layer //simplegeo/occ/data/layer" --><span class="var">layer</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt><code>layer</code></dt>
+<dd><p>&#65532;The layer.</p></dd>
+</dl>
+</div>
+<p></p>
+<hr>
+<!-- headerDoc=instm;  uid=//simplegeo/occ/instm/SGLayerMapView/addLayers:;   name=SGLayerMapView::addLayers: --><a name="//simplegeo/occ/instm/SGLayerMapView/addLayers:"></a>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="addLayers:">addLayers:</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --></p>
+<p>&#65532;Adds an array of layers to be displayed in the map view.
+<!-- end abstract --></p>
+<p></p>
+<div class="declaration_indent">
+<pre>- (<!-- a logicalPath="//simplegeo/occ/cl/void //simplegeo/occ/tdef/void //simplegeo/occ/tag/void //simplegeo/occ/econst/void //simplegeo/occ/struct/void //simplegeo/occ/clconst/void //simplegeo/occ/intf/void" --><span class="type">void</span><!-- /a -->) <!-- a logicalPath="//simplegeo/occ/instm/addLayers //simplegeo/occ/clm/addLayers //simplegeo/occ/intfcm/addLayers //simplegeo/occ/intfm/addLayers //simplegeo/occ/func/addLayers //simplegeo/occ/ftmplt/addLayers //simplegeo/occ/defn/addLayers //simplegeo/occ/macro/addLayers" --><span class="function">addLayers</span><!-- /a -->:(<!-- a logicalPath="//simplegeo/occ/cl/NSArray //simplegeo/occ/tdef/NSArray //simplegeo/occ/tag/NSArray //simplegeo/occ/econst/NSArray //simplegeo/occ/struct/NSArray //simplegeo/occ/clconst/NSArray //simplegeo/occ/intf/NSArray" --><span class="type">NSArray</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//simplegeo/occ/econst/layers //simplegeo/occ/data/layers" --><span class="var">layers</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt><code>layers</code></dt>
+<dd><p>&#65532;The array of layers.</p></dd>
+</dl>
+</div>
+<p></p>
+<hr>
+<!-- headerDoc=instm;  uid=//simplegeo/occ/instm/SGLayerMapView/removeLayer:;   name=SGLayerMapView::removeLayer: --><a name="//simplegeo/occ/instm/SGLayerMapView/removeLayer:"></a>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="removeLayer:">removeLayer:</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --></p>
+<p>&#65532;Removes a layer from the map view.
+<!-- end abstract --></p>
+<p></p>
+<div class="declaration_indent">
+<pre>- (<!-- a logicalPath="//simplegeo/occ/cl/void //simplegeo/occ/tdef/void //simplegeo/occ/tag/void //simplegeo/occ/econst/void //simplegeo/occ/struct/void //simplegeo/occ/clconst/void //simplegeo/occ/intf/void" --><span class="type">void</span><!-- /a -->) <!-- a logicalPath="//simplegeo/occ/instm/removeLayer //simplegeo/occ/clm/removeLayer //simplegeo/occ/intfcm/removeLayer //simplegeo/occ/intfm/removeLayer //simplegeo/occ/func/removeLayer //simplegeo/occ/ftmplt/removeLayer //simplegeo/occ/defn/removeLayer //simplegeo/occ/macro/removeLayer" --><span class="function">removeLayer</span><!-- /a -->:(<a href="../../../../Documentation/SGLayer_h/Classes/SGLayer/index.html#//simplegeo/occ/cl/SGLayer" logicalPath="//simplegeo/occ/cl/SGLayer"><span class="type">SGLayer</span></a><span class="type">*</span>)<!-- a logicalPath="//simplegeo/occ/econst/layer //simplegeo/occ/data/layer" --><span class="var">layer</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt><code>layer</code></dt>
+<dd><p>&#65532;The layer.adddRetrievedRecrodsToLayer</p></dd>
+</dl>
+</div>
+<p></p>
+<hr>
+<!-- headerDoc=instm;  uid=//simplegeo/occ/instm/SGLayerMapView/removeLayers:;   name=SGLayerMapView::removeLayers: --><a name="//simplegeo/occ/instm/SGLayerMapView/removeLayers:"></a>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="removeLayers:">removeLayers:</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --></p>
+<p>&#65532;Removes an array of layers from the map view.
+<!-- end abstract --></p>
+<p></p>
+<div class="declaration_indent">
+<pre>- (<!-- a logicalPath="//simplegeo/occ/cl/void //simplegeo/occ/tdef/void //simplegeo/occ/tag/void //simplegeo/occ/econst/void //simplegeo/occ/struct/void //simplegeo/occ/clconst/void //simplegeo/occ/intf/void" --><span class="type">void</span><!-- /a -->) <!-- a logicalPath="//simplegeo/occ/instm/removeLayers //simplegeo/occ/clm/removeLayers //simplegeo/occ/intfcm/removeLayers //simplegeo/occ/intfm/removeLayers //simplegeo/occ/func/removeLayers //simplegeo/occ/ftmplt/removeLayers //simplegeo/occ/defn/removeLayers //simplegeo/occ/macro/removeLayers" --><span class="function">removeLayers</span><!-- /a -->:(<!-- a logicalPath="//simplegeo/occ/cl/NSArray //simplegeo/occ/tdef/NSArray //simplegeo/occ/tag/NSArray //simplegeo/occ/econst/NSArray //simplegeo/occ/struct/NSArray //simplegeo/occ/clconst/NSArray //simplegeo/occ/intf/NSArray" --><span class="type">NSArray</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//simplegeo/occ/econst/layers //simplegeo/occ/data/layers" --><span class="var">layers</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt><code>layers</code></dt>
+<dd><p>&#65532;The array of layers.</p></dd>
+</dl>
+</div>
+<p></p>
+<hr>
+<!-- headerDoc=instm;  uid=//simplegeo/occ/instm/SGLayerMapView/startRetrieving;   name=SGLayerMapView::startRetrieving --><a name="//simplegeo/occ/instm/SGLayerMapView/startRetrieving"></a>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="startRetrieving">startRetrieving</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --></p>
+<p>&#65532; Enables fetching records for each layer from SimpleGeo when the map view's region changes.
+<!-- end abstract --></p>
+<p></p>
+<div class="declaration_indent">
+<pre>- (<!-- a logicalPath="//simplegeo/occ/cl/void //simplegeo/occ/tdef/void //simplegeo/occ/tag/void //simplegeo/occ/econst/void //simplegeo/occ/struct/void //simplegeo/occ/clconst/void //simplegeo/occ/intf/void" --><span class="type">void</span><!-- /a -->) <!-- a logicalPath="//simplegeo/occ/econst/startRetrieving //simplegeo/occ/data/startRetrieving" --><span class="var">startRetrieving</span><!-- /a -->; </pre>
+</div>
+<p></p>
+<hr>
+<!-- headerDoc=instm;  uid=//simplegeo/occ/instm/SGLayerMapView/stopRetrieving;   name=SGLayerMapView::stopRetrieving --><a name="//simplegeo/occ/instm/SGLayerMapView/stopRetrieving"></a>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="stopRetrieving">stopRetrieving</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --></p>
+<p>&#65532; Disables fetching records for each layer from SimpleGeo when the map view's region changes.
+<!-- end abstract --></p>
+<p></p>
+<div class="declaration_indent">
+<pre>- (<!-- a logicalPath="//simplegeo/occ/cl/void //simplegeo/occ/tdef/void //simplegeo/occ/tag/void //simplegeo/occ/econst/void //simplegeo/occ/struct/void //simplegeo/occ/clconst/void //simplegeo/occ/intf/void" --><span class="type">void</span><!-- /a -->) <!-- a logicalPath="//simplegeo/occ/econst/stopRetrieving //simplegeo/occ/data/stopRetrieving" --><span class="var">stopRetrieving</span><!-- /a -->; </pre>
+</div>
+<p></p>
+<a name="HeaderDoc_props"></a>
+<h2>Properties</h2>
+<dl>
+<dt><tt><a href="index.html#//simplegeo/occ/instp/SGLayerMapView/limit" target="_top">limit</a></tt></dt>
+<dd><p>The amount of records to retrieve each time the map view
+detects it needs to refresh its annotations.
+</p></dd>
+</dl>
+<hr>
+<!-- headerDoc=instp;  uid=//simplegeo/occ/instp/SGLayerMapView/limit;   name=SGLayerMapView::limit --><a name="//simplegeo/occ/instp/SGLayerMapView/limit"></a>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="limit">limit</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --></p>
+<p>The amount of records to retrieve each time the map view
+detects it needs to refresh its annotations.
+<!-- end abstract --></p>
+<p></p>
+<div class="declaration_indent">
+<pre>@property (
+    <span class="param">nonatomic</span>,
+    <span class="param">assign</span>) <!-- a logicalPath="//simplegeo/occ/cl/NSInteger //simplegeo/occ/tdef/NSInteger //simplegeo/occ/tag/NSInteger //simplegeo/occ/econst/NSInteger //simplegeo/occ/struct/NSInteger //simplegeo/occ/clconst/NSInteger //simplegeo/occ/intf/NSInteger" --><span class="type">NSInteger</span><!-- /a --> <!-- a logicalPath="//simplegeo/occ/econst/limit //simplegeo/occ/data/limit" --><span class="var">limit</span><!-- /a -->; </pre>
+</div>
+<p></p>
+<p><!-- start of footer -->
+
+<!-- end of footer -->
+</p>
+<p>&copy; SimpleGeo Last Updated: 12/17/2009
+</p>
+</div>
+</body>
+</html>

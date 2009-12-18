@@ -1,0 +1,172 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/1998/REC-html40-19980424/loose.dtd">
+<html>
+<head>
+<title>SGARViewDataSource</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf8">
+<meta name="generator" content="HeaderDoc">
+<meta name="xcode-display" content="render">
+<style><!--
+#tocMenu {
+		display: block;
+		position:fixed;
+		top:0px;
+		left:0px;
+		width:210px;
+		height:100%;
+		background:transparent;
+}
+#bodyText {
+		margin-left: 210px;
+}
+--></style>
+<script language="JavaScript" type="text/javascript"><!--
+function hidetoc() {
+	var origURL = parent.document.URL;
+	var contentURL = origURL.substring(origURL.indexOf('?')+1, origURL.length);
+	if (contentURL.length == origURL.length) {
+		jumpPos = origURL.substring(origURL.indexOf('#')+1, origURL.length);
+	}
+	if (contentURL == "hidetoc") {
+		var toc = document.getElementById('tocMenu');
+		var body = document.getElementById('bodyText');
+		if (toc && body) {
+			toc.style.display = 'none';
+			body.style.marginLeft = '0px';
+		}
+	}
+}
+--></script><style type="text/css"><!--.keyword {background:#ffffff; color:#761550;}.template {background:#ffffff; color:#761550;}.number {background: #ffffff; color:#0000ff;}.function {background:#ffffff; color:#000000;}.string {background: #ffffff; color:#891315;}.preprocessor {background:#ffffff; color:#236e25}.comment {background:#ffffff; color:#236e25}.char {background: #ffffff; color:#0000ff;}.var {background:#ffffff; color:#000000;}.type {background:#ffffff; color:#761550;}.param {background:#ffffff; color:#000000;}a:link {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #0000ff;}a:visited {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #0000ff;}a:visited:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}a:active {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}a:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}h4 {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: tiny; font-weight: bold;}body {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: 10pt;}.list_indent { margin-left: 40px; }.declaration_indent { margin-left: 40px; }.param_indent { margin-left: 40px; }.group_indent { margin-left: 40px; }.group_desc_indent { margin-left: 20px; }.warning_indent { margin-left: 40px; }.important_indent { margin-left: 40px; }.hd_tocAccess { font-style: italic; font-size: 10px; font-weight: normal; color: #303030; }--></style>
+</head>
+<body bgcolor="#ffffff" onload="hidetoc();">
+
+<!-- headerDoc=intf; uid=//simplegeo/occ/intf/SGARViewDataSource;  name=SGARViewDataSource-->
+<a name="//simplegeo/occ/intf/SGARViewDataSource"></a><div id="tocMenu">
+<iframe id="toc_content" name="toc_content" src="toc.html" width="210" height="100%" align="left" frameborder="0">This document set is best viewed in a browser that supports iFrames.</iframe>
+</div>
+<div id="bodyText">
+<!-- start of header -->
+
+<!-- end of header -->
+<a name="top"></a>
+<hr>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h1><a name="SGARViewDataSource">SGARViewDataSource</a></h1>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --></p>
+<p>Responsible for providing all the annotations and their views.
+<!-- end abstract --></p>
+<p><b>Extends&nbsp;Protocol:</b> <!-- a logicalPath="//simplegeo/occ/intf/NSObject" -->NSObject<!-- /a --><br><b>Declared In:</b> <a href="../../index.html" target="_top">SGARView.h</a><br></p>
+<div class="declaration_indent">
+</div>
+<p></p>
+<hr>
+<br><a name="HeaderDoc_methods"></a>
+<h2>Methods</h2>
+<dl>
+<dt><tt><a href="index.html#//simplegeo/occ/intfm/SGARViewDataSource/arView:annotationsAtLocation:" target="_top">-arView:annotationsAtLocation:</a></tt></dt>
+<dd><p>&#65532;Provides the annotations for the location.
+</p></dd>
+<dt><tt><a href="index.html#//simplegeo/occ/intfm/SGARViewDataSource/arView:didAddAnnotationViews:" target="_top">-arView:didAddAnnotationViews:</a></tt></dt>
+<dd><p>&#65532;Notifies the delegate when <!-- a logicalPath="//simplegeo/ooc/cl/SGAnnotationView" -->SGAnnotationViews<!-- /a -->  have
+been added to the arView.
+</p></dd>
+<dt><tt><a href="index.html#//simplegeo/occ/intfm/SGARViewDataSource/arView:viewForAnnotation:" target="_top">-arView:viewForAnnotation:</a></tt></dt>
+<dd><p>&#65532;Provides the view for the specified <!-- a logicalPath="//simplegeo/ooc/cl/SGAnnotation" -->annotation<!-- /a --> .
+</p></dd>
+</dl>
+<hr>
+<!-- headerDoc=intfm;  uid=//simplegeo/occ/intfm/SGARViewDataSource/arView:annotationsAtLocation:;   name=SGARViewDataSource::arView:annotationsAtLocation: --><a name="//simplegeo/occ/intfm/SGARViewDataSource/arView:annotationsAtLocation:"></a>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="arView:annotationsAtLocation:">arView:annotationsAtLocation:</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --></p>
+<p>&#65532;Provides the annotations for the location.
+<!-- end abstract --></p>
+<p></p>
+<div class="declaration_indent">
+<pre>- (<!-- a logicalPath="//simplegeo/occ/cl/NSArray //simplegeo/occ/tdef/NSArray //simplegeo/occ/tag/NSArray //simplegeo/occ/econst/NSArray //simplegeo/occ/struct/NSArray //simplegeo/occ/clconst/NSArray //simplegeo/occ/intf/NSArray" --><span class="type">NSArray</span><!-- /a --><span class="type">*</span>) <!-- a logicalPath="//simplegeo/occ/instm/arView //simplegeo/occ/clm/arView //simplegeo/occ/intfcm/arView //simplegeo/occ/intfm/arView //simplegeo/occ/func/arView //simplegeo/occ/ftmplt/arView //simplegeo/occ/defn/arView //simplegeo/occ/macro/arView" --><span class="function">arView</span><!-- /a -->:(<a href="../../../../Documentation/SGARView_h/Classes/SGARView/index.html#//simplegeo/occ/cl/SGARView" logicalPath="//simplegeo/occ/cl/SGARView"><span class="type">SGARView</span></a><span class="type">*</span>)<span class="param">arView</span> <!-- a logicalPath="//simplegeo/occ/instm/annotationsAtLocation //simplegeo/occ/clm/annotationsAtLocation //simplegeo/occ/intfcm/annotationsAtLocation //simplegeo/occ/intfm/annotationsAtLocation //simplegeo/occ/func/annotationsAtLocation //simplegeo/occ/ftmplt/annotationsAtLocation //simplegeo/occ/defn/annotationsAtLocation //simplegeo/occ/macro/annotationsAtLocation" --><span class="function">annotationsAtLocation</span><!-- /a -->:(<!-- a logicalPath="//simplegeo/occ/cl/CLLocation //simplegeo/occ/tdef/CLLocation //simplegeo/occ/tag/CLLocation //simplegeo/occ/econst/CLLocation //simplegeo/occ/struct/CLLocation //simplegeo/occ/clconst/CLLocation //simplegeo/occ/intf/CLLocation" --><span class="type">CLLocation</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//simplegeo/occ/econst/location //simplegeo/occ/data/location" --><span class="var">location</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt><code>arView</code></dt>
+<dd><p>The <a href="../../../../Documentation/SGARView_h/Classes/SGARView/index.html#//simplegeo/occ/cl/SGARView" logicalPath="//simplegeo/occ/cl/SGARView">AR view</a>  that needs annotations.</p></dd>
+<dt><code>location</code></dt>
+<dd><p>&#65532;The location.</p></dd>
+</dl>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5>
+<p><!-- begin return value -->&#65532;An array of <!-- a logicalPath="//simplegeo/ooc/cl/SGAnnotation" -->annotations<!-- /a -->.
+
+<!-- end return value --></p>
+<p></p>
+<hr>
+<!-- headerDoc=intfm;  uid=//simplegeo/occ/intfm/SGARViewDataSource/arView:didAddAnnotationViews:;   name=SGARViewDataSource::arView:didAddAnnotationViews: --><a name="//simplegeo/occ/intfm/SGARViewDataSource/arView:didAddAnnotationViews:"></a>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="arView:didAddAnnotationViews:">arView:didAddAnnotationViews:</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --></p>
+<p>&#65532;Notifies the delegate when <!-- a logicalPath="//simplegeo/ooc/cl/SGAnnotationView" -->SGAnnotationViews<!-- /a --> have
+been added to the arView.
+<!-- end abstract --></p>
+<p></p>
+<div class="declaration_indent">
+<pre>- (<!-- a logicalPath="//simplegeo/occ/cl/void //simplegeo/occ/tdef/void //simplegeo/occ/tag/void //simplegeo/occ/econst/void //simplegeo/occ/struct/void //simplegeo/occ/clconst/void //simplegeo/occ/intf/void" --><span class="type">void</span><!-- /a -->) <!-- a logicalPath="//simplegeo/occ/instm/arView //simplegeo/occ/clm/arView //simplegeo/occ/intfcm/arView //simplegeo/occ/intfm/arView //simplegeo/occ/func/arView //simplegeo/occ/ftmplt/arView //simplegeo/occ/defn/arView //simplegeo/occ/macro/arView" --><span class="function">arView</span><!-- /a -->:(<a href="../../../../Documentation/SGARView_h/Classes/SGARView/index.html#//simplegeo/occ/cl/SGARView" logicalPath="//simplegeo/occ/cl/SGARView"><span class="type">SGARView</span></a><span class="type">*</span>)<span class="param">arView</span> <!-- a logicalPath="//simplegeo/occ/instm/didAddAnnotationViews //simplegeo/occ/clm/didAddAnnotationViews //simplegeo/occ/intfcm/didAddAnnotationViews //simplegeo/occ/intfm/didAddAnnotationViews //simplegeo/occ/func/didAddAnnotationViews //simplegeo/occ/ftmplt/didAddAnnotationViews //simplegeo/occ/defn/didAddAnnotationViews //simplegeo/occ/macro/didAddAnnotationViews" --><span class="function">didAddAnnotationViews</span><!-- /a -->:(<!-- a logicalPath="//simplegeo/occ/cl/NSArray //simplegeo/occ/tdef/NSArray //simplegeo/occ/tag/NSArray //simplegeo/occ/econst/NSArray //simplegeo/occ/struct/NSArray //simplegeo/occ/clconst/NSArray //simplegeo/occ/intf/NSArray" --><span class="type">NSArray</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//simplegeo/occ/econst/views //simplegeo/occ/data/views" --><span class="var">views</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt><code>arView</code></dt>
+<dd><p>&#65532;The <a href="../../../../Documentation/SGARView_h/Classes/SGARView/index.html#//simplegeo/occ/cl/SGARView" logicalPath="//simplegeo/occ/cl/SGARView">SGARView</a>  that added the annotation views.</p></dd>
+<dt><code>views</code></dt>
+<dd><p>&#65532;The annotation views.</p></dd>
+</dl>
+</div>
+<p></p>
+<hr>
+<!-- headerDoc=intfm;  uid=//simplegeo/occ/intfm/SGARViewDataSource/arView:viewForAnnotation:;   name=SGARViewDataSource::arView:viewForAnnotation: --><a name="//simplegeo/occ/intfm/SGARViewDataSource/arView:viewForAnnotation:"></a>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="arView:viewForAnnotation:">arView:viewForAnnotation:</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --></p>
+<p>&#65532;Provides the view for the specified <!-- a logicalPath="//simplegeo/ooc/cl/SGAnnotation" -->annotation<!-- /a -->.
+<!-- end abstract --></p>
+<p></p>
+<div class="declaration_indent">
+<pre>- (<a href="../../../../Documentation/SGAnnotationView_h/Classes/SGAnnotationView/index.html#//simplegeo/occ/cl/SGAnnotationView" logicalPath="//simplegeo/occ/cl/SGAnnotationView"><span class="type">SGAnnotationView</span></a><span class="type">*</span>) <!-- a logicalPath="//simplegeo/occ/instm/arView //simplegeo/occ/clm/arView //simplegeo/occ/intfcm/arView //simplegeo/occ/intfm/arView //simplegeo/occ/func/arView //simplegeo/occ/ftmplt/arView //simplegeo/occ/defn/arView //simplegeo/occ/macro/arView" --><span class="function">arView</span><!-- /a -->:(<a href="../../../../Documentation/SGARView_h/Classes/SGARView/index.html#//simplegeo/occ/cl/SGARView" logicalPath="//simplegeo/occ/cl/SGARView"><span class="type">SGARView</span></a><span class="type">*</span>)<span class="param">arView</span> 
+        <!-- a logicalPath="//simplegeo/occ/instm/viewForAnnotation //simplegeo/occ/clm/viewForAnnotation //simplegeo/occ/intfcm/viewForAnnotation //simplegeo/occ/intfm/viewForAnnotation //simplegeo/occ/func/viewForAnnotation //simplegeo/occ/ftmplt/viewForAnnotation //simplegeo/occ/defn/viewForAnnotation //simplegeo/occ/macro/viewForAnnotation" --><span class="function">viewForAnnotation</span><!-- /a -->:(<!-- a logicalPath="//simplegeo/occ/cl/id //simplegeo/occ/tdef/id //simplegeo/occ/tag/id //simplegeo/occ/econst/id //simplegeo/occ/struct/id //simplegeo/occ/clconst/id //simplegeo/occ/intf/id" --><span class="type">id</span><!-- /a -->&lt;<span class="param">SGAnnotation</span>&gt;)<!-- a logicalPath="//simplegeo/occ/econst/annotation //simplegeo/occ/data/annotation" --><span class="var">annotation</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt><code>arView</code></dt>
+<dd><p>&#65532;The <a href="../../../../Documentation/SGARView_h/Classes/SGARView/index.html#//simplegeo/occ/cl/SGARView" logicalPath="//simplegeo/occ/cl/SGARView">AR view</a>  that needs views for its annotaitons.</p></dd>
+<dt><code>annotation</code></dt>
+<dd><p>The annotation that nee&#65532;ds a view.</p></dd>
+</dl>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5>
+<p><!-- begin return value -->&#65532;The view for the annotation.
+
+<!-- end return value --></p>
+<h5 class="tight">
+<font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5>
+<!-- begin discussion --><p>This allows the data source to prepare the annotation for display (e.g. changing location, title). You can also
+return a nil value which would not display a view for the specified annotation.
+<!-- end discussion -->
+</p>
+<p></p>
+<p><!-- start of footer -->
+
+<!-- end of footer -->
+</p>
+<p>&copy; SimpleGeo Last Updated: 12/17/2009
+</p>
+</div>
+</body>
+</html>

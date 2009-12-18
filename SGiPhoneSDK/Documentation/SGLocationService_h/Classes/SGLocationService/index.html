@@ -1,0 +1,253 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/1998/REC-html40-19980424/loose.dtd">
+<html>
+<head>
+<title>SGLocationService</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf8">
+<meta name="generator" content="HeaderDoc">
+<meta name="xcode-display" content="render">
+<style><!--
+#tocMenu {
+		display: block;
+		position:fixed;
+		top:0px;
+		left:0px;
+		width:210px;
+		height:100%;
+		background:transparent;
+}
+#bodyText {
+		margin-left: 210px;
+}
+--></style>
+<script language="JavaScript" type="text/javascript"><!--
+function hidetoc() {
+	var origURL = parent.document.URL;
+	var contentURL = origURL.substring(origURL.indexOf('?')+1, origURL.length);
+	if (contentURL.length == origURL.length) {
+		jumpPos = origURL.substring(origURL.indexOf('#')+1, origURL.length);
+	}
+	if (contentURL == "hidetoc") {
+		var toc = document.getElementById('tocMenu');
+		var body = document.getElementById('bodyText');
+		if (toc && body) {
+			toc.style.display = 'none';
+			body.style.marginLeft = '0px';
+		}
+	}
+}
+--></script><style type="text/css"><!--.keyword {background:#ffffff; color:#761550;}.template {background:#ffffff; color:#761550;}.number {background: #ffffff; color:#0000ff;}.function {background:#ffffff; color:#000000;}.string {background: #ffffff; color:#891315;}.preprocessor {background:#ffffff; color:#236e25}.comment {background:#ffffff; color:#236e25}.char {background: #ffffff; color:#0000ff;}.var {background:#ffffff; color:#000000;}.type {background:#ffffff; color:#761550;}.param {background:#ffffff; color:#000000;}a:link {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #0000ff;}a:visited {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #0000ff;}a:visited:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}a:active {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}a:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}h4 {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: tiny; font-weight: bold;}body {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: 10pt;}.list_indent { margin-left: 40px; }.declaration_indent { margin-left: 40px; }.param_indent { margin-left: 40px; }.group_indent { margin-left: 40px; }.group_desc_indent { margin-left: 20px; }.warning_indent { margin-left: 40px; }.important_indent { margin-left: 40px; }.hd_tocAccess { font-style: italic; font-size: 10px; font-weight: normal; color: #303030; }--></style>
+</head>
+<body bgcolor="#ffffff" onload="hidetoc();">
+
+<!-- headerDoc=cl; uid=//simplegeo/occ/cl/SGLocationService;  name=SGLocationService-->
+<a name="//simplegeo/occ/cl/SGLocationService"></a><div id="tocMenu">
+<iframe id="toc_content" name="toc_content" src="toc.html" width="210" height="100%" align="left" frameborder="0">This document set is best viewed in a browser that supports iFrames.</iframe>
+</div>
+<div id="bodyText">
+<!-- start of header -->
+
+<!-- end of header -->
+<a name="top"></a>
+<hr>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h1><a name="SGLocationService">SGLocationService</a></h1>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --></p>
+<p>&#65532;Update and retrieve records from SimpleGeo.
+<!-- end abstract --></p>
+<p><b>Superclass:</b> <!-- a logicalPath="//simplegeo/occ/cl/NSObject" -->NSObject<!-- /a --><br><b>Declared In:</b> <a href="../../index.html" target="_top">SGLocationService.h</a><br></p>
+<div class="declaration_indent">
+</div>
+<h5 class="tight">
+<font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5>
+<!-- begin discussion --><p>&#65532;All methods that create an HTTP request return a response identifier. The response identifier is used
+to identify which response is being returned when either <a href="../../../../Documentation/SGLocationService_h/Protocols/SGLocationServiceDelegate/index.html#//simplegeo/occ/intfm/SGLocationServiceDelegate/locationService:succeededForResponseId:responseObject:" logicalPath="//simplegeo/occ/intfm/SGLocationServiceDelegate/locationService:succeededForResponseId:responseObject:">locationService:succeededForResponseId:responseObject:</a> 
+or <a href="../../../../Documentation/SGLocationService_h/Protocols/SGLocationServiceDelegate/index.html#//simplegeo/occ/intfm/SGLocationServiceDelegate/locationService:failedForResponseId:error:" logicalPath="//simplegeo/occ/intfm/SGLocationServiceDelegate/locationService:failedForResponseId:error:">locationService:failedForResponseId:error:</a>  is called for all delegates. The class
+allows multiple records to be registered using <a href="../../../../Documentation/SGLocationService_h/Classes/SGLocationService/index.html#//simplegeo/occ/instm/SGLocationService/addDelegate:" logicalPath="//simplegeo/occ/instm/SGLocationService/addDelegate:">addDelegate:</a> . Delegates will continue recieving notifications
+so it is important to <a href="../../../../Documentation/SGLocationService_h/Classes/SGLocationService/index.html#//simplegeo/occ/instm/SGLocationService/removeDelegate:" logicalPath="//simplegeo/occ/instm/SGLocationService/removeDelegate:">removeDelegate:</a>  when that object no longer wants to recieve notifications.
+</p>
+<p>The location service requires that <a href="../../../../Documentation/SGLocationService_h/Classes/SGLocationService/index.html#//simplegeo/occ/instp/SGLocationService/HTTPAuthorizer" logicalPath="//simplegeo/occ/instp/SGLocationService/HTTPAuthorizer">HTTPAuthorizer</a>  be set with a valid instance of <!-- a logicalPath="//simplegeo/ooc/cl/SGOAuth" -->SGOAuth<!-- /a --> . Since
+the only type of authorization supported by SimpleGeo is OAuth, this property must be set or all HTTP requests will result in an error.
+</p>
+<p>All HTTP requests are sent as NSInvocationOperations. Currently, the SimpleGeo API only offers get/add/delete methods for only a single
+record. When using a method like <!-- a logicalPath="updateRecordAnnotations:" -->updateRecordAnnotations:<!-- /a --> , a single NSInvocationOperation is used
+to update all of the records. It does not create a new operation for each <!-- a logicalPath="//simplegeo/ooc/cl/SGRecordAnnotation" -->SGRecordAnnotation<!-- /a --> 
+that is passed through.
+</p>
+<p>This interface provides two different avenues when it comes to storing and retrieving records. The first is using the standard
+NSString parameratized methods like <!-- a logicalPath="retrieveRecord:layer:" -->retrieveRecord:layer:<!-- /a --> . Calling this method
+only requires the knowledge of the desired recordId and the layer to which it belongs to. The alternative method would be to use
+<!-- a logicalPath="retrieveRecordAnnotation:" -->retrieveRecordAnnotation:<!-- /a -->  which requires an NSObject that implements 
+<!-- a logicalPath="//simplegeo/ooc/intf/SGRecordAnnotation" -->SGRecordAnnotation<!-- /a --> . <!-- a logicalPath="//simplegeo/ooc/cl/SGRecord" -->SGRecord<!-- /a -->  is provided
+as a standard class that implements the protocol. The advantage to using the second method is that everytime a response succeeds,
+the delegate can use the responseObject that is passed in via <a href="../../../../Documentation/SGLocationService_h/Protocols/SGLocationServiceDelegate/index.html#//simplegeo/occ/intfm/SGLocationServiceDelegate/locationService:succeededForResponseId:responseObject:" logicalPath="//simplegeo/occ/intfm/SGLocationServiceDelegate/locationService:succeededForResponseId:responseObject:">locationService:succeededForResponseId:responseObject:</a> 
+to update the SGRecord by calling <!-- a logicalPath="//simplegeo/ooc/instm/SGRecord/updateRecordWithGeoJSONDictionary:" -->updateRecordWithGeoJSONDictionary:<!-- /a -->.
+<!-- end discussion -->
+</p>
+<p></p>
+<hr>
+<br><a name="HeaderDoc_methods"></a>
+<h2>Methods</h2>
+<dl>
+<dt><tt><a href="index.html#//simplegeo/occ/instm/SGLocationService/addDelegate:" target="_top">-addDelegate:</a></tt></dt>
+<dd><p>&#65532;Adds an instance of <a href="../../../../Documentation/SGLocationService_h/Protocols/SGLocationServiceDelegate/index.html#//simplegeo/occ/intf/SGLocationServiceDelegate" logicalPath="//simplegeo/occ/intf/SGLocationServiceDelegate">SGLocationServiceDelegate</a>  to be notified
+when a HTTP request fails or succeeds.
+</p></dd>
+<dt><tt><a href="index.html#//simplegeo/occ/clm/SGLocationService/callbackOnMainThread:" target="_top">+callbackOnMainThread:</a></tt></dt>
+<dd><p>&#65532;Determines whether or not to use the main thread to call delegate methods. Default is YES.
+</p></dd>
+<dt><tt><a href="index.html#//simplegeo/occ/instm/SGLocationService/removeDelegate:" target="_top">-removeDelegate:</a></tt></dt>
+<dd><p>&#65532;Removes the <a href="../../../../Documentation/SGLocationService_h/Protocols/SGLocationServiceDelegate/index.html#//simplegeo/occ/intf/SGLocationServiceDelegate" logicalPath="//simplegeo/occ/intf/SGLocationServiceDelegate">SGLocationServiceDelegate</a>  from the group
+of delegates.
+</p></dd>
+<dt><tt><a href="index.html#//simplegeo/occ/clm/SGLocationService/sharedLocationService" target="_top">+sharedLocationService</a></tt></dt>
+<dd><p>&#65532; The shared instance of <a href="../../../../Documentation/SGLocationService_h/Classes/SGLocationService/index.html#//simplegeo/occ/cl/SGLocationService" logicalPath="//simplegeo/occ/cl/SGLocationService">SGLocationService</a> .
+</p></dd>
+</dl>
+<hr>
+<!-- headerDoc=instm;  uid=//simplegeo/occ/instm/SGLocationService/addDelegate:;   name=SGLocationService::addDelegate: --><a name="//simplegeo/occ/instm/SGLocationService/addDelegate:"></a>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="addDelegate:">addDelegate:</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --></p>
+<p>&#65532;Adds an instance of <a href="../../../../Documentation/SGLocationService_h/Protocols/SGLocationServiceDelegate/index.html#//simplegeo/occ/intf/SGLocationServiceDelegate" logicalPath="//simplegeo/occ/intf/SGLocationServiceDelegate">SGLocationServiceDelegate</a> to be notified
+when a HTTP request fails or succeeds.
+<!-- end abstract --></p>
+<p></p>
+<div class="declaration_indent">
+<pre>- (<!-- a logicalPath="//simplegeo/occ/cl/void //simplegeo/occ/tdef/void //simplegeo/occ/tag/void //simplegeo/occ/econst/void //simplegeo/occ/struct/void //simplegeo/occ/clconst/void //simplegeo/occ/intf/void" --><span class="type">void</span><!-- /a -->) <!-- a logicalPath="//simplegeo/occ/instm/addDelegate //simplegeo/occ/clm/addDelegate //simplegeo/occ/intfcm/addDelegate //simplegeo/occ/intfm/addDelegate //simplegeo/occ/func/addDelegate //simplegeo/occ/ftmplt/addDelegate //simplegeo/occ/defn/addDelegate //simplegeo/occ/macro/addDelegate" --><span class="function">addDelegate</span><!-- /a -->:(<!-- a logicalPath="//simplegeo/occ/cl/id //simplegeo/occ/tdef/id //simplegeo/occ/tag/id //simplegeo/occ/econst/id //simplegeo/occ/struct/id //simplegeo/occ/clconst/id //simplegeo/occ/intf/id" --><span class="type">id</span><!-- /a -->&lt;<span class="param">SGLocationServiceDelegate</span>&gt;)<!-- a logicalPath="//simplegeo/occ/econst/delegate //simplegeo/occ/data/delegate" --><span class="var">delegate</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt><code>delegate</code></dt>
+<dd><p>&#65532;The delegate to add.</p></dd>
+</dl>
+</div>
+<p></p>
+<hr>
+<!-- headerDoc=clm;  uid=//simplegeo/occ/clm/SGLocationService/callbackOnMainThread:;   name=SGLocationService::callbackOnMainThread: --><a name="//simplegeo/occ/clm/SGLocationService/callbackOnMainThread:"></a>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="callbackOnMainThread:">callbackOnMainThread:</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --></p>
+<p>&#65532;Determines whether or not to use the main thread to call delegate methods. Default is YES.
+<!-- end abstract --></p>
+<p></p>
+<div class="declaration_indent">
+<pre>+ (<!-- a logicalPath="//simplegeo/occ/cl/void //simplegeo/occ/tdef/void //simplegeo/occ/tag/void //simplegeo/occ/econst/void //simplegeo/occ/struct/void //simplegeo/occ/clconst/void //simplegeo/occ/intf/void" --><span class="type">void</span><!-- /a -->) <!-- a logicalPath="//simplegeo/occ/instm/callbackOnMainThread //simplegeo/occ/clm/callbackOnMainThread //simplegeo/occ/intfcm/callbackOnMainThread //simplegeo/occ/intfm/callbackOnMainThread //simplegeo/occ/func/callbackOnMainThread //simplegeo/occ/ftmplt/callbackOnMainThread //simplegeo/occ/defn/callbackOnMainThread //simplegeo/occ/macro/callbackOnMainThread" --><span class="function">callbackOnMainThread</span><!-- /a -->:(<!-- a logicalPath="//simplegeo/occ/cl/BOOL //simplegeo/occ/tdef/BOOL //simplegeo/occ/tag/BOOL //simplegeo/occ/econst/BOOL //simplegeo/occ/struct/BOOL //simplegeo/occ/clconst/BOOL //simplegeo/occ/intf/BOOL" --><span class="type">BOOL</span><!-- /a -->)<!-- a logicalPath="//simplegeo/occ/econst/callback //simplegeo/occ/data/callback" --><span class="var">callback</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt><code>callback</code></dt>
+<dd><p>&#65532;YES to have the delegate methods be called on the main thread; otherwise NO.</p></dd>
+</dl>
+</div>
+<h5 class="tight">
+<font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5>
+<!-- begin discussion --><p>&#65532;Since NSOpertaionQueue spawns new threads in order to fulfill its purpose, there are instances
+where it might be benefical to extend the life of that thread (e.g. loading objects into CoreData).
+</p>
+<p>There are only two delegate methods defined by <a href="../../../../Documentation/SGLocationService_h/Protocols/SGLocationServiceDelegate/index.html#//simplegeo/occ/intf/SGLocationServiceDelegate" logicalPath="//simplegeo/occ/intf/SGLocationServiceDelegate">SGLocationServiceDelegate</a>.
+If you plan on updating any UIViews, Apple recomends to us the main thread. So be careful. If you plan on updating
+a UITableView within your implementation of the delegate methods, be sure that this value is set to YES.
+<!-- end discussion -->
+</p>
+<p></p>
+<hr>
+<!-- headerDoc=instm;  uid=//simplegeo/occ/instm/SGLocationService/removeDelegate:;   name=SGLocationService::removeDelegate: --><a name="//simplegeo/occ/instm/SGLocationService/removeDelegate:"></a>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="removeDelegate:">removeDelegate:</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --></p>
+<p>&#65532;Removes the <a href="../../../../Documentation/SGLocationService_h/Protocols/SGLocationServiceDelegate/index.html#//simplegeo/occ/intf/SGLocationServiceDelegate" logicalPath="//simplegeo/occ/intf/SGLocationServiceDelegate">SGLocationServiceDelegate</a> from the group
+of delegates.
+<!-- end abstract --></p>
+<p></p>
+<div class="declaration_indent">
+<pre>- (<!-- a logicalPath="//simplegeo/occ/cl/void //simplegeo/occ/tdef/void //simplegeo/occ/tag/void //simplegeo/occ/econst/void //simplegeo/occ/struct/void //simplegeo/occ/clconst/void //simplegeo/occ/intf/void" --><span class="type">void</span><!-- /a -->) <!-- a logicalPath="//simplegeo/occ/instm/removeDelegate //simplegeo/occ/clm/removeDelegate //simplegeo/occ/intfcm/removeDelegate //simplegeo/occ/intfm/removeDelegate //simplegeo/occ/func/removeDelegate //simplegeo/occ/ftmplt/removeDelegate //simplegeo/occ/defn/removeDelegate //simplegeo/occ/macro/removeDelegate" --><span class="function">removeDelegate</span><!-- /a -->:(<!-- a logicalPath="//simplegeo/occ/cl/id //simplegeo/occ/tdef/id //simplegeo/occ/tag/id //simplegeo/occ/econst/id //simplegeo/occ/struct/id //simplegeo/occ/clconst/id //simplegeo/occ/intf/id" --><span class="type">id</span><!-- /a -->&lt;<span class="param">SGLocationServiceDelegate</span>&gt;)<!-- a logicalPath="//simplegeo/occ/econst/delegate //simplegeo/occ/data/delegate" --><span class="var">delegate</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt><code>delegate</code></dt>
+<dd><p>&#65532;The delegate to remove.</p></dd>
+</dl>
+</div>
+<p></p>
+<hr>
+<!-- headerDoc=clm;  uid=//simplegeo/occ/clm/SGLocationService/sharedLocationService;   name=SGLocationService::sharedLocationService --><a name="//simplegeo/occ/clm/SGLocationService/sharedLocationService"></a>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="sharedLocationService">sharedLocationService</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --></p>
+<p>&#65532; The shared instance of <a href="../../../../Documentation/SGLocationService_h/Classes/SGLocationService/index.html#//simplegeo/occ/cl/SGLocationService" logicalPath="//simplegeo/occ/cl/SGLocationService">SGLocationService</a>.
+<!-- end abstract --></p>
+<p></p>
+<div class="declaration_indent">
+<pre>+ (<a href="../../../../Documentation/SGLocationService_h/Classes/SGLocationService/index.html#//simplegeo/occ/cl/SGLocationService" logicalPath="//simplegeo/occ/cl/SGLocationService"><span class="type">SGLocationService</span></a><span class="type">*</span>) <!-- a logicalPath="//simplegeo/occ/econst/sharedLocationService //simplegeo/occ/data/sharedLocationService" --><span class="var">sharedLocationService</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5>
+<p><!-- begin return value -->&#65532; The shared instance of <a href="../../../../Documentation/SGLocationService_h/Classes/SGLocationService/index.html#//simplegeo/occ/cl/SGLocationService" logicalPath="//simplegeo/occ/cl/SGLocationService">SGLocationService</a>.
+
+<!-- end return value --></p>
+<p></p>
+<a name="HeaderDoc_props"></a>
+<h2>Properties</h2>
+<dl>
+<dt><tt><a href="index.html#//simplegeo/occ/instp/SGLocationService/HTTPAuthorizer" target="_top">HTTPAuthorizer</a></tt></dt>
+<dd><p>The type of authorization to apply to all HTTP requests.
+</p></dd>
+<dt><tt><a href="index.html#//simplegeo/occ/instp/SGLocationService/operationQueue" target="_top">operationQueue</a></tt></dt>
+<dd><p>The operation queue that is used to send HTTP requests.
+</p></dd>
+</dl>
+<hr>
+<!-- headerDoc=instp;  uid=//simplegeo/occ/instp/SGLocationService/HTTPAuthorizer;   name=SGLocationService::HTTPAuthorizer --><a name="//simplegeo/occ/instp/SGLocationService/HTTPAuthorizer"></a>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="HTTPAuthorizer">HTTPAuthorizer</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --></p>
+<p>The type of authorization to apply to all HTTP requests.
+<!-- end abstract --></p>
+<p></p>
+<div class="declaration_indent">
+<pre>@property (
+    <span class="param">nonatomic</span>,
+    <span class="param">assign</span>) <!-- a logicalPath="//simplegeo/occ/cl/id //simplegeo/occ/tdef/id //simplegeo/occ/tag/id //simplegeo/occ/econst/id //simplegeo/occ/struct/id //simplegeo/occ/clconst/id //simplegeo/occ/intf/id" --><span class="type">id</span><!-- /a -->&lt;<span class="template">SGAuthorization</span>&gt; <!-- a logicalPath="//simplegeo/occ/econst/HTTPAuthorizer //simplegeo/occ/data/HTTPAuthorizer" --><span class="var">HTTPAuthorizer</span><!-- /a -->; </pre>
+</div>
+<p></p>
+<hr>
+<!-- headerDoc=instp;  uid=//simplegeo/occ/instp/SGLocationService/operationQueue;   name=SGLocationService::operationQueue --><a name="//simplegeo/occ/instp/SGLocationService/operationQueue"></a>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="operationQueue">operationQueue</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --></p>
+<p>The operation queue that is used to send HTTP requests.
+<!-- end abstract --></p>
+<p></p>
+<div class="declaration_indent">
+<pre>@property (
+    <span class="param">nonatomic</span>,
+    <span class="param">readonly</span>) <!-- a logicalPath="//simplegeo/occ/cl/NSOperationQueue //simplegeo/occ/tdef/NSOperationQueue //simplegeo/occ/tag/NSOperationQueue //simplegeo/occ/econst/NSOperationQueue //simplegeo/occ/struct/NSOperationQueue //simplegeo/occ/clconst/NSOperationQueue //simplegeo/occ/intf/NSOperationQueue" --><span class="type">NSOperationQueue</span><!-- /a --><span class="type">*</span> <!-- a logicalPath="//simplegeo/occ/econst/operationQueue //simplegeo/occ/data/operationQueue" --><span class="var">operationQueue</span><!-- /a -->; </pre>
+</div>
+<p></p>
+<p><!-- start of footer -->
+
+<!-- end of footer -->
+</p>
+<p>&copy; SimpleGeo Last Updated: 12/17/2009
+</p>
+</div>
+</body>
+</html>

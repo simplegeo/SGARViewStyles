@@ -1,0 +1,267 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/1998/REC-html40-19980424/loose.dtd">
+<html>
+<head>
+<title>SGAnnotationViewContainer</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf8">
+<meta name="generator" content="HeaderDoc">
+<meta name="xcode-display" content="render">
+<style><!--
+#tocMenu {
+		display: block;
+		position:fixed;
+		top:0px;
+		left:0px;
+		width:210px;
+		height:100%;
+		background:transparent;
+}
+#bodyText {
+		margin-left: 210px;
+}
+--></style>
+<script language="JavaScript" type="text/javascript"><!--
+function hidetoc() {
+	var origURL = parent.document.URL;
+	var contentURL = origURL.substring(origURL.indexOf('?')+1, origURL.length);
+	if (contentURL.length == origURL.length) {
+		jumpPos = origURL.substring(origURL.indexOf('#')+1, origURL.length);
+	}
+	if (contentURL == "hidetoc") {
+		var toc = document.getElementById('tocMenu');
+		var body = document.getElementById('bodyText');
+		if (toc && body) {
+			toc.style.display = 'none';
+			body.style.marginLeft = '0px';
+		}
+	}
+}
+--></script><style type="text/css"><!--.keyword {background:#ffffff; color:#761550;}.template {background:#ffffff; color:#761550;}.number {background: #ffffff; color:#0000ff;}.function {background:#ffffff; color:#000000;}.string {background: #ffffff; color:#891315;}.preprocessor {background:#ffffff; color:#236e25}.comment {background:#ffffff; color:#236e25}.char {background: #ffffff; color:#0000ff;}.var {background:#ffffff; color:#000000;}.type {background:#ffffff; color:#761550;}.param {background:#ffffff; color:#000000;}a:link {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #0000ff;}a:visited {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #0000ff;}a:visited:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}a:active {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}a:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}h4 {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: tiny; font-weight: bold;}body {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: 10pt;}.list_indent { margin-left: 40px; }.declaration_indent { margin-left: 40px; }.param_indent { margin-left: 40px; }.group_indent { margin-left: 40px; }.group_desc_indent { margin-left: 20px; }.warning_indent { margin-left: 40px; }.important_indent { margin-left: 40px; }.hd_tocAccess { font-style: italic; font-size: 10px; font-weight: normal; color: #303030; }--></style>
+</head>
+<body bgcolor="#ffffff" onload="hidetoc();">
+
+<!-- headerDoc=cl; uid=//simplegeo/occ/cl/SGAnnotationViewContainer;  name=SGAnnotationViewContainer-->
+<a name="//simplegeo/occ/cl/SGAnnotationViewContainer"></a><div id="tocMenu">
+<iframe id="toc_content" name="toc_content" src="toc.html" width="210" height="100%" align="left" frameborder="0">This document set is best viewed in a browser that supports iFrames.</iframe>
+</div>
+<div id="bodyText">
+<!-- start of header -->
+
+<!-- end of header -->
+<a name="top"></a>
+<hr>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h1><a name="SGAnnotationViewContainer">SGAnnotationViewContainer</a></h1>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --></p>
+<p>Containers provide a storage structure for <!-- a logicalPath="//simplegeo/ooc/cl/SGRecordAnnotationView" -->SGRecordAnnotationViews<!-- /a --> in the AR view.
+<!-- end abstract --></p>
+<p><b>Superclass:</b> <!-- a logicalPath="//simplegeo/occ/cl/UIButton" -->UIButton<!-- /a --><br><b>Declared In:</b> <a href="../../index.html" target="_top">SGAnnotationViewContainer.h</a><br></p>
+<div class="declaration_indent">
+</div>
+<h5 class="tight">
+<font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5>
+<!-- begin discussion --><p>The main intention of a container is to allow the user to be able to separate records from each other. Because there can be
+a high volume of records per location, users can drag views into containers until they reach the desired view.
+</p>
+<p>Containers are registered with the AR view by <!-- a logicalPath="//simplegeo/ooc/instm/SGChromeManager/addContainer:" -->addContainer:<!-- /a --> .
+</p>
+<!-- end discussion -->
+<p></p>
+<hr>
+<br><a name="HeaderDoc_methods"></a>
+<h2>Methods</h2>
+<dl>
+<dt><tt><a href="index.html#//simplegeo/occ/instm/SGAnnotationViewContainer/addRecordAnnotationViews:" target="_top">-addRecordAnnotationViews:</a></tt></dt>
+<dd><p>&#65532;Adds an array of <!-- a logicalPath="//simplegeo/ooc/cl/SGRecordAnnotationView" -->annotation views<!-- /a -->  to the container.
+</p></dd>
+<dt><tt><a href="index.html#//simplegeo/occ/instm/SGAnnotationViewContainer/getRecordAnnotations" target="_top">-getRecordAnnotations</a></tt></dt>
+<dd><p>&#65532;Returns the <!-- a logicalPath="//simplegeo/ooc/cl/SGRecordAnnotation" -->SGRecordAnnotations<!-- /a -->  of all annotation views held by the container.
+</p></dd>
+<dt><tt><a href="index.html#//simplegeo/occ/instm/SGAnnotationViewContainer/getRecordAnnotationViews" target="_top">-getRecordAnnotationViews</a></tt></dt>
+<dd><p>&#65532; Returns the <!-- a logicalPath="//simplegeo/ooc/cl/SGRecordAnnotationView" -->record views<!-- /a -->  associated with the container.
+</p></dd>
+<dt><tt><a href="index.html#//simplegeo/occ/instm/SGAnnotationViewContainer/isEmpty" target="_top">-isEmpty</a></tt></dt>
+<dd><p>&#65532;Determines whether the container is empty.
+</p></dd>
+<dt><tt><a href="index.html#//simplegeo/occ/instm/SGAnnotationViewContainer/removeAllAnnotationViews" target="_top">-removeAllAnnotationViews</a></tt></dt>
+<dd><p>&#65532; Removes all annotations views held by the container.
+</p></dd>
+<dt><tt><a href="index.html#//simplegeo/occ/instm/SGAnnotationViewContainer/removeAnnotationView:" target="_top">-removeAnnotationView:</a></tt></dt>
+<dd><p>&#65532;Removes a <!-- a logicalPath="//simplegeo/ooc/cl/SGRecordAnnotationView" -->annotation view<!-- /a -->  from the container.
+</p></dd>
+<dt><tt><a href="index.html#//simplegeo/occ/instm/SGAnnotationViewContainer/shouldAddViews:" target="_top">-shouldAddViews:</a></tt></dt>
+<dd><p>This method is called before annotation views are added to the container. The default return
+value is YES.
+</p></dd>
+</dl>
+<hr>
+<!-- headerDoc=instm;  uid=//simplegeo/occ/instm/SGAnnotationViewContainer/addRecordAnnotationViews:;   name=SGAnnotationViewContainer::addRecordAnnotationViews: --><a name="//simplegeo/occ/instm/SGAnnotationViewContainer/addRecordAnnotationViews:"></a>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="addRecordAnnotationViews:">addRecordAnnotationViews:</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --></p>
+<p>&#65532;Adds an array of <!-- a logicalPath="//simplegeo/ooc/cl/SGRecordAnnotationView" -->annotation views<!-- /a --> to the container.
+<!-- end abstract --></p>
+<p></p>
+<div class="declaration_indent">
+<pre>- (<!-- a logicalPath="//simplegeo/occ/cl/void //simplegeo/occ/tdef/void //simplegeo/occ/tag/void //simplegeo/occ/econst/void //simplegeo/occ/struct/void //simplegeo/occ/clconst/void //simplegeo/occ/intf/void" --><span class="type">void</span><!-- /a -->) <!-- a logicalPath="//simplegeo/occ/instm/addRecordAnnotationViews //simplegeo/occ/clm/addRecordAnnotationViews //simplegeo/occ/intfcm/addRecordAnnotationViews //simplegeo/occ/intfm/addRecordAnnotationViews //simplegeo/occ/func/addRecordAnnotationViews //simplegeo/occ/ftmplt/addRecordAnnotationViews //simplegeo/occ/defn/addRecordAnnotationViews //simplegeo/occ/macro/addRecordAnnotationViews" --><span class="function">addRecordAnnotationViews</span><!-- /a -->:(<!-- a logicalPath="//simplegeo/occ/cl/NSArray //simplegeo/occ/tdef/NSArray //simplegeo/occ/tag/NSArray //simplegeo/occ/econst/NSArray //simplegeo/occ/struct/NSArray //simplegeo/occ/clconst/NSArray //simplegeo/occ/intf/NSArray" --><span class="type">NSArray</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//simplegeo/occ/econst/view //simplegeo/occ/data/view" --><span class="var">view</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt><code>view</code></dt>
+<dd><p>&#65532;The array of views to add to the container.</p></dd>
+</dl>
+</div>
+<p></p>
+<hr>
+<!-- headerDoc=instm;  uid=//simplegeo/occ/instm/SGAnnotationViewContainer/getRecordAnnotations;   name=SGAnnotationViewContainer::getRecordAnnotations --><a name="//simplegeo/occ/instm/SGAnnotationViewContainer/getRecordAnnotations"></a>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="getRecordAnnotations">getRecordAnnotations</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --></p>
+<p>&#65532;Returns the <!-- a logicalPath="//simplegeo/ooc/cl/SGRecordAnnotation" -->SGRecordAnnotations<!-- /a --> of all annotation views held by the container.
+<!-- end abstract --></p>
+<p></p>
+<div class="declaration_indent">
+<pre>- (<!-- a logicalPath="//simplegeo/occ/cl/NSArray //simplegeo/occ/tdef/NSArray //simplegeo/occ/tag/NSArray //simplegeo/occ/econst/NSArray //simplegeo/occ/struct/NSArray //simplegeo/occ/clconst/NSArray //simplegeo/occ/intf/NSArray" --><span class="type">NSArray</span><!-- /a --><span class="type">*</span>) <!-- a logicalPath="//simplegeo/occ/econst/getRecordAnnotations //simplegeo/occ/data/getRecordAnnotations" --><span class="var">getRecordAnnotations</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5>
+<p><!-- begin return value -->&#65532;The annotations within the container.
+
+<!-- end return value --></p>
+<p></p>
+<hr>
+<!-- headerDoc=instm;  uid=//simplegeo/occ/instm/SGAnnotationViewContainer/getRecordAnnotationViews;   name=SGAnnotationViewContainer::getRecordAnnotationViews --><a name="//simplegeo/occ/instm/SGAnnotationViewContainer/getRecordAnnotationViews"></a>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="getRecordAnnotationViews">getRecordAnnotationViews</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --></p>
+<p>&#65532; Returns the <!-- a logicalPath="//simplegeo/ooc/cl/SGRecordAnnotationView" -->record views<!-- /a --> associated with the container.
+<!-- end abstract --></p>
+<p></p>
+<div class="declaration_indent">
+<pre>- (<!-- a logicalPath="//simplegeo/occ/cl/NSArray //simplegeo/occ/tdef/NSArray //simplegeo/occ/tag/NSArray //simplegeo/occ/econst/NSArray //simplegeo/occ/struct/NSArray //simplegeo/occ/clconst/NSArray //simplegeo/occ/intf/NSArray" --><span class="type">NSArray</span><!-- /a --><span class="type">*</span>) <!-- a logicalPath="//simplegeo/occ/econst/getRecordAnnotationViews //simplegeo/occ/data/getRecordAnnotationViews" --><span class="var">getRecordAnnotationViews</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5>
+<p><!-- begin return value -->The record views associated with the container.&#65532;
+
+<!-- end return value --></p>
+<p></p>
+<hr>
+<!-- headerDoc=instm;  uid=//simplegeo/occ/instm/SGAnnotationViewContainer/isEmpty;   name=SGAnnotationViewContainer::isEmpty --><a name="//simplegeo/occ/instm/SGAnnotationViewContainer/isEmpty"></a>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="isEmpty">isEmpty</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --></p>
+<p>&#65532;Determines whether the container is empty.
+<!-- end abstract --></p>
+<p></p>
+<div class="declaration_indent">
+<pre>- (<!-- a logicalPath="//simplegeo/occ/cl/BOOL //simplegeo/occ/tdef/BOOL //simplegeo/occ/tag/BOOL //simplegeo/occ/econst/BOOL //simplegeo/occ/struct/BOOL //simplegeo/occ/clconst/BOOL //simplegeo/occ/intf/BOOL" --><span class="type">BOOL</span><!-- /a -->) <!-- a logicalPath="//simplegeo/occ/econst/isEmpty //simplegeo/occ/data/isEmpty" --><span class="var">isEmpty</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5>
+<p><!-- begin return value -->&#65532;YES if the container is empty; otherwise NO.
+
+<!-- end return value --></p>
+<p></p>
+<hr>
+<!-- headerDoc=instm;  uid=//simplegeo/occ/instm/SGAnnotationViewContainer/removeAllAnnotationViews;   name=SGAnnotationViewContainer::removeAllAnnotationViews --><a name="//simplegeo/occ/instm/SGAnnotationViewContainer/removeAllAnnotationViews"></a>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="removeAllAnnotationViews">removeAllAnnotationViews</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --></p>
+<p>&#65532; Removes all annotations views held by the container.
+<!-- end abstract --></p>
+<p></p>
+<div class="declaration_indent">
+<pre>- (<!-- a logicalPath="//simplegeo/occ/cl/void //simplegeo/occ/tdef/void //simplegeo/occ/tag/void //simplegeo/occ/econst/void //simplegeo/occ/struct/void //simplegeo/occ/clconst/void //simplegeo/occ/intf/void" --><span class="type">void</span><!-- /a -->) <!-- a logicalPath="//simplegeo/occ/econst/removeAllAnnotationViews //simplegeo/occ/data/removeAllAnnotationViews" --><span class="var">removeAllAnnotationViews</span><!-- /a -->; </pre>
+</div>
+<p></p>
+<hr>
+<!-- headerDoc=instm;  uid=//simplegeo/occ/instm/SGAnnotationViewContainer/removeAnnotationView:;   name=SGAnnotationViewContainer::removeAnnotationView: --><a name="//simplegeo/occ/instm/SGAnnotationViewContainer/removeAnnotationView:"></a>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="removeAnnotationView:">removeAnnotationView:</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --></p>
+<p>&#65532;Removes a <!-- a logicalPath="//simplegeo/ooc/cl/SGRecordAnnotationView" -->annotation view<!-- /a --> from the container.
+<!-- end abstract --></p>
+<p></p>
+<div class="declaration_indent">
+<pre>- (<!-- a logicalPath="//simplegeo/occ/cl/void //simplegeo/occ/tdef/void //simplegeo/occ/tag/void //simplegeo/occ/econst/void //simplegeo/occ/struct/void //simplegeo/occ/clconst/void //simplegeo/occ/intf/void" --><span class="type">void</span><!-- /a -->) <!-- a logicalPath="//simplegeo/occ/instm/removeAnnotationView //simplegeo/occ/clm/removeAnnotationView //simplegeo/occ/intfcm/removeAnnotationView //simplegeo/occ/intfm/removeAnnotationView //simplegeo/occ/func/removeAnnotationView //simplegeo/occ/ftmplt/removeAnnotationView //simplegeo/occ/defn/removeAnnotationView //simplegeo/occ/macro/removeAnnotationView" --><span class="function">removeAnnotationView</span><!-- /a -->:(<a href="../../../../Documentation/SGAnnotationView_h/Classes/SGAnnotationView/index.html#//simplegeo/occ/cl/SGAnnotationView" logicalPath="//simplegeo/occ/cl/SGAnnotationView"><span class="type">SGAnnotationView</span></a><span class="type">*</span>)<!-- a logicalPath="//simplegeo/occ/econst/view //simplegeo/occ/data/view" --><span class="var">view</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt><code>view</code></dt>
+<dd><p>&#65532;The view to remove.</p></dd>
+</dl>
+</div>
+<p></p>
+<hr>
+<!-- headerDoc=instm;  uid=//simplegeo/occ/instm/SGAnnotationViewContainer/shouldAddViews:;   name=SGAnnotationViewContainer::shouldAddViews: --><a name="//simplegeo/occ/instm/SGAnnotationViewContainer/shouldAddViews:"></a>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="shouldAddViews:">shouldAddViews:</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --></p>
+<p>This method is called before annotation views are added to the container. The default return
+value is YES.
+<!-- end abstract --></p>
+<p></p>
+<div class="declaration_indent">
+<pre>- (<!-- a logicalPath="//simplegeo/occ/cl/BOOL //simplegeo/occ/tdef/BOOL //simplegeo/occ/tag/BOOL //simplegeo/occ/econst/BOOL //simplegeo/occ/struct/BOOL //simplegeo/occ/clconst/BOOL //simplegeo/occ/intf/BOOL" --><span class="type">BOOL</span><!-- /a -->) <!-- a logicalPath="//simplegeo/occ/instm/shouldAddViews //simplegeo/occ/clm/shouldAddViews //simplegeo/occ/intfcm/shouldAddViews //simplegeo/occ/intfm/shouldAddViews //simplegeo/occ/func/shouldAddViews //simplegeo/occ/ftmplt/shouldAddViews //simplegeo/occ/defn/shouldAddViews //simplegeo/occ/macro/shouldAddViews" --><span class="function">shouldAddViews</span><!-- /a -->:(<!-- a logicalPath="//simplegeo/occ/cl/NSArray //simplegeo/occ/tdef/NSArray //simplegeo/occ/tag/NSArray //simplegeo/occ/econst/NSArray //simplegeo/occ/struct/NSArray //simplegeo/occ/clconst/NSArray //simplegeo/occ/intf/NSArray" --><span class="type">NSArray</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//simplegeo/occ/econst/views //simplegeo/occ/data/views" --><span class="var">views</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt><code>views</code></dt>
+<dd><p>&#65532;The <!-- a logicalPath="//simplegeo/ooc/cl/SGAnnotationView" -->annotation views<!-- /a -->  that will be added to
+the container.</p></dd>
+</dl>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5>
+<p><!-- begin return value -->&#65532;YES if the views should be added to the container. Otherwise, NO.
+
+<!-- end return value --></p>
+<p></p>
+<a name="HeaderDoc_props"></a>
+<h2>Properties</h2>
+<dl>
+<dt><tt><a href="index.html#//simplegeo/occ/instp/SGAnnotationViewContainer/arView" target="_top">arView</a></tt></dt>
+<dd><p>The <!-- a logicalPath="//simplegeo/ooc/cl/SGARView" -->SGARView<!-- /a -->  that controls the container.
+</p></dd>
+</dl>
+<hr>
+<!-- headerDoc=instp;  uid=//simplegeo/occ/instp/SGAnnotationViewContainer/arView;   name=SGAnnotationViewContainer::arView --><a name="//simplegeo/occ/instp/SGAnnotationViewContainer/arView"></a>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="arView">arView</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --></p>
+<p>The <!-- a logicalPath="//simplegeo/ooc/cl/SGARView" -->SGARView<!-- /a --> that controls the container.
+<!-- end abstract --></p>
+<p></p>
+<div class="declaration_indent">
+<pre>@property (
+    <span class="param">nonatomic</span>,
+    <span class="param">readonly</span>) <a href="../../../../Documentation/SGARView_h/Classes/SGARView/index.html#//simplegeo/occ/cl/SGARView" logicalPath="//simplegeo/occ/cl/SGARView"><span class="type">SGARView</span></a><span class="type">*</span> <!-- a logicalPath="//simplegeo/occ/econst/arView //simplegeo/occ/data/arView" --><span class="var">arView</span><!-- /a -->; </pre>
+</div>
+<p></p>
+<p><!-- start of footer -->
+
+<!-- end of footer -->
+</p>
+<p>&copy; SimpleGeo Last Updated: 12/17/2009
+</p>
+</div>
+</body>
+</html>

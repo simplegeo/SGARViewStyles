@@ -1,0 +1,284 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/1998/REC-html40-19980424/loose.dtd">
+<html>
+<head>
+<title>SGRecord</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf8">
+<meta name="generator" content="HeaderDoc">
+<meta name="xcode-display" content="render">
+<style><!--
+#tocMenu {
+		display: block;
+		position:fixed;
+		top:0px;
+		left:0px;
+		width:210px;
+		height:100%;
+		background:transparent;
+}
+#bodyText {
+		margin-left: 210px;
+}
+--></style>
+<script language="JavaScript" type="text/javascript"><!--
+function hidetoc() {
+	var origURL = parent.document.URL;
+	var contentURL = origURL.substring(origURL.indexOf('?')+1, origURL.length);
+	if (contentURL.length == origURL.length) {
+		jumpPos = origURL.substring(origURL.indexOf('#')+1, origURL.length);
+	}
+	if (contentURL == "hidetoc") {
+		var toc = document.getElementById('tocMenu');
+		var body = document.getElementById('bodyText');
+		if (toc && body) {
+			toc.style.display = 'none';
+			body.style.marginLeft = '0px';
+		}
+	}
+}
+--></script><style type="text/css"><!--.keyword {background:#ffffff; color:#761550;}.template {background:#ffffff; color:#761550;}.number {background: #ffffff; color:#0000ff;}.function {background:#ffffff; color:#000000;}.string {background: #ffffff; color:#891315;}.preprocessor {background:#ffffff; color:#236e25}.comment {background:#ffffff; color:#236e25}.char {background: #ffffff; color:#0000ff;}.var {background:#ffffff; color:#000000;}.type {background:#ffffff; color:#761550;}.param {background:#ffffff; color:#000000;}a:link {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #0000ff;}a:visited {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #0000ff;}a:visited:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}a:active {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}a:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}h4 {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: tiny; font-weight: bold;}body {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: 10pt;}.list_indent { margin-left: 40px; }.declaration_indent { margin-left: 40px; }.param_indent { margin-left: 40px; }.group_indent { margin-left: 40px; }.group_desc_indent { margin-left: 20px; }.warning_indent { margin-left: 40px; }.important_indent { margin-left: 40px; }.hd_tocAccess { font-style: italic; font-size: 10px; font-weight: normal; color: #303030; }--></style>
+</head>
+<body bgcolor="#ffffff" onload="hidetoc();">
+
+<!-- headerDoc=cl; uid=//simplegeo/occ/cl/SGRecord;  name=SGRecord-->
+<a name="//simplegeo/occ/cl/SGRecord"></a><div id="tocMenu">
+<iframe id="toc_content" name="toc_content" src="toc.html" width="210" height="100%" align="left" frameborder="0">This document set is best viewed in a browser that supports iFrames.</iframe>
+</div>
+<div id="bodyText">
+<!-- start of header -->
+
+<!-- end of header -->
+<a name="top"></a>
+<hr>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h1><a name="SGRecord">SGRecord</a></h1>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --></p>
+<p>Stores location data for any particular record.
+<!-- end abstract --></p>
+<p><b>Conforms&nbsp;to:</b> <a href="../../../../Documentation/SGRecordAnnotation_h/Protocols/SGRecordAnnotation/index.html#//simplegeo/occ/intf/SGRecordAnnotation" logicalPath="//simplegeo/occ/intf/SGRecordAnnotation">SGRecordAnnotation</a><br><b>Superclass:</b> <!-- a logicalPath="//simplegeo/occ/cl/NSObject" -->NSObject<!-- /a --><br><b>Declared In:</b> <a href="../../index.html" target="_top">SGRecord.h</a><br></p>
+<div class="declaration_indent">
+</div>
+<h5 class="tight">
+<font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5>
+<!-- begin discussion --><p>This class provides the standard functionality that allows a record from SimpleGeo to be placed inside of a
+<!-- a logicalPath="//simplegeo/ooc/cl/SGARView" -->SGARView<!-- /a -->  while acting as a stand-alone object for record retrieval and updates
+used by <!-- a logicalPath="//simplegeo/ooc/cl/SGLocationService" -->SGLocationService<!-- /a --> . This object is valid wherever 
+<!-- a logicalPath="//simplegeo/ooc/intf/SGRecordAnnotation" -->SGRecordAnnotation<!-- /a -->  or <!-- a logicalPath="//simplegeo/ooc/intf/SGAnnotation" -->//simplegeo/ooc/intf/SGAnnotation<!-- /a --> is required.
+</p>
+<p>It is recommended that this class be subclassed because most records stored in SimpleGeo will have user-defined properties. See 
+<!-- a logicalPath="//simplegeo/ooc/cl/SGGeoJSONEncoder" -->SGGeoJSONEncoder<!-- /a -->.
+<!-- end discussion -->
+</p>
+<p></p>
+<hr>
+<br><a name="HeaderDoc_methods"></a>
+<h2>Methods</h2>
+<dl>
+<dt><tt><a href="index.html#//simplegeo/occ/instm/SGRecord/propertiesForRecord" target="_top">-propertiesForRecord</a></tt></dt>
+<dd><p>Returns a dictionary representation of the non-user defined properites. See <!-- a logicalPath="&#65532;//simplegeo/ooc/instm/SGRecordAnnotation/propertiesForRecord" -->propertiesForRecord<!-- /a --> . 
+</p></dd>
+<dt><tt><a href="index.html#//simplegeo/occ/instm/SGRecord/updateRecordWithGeoJSONDictionary:" target="_top">-updateRecordWithGeoJSONDictionary:</a></tt></dt>
+<dd><p>Updates the record with a dictionary. See <!-- a logicalPath="//simplegeo/ooc/instm/SGRecordAnnotation/updateRecordWithGeoJSONDictionary:" -->updateRecordWithGeoJSONDictionary:<!-- /a --> . 
+</p></dd>
+</dl>
+<hr>
+<!-- headerDoc=instm;  uid=//simplegeo/occ/instm/SGRecord/propertiesForRecord;   name=SGRecord::propertiesForRecord --><a name="//simplegeo/occ/instm/SGRecord/propertiesForRecord"></a>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="propertiesForRecord">propertiesForRecord</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --></p>
+<p>Returns a dictionary representation of the non-user defined properites. See <!-- a logicalPath="&#65532;//simplegeo/ooc/instm/SGRecordAnnotation/propertiesForRecord" -->propertiesForRecord<!-- /a -->. 
+<!-- end abstract --></p>
+<p></p>
+<div class="declaration_indent">
+<pre>- (<!-- a logicalPath="//simplegeo/occ/cl/NSDictionary //simplegeo/occ/tdef/NSDictionary //simplegeo/occ/tag/NSDictionary //simplegeo/occ/econst/NSDictionary //simplegeo/occ/struct/NSDictionary //simplegeo/occ/clconst/NSDictionary //simplegeo/occ/intf/NSDictionary" --><span class="type">NSDictionary</span><!-- /a --><span class="type">*</span>) <!-- a logicalPath="//simplegeo/occ/econst/propertiesForRecord //simplegeo/occ/data/propertiesForRecord" --><span class="var">propertiesForRecord</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5>
+<p><!-- begin return value -->The dictionary representation of the properties for this record.
+
+<!-- end return value --></p>
+<h5 class="tight">
+<font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5>
+<!-- begin discussion --><p>&#65532;The default implementaion will return a dictionary with id, layer, type, expires and created defined as keys with the
+proper values attached to them. Be sure to call [super propertiesForRecord] to take advantage of this classes default implementation.
+<!-- end discussion -->
+</p>
+<p></p>
+<hr>
+<!-- headerDoc=instm;  uid=//simplegeo/occ/instm/SGRecord/updateRecordWithGeoJSONDictionary:;   name=SGRecord::updateRecordWithGeoJSONDictionary: --><a name="//simplegeo/occ/instm/SGRecord/updateRecordWithGeoJSONDictionary:"></a>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="updateRecordWithGeoJSONDictionary:">updateRecordWithGeoJSONDictionary:</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --></p>
+<p>Updates the record with a dictionary. See <!-- a logicalPath="//simplegeo/ooc/instm/SGRecordAnnotation/updateRecordWithGeoJSONDictionary:" -->updateRecordWithGeoJSONDictionary:<!-- /a -->. 
+<!-- end abstract --></p>
+<p></p>
+<div class="declaration_indent">
+<pre>- (<!-- a logicalPath="//simplegeo/occ/cl/void //simplegeo/occ/tdef/void //simplegeo/occ/tag/void //simplegeo/occ/econst/void //simplegeo/occ/struct/void //simplegeo/occ/clconst/void //simplegeo/occ/intf/void" --><span class="type">void</span><!-- /a -->) <!-- a logicalPath="//simplegeo/occ/instm/updateRecordWithGeoJSONDictionary //simplegeo/occ/clm/updateRecordWithGeoJSONDictionary //simplegeo/occ/intfcm/updateRecordWithGeoJSONDictionary //simplegeo/occ/intfm/updateRecordWithGeoJSONDictionary //simplegeo/occ/func/updateRecordWithGeoJSONDictionary //simplegeo/occ/ftmplt/updateRecordWithGeoJSONDictionary //simplegeo/occ/defn/updateRecordWithGeoJSONDictionary //simplegeo/occ/macro/updateRecordWithGeoJSONDictionary" --><span class="function">updateRecordWithGeoJSONDictionary</span><!-- /a -->:(<!-- a logicalPath="//simplegeo/occ/cl/NSDictionary //simplegeo/occ/tdef/NSDictionary //simplegeo/occ/tag/NSDictionary //simplegeo/occ/econst/NSDictionary //simplegeo/occ/struct/NSDictionary //simplegeo/occ/clconst/NSDictionary //simplegeo/occ/intf/NSDictionary" --><span class="type">NSDictionary</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//simplegeo/occ/econst/dictionary //simplegeo/occ/data/dictionary" --><span class="var">dictionary</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight">
+<font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5>
+<!-- begin discussion --><p>The default implementation will update all of the non-user defined properties including the coordinate. Subclasses
+are encouraged to override this method to allow user-defined properties to be extracted from the dictionary. Be sure to call
+[super updateRecordWithGeoJSONDictionary:dictionary] to allow this class to assign the non-user defined values to the record.
+<!-- end discussion -->
+</p>
+<p></p>
+<a name="HeaderDoc_props"></a>
+<h2>Properties</h2>
+<dl>
+<dt><tt><a href="index.html#//simplegeo/occ/instp/SGRecord/creationTimeInterval" target="_top">creationTimeInterval</a></tt></dt>
+<dd><p>See <!-- a logicalPath="//simplegeo/ooc/instp/SGRecordAnnotation/creationTimeInterval" -->SGRecordAnnotation<!-- /a --> 
+</p></dd>
+<dt><tt><a href="index.html#//simplegeo/occ/instp/SGRecord/expirationTimeInterval" target="_top">expirationTimeInterval</a></tt></dt>
+<dd><p>See <!-- a logicalPath="//simplegeo/ooc/instp/SGRecordAnnotation/expirationTimeInterval" -->SGRecordAnnotation<!-- /a --> 
+</p></dd>
+<dt><tt><a href="index.html#//simplegeo/occ/instp/SGRecord/latitude" target="_top">latitude</a></tt></dt>
+<dd><p>The latitude of the record.
+</p></dd>
+<dt><tt><a href="index.html#//simplegeo/occ/instp/SGRecord/layer" target="_top">layer</a></tt></dt>
+<dd><p>See <!-- a logicalPath="//simplegeo/ooc/inspt/SGRecordAnnotation/layer" -->SGRecordAnnotation<!-- /a --> 
+</p></dd>
+<dt><tt><a href="index.html#//simplegeo/occ/instp/SGRecord/longitude" target="_top">longitude</a></tt></dt>
+<dd><p>The longitude of the record.
+</p></dd>
+<dt><tt><a href="index.html#//simplegeo/occ/instp/SGRecord/recordId" target="_top">recordId</a></tt></dt>
+<dd><p>See <!-- a logicalPath="//simplegeo/ooc/instp/SGRecordAnnotaiton/recordId" -->SGRecordAnnotation<!-- /a --> 
+</p></dd>
+<dt><tt><a href="index.html#//simplegeo/occ/instp/SGRecord/type" target="_top">type</a></tt></dt>
+<dd><p>See <!-- a logicalPath="//simplegeo/ooc/instp/SGRecordAnnotation/type" -->SGRecordAnnotation<!-- /a --> 
+</p></dd>
+</dl>
+<hr>
+<!-- headerDoc=instp;  uid=//simplegeo/occ/instp/SGRecord/creationTimeInterval;   name=SGRecord::creationTimeInterval --><a name="//simplegeo/occ/instp/SGRecord/creationTimeInterval"></a>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="creationTimeInterval">creationTimeInterval</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --></p>
+<p>See <!-- a logicalPath="//simplegeo/ooc/instp/SGRecordAnnotation/creationTimeInterval" -->SGRecordAnnotation<!-- /a -->
+<!-- end abstract --></p>
+<p></p>
+<div class="declaration_indent">
+<pre>@property (
+    <span class="param">nonatomic</span>,
+    <span class="param">assign</span>) <!-- a logicalPath="//simplegeo/occ/cl/NSTimeInterval //simplegeo/occ/tdef/NSTimeInterval //simplegeo/occ/tag/NSTimeInterval //simplegeo/occ/econst/NSTimeInterval //simplegeo/occ/struct/NSTimeInterval //simplegeo/occ/clconst/NSTimeInterval //simplegeo/occ/intf/NSTimeInterval" --><span class="type">NSTimeInterval</span><!-- /a --> <!-- a logicalPath="//simplegeo/occ/econst/creationTimeInterval //simplegeo/occ/data/creationTimeInterval" --><span class="var">creationTimeInterval</span><!-- /a -->; </pre>
+</div>
+<p></p>
+<hr>
+<!-- headerDoc=instp;  uid=//simplegeo/occ/instp/SGRecord/expirationTimeInterval;   name=SGRecord::expirationTimeInterval --><a name="//simplegeo/occ/instp/SGRecord/expirationTimeInterval"></a>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="expirationTimeInterval">expirationTimeInterval</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --></p>
+<p>See <!-- a logicalPath="//simplegeo/ooc/instp/SGRecordAnnotation/expirationTimeInterval" -->SGRecordAnnotation<!-- /a -->
+<!-- end abstract --></p>
+<p></p>
+<div class="declaration_indent">
+<pre>@property (
+    <span class="param">nonatomic</span>,
+    <span class="param">assign</span>) <!-- a logicalPath="//simplegeo/occ/cl/NSTimeInterval //simplegeo/occ/tdef/NSTimeInterval //simplegeo/occ/tag/NSTimeInterval //simplegeo/occ/econst/NSTimeInterval //simplegeo/occ/struct/NSTimeInterval //simplegeo/occ/clconst/NSTimeInterval //simplegeo/occ/intf/NSTimeInterval" --><span class="type">NSTimeInterval</span><!-- /a --> <!-- a logicalPath="//simplegeo/occ/econst/expirationTimeInterval //simplegeo/occ/data/expirationTimeInterval" --><span class="var">expirationTimeInterval</span><!-- /a -->; </pre>
+</div>
+<p></p>
+<hr>
+<!-- headerDoc=instp;  uid=//simplegeo/occ/instp/SGRecord/latitude;   name=SGRecord::latitude --><a name="//simplegeo/occ/instp/SGRecord/latitude"></a>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="latitude">latitude</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --></p>
+<p>The latitude of the record.
+<!-- end abstract --></p>
+<p></p>
+<div class="declaration_indent">
+<pre>@property (
+    <span class="param">nonatomic</span>,
+    <span class="param">assign</span>) <!-- a logicalPath="//simplegeo/occ/cl/double //simplegeo/occ/tdef/double //simplegeo/occ/tag/double //simplegeo/occ/econst/double //simplegeo/occ/struct/double //simplegeo/occ/clconst/double //simplegeo/occ/intf/double" --><span class="type">double</span><!-- /a --> <!-- a logicalPath="//simplegeo/occ/econst/latitude //simplegeo/occ/data/latitude" --><span class="var">latitude</span><!-- /a -->; </pre>
+</div>
+<p></p>
+<hr>
+<!-- headerDoc=instp;  uid=//simplegeo/occ/instp/SGRecord/layer;   name=SGRecord::layer --><a name="//simplegeo/occ/instp/SGRecord/layer"></a>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="layer">layer</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --></p>
+<p>See <!-- a logicalPath="//simplegeo/ooc/inspt/SGRecordAnnotation/layer" -->SGRecordAnnotation<!-- /a -->
+<!-- end abstract --></p>
+<p></p>
+<div class="declaration_indent">
+<pre>@property (
+    <span class="param">nonatomic</span>,
+    <span class="param">retain</span>) <!-- a logicalPath="//simplegeo/occ/cl/NSString //simplegeo/occ/tdef/NSString //simplegeo/occ/tag/NSString //simplegeo/occ/econst/NSString //simplegeo/occ/struct/NSString //simplegeo/occ/clconst/NSString //simplegeo/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --><span class="type">*</span> <!-- a logicalPath="//simplegeo/occ/econst/layer //simplegeo/occ/data/layer" --><span class="var">layer</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight">
+<font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5>
+<!-- begin discussion --><p>When a new record object is created, the layer property is assigned the bundle identifier. 
+<!-- end discussion -->
+</p>
+<p></p>
+<hr>
+<!-- headerDoc=instp;  uid=//simplegeo/occ/instp/SGRecord/longitude;   name=SGRecord::longitude --><a name="//simplegeo/occ/instp/SGRecord/longitude"></a>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="longitude">longitude</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --></p>
+<p>The longitude of the record.
+<!-- end abstract --></p>
+<p></p>
+<div class="declaration_indent">
+<pre>@property (
+    <span class="param">nonatomic</span>,
+    <span class="param">assign</span>) <!-- a logicalPath="//simplegeo/occ/cl/double //simplegeo/occ/tdef/double //simplegeo/occ/tag/double //simplegeo/occ/econst/double //simplegeo/occ/struct/double //simplegeo/occ/clconst/double //simplegeo/occ/intf/double" --><span class="type">double</span><!-- /a --> <!-- a logicalPath="//simplegeo/occ/econst/longitude //simplegeo/occ/data/longitude" --><span class="var">longitude</span><!-- /a -->; </pre>
+</div>
+<p></p>
+<hr>
+<!-- headerDoc=instp;  uid=//simplegeo/occ/instp/SGRecord/recordId;   name=SGRecord::recordId --><a name="//simplegeo/occ/instp/SGRecord/recordId"></a>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="recordId">recordId</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --></p>
+<p>See <!-- a logicalPath="//simplegeo/ooc/instp/SGRecordAnnotaiton/recordId" -->SGRecordAnnotation<!-- /a -->
+<!-- end abstract --></p>
+<p></p>
+<div class="declaration_indent">
+<pre>@property (
+    <span class="param">nonatomic</span>,
+    <span class="param">retain</span>) <!-- a logicalPath="//simplegeo/occ/cl/NSString //simplegeo/occ/tdef/NSString //simplegeo/occ/tag/NSString //simplegeo/occ/econst/NSString //simplegeo/occ/struct/NSString //simplegeo/occ/clconst/NSString //simplegeo/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --><span class="type">*</span> <!-- a logicalPath="//simplegeo/occ/econst/recordId //simplegeo/occ/data/recordId" --><span class="var">recordId</span><!-- /a -->; </pre>
+</div>
+<p></p>
+<hr>
+<!-- headerDoc=instp;  uid=//simplegeo/occ/instp/SGRecord/type;   name=SGRecord::type --><a name="//simplegeo/occ/instp/SGRecord/type"></a>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="type">type</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --></p>
+<p>See <!-- a logicalPath="//simplegeo/ooc/instp/SGRecordAnnotation/type" -->SGRecordAnnotation<!-- /a -->
+<!-- end abstract --></p>
+<p></p>
+<div class="declaration_indent">
+<pre>@property (
+    <span class="param">nonatomic</span>,
+    <span class="param">retain</span>) <!-- a logicalPath="//simplegeo/occ/cl/NSString //simplegeo/occ/tdef/NSString //simplegeo/occ/tag/NSString //simplegeo/occ/econst/NSString //simplegeo/occ/struct/NSString //simplegeo/occ/clconst/NSString //simplegeo/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --><span class="type">*</span> <!-- a logicalPath="//simplegeo/occ/econst/type //simplegeo/occ/data/type" --><span class="var">type</span><!-- /a -->; </pre>
+</div>
+<p></p>
+<p><!-- start of footer -->
+
+<!-- end of footer -->
+</p>
+<p>&copy; SimpleGeo Last Updated: 12/17/2009
+</p>
+</div>
+</body>
+</html>

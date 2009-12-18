@@ -1,0 +1,281 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/1998/REC-html40-19980424/loose.dtd">
+<html>
+<head>
+<title>SGAnnotationView.h</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf8">
+<meta name="generator" content="HeaderDoc">
+<meta name="xcode-display" content="render">
+<style><!--
+#tocMenu {
+		display: block;
+		position:fixed;
+		top:0px;
+		left:0px;
+		width:210px;
+		height:100%;
+		background:transparent;
+}
+#bodyText {
+		margin-left: 210px;
+}
+--></style>
+<script language="JavaScript" type="text/javascript"><!--
+function hidetoc() {
+	var origURL = parent.document.URL;
+	var contentURL = origURL.substring(origURL.indexOf('?')+1, origURL.length);
+	if (contentURL.length == origURL.length) {
+		jumpPos = origURL.substring(origURL.indexOf('#')+1, origURL.length);
+	}
+	if (contentURL == "hidetoc") {
+		var toc = document.getElementById('tocMenu');
+		var body = document.getElementById('bodyText');
+		if (toc && body) {
+			toc.style.display = 'none';
+			body.style.marginLeft = '0px';
+		}
+	}
+}
+--></script><style type="text/css"><!--.keyword {background:#ffffff; color:#761550;}.template {background:#ffffff; color:#761550;}.number {background: #ffffff; color:#0000ff;}.function {background:#ffffff; color:#000000;}.string {background: #ffffff; color:#891315;}.preprocessor {background:#ffffff; color:#236e25}.comment {background:#ffffff; color:#236e25}.char {background: #ffffff; color:#0000ff;}.var {background:#ffffff; color:#000000;}.type {background:#ffffff; color:#761550;}.param {background:#ffffff; color:#000000;}a:link {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #0000ff;}a:visited {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #0000ff;}a:visited:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}a:active {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}a:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}h4 {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: tiny; font-weight: bold;}body {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: 10pt;}.list_indent { margin-left: 40px; }.declaration_indent { margin-left: 40px; }.param_indent { margin-left: 40px; }.group_indent { margin-left: 40px; }.group_desc_indent { margin-left: 20px; }.warning_indent { margin-left: 40px; }.important_indent { margin-left: 40px; }.hd_tocAccess { font-style: italic; font-size: 10px; font-weight: normal; color: #303030; }--></style>
+</head>
+<body bgcolor="#ffffff" onload="hidetoc();">
+
+<!-- headerDoc=Header;  uid=//simplegeo/doc/header/SGAnnotationView.h;   name=SGAnnotationView.h -->
+<a name="//simplegeo/doc/header/SGAnnotationView.h"></a>
+<div id="tocMenu">
+<iframe id="toc_content" name="toc_content" src="toc.html" width="210" height="100%" align="left" frameborder="0">This document set is best viewed in a browser that supports iFrames.</iframe>
+</div>
+<div id="bodyText">
+<!-- start of header -->
+
+<!-- end of header -->
+<a name="top"></a>
+<hr>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h1><a name="SGAnnotationView.h">SGAnnotationView.h</a></h1>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract -->Use the links in the table of contents to the left to access the documentation.<br><!-- end abstract --></p>
+<p></p>
+<div class="declaration_indent">
+</div>
+<p></p>
+<hr>
+<br><a name="HeaderDoc_classes"></a>
+<h2>Classes</h2>
+<dl>
+<dt><tt><a href="Classes/SGAnnotationView/index.html#//simplegeo/occ/cl/SGAnnotationView" target="_top">SGAnnotationView</a></tt></dt>
+<dd><p>Used to display information about <!-- a logicalPath="//simplegeo/ooc/intf/SGRecordAnnotation/SGAnnotation" -->SGAnnotation<!-- /a -->  in an AR enviornment.
+</p></dd>
+</dl>
+<a name="HeaderDoc_protocols"></a>
+<h2>Protocols</h2>
+<dl>
+<dt><tt><a href="Protocols/SGAnnotationViewDelegate/index.html#//simplegeo/occ/intf/SGAnnotationViewDelegate" target="_top">SGAnnotationViewDelegate</a></tt></dt>
+<dd><p>Callback methods for <!-- a logicalPath="//simplegeo/ooc/cl/SGAnnotationView" -->SGAnnotationViews <!-- a logicalPath="when" -->they recieve touch events.
+discussion Every annotation view has two modes: target and inspect. Target is the default mode. When the view is clicked,
+<a href="../../Documentation/SGAnnotationView_h/Protocols/SGAnnotationViewDelegate/index.html#//simplegeo/occ/intfm/SGAnnotationViewDelegate/shouldInspectAnnotationView:" logicalPath="//simplegeo/occ/intfm/SGAnnotationViewDelegate/shouldInspectAnnotationView:">shouldInspectAnnotationView:</a>  is called.
+If the delegate returns a view, the annotation view will move into inspect mode.
+</p></dd>
+</dl>
+<hr>
+<br><a name="HeaderDoc_enums"></a>
+<h2>Enumerated Types</h2>
+<dl>
+<dt><tt><a href="index.html#//simplegeo/doc/title:tag/InspectorStyles" target="_top">Inspector Styles</a></tt></dt>
+<dd><p>&#65532;The style of the view when it is being inspected.
+</p></dd>
+<dt><tt><a href="index.html#//simplegeo/c/tag/SGAnnotationViewInspectorType" target="_top">SGAnnotationViewInspectorType</a></tt></dt>
+<dd><p>&#65532;The style of the view when it is being inspected.
+</p></dd>
+<dt><tt><a href="index.html#//simplegeo/c/tag/SGAnnotationViewTargetType" target="_top">SGAnnotationViewTargetType</a></tt></dt>
+<dd><p>The style of the view when it is loaded in the <!-- a logicalPath="SGARView" -->SGARView<!-- /a --> .
+</p></dd>
+<dt><tt><a href="index.html#//simplegeo/doc/title:tag/TargetStyles" target="_top">Target Styles</a></tt></dt>
+<dd><p>The style of the view when it is loaded in the <!-- a logicalPath="SGARView" -->SGARView<!-- /a --> .
+</p></dd>
+</dl>
+<hr>
+<!-- headerDoc=title:tag;  uid=//simplegeo/doc/title:tag/InspectorStyles;   name=Inspector Styles --><a name="//simplegeo/doc/title:tag/InspectorStyles"></a>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="InspectorStyles">Inspector Styles</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --></p>
+<p>&#65532;The style of the view when it is being inspected.
+<!-- end abstract --></p>
+<p></p>
+<b>See Also:</b><div class="list_indent"><dl>
+<dt>
+<a href="../../Documentation/SGAnnotationView_h/index.html#//simplegeo/c/tag/SGAnnotationViewInspectorType" logicalPath="//simplegeo/c/tag/SGAnnotationViewInspectorType"><p>SGAnnotationViewInspectorType</p></a>
+</dt>
+<dd></dd>
+</dl></div>
+<div class="declaration_indent">
+<pre><span class="keyword">enum</span> <a href="../../Documentation/SGAnnotationView_h/index.html#//simplegeo/c/tag/SGAnnotationViewInspectorType" logicalPath="//simplegeo/c/cl/SGAnnotationViewInspectorType //simplegeo/c/tdef/SGAnnotationViewInspectorType //simplegeo/c/tag/SGAnnotationViewInspectorType"><span class="type">SGAnnotationViewInspectorType</span></a> {  
+    <!-- a logicalPath="//simplegeo/c/econst/kSGAnnotationViewInspectorType_None //simplegeo/c/data/kSGAnnotationViewInspectorType_None" --><span class="var">kSGAnnotationViewInspectorType_None</span><!-- /a --> = <span class="number">0</span>, 
+    <!-- a logicalPath="//simplegeo/c/econst/kSGAnnotationViewInspectorType_Standard //simplegeo/c/data/kSGAnnotationViewInspectorType_Standard" --><span class="var">kSGAnnotationViewInspectorType_Standard</span><!-- /a -->, 
+    <!-- a logicalPath="//simplegeo/c/econst/kSGAnnotationViewInspectorType_Message //simplegeo/c/data/kSGAnnotationViewInspectorType_Message" --><span class="var">kSGAnnotationViewInspectorType_Message</span><!-- /a -->, 
+    <!-- a logicalPath="//simplegeo/c/econst/kSGAnnotationViewInspectorType_Photo //simplegeo/c/data/kSGAnnotationViewInspectorType_Photo" --><span class="var">kSGAnnotationViewInspectorType_Photo</span><!-- /a -->, 
+    <!-- a logicalPath="//simplegeo/c/econst/kSGAnnotationViewInspectorType_Custom //simplegeo/c/data/kSGAnnotationViewInspectorType_Custom" --><span class="var">kSGAnnotationViewInspectorType_Custom</span><!-- /a -->  
+};  </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Constants</font></h5>
+<div class="param_indent">
+<dl>
+<dt><a name="//simplegeo/doc/title:econst/InspectorStyles/kSGAnnotationViewInspectorType_None"><code>&#65532;kSGAnnotationViewInspectorType_None</code></a></dt>
+<dd><p>When inspected, nothing will show.</p></dd>
+<dt><a name="//simplegeo/doc/title:econst/InspectorStyles/kSGAnnotationViewInspectorType_Standard"><code>&#65532;kSGAnnotationViewInspectorType_Standard</code></a></dt>
+<dd><p>Displays a title, date, and the target image.</p></dd>
+<dt><a name="//simplegeo/doc/title:econst/InspectorStyles/kSGAnnotationViewInspectorType_Message"><code>&#65532;kSGAnnotationViewInspectorType_Message</code></a></dt>
+<dd><p>Displays a title, date, message, and the target image.</p></dd>
+<dt><a name="//simplegeo/doc/title:econst/InspectorStyles/kSGAnnotationViewInspectorType_Photo"><code>&#65532;kSGAnnotationViewInspectorType_Photo</code></a></dt>
+<dd><p>Displays a title, date, message, photo, and the target image.</p></dd>
+<dt><a name="//simplegeo/doc/title:econst/InspectorStyles/kSGAnnotationViewInspectorType_Custom"><code>&#65532;kSGAnnotationViewInspectorType_Custom</code></a></dt>
+<dd><p>Displays the current layout of the view.</p></dd>
+</dl>
+</div>
+<h5 class="tight">
+<font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5>
+<!-- begin discussion --><p>&#65532;The default style is kSGAnnotationViewInspectorType_Standard.
+<!-- end discussion -->
+</p>
+<p></p>
+<hr>
+<!-- headerDoc=tag;  uid=//simplegeo/c/tag/SGAnnotationViewInspectorType;   name=SGAnnotationViewInspectorType --><a name="//simplegeo/c/tag/SGAnnotationViewInspectorType"></a>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="SGAnnotationViewInspectorType">SGAnnotationViewInspectorType</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --></p>
+<p>&#65532;The style of the view when it is being inspected.
+<!-- end abstract --></p>
+<p></p>
+<b>See Also:</b><div class="list_indent"><dl>
+<dt>
+<a href="../../Documentation/SGAnnotationView_h/index.html#//simplegeo/doc/title:tag/InspectorStyles" logicalPath="//simplegeo/doc/title:tag/InspectorStyles"><p>Inspector</p></a>
+</dt>
+<dd></dd>
+</dl></div>
+<div class="declaration_indent">
+<pre><span class="keyword">enum</span> <a href="../../Documentation/SGAnnotationView_h/index.html#//simplegeo/c/tag/SGAnnotationViewInspectorType" logicalPath="//simplegeo/c/cl/SGAnnotationViewInspectorType //simplegeo/c/tdef/SGAnnotationViewInspectorType //simplegeo/c/tag/SGAnnotationViewInspectorType"><span class="type">SGAnnotationViewInspectorType</span></a> {  
+    <!-- a logicalPath="//simplegeo/c/econst/kSGAnnotationViewInspectorType_None //simplegeo/c/data/kSGAnnotationViewInspectorType_None" --><span class="var">kSGAnnotationViewInspectorType_None</span><!-- /a --> = <span class="number">0</span>, 
+    <!-- a logicalPath="//simplegeo/c/econst/kSGAnnotationViewInspectorType_Standard //simplegeo/c/data/kSGAnnotationViewInspectorType_Standard" --><span class="var">kSGAnnotationViewInspectorType_Standard</span><!-- /a -->, 
+    <!-- a logicalPath="//simplegeo/c/econst/kSGAnnotationViewInspectorType_Message //simplegeo/c/data/kSGAnnotationViewInspectorType_Message" --><span class="var">kSGAnnotationViewInspectorType_Message</span><!-- /a -->, 
+    <!-- a logicalPath="//simplegeo/c/econst/kSGAnnotationViewInspectorType_Photo //simplegeo/c/data/kSGAnnotationViewInspectorType_Photo" --><span class="var">kSGAnnotationViewInspectorType_Photo</span><!-- /a -->, 
+    <!-- a logicalPath="//simplegeo/c/econst/kSGAnnotationViewInspectorType_Custom //simplegeo/c/data/kSGAnnotationViewInspectorType_Custom" --><span class="var">kSGAnnotationViewInspectorType_Custom</span><!-- /a -->  
+};  </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Constants</font></h5>
+<div class="param_indent">
+<dl>
+<dt><a name="//simplegeo/doc/title:econst/InspectorStyles/kSGAnnotationViewInspectorType_None_DONTLINK_0"><code>&#65532;kSGAnnotationViewInspectorType_None</code></a></dt>
+<dd><p>When inspected, nothing will show.</p></dd>
+<dt><a name="//simplegeo/doc/title:econst/InspectorStyles/kSGAnnotationViewInspectorType_Standard_DONTLINK_0"><code>&#65532;kSGAnnotationViewInspectorType_Standard</code></a></dt>
+<dd><p>Displays a title, date, and the target image.</p></dd>
+<dt><a name="//simplegeo/doc/title:econst/InspectorStyles/kSGAnnotationViewInspectorType_Message_DONTLINK_0"><code>&#65532;kSGAnnotationViewInspectorType_Message</code></a></dt>
+<dd><p>Displays a title, date, message, and the target image.</p></dd>
+<dt><a name="//simplegeo/doc/title:econst/InspectorStyles/kSGAnnotationViewInspectorType_Photo_DONTLINK_0"><code>&#65532;kSGAnnotationViewInspectorType_Photo</code></a></dt>
+<dd><p>Displays a title, date, message, photo, and the target image.</p></dd>
+<dt><a name="//simplegeo/doc/title:econst/InspectorStyles/kSGAnnotationViewInspectorType_Custom_DONTLINK_0"><code>&#65532;kSGAnnotationViewInspectorType_Custom</code></a></dt>
+<dd><p>Displays the current layout of the view.</p></dd>
+</dl>
+</div>
+<h5 class="tight">
+<font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5>
+<!-- begin discussion --><p>&#65532;The default style is kSGAnnotationViewInspectorType_Standard.
+<!-- end discussion -->
+</p>
+<p></p>
+<hr>
+<!-- headerDoc=tag;  uid=//simplegeo/c/tag/SGAnnotationViewTargetType;   name=SGAnnotationViewTargetType --><a name="//simplegeo/c/tag/SGAnnotationViewTargetType"></a>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="SGAnnotationViewTargetType">SGAnnotationViewTargetType</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --></p>
+<p>The style of the view when it is loaded in the <!-- a logicalPath="SGARView" -->SGARView<!-- /a -->.
+<!-- end abstract --></p>
+<p></p>
+<b>See Also:</b><div class="list_indent"><dl>
+<dt>
+<a href="../../Documentation/SGAnnotationView_h/index.html#//simplegeo/doc/title:tag/TargetStyles" logicalPath="//simplegeo/doc/title:tag/TargetStyles"><p>Target</p></a>
+</dt>
+<dd></dd>
+</dl></div>
+<div class="declaration_indent">
+<pre><span class="keyword">enum</span> <a href="../../Documentation/SGAnnotationView_h/index.html#//simplegeo/c/tag/SGAnnotationViewTargetType" logicalPath="//simplegeo/c/cl/SGAnnotationViewTargetType //simplegeo/c/tdef/SGAnnotationViewTargetType //simplegeo/c/tag/SGAnnotationViewTargetType"><span class="type">SGAnnotationViewTargetType</span></a> {  
+    <!-- a logicalPath="//simplegeo/c/econst/kSGAnnotationViewTargetType_Pin //simplegeo/c/data/kSGAnnotationViewTargetType_Pin" --><span class="var">kSGAnnotationViewTargetType_Pin</span><!-- /a --> = <span class="number">0</span>, 
+    <!-- a logicalPath="//simplegeo/c/econst/kSGAnnotationViewTargetType_Glass //simplegeo/c/data/kSGAnnotationViewTargetType_Glass" --><span class="var">kSGAnnotationViewTargetType_Glass</span><!-- /a -->, 
+    <!-- a logicalPath="//simplegeo/c/econst/kSGAnnotationViewTargetType_Custom //simplegeo/c/data/kSGAnnotationViewTargetType_Custom" --><span class="var">kSGAnnotationViewTargetType_Custom</span><!-- /a -->  
+};  </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Constants</font></h5>
+<div class="param_indent">
+<dl>
+<dt><a name="//simplegeo/doc/title:econst/TargetStyles/kSGAnnotationViewTargetType_Pin_DONTLINK_0"><code>&#65532;kSGAnnotationViewTargetType_Pin</code></a></dt>
+<dd><p>Displays a pin that resemebles the pin from MKPinAnnotationView.</p></dd>
+<dt><a name="//simplegeo/doc/title:econst/TargetStyles/kSGAnnotationViewTargetType_Glass_DONTLINK_0"><code>&#65532;kSGAnnotationViewTargetType_Glass</code></a></dt>
+<dd><p>Displays the Target image over a glassy, pointed square.</p></dd>
+<dt><a name="//simplegeo/doc/title:econst/TargetStyles/kSGAnnotationViewTargetType_Custom_DONTLINK_0"><code>kSGAnnotationViewTargetType_Custom</code></a></dt>
+<dd><p>Displays the current layout of the view.</p></dd>
+</dl>
+</div>
+<h5 class="tight">
+<font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5>
+<!-- begin discussion --><p>&#65532;The default style is kSGAnnotationViewTargetType_Pin.
+<!-- end discussion -->
+</p>
+<p></p>
+<hr>
+<!-- headerDoc=title:tag;  uid=//simplegeo/doc/title:tag/TargetStyles;   name=Target Styles --><a name="//simplegeo/doc/title:tag/TargetStyles"></a>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="TargetStyles">Target Styles</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --></p>
+<p>The style of the view when it is loaded in the <!-- a logicalPath="SGARView" -->SGARView<!-- /a -->.
+<!-- end abstract --></p>
+<p></p>
+<b>See Also:</b><div class="list_indent"><dl>
+<dt>
+<a href="../../Documentation/SGAnnotationView_h/index.html#//simplegeo/c/tag/SGAnnotationViewTargetType" logicalPath="//simplegeo/c/tag/SGAnnotationViewTargetType"><p>SGAnnotationViewTargetType</p></a>
+</dt>
+<dd></dd>
+</dl></div>
+<div class="declaration_indent">
+<pre><span class="keyword">enum</span> <a href="../../Documentation/SGAnnotationView_h/index.html#//simplegeo/c/tag/SGAnnotationViewTargetType" logicalPath="//simplegeo/c/cl/SGAnnotationViewTargetType //simplegeo/c/tdef/SGAnnotationViewTargetType //simplegeo/c/tag/SGAnnotationViewTargetType"><span class="type">SGAnnotationViewTargetType</span></a> {  
+    <!-- a logicalPath="//simplegeo/c/econst/kSGAnnotationViewTargetType_Pin //simplegeo/c/data/kSGAnnotationViewTargetType_Pin" --><span class="var">kSGAnnotationViewTargetType_Pin</span><!-- /a --> = <span class="number">0</span>, 
+    <!-- a logicalPath="//simplegeo/c/econst/kSGAnnotationViewTargetType_Glass //simplegeo/c/data/kSGAnnotationViewTargetType_Glass" --><span class="var">kSGAnnotationViewTargetType_Glass</span><!-- /a -->, 
+    <!-- a logicalPath="//simplegeo/c/econst/kSGAnnotationViewTargetType_Custom //simplegeo/c/data/kSGAnnotationViewTargetType_Custom" --><span class="var">kSGAnnotationViewTargetType_Custom</span><!-- /a -->  
+};  </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Constants</font></h5>
+<div class="param_indent">
+<dl>
+<dt><a name="//simplegeo/doc/title:econst/TargetStyles/kSGAnnotationViewTargetType_Pin"><code>&#65532;kSGAnnotationViewTargetType_Pin</code></a></dt>
+<dd><p>Displays a pin that resemebles the pin from MKPinAnnotationView.</p></dd>
+<dt><a name="//simplegeo/doc/title:econst/TargetStyles/kSGAnnotationViewTargetType_Glass"><code>&#65532;kSGAnnotationViewTargetType_Glass</code></a></dt>
+<dd><p>Displays the Target image over a glassy, pointed square.</p></dd>
+<dt><a name="//simplegeo/doc/title:econst/TargetStyles/kSGAnnotationViewTargetType_Custom"><code>kSGAnnotationViewTargetType_Custom</code></a></dt>
+<dd><p>Displays the current layout of the view.</p></dd>
+</dl>
+</div>
+<h5 class="tight">
+<font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5>
+<!-- begin discussion --><p>&#65532;The default style is kSGAnnotationViewTargetType_Pin.
+<!-- end discussion -->
+</p>
+<p></p>
+<p><!-- start of footer -->
+
+<!-- end of footer -->
+</p>
+<p>&copy; SimpleGeo Last Updated: 12/17/2009
+</p>
+</div>
+</body>
+</html>

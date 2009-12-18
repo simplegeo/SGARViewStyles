@@ -1,0 +1,179 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/1998/REC-html40-19980424/loose.dtd">
+<html>
+<head>
+<title>SGLayer</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf8">
+<meta name="generator" content="HeaderDoc">
+<meta name="xcode-display" content="render">
+<style><!--
+#tocMenu {
+		display: block;
+		position:fixed;
+		top:0px;
+		left:0px;
+		width:210px;
+		height:100%;
+		background:transparent;
+}
+#bodyText {
+		margin-left: 210px;
+}
+--></style>
+<script language="JavaScript" type="text/javascript"><!--
+function hidetoc() {
+	var origURL = parent.document.URL;
+	var contentURL = origURL.substring(origURL.indexOf('?')+1, origURL.length);
+	if (contentURL.length == origURL.length) {
+		jumpPos = origURL.substring(origURL.indexOf('#')+1, origURL.length);
+	}
+	if (contentURL == "hidetoc") {
+		var toc = document.getElementById('tocMenu');
+		var body = document.getElementById('bodyText');
+		if (toc && body) {
+			toc.style.display = 'none';
+			body.style.marginLeft = '0px';
+		}
+	}
+}
+--></script><style type="text/css"><!--.keyword {background:#ffffff; color:#761550;}.template {background:#ffffff; color:#761550;}.number {background: #ffffff; color:#0000ff;}.function {background:#ffffff; color:#000000;}.string {background: #ffffff; color:#891315;}.preprocessor {background:#ffffff; color:#236e25}.comment {background:#ffffff; color:#236e25}.char {background: #ffffff; color:#0000ff;}.var {background:#ffffff; color:#000000;}.type {background:#ffffff; color:#761550;}.param {background:#ffffff; color:#000000;}a:link {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #0000ff;}a:visited {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #0000ff;}a:visited:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}a:active {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}a:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}h4 {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: tiny; font-weight: bold;}body {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: 10pt;}.list_indent { margin-left: 40px; }.declaration_indent { margin-left: 40px; }.param_indent { margin-left: 40px; }.group_indent { margin-left: 40px; }.group_desc_indent { margin-left: 20px; }.warning_indent { margin-left: 40px; }.important_indent { margin-left: 40px; }.hd_tocAccess { font-style: italic; font-size: 10px; font-weight: normal; color: #303030; }--></style>
+</head>
+<body bgcolor="#ffffff" onload="hidetoc();">
+
+<!-- headerDoc=cl; uid=//simplegeo/occ/cl/SGLayer;  name=SGLayer-->
+<a name="//simplegeo/occ/cl/SGLayer"></a><div id="tocMenu">
+<iframe id="toc_content" name="toc_content" src="toc.html" width="210" height="100%" align="left" frameborder="0">This document set is best viewed in a browser that supports iFrames.</iframe>
+</div>
+<div id="bodyText">
+<!-- start of header -->
+
+<!-- end of header -->
+<a name="top"></a>
+<hr>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h1><a name="SGLayer">SGLayer</a></h1>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --></p>
+<p>Updates and retrieves records that are within a layer.
+<!-- end abstract --></p>
+<p><b>Conforms&nbsp;to:</b> <a href="../../../../Documentation/SGLocationService_h/Protocols/SGLocationServiceDelegate/index.html#//simplegeo/occ/intf/SGLocationServiceDelegate" logicalPath="//simplegeo/occ/intf/SGLocationServiceDelegate">SGLocationServiceDelegate</a><br><b>Superclass:</b> <!-- a logicalPath="//simplegeo/occ/cl/NSObject" -->NSObject<!-- /a --><br><b>Declared In:</b> <a href="../../index.html" target="_top">SGLayer.h</a><br></p>
+<div class="declaration_indent">
+</div>
+<p></p>
+<hr>
+<br><a name="HeaderDoc_methods"></a>
+<h2>Methods</h2>
+<dl>
+<dt><tt><a href="index.html#//simplegeo/occ/instm/SGLayer/initWithLayerName:" target="_top">-initWithLayerName:</a></tt></dt>
+<dd><p>&#65532;Initialize a new SGLayer object with a layer name.
+</p></dd>
+<dt><tt><a href="index.html#//simplegeo/occ/instm/SGLayer/recordAnnotationFromGeoJSONDictionary:" target="_top">-recordAnnotationFromGeoJSONDictionary:</a></tt></dt>
+<dd><p>&#65532;Creates a new record from the given dictionary.
+</p></dd>
+</dl>
+<hr>
+<!-- headerDoc=instm;  uid=//simplegeo/occ/instm/SGLayer/initWithLayerName:;   name=SGLayer::initWithLayerName: --><a name="//simplegeo/occ/instm/SGLayer/initWithLayerName:"></a>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="initWithLayerName:">initWithLayerName:</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --></p>
+<p>&#65532;Initialize a new SGLayer object with a layer name.
+<!-- end abstract --></p>
+<p></p>
+<div class="declaration_indent">
+<pre>- (<!-- a logicalPath="//simplegeo/occ/cl/id //simplegeo/occ/tdef/id //simplegeo/occ/tag/id //simplegeo/occ/econst/id //simplegeo/occ/struct/id //simplegeo/occ/clconst/id //simplegeo/occ/intf/id" --><span class="type">id</span><!-- /a -->) <!-- a logicalPath="//simplegeo/occ/instm/initWithLayerName //simplegeo/occ/clm/initWithLayerName //simplegeo/occ/intfcm/initWithLayerName //simplegeo/occ/intfm/initWithLayerName //simplegeo/occ/func/initWithLayerName //simplegeo/occ/ftmplt/initWithLayerName //simplegeo/occ/defn/initWithLayerName //simplegeo/occ/macro/initWithLayerName" --><span class="function">initWithLayerName</span><!-- /a -->:(<!-- a logicalPath="//simplegeo/occ/cl/NSString //simplegeo/occ/tdef/NSString //simplegeo/occ/tag/NSString //simplegeo/occ/econst/NSString //simplegeo/occ/struct/NSString //simplegeo/occ/clconst/NSString //simplegeo/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//simplegeo/occ/econst/layerId //simplegeo/occ/data/layerId" --><span class="var">layerId</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt><code>layerId</code></dt>
+<dd><p>&#65532;The name of the layer.</p></dd>
+</dl>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5>
+<p><!-- begin return value -->&#65532;A initialized SGLayer object.
+
+<!-- end return value --></p>
+<h5 class="tight">
+<font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5>
+<!-- begin discussion --><p>See <a href="../../../../Documentation/SGLayer_h/Classes/SGLayer/index.html#//simplegeo/occ/instp/SGLayer/layerId" logicalPath="//simplegeo/occ/instp/SGLayer/layerId">layerId</a> 
+</p>
+<!-- end discussion -->
+<p></p>
+<hr>
+<!-- headerDoc=instm;  uid=//simplegeo/occ/instm/SGLayer/recordAnnotationFromGeoJSONDictionary:;   name=SGLayer::recordAnnotationFromGeoJSONDictionary: --><a name="//simplegeo/occ/instm/SGLayer/recordAnnotationFromGeoJSONDictionary:"></a>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="recordAnnotationFromGeoJSONDictionary:">recordAnnotationFromGeoJSONDictionary:</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --></p>
+<p>&#65532;Creates a new record from the given dictionary.
+<!-- end abstract --></p>
+<p></p>
+<div class="declaration_indent">
+<pre>- (<!-- a logicalPath="//simplegeo/occ/cl/id //simplegeo/occ/tdef/id //simplegeo/occ/tag/id //simplegeo/occ/econst/id //simplegeo/occ/struct/id //simplegeo/occ/clconst/id //simplegeo/occ/intf/id" --><span class="type">id</span><!-- /a -->&lt;<span class="param">SGRecordAnnotation</span>&gt;) 
+        <!-- a logicalPath="//simplegeo/occ/instm/recordAnnotationFromGeoJSONDictionary //simplegeo/occ/clm/recordAnnotationFromGeoJSONDictionary //simplegeo/occ/intfcm/recordAnnotationFromGeoJSONDictionary //simplegeo/occ/intfm/recordAnnotationFromGeoJSONDictionary //simplegeo/occ/func/recordAnnotationFromGeoJSONDictionary //simplegeo/occ/ftmplt/recordAnnotationFromGeoJSONDictionary //simplegeo/occ/defn/recordAnnotationFromGeoJSONDictionary //simplegeo/occ/macro/recordAnnotationFromGeoJSONDictionary" --><span class="function">recordAnnotationFromGeoJSONDictionary</span><!-- /a -->:(<!-- a logicalPath="//simplegeo/occ/cl/NSDictionary //simplegeo/occ/tdef/NSDictionary //simplegeo/occ/tag/NSDictionary //simplegeo/occ/econst/NSDictionary //simplegeo/occ/struct/NSDictionary //simplegeo/occ/clconst/NSDictionary //simplegeo/occ/intf/NSDictionary" --><span class="type">NSDictionary</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//simplegeo/occ/econst/dictionary //simplegeo/occ/data/dictionary" --><span class="var">dictionary</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt><code>geoJSONDictionary</code></dt>
+<dd><p>The GeoJSON dictionary representation of the new record. &#65532;</p></dd>
+</dl>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5>
+<p><!-- begin return value -->&#65532;The <!-- a logicalPath="//simplegeo/ooc/instp/SGRecordAnnotation" -->SGRecordAnnotation<!-- /a --> of the GeoJSON dictionary.
+
+<!-- end return value --></p>
+<h5 class="tight">
+<font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5>
+<!-- begin discussion --><p>&#65532;This method is called when the layer finds an unregistered record. The default implementation
+of this method creates a new instance of <!-- a logicalPath="//simplegeo/ooc/cl/SGRecord" -->SGRecord<!-- /a -->  and calls
+<!-- a logicalPath="//simplegeo/ooc/instm/SGRecord/updateRecordWithGeoJSONDictionary:" -->updateRecordWithGeoJSONDictionary:<!-- /a -->.
+If subclasses wish to do any manipulation to a record after it is retrieved from SimpleGeo, they are encouraged to
+override this method.
+<!-- end discussion -->
+</p>
+<p></p>
+<a name="HeaderDoc_props"></a>
+<h2>Properties</h2>
+<dl>
+<dt><tt><a href="index.html#//simplegeo/occ/instp/SGLayer/layerId" target="_top">layerId</a></tt></dt>
+<dd><p>The layerId is the name of the layer used in SimpleGeo. A common convention
+used in naming a layer is a reverse URL. (e.g. "com.simplegeo.spatula").
+</p></dd>
+</dl>
+<hr>
+<!-- headerDoc=instp;  uid=//simplegeo/occ/instp/SGLayer/layerId;   name=SGLayer::layerId --><a name="//simplegeo/occ/instp/SGLayer/layerId"></a>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="layerId">layerId</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --></p>
+<p>The layerId is the name of the layer used in SimpleGeo. A common convention
+used in naming a layer is a reverse URL. (e.g. "com.simplegeo.spatula").
+<!-- end abstract --></p>
+<p></p>
+<div class="declaration_indent">
+<pre>@property (
+    <span class="param">nonatomic</span>,
+    <span class="param">readonly</span>) <!-- a logicalPath="//simplegeo/occ/cl/NSString //simplegeo/occ/tdef/NSString //simplegeo/occ/tag/NSString //simplegeo/occ/econst/NSString //simplegeo/occ/struct/NSString //simplegeo/occ/clconst/NSString //simplegeo/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --><span class="type">*</span> <!-- a logicalPath="//simplegeo/occ/econst/layerId //simplegeo/occ/data/layerId" --><span class="var">layerId</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight">
+<font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5>
+<!-- begin discussion --><p>name of the layer.</p>
+<!-- end discussion -->
+<p></p>
+<p><!-- start of footer -->
+
+<!-- end of footer -->
+</p>
+<p>&copy; SimpleGeo Last Updated: 12/17/2009
+</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,92 @@
+ARViewStyles
+
+================================================================================
+ABSTRACT:
+
+This project demonstrates the different ways to implement and use the augmented
+reality (AR) library in the SGiPhoneSDK. The library is completely independent from the
+SGLocationService.
+
+Different Styles:
+
+1. Default - This is just the default style. SGAnnotationView are present as red pins
+while the radar mantains its default images. When pins are touched, the default inspect
+behavior occurs where the view is removed from the AR enviornment and then added as a 
+subview of the ARView.
+
+2. Forest - This style sets the SGAnnotationViews into inspect mode while being
+present in the AR enviornment. It can be considered to be the reverse of the default style.
+When the SGAnnotationView is touched, it is removed from the AREnvironment, placed into,
+target mode and then added as a subview of the SGARView.
+
+3. Damsels in Distress - There are two types of SGAnnotationViews used here. One with
+a static position and another that changes everytime the SGAnnotationView needs to be
+redrawn. The main note to take away from this style is that SGAnnotationViews can move
+around within the AR enviornment and still be represented properly by the radar.
+
+4. Kettle + Escher - SGAnnotationViews allow subclasses to draw themselves in OpenGLES.
+Instead of setting up the subview layout, we just load in the teapot vertices and normals
+and we are able to draw the teapot model in the proper location.
+
+5. Big Radar - 
+
+================================================================================
+BUILD REQUIREMENTS:
+
+iPhone SDK 3.1
+
+================================================================================
+RUNTIME REQUIREMENTS:
+
+iPhone OS 3.1
+
+================================================================================
+PACKAGING LIST:
+
+SGARViewStylesAppDelegate
+Standard AppDelegate implementation. Once the applicationDidFinishLaunching: is 
+called, the SGStylesViewController is added to the main window.
+
+SGStylesViewController
+This is the main view controller for the application; it is in charge of configuring
+styles and loading the AR enviornment. Each style is setup using there own
+configuration method, see #pragma Style config methods. Since there is no reset
+button for the AR enviornment, each setting must be addressed in order to produce 
+the proper style.
+
+SGSimpleAnnotation
+A simple class that implements the SGAnnotation protocol. Its used to provide
+a title and subtitle for SGAnnotationViews when they are inspected.
+
+SGForestAnnotationView
+Initalizes the SGAnnotationView with a randomly chosen forest critter and then
+uses one of the view properties (distance, coordinate or bearing) to display
+as the title while in inspect mode.
+
+SGDistressedDamselAnnotationView
+Setups up the SGAnnotationView to have the glassy style along with a random
+princess to be used as the target image.
+
+SGKettleAnnotationView
+This SGAnnotationView draws itself. By setting enableOpenGL to YES and implementing
+drawAnnotationView, we are able to render a model at the proper location in the AR
+enviornment. The AR library will ask to SGAnnotationView to draw itself at the origin.
+It will then apply the proper transformations to place the model inside the enviornment.
+
+SGGargoyleAnnotaitonView
+A random scary SGAnnotationView that increments its position in the AR enviornment.
+It does something tricky though. It overrides the annotation get property and does
+some readjustment to the coordinate. Everytime the view needs to be drawn, the annotaiton
+is accessed to obtain the coordinate of the view.
+
+SGPersonAnnotationView
+TODO
+
+================================================================================
+CHANGES FROM PREVIOUS VERSIONS:
+
+Version 1.0
+- First version.
+
+================================================================================
+Copyright (C) 2009 SimpleGeo Inc. All rights reserved.
