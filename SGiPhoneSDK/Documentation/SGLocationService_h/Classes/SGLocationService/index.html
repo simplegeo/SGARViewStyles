@@ -72,14 +72,14 @@ so it is important to <a href="../../../../Documentation/SGLocationService_h/Cla
 the only type of authorization supported by SimpleGeo is OAuth, this property must be set or all HTTP requests will result in an error.
 </p>
 <p>All HTTP requests are sent as NSInvocationOperations. Currently, the SimpleGeo API only offers get/add/delete methods for only a single
-record. When using a method like <!-- a logicalPath="updateRecordAnnotations:" -->updateRecordAnnotations:<!-- /a --> , a single NSInvocationOperation is used
+record. When using a method like <a href="../../../../Documentation/SGLocationService_h/Classes/SGLocationService/index.html#//simplegeo/occ/instm/SGLocationService/updateRecordAnnotations:" logicalPath="//simplegeo/occ/instm/SGLocationService/updateRecordAnnotations:">updateRecordAnnotations:</a> , a single NSInvocationOperation is used
 to update all of the records. It does not create a new operation for each <!-- a logicalPath="//simplegeo/ooc/cl/SGRecordAnnotation" -->SGRecordAnnotation<!-- /a --> 
 that is passed through.
 </p>
 <p>This interface provides two different avenues when it comes to storing and retrieving records. The first is using the standard
-NSString parameratized methods like <!-- a logicalPath="retrieveRecord:layer:" -->retrieveRecord:layer:<!-- /a --> . Calling this method
+NSString parameratized methods like <a href="../../../../Documentation/SGLocationService_h/Classes/SGLocationService/index.html#//simplegeo/occ/instm/SGLocationService/retrieveRecord:layer:" logicalPath="//simplegeo/occ/instm/SGLocationService/retrieveRecord:layer:">retrieveRecord:layer:</a> . Calling this method
 only requires the knowledge of the desired recordId and the layer to which it belongs to. The alternative method would be to use
-<!-- a logicalPath="retrieveRecordAnnotation:" -->retrieveRecordAnnotation:<!-- /a -->  which requires an NSObject that implements 
+<a href="../../../../Documentation/SGLocationService_h/Classes/SGLocationService/index.html#//simplegeo/occ/instm/SGLocationService/retrieveRecordAnnotation:" logicalPath="//simplegeo/occ/instm/SGLocationService/retrieveRecordAnnotation:">retrieveRecordAnnotation:</a>  which requires an NSObject that implements 
 <!-- a logicalPath="//simplegeo/ooc/intf/SGRecordAnnotation" -->SGRecordAnnotation<!-- /a --> . <!-- a logicalPath="//simplegeo/ooc/cl/SGRecord" -->SGRecord<!-- /a -->  is provided
 as a standard class that implements the protocol. The advantage to using the second method is that everytime a response succeeds,
 the delegate can use the responseObject that is passed in via <a href="../../../../Documentation/SGLocationService_h/Protocols/SGLocationServiceDelegate/index.html#//simplegeo/occ/intfm/SGLocationServiceDelegate/locationService:succeededForResponseId:responseObject:" logicalPath="//simplegeo/occ/intfm/SGLocationServiceDelegate/locationService:succeededForResponseId:responseObject:">locationService:succeededForResponseId:responseObject:</a> 
@@ -92,18 +92,60 @@ to update the SGRecord by calling <!-- a logicalPath="//simplegeo/ooc/instm/SGRe
 <h2>Methods</h2>
 <dl>
 <dt><tt><a href="index.html#//simplegeo/occ/instm/SGLocationService/addDelegate:" target="_top">-addDelegate:</a></tt></dt>
-<dd><p>&#65532;Adds an instance of <a href="../../../../Documentation/SGLocationService_h/Protocols/SGLocationServiceDelegate/index.html#//simplegeo/occ/intf/SGLocationServiceDelegate" logicalPath="//simplegeo/occ/intf/SGLocationServiceDelegate">SGLocationServiceDelegate</a>  to be notified
+<dd><p>Adds an instance of <a href="../../../../Documentation/SGLocationService_h/Protocols/SGLocationServiceDelegate/index.html#//simplegeo/occ/intf/SGLocationServiceDelegate" logicalPath="//simplegeo/occ/intf/SGLocationServiceDelegate">SGLocationServiceDelegate</a>  to be notified
 when a HTTP request fails or succeeds.
 </p></dd>
 <dt><tt><a href="index.html#//simplegeo/occ/clm/SGLocationService/callbackOnMainThread:" target="_top">+callbackOnMainThread:</a></tt></dt>
-<dd><p>&#65532;Determines whether or not to use the main thread to call delegate methods. Default is YES.
+<dd><p>Determines whether or not to use the main thread to call delegate methods. Default is YES.
+</p></dd>
+<dt><tt><a href="index.html#//simplegeo/occ/instm/SGLocationService/deleteRecord:layer:" target="_top">-deleteRecord:layer:</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="index.html#//simplegeo/occ/instm/SGLocationService/deleteRecordAnnotation:" target="_top">-deleteRecordAnnotation:</a></tt></dt>
+<dd><p>&#65532;Deletes a <!-- a logicalPath="//simplegeo/ooc/intf/SGAnnotationRecord" -->SGAnnotationRecord<!-- /a -->  from SimpleGeo.
+</p></dd>
+<dt><tt><a href="index.html#//simplegeo/occ/instm/SGLocationService/deleteRecordAnnotations:" target="_top">-deleteRecordAnnotations:</a></tt></dt>
+<dd><p>&#65532;Deletes an array of <!-- a logicalPath="//simplegeo/ooc/intf/SGAnnotationRecord" -->SGAnnotationRecord<!-- /a -->  from SimpleGeo.
 </p></dd>
 <dt><tt><a href="index.html#//simplegeo/occ/instm/SGLocationService/removeDelegate:" target="_top">-removeDelegate:</a></tt></dt>
-<dd><p>&#65532;Removes the <a href="../../../../Documentation/SGLocationService_h/Protocols/SGLocationServiceDelegate/index.html#//simplegeo/occ/intf/SGLocationServiceDelegate" logicalPath="//simplegeo/occ/intf/SGLocationServiceDelegate">SGLocationServiceDelegate</a>  from the group
+<dd><p>Removes the <a href="../../../../Documentation/SGLocationService_h/Protocols/SGLocationServiceDelegate/index.html#//simplegeo/occ/intf/SGLocationServiceDelegate" logicalPath="//simplegeo/occ/intf/SGLocationServiceDelegate">SGLocationServiceDelegate</a>  from the group
 of delegates.
 </p></dd>
+<dt><tt><a href="index.html#//simplegeo/occ/instm/SGLocationService/retrieveRecord:layer:" target="_top">-retrieveRecord:layer:</a></tt></dt>
+<dd><p>Retrieves information about a record within a layer.
+</p></dd>
+<dt><tt><a href="index.html#//simplegeo/occ/instm/SGLocationService/retrieveRecordAnnotation:" target="_top">-retrieveRecordAnnotation:</a></tt></dt>
+<dd><p>Retrieves information about a <!-- a logicalPath="//simplegeo/ooc/intf/SGRecordAnnotation" -->SGRecordAnnotation<!-- /a -->  from 
+SimpleGeo.
+</p></dd>
+<dt><tt><a href="index.html#//simplegeo/occ/instm/SGLocationService/retrieveRecordAnnotations:" target="_top">-retrieveRecordAnnotations:</a></tt></dt>
+<dd><p>Retreives information about an array of <!-- a logicalPath="//simplegeo/ooc/intf/SGRecordAnnotation" -->SGRecordAnnotation<!-- /a --> 
+from Simplegeo.
+</p></dd>
+<dt><tt><a href="index.html#//simplegeo/occ/instm/SGLocationService/retrieveRecordsForCoordinate:radius:layers:types:limit:" target="_top">-retrieveRecordsForCoordinate:radius:layers:types:limit:</a></tt></dt>
+<dd><p>Get records that are located within a radius of coordinate.
+</p></dd>
+<dt><tt><a href="index.html#//simplegeo/occ/instm/SGLocationService/retrieveRecordsForGeohash:layers:types:limit:" target="_top">-retrieveRecordsForGeohash:layers:types:limit:</a></tt></dt>
+<dd><p>Gets records that are located in a specific geohash.
+</p></dd>
+<dt><tt><a href="index.html#//simplegeo/occ/instm/SGLocationService/reverseGeocode:" target="_top">-reverseGeocode:</a></tt></dt>
+<dd><p>Returns resource information for a given pair lat/lon coordinate.
+</p></dd>
 <dt><tt><a href="index.html#//simplegeo/occ/clm/SGLocationService/sharedLocationService" target="_top">+sharedLocationService</a></tt></dt>
-<dd><p>&#65532; The shared instance of <a href="../../../../Documentation/SGLocationService_h/Classes/SGLocationService/index.html#//simplegeo/occ/cl/SGLocationService" logicalPath="//simplegeo/occ/cl/SGLocationService">SGLocationService</a> .
+<dd><p>The shared instance of <a href="../../../../Documentation/SGLocationService_h/Classes/SGLocationService/index.html#//simplegeo/occ/cl/SGLocationService" logicalPath="//simplegeo/occ/cl/SGLocationService">SGLocationService</a> .
+</p></dd>
+<dt><tt><a href="index.html#//simplegeo/occ/instm/SGLocationService/updateRecord:layer:coord:properties:" target="_top">-updateRecord:layer:coord:properties:</a></tt></dt>
+<dd><p>Updates a record with the given properties.
+</p></dd>
+<dt><tt><a href="index.html#//simplegeo/doc/title:instm/SGLocationService/updateRecord:layer:properties:" target="_top">-updateRecord:layer:properties:</a></tt></dt>
+<dd><p>Updates a record with the given properties.
+</p></dd>
+<dt><tt><a href="index.html#//simplegeo/occ/instm/SGLocationService/updateRecordAnnotation:" target="_top">-updateRecordAnnotation:</a></tt></dt>
+<dd><p>Updates a record a <!-- a logicalPath="//simplegeo/ooc/intf/SGRecordAnnotation" -->SGRecordAnnotation<!-- /a -->  in
+SimpleGeo.
+</p></dd>
+<dt><tt><a href="index.html#//simplegeo/occ/instm/SGLocationService/updateRecordAnnotations:" target="_top">-updateRecordAnnotations:</a></tt></dt>
+<dd><p>Updates an array of <!-- a logicalPath="//simplegeo/ooc/intf/SGRecordAnnotation" -->SGRecordAnnotations<!-- /a -->  in
+SimpleGeo.
 </p></dd>
 </dl>
 <hr>
@@ -113,7 +155,7 @@ of delegates.
 </td></tr></table>
 <hr>
 <p><!-- begin abstract --></p>
-<p>&#65532;Adds an instance of <a href="../../../../Documentation/SGLocationService_h/Protocols/SGLocationServiceDelegate/index.html#//simplegeo/occ/intf/SGLocationServiceDelegate" logicalPath="//simplegeo/occ/intf/SGLocationServiceDelegate">SGLocationServiceDelegate</a> to be notified
+<p>Adds an instance of <a href="../../../../Documentation/SGLocationService_h/Protocols/SGLocationServiceDelegate/index.html#//simplegeo/occ/intf/SGLocationServiceDelegate" logicalPath="//simplegeo/occ/intf/SGLocationServiceDelegate">SGLocationServiceDelegate</a> to be notified
 when a HTTP request fails or succeeds.
 <!-- end abstract --></p>
 <p></p>
@@ -124,7 +166,7 @@ when a HTTP request fails or succeeds.
 <div class="param_indent">
 <dl>
 <dt><code>delegate</code></dt>
-<dd><p>&#65532;The delegate to add.</p></dd>
+<dd><p>The delegate to add.</p></dd>
 </dl>
 </div>
 <p></p>
@@ -135,7 +177,7 @@ when a HTTP request fails or succeeds.
 </td></tr></table>
 <hr>
 <p><!-- begin abstract --></p>
-<p>&#65532;Determines whether or not to use the main thread to call delegate methods. Default is YES.
+<p>Determines whether or not to use the main thread to call delegate methods. Default is YES.
 <!-- end abstract --></p>
 <p></p>
 <div class="declaration_indent">
@@ -145,18 +187,113 @@ when a HTTP request fails or succeeds.
 <div class="param_indent">
 <dl>
 <dt><code>callback</code></dt>
-<dd><p>&#65532;YES to have the delegate methods be called on the main thread; otherwise NO.</p></dd>
+<dd><p>YES to have the delegate methods be called on the main thread; otherwise NO.</p></dd>
 </dl>
 </div>
 <h5 class="tight">
 <font face="Lucida Grande,Helvetica,Arial">Discussion</font>
 </h5>
-<!-- begin discussion --><p>&#65532;Since NSOpertaionQueue spawns new threads in order to fulfill its purpose, there are instances
+<!-- begin discussion --><p>Since NSOpertaionQueue spawns new threads in order to fulfill its purpose, there are instances
 where it might be benefical to extend the life of that thread (e.g. loading objects into CoreData).
 </p>
 <p>There are only two delegate methods defined by <a href="../../../../Documentation/SGLocationService_h/Protocols/SGLocationServiceDelegate/index.html#//simplegeo/occ/intf/SGLocationServiceDelegate" logicalPath="//simplegeo/occ/intf/SGLocationServiceDelegate">SGLocationServiceDelegate</a>.
 If you plan on updating any UIViews, Apple recomends to us the main thread. So be careful. If you plan on updating
 a UITableView within your implementation of the delegate methods, be sure that this value is set to YES.
+<!-- end discussion -->
+</p>
+<p></p>
+<hr>
+<!-- headerDoc=instm;  uid=//simplegeo/occ/instm/SGLocationService/deleteRecord:layer:;   name=SGLocationService::deleteRecord:layer: --><a name="//simplegeo/occ/instm/SGLocationService/deleteRecord:layer:"></a>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="deleteRecord:layer:">deleteRecord:layer:</a></h3>
+</td></tr></table>
+<hr>
+<p></p>
+<div class="declaration_indent">
+<pre>- (<!-- a logicalPath="//simplegeo/occ/cl/NSString //simplegeo/occ/tdef/NSString //simplegeo/occ/tag/NSString //simplegeo/occ/econst/NSString //simplegeo/occ/struct/NSString //simplegeo/occ/clconst/NSString //simplegeo/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --><span class="type">*</span>) <!-- a logicalPath="//simplegeo/occ/instm/deleteRecord //simplegeo/occ/clm/deleteRecord //simplegeo/occ/intfcm/deleteRecord //simplegeo/occ/intfm/deleteRecord //simplegeo/occ/func/deleteRecord //simplegeo/occ/ftmplt/deleteRecord //simplegeo/occ/defn/deleteRecord //simplegeo/occ/macro/deleteRecord" --><span class="function">deleteRecord</span><!-- /a -->:(<!-- a logicalPath="//simplegeo/occ/cl/NSString //simplegeo/occ/tdef/NSString //simplegeo/occ/tag/NSString //simplegeo/occ/econst/NSString //simplegeo/occ/struct/NSString //simplegeo/occ/clconst/NSString //simplegeo/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --><span class="type">*</span>)<span class="param">recordId</span> <!-- a logicalPath="//simplegeo/occ/instm/layer //simplegeo/occ/clm/layer //simplegeo/occ/intfcm/layer //simplegeo/occ/intfm/layer //simplegeo/occ/func/layer //simplegeo/occ/ftmplt/layer //simplegeo/occ/defn/layer //simplegeo/occ/macro/layer" --><span class="function">layer</span><!-- /a -->:(<!-- a logicalPath="//simplegeo/occ/cl/NSString //simplegeo/occ/tdef/NSString //simplegeo/occ/tag/NSString //simplegeo/occ/econst/NSString //simplegeo/occ/struct/NSString //simplegeo/occ/clconst/NSString //simplegeo/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//simplegeo/occ/econst/layer //simplegeo/occ/data/layer" --><span class="var">layer</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt><code>recordId</code></dt>
+<dd><p>The id of the record to delete.</p></dd>
+<dt><code>layer</code></dt>
+<dd><p>The layer in which the record is located.</p></dd>
+</dl>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5>
+<p><!-- begin return value -->A response id that is used to identifier the return value from SimpleGeo. 
+You can use this value in <a href="../../../../Documentation/SGLocationService_h/Protocols/SGLocationServiceDelegate/index.html#//simplegeo/occ/intf/SGLocationServiceDelegate" logicalPath="//simplegeo/occ/intf/SGLocationServiceDelegate">delegate</a>.
+
+<!-- end return value --></p>
+<h5 class="tight">
+<font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5>
+<!-- begin discussion --><p>@abstract&#65532;Deletes a single record from SimpleGeo.
+@discussion&#65532;Use this method to delete a record from SimpleGeo.<!-- end discussion -->
+</p>
+<p></p>
+<hr>
+<!-- headerDoc=instm;  uid=//simplegeo/occ/instm/SGLocationService/deleteRecordAnnotation:;   name=SGLocationService::deleteRecordAnnotation: --><a name="//simplegeo/occ/instm/SGLocationService/deleteRecordAnnotation:"></a>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="deleteRecordAnnotation:">deleteRecordAnnotation:</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --></p>
+<p>&#65532;Deletes a <!-- a logicalPath="//simplegeo/ooc/intf/SGAnnotationRecord" -->SGAnnotationRecord<!-- /a --> from SimpleGeo.
+<!-- end abstract --></p>
+<p></p>
+<div class="declaration_indent">
+<pre>- (<!-- a logicalPath="//simplegeo/occ/cl/NSString //simplegeo/occ/tdef/NSString //simplegeo/occ/tag/NSString //simplegeo/occ/econst/NSString //simplegeo/occ/struct/NSString //simplegeo/occ/clconst/NSString //simplegeo/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --><span class="type">*</span>) <!-- a logicalPath="//simplegeo/occ/instm/deleteRecordAnnotation //simplegeo/occ/clm/deleteRecordAnnotation //simplegeo/occ/intfcm/deleteRecordAnnotation //simplegeo/occ/intfm/deleteRecordAnnotation //simplegeo/occ/func/deleteRecordAnnotation //simplegeo/occ/ftmplt/deleteRecordAnnotation //simplegeo/occ/defn/deleteRecordAnnotation //simplegeo/occ/macro/deleteRecordAnnotation" --><span class="function">deleteRecordAnnotation</span><!-- /a -->:(<!-- a logicalPath="//simplegeo/occ/cl/id //simplegeo/occ/tdef/id //simplegeo/occ/tag/id //simplegeo/occ/econst/id //simplegeo/occ/struct/id //simplegeo/occ/clconst/id //simplegeo/occ/intf/id" --><span class="type">id</span><!-- /a -->&lt;<span class="param">SGRecordAnnotation</span>&gt;)<!-- a logicalPath="//simplegeo/occ/econst/record //simplegeo/occ/data/record" --><span class="var">record</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt><code>record</code></dt>
+<dd><p>&#65532;The record to delete.</p></dd>
+</dl>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5>
+<p><!-- begin return value -->&#65532;A response id that is used to identifier the return value from SimpleGeo. 
+You can use this value in <a href="../../../../Documentation/SGLocationService_h/Protocols/SGLocationServiceDelegate/index.html#//simplegeo/occ/intf/SGLocationServiceDelegate" logicalPath="//simplegeo/occ/intf/SGLocationServiceDelegate">delegate</a>.
+
+<!-- end return value --></p>
+<h5 class="tight">
+<font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5>
+<!-- begin discussion --><p>&#65532;See <a href="../../../../Documentation/SGLocationService_h/Classes/SGLocationService/index.html#//simplegeo/occ/instm/SGLocationService/deleteRecord:layer:" logicalPath="//simplegeo/occ/instm/SGLocationService/deleteRecord:layer:">deleteRecord:layer:</a>
+<!-- end discussion -->
+</p>
+<p></p>
+<hr>
+<!-- headerDoc=instm;  uid=//simplegeo/occ/instm/SGLocationService/deleteRecordAnnotations:;   name=SGLocationService::deleteRecordAnnotations: --><a name="//simplegeo/occ/instm/SGLocationService/deleteRecordAnnotations:"></a>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="deleteRecordAnnotations:">deleteRecordAnnotations:</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --></p>
+<p>&#65532;Deletes an array of <!-- a logicalPath="//simplegeo/ooc/intf/SGAnnotationRecord" -->SGAnnotationRecord<!-- /a --> from SimpleGeo.
+<!-- end abstract --></p>
+<p></p>
+<div class="declaration_indent">
+<pre>- (<!-- a logicalPath="//simplegeo/occ/cl/NSString //simplegeo/occ/tdef/NSString //simplegeo/occ/tag/NSString //simplegeo/occ/econst/NSString //simplegeo/occ/struct/NSString //simplegeo/occ/clconst/NSString //simplegeo/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --><span class="type">*</span>) <!-- a logicalPath="//simplegeo/occ/instm/deleteRecordAnnotations //simplegeo/occ/clm/deleteRecordAnnotations //simplegeo/occ/intfcm/deleteRecordAnnotations //simplegeo/occ/intfm/deleteRecordAnnotations //simplegeo/occ/func/deleteRecordAnnotations //simplegeo/occ/ftmplt/deleteRecordAnnotations //simplegeo/occ/defn/deleteRecordAnnotations //simplegeo/occ/macro/deleteRecordAnnotations" --><span class="function">deleteRecordAnnotations</span><!-- /a -->:(<!-- a logicalPath="//simplegeo/occ/cl/NSArray //simplegeo/occ/tdef/NSArray //simplegeo/occ/tag/NSArray //simplegeo/occ/econst/NSArray //simplegeo/occ/struct/NSArray //simplegeo/occ/clconst/NSArray //simplegeo/occ/intf/NSArray" --><span class="type">NSArray</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//simplegeo/occ/econst/records //simplegeo/occ/data/records" --><span class="var">records</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt><code>records</code></dt>
+<dd><p>&#65532;The records to delete.</p></dd>
+</dl>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5>
+<p><!-- begin return value -->&#65532;A response id that is used to identifier the return value from SimpleGeo. 
+You can use this value in <a href="../../../../Documentation/SGLocationService_h/Protocols/SGLocationServiceDelegate/index.html#//simplegeo/occ/intf/SGLocationServiceDelegate" logicalPath="//simplegeo/occ/intf/SGLocationServiceDelegate">delegate</a>.
+
+<!-- end return value --></p>
+<h5 class="tight">
+<font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5>
+<!-- begin discussion --><p>&#65532;See <a href="../../../../Documentation/SGLocationService_h/Classes/SGLocationService/index.html#//simplegeo/occ/instm/SGLocationService/deleteRecord:layer:" logicalPath="//simplegeo/occ/instm/SGLocationService/deleteRecord:layer:">deleteRecord:layer:</a>
 <!-- end discussion -->
 </p>
 <p></p>
@@ -167,7 +304,7 @@ a UITableView within your implementation of the delegate methods, be sure that t
 </td></tr></table>
 <hr>
 <p><!-- begin abstract --></p>
-<p>&#65532;Removes the <a href="../../../../Documentation/SGLocationService_h/Protocols/SGLocationServiceDelegate/index.html#//simplegeo/occ/intf/SGLocationServiceDelegate" logicalPath="//simplegeo/occ/intf/SGLocationServiceDelegate">SGLocationServiceDelegate</a> from the group
+<p>Removes the <a href="../../../../Documentation/SGLocationService_h/Protocols/SGLocationServiceDelegate/index.html#//simplegeo/occ/intf/SGLocationServiceDelegate" logicalPath="//simplegeo/occ/intf/SGLocationServiceDelegate">SGLocationServiceDelegate</a> from the group
 of delegates.
 <!-- end abstract --></p>
 <p></p>
@@ -178,9 +315,214 @@ of delegates.
 <div class="param_indent">
 <dl>
 <dt><code>delegate</code></dt>
-<dd><p>&#65532;The delegate to remove.</p></dd>
+<dd><p>The delegate to remove.</p></dd>
 </dl>
 </div>
+<p></p>
+<hr>
+<!-- headerDoc=instm;  uid=//simplegeo/occ/instm/SGLocationService/retrieveRecord:layer:;   name=SGLocationService::retrieveRecord:layer: --><a name="//simplegeo/occ/instm/SGLocationService/retrieveRecord:layer:"></a>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="retrieveRecord:layer:">retrieveRecord:layer:</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --></p>
+<p>Retrieves information about a record within a layer.
+<!-- end abstract --></p>
+<p></p>
+<div class="declaration_indent">
+<pre>- (<!-- a logicalPath="//simplegeo/occ/cl/NSString //simplegeo/occ/tdef/NSString //simplegeo/occ/tag/NSString //simplegeo/occ/econst/NSString //simplegeo/occ/struct/NSString //simplegeo/occ/clconst/NSString //simplegeo/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --><span class="type">*</span>) <!-- a logicalPath="//simplegeo/occ/instm/retrieveRecord //simplegeo/occ/clm/retrieveRecord //simplegeo/occ/intfcm/retrieveRecord //simplegeo/occ/intfm/retrieveRecord //simplegeo/occ/func/retrieveRecord //simplegeo/occ/ftmplt/retrieveRecord //simplegeo/occ/defn/retrieveRecord //simplegeo/occ/macro/retrieveRecord" --><span class="function">retrieveRecord</span><!-- /a -->:(<!-- a logicalPath="//simplegeo/occ/cl/NSString //simplegeo/occ/tdef/NSString //simplegeo/occ/tag/NSString //simplegeo/occ/econst/NSString //simplegeo/occ/struct/NSString //simplegeo/occ/clconst/NSString //simplegeo/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --><span class="type">*</span>)<span class="param">recordId</span> <!-- a logicalPath="//simplegeo/occ/instm/layer //simplegeo/occ/clm/layer //simplegeo/occ/intfcm/layer //simplegeo/occ/intfm/layer //simplegeo/occ/func/layer //simplegeo/occ/ftmplt/layer //simplegeo/occ/defn/layer //simplegeo/occ/macro/layer" --><span class="function">layer</span><!-- /a -->:(<!-- a logicalPath="//simplegeo/occ/cl/NSString //simplegeo/occ/tdef/NSString //simplegeo/occ/tag/NSString //simplegeo/occ/econst/NSString //simplegeo/occ/struct/NSString //simplegeo/occ/clconst/NSString //simplegeo/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//simplegeo/occ/econst/layer //simplegeo/occ/data/layer" --><span class="var">layer</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt><code>recordId</code></dt>
+<dd><p>The id of the record.</p></dd>
+<dt><code>layer</code></dt>
+<dd><p>The layer in which the record is located in.</p></dd>
+</dl>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5>
+<p><!-- begin return value -->A response id that is used to identifier the return value from SimpleGeo. 
+You can use this value in <a href="../../../../Documentation/SGLocationService_h/Protocols/SGLocationServiceDelegate/index.html#//simplegeo/occ/intf/SGLocationServiceDelegate" logicalPath="//simplegeo/occ/intf/SGLocationServiceDelegate">delegate</a>.
+
+<!-- end return value --></p>
+<h5 class="tight">
+<font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5>
+<!-- begin discussion --><p>Use this method to retrieve information about a single record that is already stored in SimpleGeo. 
+<!-- end discussion -->
+</p>
+<p></p>
+<hr>
+<!-- headerDoc=instm;  uid=//simplegeo/occ/instm/SGLocationService/retrieveRecordAnnotation:;   name=SGLocationService::retrieveRecordAnnotation: --><a name="//simplegeo/occ/instm/SGLocationService/retrieveRecordAnnotation:"></a>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="retrieveRecordAnnotation:">retrieveRecordAnnotation:</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --></p>
+<p>Retrieves information about a <!-- a logicalPath="//simplegeo/ooc/intf/SGRecordAnnotation" -->SGRecordAnnotation<!-- /a --> from 
+SimpleGeo.
+<!-- end abstract --></p>
+<p></p>
+<div class="declaration_indent">
+<pre>- (<!-- a logicalPath="//simplegeo/occ/cl/NSString //simplegeo/occ/tdef/NSString //simplegeo/occ/tag/NSString //simplegeo/occ/econst/NSString //simplegeo/occ/struct/NSString //simplegeo/occ/clconst/NSString //simplegeo/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --><span class="type">*</span>) <!-- a logicalPath="//simplegeo/occ/instm/retrieveRecordAnnotation //simplegeo/occ/clm/retrieveRecordAnnotation //simplegeo/occ/intfcm/retrieveRecordAnnotation //simplegeo/occ/intfm/retrieveRecordAnnotation //simplegeo/occ/func/retrieveRecordAnnotation //simplegeo/occ/ftmplt/retrieveRecordAnnotation //simplegeo/occ/defn/retrieveRecordAnnotation //simplegeo/occ/macro/retrieveRecordAnnotation" --><span class="function">retrieveRecordAnnotation</span><!-- /a -->:(<!-- a logicalPath="//simplegeo/occ/cl/id //simplegeo/occ/tdef/id //simplegeo/occ/tag/id //simplegeo/occ/econst/id //simplegeo/occ/struct/id //simplegeo/occ/clconst/id //simplegeo/occ/intf/id" --><span class="type">id</span><!-- /a -->&lt;<span class="param">SGRecordAnnotation</span>&gt;)<!-- a logicalPath="//simplegeo/occ/econst/record //simplegeo/occ/data/record" --><span class="var">record</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt><code>record</code></dt>
+<dd><p>The record.</p></dd>
+</dl>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5>
+<p><!-- begin return value -->A response id that is used to identifier the return value from SimpleGeo. 
+You can use this value in <a href="../../../../Documentation/SGLocationService_h/Protocols/SGLocationServiceDelegate/index.html#//simplegeo/occ/intf/SGLocationServiceDelegate" logicalPath="//simplegeo/occ/intf/SGLocationServiceDelegate">delegate</a>.
+
+<!-- end return value --></p>
+<h5 class="tight">
+<font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5>
+<!-- begin discussion --><p>See <a href="../../../../Documentation/SGLocationService_h/Classes/SGLocationService/index.html#//simplegeo/occ/instm/SGLocationService/retrieveRecord:layer:" logicalPath="//simplegeo/occ/instm/SGLocationService/retrieveRecord:layer:">retrieveRecord:layer:</a>
+<!-- end discussion -->
+</p>
+<p></p>
+<hr>
+<!-- headerDoc=instm;  uid=//simplegeo/occ/instm/SGLocationService/retrieveRecordAnnotations:;   name=SGLocationService::retrieveRecordAnnotations: --><a name="//simplegeo/occ/instm/SGLocationService/retrieveRecordAnnotations:"></a>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="retrieveRecordAnnotations:">retrieveRecordAnnotations:</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --></p>
+<p>Retreives information about an array of <!-- a logicalPath="//simplegeo/ooc/intf/SGRecordAnnotation" -->SGRecordAnnotation<!-- /a -->
+from Simplegeo.
+<!-- end abstract --></p>
+<p></p>
+<div class="declaration_indent">
+<pre>- (<!-- a logicalPath="//simplegeo/occ/cl/NSString //simplegeo/occ/tdef/NSString //simplegeo/occ/tag/NSString //simplegeo/occ/econst/NSString //simplegeo/occ/struct/NSString //simplegeo/occ/clconst/NSString //simplegeo/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --><span class="type">*</span>) <!-- a logicalPath="//simplegeo/occ/instm/retrieveRecordAnnotations //simplegeo/occ/clm/retrieveRecordAnnotations //simplegeo/occ/intfcm/retrieveRecordAnnotations //simplegeo/occ/intfm/retrieveRecordAnnotations //simplegeo/occ/func/retrieveRecordAnnotations //simplegeo/occ/ftmplt/retrieveRecordAnnotations //simplegeo/occ/defn/retrieveRecordAnnotations //simplegeo/occ/macro/retrieveRecordAnnotations" --><span class="function">retrieveRecordAnnotations</span><!-- /a -->:(<!-- a logicalPath="//simplegeo/occ/cl/NSArray //simplegeo/occ/tdef/NSArray //simplegeo/occ/tag/NSArray //simplegeo/occ/econst/NSArray //simplegeo/occ/struct/NSArray //simplegeo/occ/clconst/NSArray //simplegeo/occ/intf/NSArray" --><span class="type">NSArray</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//simplegeo/occ/econst/records //simplegeo/occ/data/records" --><span class="var">records</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt><code>records</code></dt>
+<dd><p>&#65532;</p></dd>
+</dl>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5>
+<p><!-- begin return value -->A response id that is used to identifier the return value from SimpleGeo. 
+You can use this value in <a href="../../../../Documentation/SGLocationService_h/Protocols/SGLocationServiceDelegate/index.html#//simplegeo/occ/intf/SGLocationServiceDelegate" logicalPath="//simplegeo/occ/intf/SGLocationServiceDelegate">delegate</a>.
+
+<!-- end return value --></p>
+<h5 class="tight">
+<font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5>
+<!-- begin discussion --><p>See <a href="../../../../Documentation/SGLocationService_h/Classes/SGLocationService/index.html#//simplegeo/occ/instm/SGLocationService/retrieveRecord:layer:" logicalPath="//simplegeo/occ/instm/SGLocationService/retrieveRecord:layer:">retrieveRecord:layer:</a>
+<!-- end discussion -->
+</p>
+<p></p>
+<hr>
+<!-- headerDoc=instm;  uid=//simplegeo/occ/instm/SGLocationService/retrieveRecordsForCoordinate:radius:layers:types:limit:;   name=SGLocationService::retrieveRecordsForCoordinate:radius:layers:types:limit: --><a name="//simplegeo/occ/instm/SGLocationService/retrieveRecordsForCoordinate:radius:layers:types:limit:"></a>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="retrieveRecordsForCoordinate:radius:layers:types:limit:">retrieveRecordsForCoordinate:radius:layers:types:limit:</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --></p>
+<p>Get records that are located within a radius of coordinate.
+<!-- end abstract --></p>
+<p></p>
+<div class="declaration_indent">
+<pre>- (<!-- a logicalPath="//simplegeo/occ/cl/NSString //simplegeo/occ/tdef/NSString //simplegeo/occ/tag/NSString //simplegeo/occ/econst/NSString //simplegeo/occ/struct/NSString //simplegeo/occ/clconst/NSString //simplegeo/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --><span class="type">*</span>) <!-- a logicalPath="//simplegeo/occ/instm/retrieveRecordsForCoordinate //simplegeo/occ/clm/retrieveRecordsForCoordinate //simplegeo/occ/intfcm/retrieveRecordsForCoordinate //simplegeo/occ/intfm/retrieveRecordsForCoordinate //simplegeo/occ/func/retrieveRecordsForCoordinate //simplegeo/occ/ftmplt/retrieveRecordsForCoordinate //simplegeo/occ/defn/retrieveRecordsForCoordinate //simplegeo/occ/macro/retrieveRecordsForCoordinate" --><span class="function">retrieveRecordsForCoordinate</span><!-- /a -->:(<!-- a logicalPath="//simplegeo/occ/cl/CLLocationCoordinate2D //simplegeo/occ/tdef/CLLocationCoordinate2D //simplegeo/occ/tag/CLLocationCoordinate2D //simplegeo/occ/econst/CLLocationCoordinate2D //simplegeo/occ/struct/CLLocationCoordinate2D //simplegeo/occ/clconst/CLLocationCoordinate2D //simplegeo/occ/intf/CLLocationCoordinate2D" --><span class="type">CLLocationCoordinate2D</span><!-- /a -->)<span class="param">coord</span> <!-- a logicalPath="//simplegeo/occ/instm/radius //simplegeo/occ/clm/radius //simplegeo/occ/intfcm/radius //simplegeo/occ/intfm/radius //simplegeo/occ/func/radius //simplegeo/occ/ftmplt/radius //simplegeo/occ/defn/radius //simplegeo/occ/macro/radius" --><span class="function">radius</span><!-- /a -->:(<!-- a logicalPath="//simplegeo/occ/cl/double //simplegeo/occ/tdef/double //simplegeo/occ/tag/double //simplegeo/occ/econst/double //simplegeo/occ/struct/double //simplegeo/occ/clconst/double //simplegeo/occ/intf/double" --><span class="type">double</span><!-- /a -->)<span class="param">radius</span> <!-- a logicalPath="//simplegeo/occ/instm/layers //simplegeo/occ/clm/layers //simplegeo/occ/intfcm/layers //simplegeo/occ/intfm/layers //simplegeo/occ/func/layers //simplegeo/occ/ftmplt/layers //simplegeo/occ/defn/layers //simplegeo/occ/macro/layers" --><span class="function">layers</span><!-- /a -->:(<!-- a logicalPath="//simplegeo/occ/cl/NSArray //simplegeo/occ/tdef/NSArray //simplegeo/occ/tag/NSArray //simplegeo/occ/econst/NSArray //simplegeo/occ/struct/NSArray //simplegeo/occ/clconst/NSArray //simplegeo/occ/intf/NSArray" --><span class="type">NSArray</span><!-- /a --><span class="type">*</span>)<span class="param">layers</span> <!-- a logicalPath="//simplegeo/occ/instm/types //simplegeo/occ/clm/types //simplegeo/occ/intfcm/types //simplegeo/occ/intfm/types //simplegeo/occ/func/types //simplegeo/occ/ftmplt/types //simplegeo/occ/defn/types //simplegeo/occ/macro/types" --><span class="function">types</span><!-- /a -->:(<!-- a logicalPath="//simplegeo/occ/cl/NSArray //simplegeo/occ/tdef/NSArray //simplegeo/occ/tag/NSArray //simplegeo/occ/econst/NSArray //simplegeo/occ/struct/NSArray //simplegeo/occ/clconst/NSArray //simplegeo/occ/intf/NSArray" --><span class="type">NSArray</span><!-- /a --><span class="type">*</span>)<span class="param">types</span> <!-- a logicalPath="//simplegeo/occ/instm/limit //simplegeo/occ/clm/limit //simplegeo/occ/intfcm/limit //simplegeo/occ/intfm/limit //simplegeo/occ/func/limit //simplegeo/occ/ftmplt/limit //simplegeo/occ/defn/limit //simplegeo/occ/macro/limit" --><span class="function">limit</span><!-- /a -->:(<!-- a logicalPath="//simplegeo/occ/cl/NSInteger //simplegeo/occ/tdef/NSInteger //simplegeo/occ/tag/NSInteger //simplegeo/occ/econst/NSInteger //simplegeo/occ/struct/NSInteger //simplegeo/occ/clconst/NSInteger //simplegeo/occ/intf/NSInteger" --><span class="type">NSInteger</span><!-- /a -->)<!-- a logicalPath="//simplegeo/occ/econst/limit //simplegeo/occ/data/limit" --><span class="var">limit</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt><code>coord</code></dt>
+<dd><p>The origin of the radius.</p></dd>
+<dt><code>radius</code></dt>
+<dd><p>The radius of the search space. (km)</p></dd>
+<dt><code>layers</code></dt>
+<dd><p>An array of layer ids that will help filter the search.</p></dd>
+<dt><code>types</code></dt>
+<dd><p>An array of types that will help filter the search.</p></dd>
+<dt><code>limit&#65532;The</code></dt>
+<dd><p>amount of records to obtain.</p></dd>
+</dl>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5>
+<p><!-- begin return value -->A response id that is used to identifier the return value from SimpleGeo. 
+You can use this value in <a href="../../../../Documentation/SGLocationService_h/Protocols/SGLocationServiceDelegate/index.html#//simplegeo/occ/intf/SGLocationServiceDelegate" logicalPath="//simplegeo/occ/intf/SGLocationServiceDelegate">delegate</a>. 
+
+<!-- end return value --></p>
+<p></p>
+<hr>
+<!-- headerDoc=instm;  uid=//simplegeo/occ/instm/SGLocationService/retrieveRecordsForGeohash:layers:types:limit:;   name=SGLocationService::retrieveRecordsForGeohash:layers:types:limit: --><a name="//simplegeo/occ/instm/SGLocationService/retrieveRecordsForGeohash:layers:types:limit:"></a>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="retrieveRecordsForGeohash:layers:types:limit:">retrieveRecordsForGeohash:layers:types:limit:</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --></p>
+<p>Gets records that are located in a specific geohash.
+<!-- end abstract --></p>
+<p></p>
+<div class="declaration_indent">
+<pre>- (<!-- a logicalPath="//simplegeo/occ/cl/NSString //simplegeo/occ/tdef/NSString //simplegeo/occ/tag/NSString //simplegeo/occ/econst/NSString //simplegeo/occ/struct/NSString //simplegeo/occ/clconst/NSString //simplegeo/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --><span class="type">*</span>) <!-- a logicalPath="//simplegeo/occ/instm/retrieveRecordsForGeohash //simplegeo/occ/clm/retrieveRecordsForGeohash //simplegeo/occ/intfcm/retrieveRecordsForGeohash //simplegeo/occ/intfm/retrieveRecordsForGeohash //simplegeo/occ/func/retrieveRecordsForGeohash //simplegeo/occ/ftmplt/retrieveRecordsForGeohash //simplegeo/occ/defn/retrieveRecordsForGeohash //simplegeo/occ/macro/retrieveRecordsForGeohash" --><span class="function">retrieveRecordsForGeohash</span><!-- /a -->:(<a href="../../../../Documentation/SGLocationTypes_h/index.html#//simplegeo/c/tdef/SGGeohash" logicalPath="//simplegeo/occ/cl/SGGeohash //simplegeo/occ/tdef/SGGeohash"><span class="type">SGGeohash</span></a>)<span class="param">geohash</span> <!-- a logicalPath="//simplegeo/occ/instm/layers //simplegeo/occ/clm/layers //simplegeo/occ/intfcm/layers //simplegeo/occ/intfm/layers //simplegeo/occ/func/layers //simplegeo/occ/ftmplt/layers //simplegeo/occ/defn/layers //simplegeo/occ/macro/layers" --><span class="function">layers</span><!-- /a -->:(<!-- a logicalPath="//simplegeo/occ/cl/NSArray //simplegeo/occ/tdef/NSArray //simplegeo/occ/tag/NSArray //simplegeo/occ/econst/NSArray //simplegeo/occ/struct/NSArray //simplegeo/occ/clconst/NSArray //simplegeo/occ/intf/NSArray" --><span class="type">NSArray</span><!-- /a --><span class="type">*</span>)<span class="param">layers</span> <!-- a logicalPath="//simplegeo/occ/instm/types //simplegeo/occ/clm/types //simplegeo/occ/intfcm/types //simplegeo/occ/intfm/types //simplegeo/occ/func/types //simplegeo/occ/ftmplt/types //simplegeo/occ/defn/types //simplegeo/occ/macro/types" --><span class="function">types</span><!-- /a -->:(<!-- a logicalPath="//simplegeo/occ/cl/NSArray //simplegeo/occ/tdef/NSArray //simplegeo/occ/tag/NSArray //simplegeo/occ/econst/NSArray //simplegeo/occ/struct/NSArray //simplegeo/occ/clconst/NSArray //simplegeo/occ/intf/NSArray" --><span class="type">NSArray</span><!-- /a --><span class="type">*</span>)<span class="param">types</span> <!-- a logicalPath="//simplegeo/occ/instm/limit //simplegeo/occ/clm/limit //simplegeo/occ/intfcm/limit //simplegeo/occ/intfm/limit //simplegeo/occ/func/limit //simplegeo/occ/ftmplt/limit //simplegeo/occ/defn/limit //simplegeo/occ/macro/limit" --><span class="function">limit</span><!-- /a -->:(<!-- a logicalPath="//simplegeo/occ/cl/NSInteger //simplegeo/occ/tdef/NSInteger //simplegeo/occ/tag/NSInteger //simplegeo/occ/econst/NSInteger //simplegeo/occ/struct/NSInteger //simplegeo/occ/clconst/NSInteger //simplegeo/occ/intf/NSInteger" --><span class="type">NSInteger</span><!-- /a -->)<!-- a logicalPath="//simplegeo/occ/econst/limit //simplegeo/occ/data/limit" --><span class="var">limit</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt><code>geohash</code></dt>
+<dd><p>The geohash that should be searched.</p></dd>
+<dt><code>layers</code></dt>
+<dd><p>An array of layer ids that will help filter the search.</p></dd>
+<dt><code>types</code></dt>
+<dd><p>An array of types that will help filter the search.</p></dd>
+<dt><code>limit</code></dt>
+<dd><p>The amount of records to obtain.</p></dd>
+</dl>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5>
+<p><!-- begin return value -->A response id that is used to identifier the return value from SimpleGeo. 
+You can use this value in <a href="../../../../Documentation/SGLocationService_h/Protocols/SGLocationServiceDelegate/index.html#//simplegeo/occ/intf/SGLocationServiceDelegate" logicalPath="//simplegeo/occ/intf/SGLocationServiceDelegate">delegate</a>.
+
+<!-- end return value --></p>
+<p></p>
+<hr>
+<!-- headerDoc=instm;  uid=//simplegeo/occ/instm/SGLocationService/reverseGeocode:;   name=SGLocationService::reverseGeocode: --><a name="//simplegeo/occ/instm/SGLocationService/reverseGeocode:"></a>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="reverseGeocode:">reverseGeocode:</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --></p>
+<p>Returns resource information for a given pair lat/lon coordinate.
+<!-- end abstract --></p>
+<p></p>
+<div class="declaration_indent">
+<pre>- (<!-- a logicalPath="//simplegeo/occ/cl/NSString //simplegeo/occ/tdef/NSString //simplegeo/occ/tag/NSString //simplegeo/occ/econst/NSString //simplegeo/occ/struct/NSString //simplegeo/occ/clconst/NSString //simplegeo/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --><span class="type">*</span>) <!-- a logicalPath="//simplegeo/occ/instm/reverseGeocode //simplegeo/occ/clm/reverseGeocode //simplegeo/occ/intfcm/reverseGeocode //simplegeo/occ/intfm/reverseGeocode //simplegeo/occ/func/reverseGeocode //simplegeo/occ/ftmplt/reverseGeocode //simplegeo/occ/defn/reverseGeocode //simplegeo/occ/macro/reverseGeocode" --><span class="function">reverseGeocode</span><!-- /a -->:(<!-- a logicalPath="//simplegeo/occ/cl/CLLocationCoordinate2D //simplegeo/occ/tdef/CLLocationCoordinate2D //simplegeo/occ/tag/CLLocationCoordinate2D //simplegeo/occ/econst/CLLocationCoordinate2D //simplegeo/occ/struct/CLLocationCoordinate2D //simplegeo/occ/clconst/CLLocationCoordinate2D //simplegeo/occ/intf/CLLocationCoordinate2D" --><span class="type">CLLocationCoordinate2D</span><!-- /a -->)<!-- a logicalPath="//simplegeo/occ/econst/coord //simplegeo/occ/data/coord" --><span class="var">coord</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt><code>coord</code></dt>
+<dd><p>The coordinate to use for reverse geocoding.</p></dd>
+</dl>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5>
+<p><!-- begin return value -->A response id that is used to identifier the return value from SimpleGeo. 
+You can use this value in <a href="../../../../Documentation/SGLocationService_h/Protocols/SGLocationServiceDelegate/index.html#//simplegeo/occ/intf/SGLocationServiceDelegate" logicalPath="//simplegeo/occ/intf/SGLocationServiceDelegate">delegate</a>. 
+
+<!-- end return value --></p>
+<h5 class="tight">
+<font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5>
+<!-- begin discussion --><p>This method does not use MapKit's reverse geocoding methods. SimpleGeo
+offers its own reverse geocoding endpoint. The response object is a GeoJSON dictionary
+where the properties key contains a dictionary with the following keys:
+</p>
+<p>street_number, country, street, postal_code, county_name, county_code, state_code, place_name
+</p>
+<p>Reverse geocoding is only supported within the US; however, other countries will
+be offered in the coming months.
+<!-- end discussion -->
+</p>
 <p></p>
 <hr>
 <!-- headerDoc=clm;  uid=//simplegeo/occ/clm/SGLocationService/sharedLocationService;   name=SGLocationService::sharedLocationService --><a name="//simplegeo/occ/clm/SGLocationService/sharedLocationService"></a>
@@ -189,16 +531,165 @@ of delegates.
 </td></tr></table>
 <hr>
 <p><!-- begin abstract --></p>
-<p>&#65532; The shared instance of <a href="../../../../Documentation/SGLocationService_h/Classes/SGLocationService/index.html#//simplegeo/occ/cl/SGLocationService" logicalPath="//simplegeo/occ/cl/SGLocationService">SGLocationService</a>.
+<p>The shared instance of <a href="../../../../Documentation/SGLocationService_h/Classes/SGLocationService/index.html#//simplegeo/occ/cl/SGLocationService" logicalPath="//simplegeo/occ/cl/SGLocationService">SGLocationService</a>.
 <!-- end abstract --></p>
 <p></p>
 <div class="declaration_indent">
 <pre>+ (<a href="../../../../Documentation/SGLocationService_h/Classes/SGLocationService/index.html#//simplegeo/occ/cl/SGLocationService" logicalPath="//simplegeo/occ/cl/SGLocationService"><span class="type">SGLocationService</span></a><span class="type">*</span>) <!-- a logicalPath="//simplegeo/occ/econst/sharedLocationService //simplegeo/occ/data/sharedLocationService" --><span class="var">sharedLocationService</span><!-- /a -->; </pre>
 </div>
 <h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5>
-<p><!-- begin return value -->&#65532; The shared instance of <a href="../../../../Documentation/SGLocationService_h/Classes/SGLocationService/index.html#//simplegeo/occ/cl/SGLocationService" logicalPath="//simplegeo/occ/cl/SGLocationService">SGLocationService</a>.
+<p><!-- begin return value -->The shared instance of <a href="../../../../Documentation/SGLocationService_h/Classes/SGLocationService/index.html#//simplegeo/occ/cl/SGLocationService" logicalPath="//simplegeo/occ/cl/SGLocationService">SGLocationService</a>.
 
 <!-- end return value --></p>
+<p></p>
+<hr>
+<!-- headerDoc=instm;  uid=//simplegeo/occ/instm/SGLocationService/updateRecord:layer:coord:properties:;   name=SGLocationService::updateRecord:layer:coord:properties: --><a name="//simplegeo/occ/instm/SGLocationService/updateRecord:layer:coord:properties:"></a>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="updateRecord:layer:coord:properties:">updateRecord:layer:coord:properties:</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --></p>
+<p>Updates a record with the given properties.
+<!-- end abstract --></p>
+<p></p>
+<b>See Also:</b><div class="list_indent"><dl>
+<dt>
+<a href="../../../../Documentation/SGLocationService_h/Classes/SGLocationService/index.html#//simplegeo/doc/title:instm/SGLocationService/updateRecord:layer:properties:" logicalPath="//simplegeo/doc/title:instm/SGLocationService/updateRecord:layer:properties:"><p>updateRecord:layer:properties:</p></a>
+</dt>
+<dd></dd>
+</dl></div>
+<div class="declaration_indent">
+<pre>- (<!-- a logicalPath="//simplegeo/occ/cl/NSString //simplegeo/occ/tdef/NSString //simplegeo/occ/tag/NSString //simplegeo/occ/econst/NSString //simplegeo/occ/struct/NSString //simplegeo/occ/clconst/NSString //simplegeo/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --><span class="type">*</span>) <!-- a logicalPath="//simplegeo/occ/instm/updateRecord //simplegeo/occ/clm/updateRecord //simplegeo/occ/intfcm/updateRecord //simplegeo/occ/intfm/updateRecord //simplegeo/occ/func/updateRecord //simplegeo/occ/ftmplt/updateRecord //simplegeo/occ/defn/updateRecord //simplegeo/occ/macro/updateRecord" --><span class="function">updateRecord</span><!-- /a -->:(<!-- a logicalPath="//simplegeo/occ/cl/NSString //simplegeo/occ/tdef/NSString //simplegeo/occ/tag/NSString //simplegeo/occ/econst/NSString //simplegeo/occ/struct/NSString //simplegeo/occ/clconst/NSString //simplegeo/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --><span class="type">*</span>)<span class="param">recordId</span> <!-- a logicalPath="//simplegeo/occ/instm/layer //simplegeo/occ/clm/layer //simplegeo/occ/intfcm/layer //simplegeo/occ/intfm/layer //simplegeo/occ/func/layer //simplegeo/occ/ftmplt/layer //simplegeo/occ/defn/layer //simplegeo/occ/macro/layer" --><span class="function">layer</span><!-- /a -->:(<!-- a logicalPath="//simplegeo/occ/cl/NSString //simplegeo/occ/tdef/NSString //simplegeo/occ/tag/NSString //simplegeo/occ/econst/NSString //simplegeo/occ/struct/NSString //simplegeo/occ/clconst/NSString //simplegeo/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --><span class="type">*</span>)<span class="param">layer</span> 
+        <!-- a logicalPath="//simplegeo/occ/instm/coord //simplegeo/occ/clm/coord //simplegeo/occ/intfcm/coord //simplegeo/occ/intfm/coord //simplegeo/occ/func/coord //simplegeo/occ/ftmplt/coord //simplegeo/occ/defn/coord //simplegeo/occ/macro/coord" --><span class="function">coord</span><!-- /a -->:(<!-- a logicalPath="//simplegeo/occ/cl/CLLocationCoordinate2D //simplegeo/occ/tdef/CLLocationCoordinate2D //simplegeo/occ/tag/CLLocationCoordinate2D //simplegeo/occ/econst/CLLocationCoordinate2D //simplegeo/occ/struct/CLLocationCoordinate2D //simplegeo/occ/clconst/CLLocationCoordinate2D //simplegeo/occ/intf/CLLocationCoordinate2D" --><span class="type">CLLocationCoordinate2D</span><!-- /a -->)<span class="param">coord</span> <!-- a logicalPath="//simplegeo/occ/instm/properties //simplegeo/occ/clm/properties //simplegeo/occ/intfcm/properties //simplegeo/occ/intfm/properties //simplegeo/occ/func/properties //simplegeo/occ/ftmplt/properties //simplegeo/occ/defn/properties //simplegeo/occ/macro/properties" --><span class="function">properties</span><!-- /a -->:(<!-- a logicalPath="//simplegeo/occ/cl/NSDictionary //simplegeo/occ/tdef/NSDictionary //simplegeo/occ/tag/NSDictionary //simplegeo/occ/econst/NSDictionary //simplegeo/occ/struct/NSDictionary //simplegeo/occ/clconst/NSDictionary //simplegeo/occ/intf/NSDictionary" --><span class="type">NSDictionary</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//simplegeo/occ/econst/properties //simplegeo/occ/data/properties" --><span class="var">properties</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt><code>recordId</code></dt>
+<dd><p>The id of the record.</p></dd>
+<dt><code>layer</code></dt>
+<dd><p>The layer in which the record is located in.</p></dd>
+<dt><code>properties</code></dt>
+<dd><p>The new properties for the record.</p></dd>
+</dl>
+</div>
+<h5 class="tight">
+<font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5>
+<!-- begin discussion --><p>Use this method to update records in SimpleGeo. If the record id is not found in the layer
+then a new record will be created. 
+<!-- end discussion -->
+</p>
+<p></p>
+<hr>
+<!-- headerDoc=title:instm;  uid=//simplegeo/doc/title:instm/SGLocationService/updateRecord:layer:properties:;   name=SGLocationService::updateRecord:layer:properties: --><a name="//simplegeo/doc/title:instm/SGLocationService/updateRecord:layer:properties:"></a>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="updateRecord:layer:properties:">updateRecord:layer:properties:</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --></p>
+<p>Updates a record with the given properties.
+<!-- end abstract --></p>
+<p></p>
+<b>See Also:</b><div class="list_indent"><dl>
+<dt>
+<a href="../../../../Documentation/SGLocationService_h/Classes/SGLocationService/index.html#//simplegeo/occ/instm/SGLocationService/updateRecord:layer:coord:properties:" logicalPath="//simplegeo/occ/instm/SGLocationService/updateRecord:layer:coord:properties:"><p>updateRecord:layer:coord:properties:</p></a>
+</dt>
+<dd></dd>
+</dl></div>
+<div class="declaration_indent">
+<pre>- (<!-- a logicalPath="//simplegeo/occ/cl/NSString //simplegeo/occ/tdef/NSString //simplegeo/occ/tag/NSString //simplegeo/occ/econst/NSString //simplegeo/occ/struct/NSString //simplegeo/occ/clconst/NSString //simplegeo/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --><span class="type">*</span>) <!-- a logicalPath="//simplegeo/occ/instm/updateRecord //simplegeo/occ/clm/updateRecord //simplegeo/occ/intfcm/updateRecord //simplegeo/occ/intfm/updateRecord //simplegeo/occ/func/updateRecord //simplegeo/occ/ftmplt/updateRecord //simplegeo/occ/defn/updateRecord //simplegeo/occ/macro/updateRecord" --><span class="function">updateRecord</span><!-- /a -->:(<!-- a logicalPath="//simplegeo/occ/cl/NSString //simplegeo/occ/tdef/NSString //simplegeo/occ/tag/NSString //simplegeo/occ/econst/NSString //simplegeo/occ/struct/NSString //simplegeo/occ/clconst/NSString //simplegeo/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --><span class="type">*</span>)<span class="param">recordId</span> <!-- a logicalPath="//simplegeo/occ/instm/layer //simplegeo/occ/clm/layer //simplegeo/occ/intfcm/layer //simplegeo/occ/intfm/layer //simplegeo/occ/func/layer //simplegeo/occ/ftmplt/layer //simplegeo/occ/defn/layer //simplegeo/occ/macro/layer" --><span class="function">layer</span><!-- /a -->:(<!-- a logicalPath="//simplegeo/occ/cl/NSString //simplegeo/occ/tdef/NSString //simplegeo/occ/tag/NSString //simplegeo/occ/econst/NSString //simplegeo/occ/struct/NSString //simplegeo/occ/clconst/NSString //simplegeo/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --><span class="type">*</span>)<span class="param">layer</span> 
+        <!-- a logicalPath="//simplegeo/occ/instm/coord //simplegeo/occ/clm/coord //simplegeo/occ/intfcm/coord //simplegeo/occ/intfm/coord //simplegeo/occ/func/coord //simplegeo/occ/ftmplt/coord //simplegeo/occ/defn/coord //simplegeo/occ/macro/coord" --><span class="function">coord</span><!-- /a -->:(<!-- a logicalPath="//simplegeo/occ/cl/CLLocationCoordinate2D //simplegeo/occ/tdef/CLLocationCoordinate2D //simplegeo/occ/tag/CLLocationCoordinate2D //simplegeo/occ/econst/CLLocationCoordinate2D //simplegeo/occ/struct/CLLocationCoordinate2D //simplegeo/occ/clconst/CLLocationCoordinate2D //simplegeo/occ/intf/CLLocationCoordinate2D" --><span class="type">CLLocationCoordinate2D</span><!-- /a -->)<span class="param">coord</span> <!-- a logicalPath="//simplegeo/occ/instm/properties //simplegeo/occ/clm/properties //simplegeo/occ/intfcm/properties //simplegeo/occ/intfm/properties //simplegeo/occ/func/properties //simplegeo/occ/ftmplt/properties //simplegeo/occ/defn/properties //simplegeo/occ/macro/properties" --><span class="function">properties</span><!-- /a -->:(<!-- a logicalPath="//simplegeo/occ/cl/NSDictionary //simplegeo/occ/tdef/NSDictionary //simplegeo/occ/tag/NSDictionary //simplegeo/occ/econst/NSDictionary //simplegeo/occ/struct/NSDictionary //simplegeo/occ/clconst/NSDictionary //simplegeo/occ/intf/NSDictionary" --><span class="type">NSDictionary</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//simplegeo/occ/econst/properties //simplegeo/occ/data/properties" --><span class="var">properties</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt><code>recordId</code></dt>
+<dd><p>The id of the record.</p></dd>
+<dt><code>layer</code></dt>
+<dd><p>The layer in which the record is located in.</p></dd>
+<dt><code>properties</code></dt>
+<dd><p>The new properties for the record.</p></dd>
+</dl>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5>
+<p><!-- begin return value -->A response id that is used to identifier the return value from SimpleGeo. 
+You can use this value in <a href="../../../../Documentation/SGLocationService_h/Protocols/SGLocationServiceDelegate/index.html#//simplegeo/occ/intf/SGLocationServiceDelegate" logicalPath="//simplegeo/occ/intf/SGLocationServiceDelegate">delegate</a>.
+
+<!-- end return value --></p>
+<h5 class="tight">
+<font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5>
+<!-- begin discussion --><p>Use this method to update records in SimpleGeo. If the record id is not found in the layer
+then a new record will be created. 
+<!-- end discussion -->
+</p>
+<p></p>
+<hr>
+<!-- headerDoc=instm;  uid=//simplegeo/occ/instm/SGLocationService/updateRecordAnnotation:;   name=SGLocationService::updateRecordAnnotation: --><a name="//simplegeo/occ/instm/SGLocationService/updateRecordAnnotation:"></a>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="updateRecordAnnotation:">updateRecordAnnotation:</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --></p>
+<p>Updates a record a <!-- a logicalPath="//simplegeo/ooc/intf/SGRecordAnnotation" -->SGRecordAnnotation<!-- /a --> in
+SimpleGeo.
+<!-- end abstract --></p>
+<p></p>
+<div class="declaration_indent">
+<pre>- (<!-- a logicalPath="//simplegeo/occ/cl/NSString //simplegeo/occ/tdef/NSString //simplegeo/occ/tag/NSString //simplegeo/occ/econst/NSString //simplegeo/occ/struct/NSString //simplegeo/occ/clconst/NSString //simplegeo/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --><span class="type">*</span>) <!-- a logicalPath="//simplegeo/occ/instm/updateRecordAnnotation //simplegeo/occ/clm/updateRecordAnnotation //simplegeo/occ/intfcm/updateRecordAnnotation //simplegeo/occ/intfm/updateRecordAnnotation //simplegeo/occ/func/updateRecordAnnotation //simplegeo/occ/ftmplt/updateRecordAnnotation //simplegeo/occ/defn/updateRecordAnnotation //simplegeo/occ/macro/updateRecordAnnotation" --><span class="function">updateRecordAnnotation</span><!-- /a -->:(<!-- a logicalPath="//simplegeo/occ/cl/id //simplegeo/occ/tdef/id //simplegeo/occ/tag/id //simplegeo/occ/econst/id //simplegeo/occ/struct/id //simplegeo/occ/clconst/id //simplegeo/occ/intf/id" --><span class="type">id</span><!-- /a -->&lt;<span class="param">SGRecordAnnotation</span>&gt;)<!-- a logicalPath="//simplegeo/occ/econst/record //simplegeo/occ/data/record" --><span class="var">record</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt><code>record</code></dt>
+<dd><p>The record to update.</p></dd>
+</dl>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5>
+<p><!-- begin return value -->A response id that is used to identifier the return value from SimpleGeo. 
+You can use this value in <a href="../../../../Documentation/SGLocationService_h/Protocols/SGLocationServiceDelegate/index.html#//simplegeo/occ/intf/SGLocationServiceDelegate" logicalPath="//simplegeo/occ/intf/SGLocationServiceDelegate">delegate</a>.
+
+<!-- end return value --></p>
+<h5 class="tight">
+<font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5>
+<!-- begin discussion --><p>See <!-- a logicalPath="updateRecord:layer:properites:" -->updateRecord:layer:properites:<!-- /a -->
+<!-- end discussion -->
+</p>
+<p></p>
+<hr>
+<!-- headerDoc=instm;  uid=//simplegeo/occ/instm/SGLocationService/updateRecordAnnotations:;   name=SGLocationService::updateRecordAnnotations: --><a name="//simplegeo/occ/instm/SGLocationService/updateRecordAnnotations:"></a>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="updateRecordAnnotations:">updateRecordAnnotations:</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --></p>
+<p>Updates an array of <!-- a logicalPath="//simplegeo/ooc/intf/SGRecordAnnotation" -->SGRecordAnnotations<!-- /a --> in
+SimpleGeo.
+<!-- end abstract --></p>
+<p></p>
+<div class="declaration_indent">
+<pre>- (<!-- a logicalPath="//simplegeo/occ/cl/NSString //simplegeo/occ/tdef/NSString //simplegeo/occ/tag/NSString //simplegeo/occ/econst/NSString //simplegeo/occ/struct/NSString //simplegeo/occ/clconst/NSString //simplegeo/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --><span class="type">*</span>) <!-- a logicalPath="//simplegeo/occ/instm/updateRecordAnnotations //simplegeo/occ/clm/updateRecordAnnotations //simplegeo/occ/intfcm/updateRecordAnnotations //simplegeo/occ/intfm/updateRecordAnnotations //simplegeo/occ/func/updateRecordAnnotations //simplegeo/occ/ftmplt/updateRecordAnnotations //simplegeo/occ/defn/updateRecordAnnotations //simplegeo/occ/macro/updateRecordAnnotations" --><span class="function">updateRecordAnnotations</span><!-- /a -->:(<!-- a logicalPath="//simplegeo/occ/cl/NSArray //simplegeo/occ/tdef/NSArray //simplegeo/occ/tag/NSArray //simplegeo/occ/econst/NSArray //simplegeo/occ/struct/NSArray //simplegeo/occ/clconst/NSArray //simplegeo/occ/intf/NSArray" --><span class="type">NSArray</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//simplegeo/occ/econst/records //simplegeo/occ/data/records" --><span class="var">records</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt><code>records</code></dt>
+<dd><p>&#65532;An array of records.</p></dd>
+</dl>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5>
+<p><!-- begin return value -->A response id that is used to identifier the return value from SimpleGeo. 
+You can use this value in <a href="../../../../Documentation/SGLocationService_h/Protocols/SGLocationServiceDelegate/index.html#//simplegeo/occ/intf/SGLocationServiceDelegate" logicalPath="//simplegeo/occ/intf/SGLocationServiceDelegate">delegate</a>.
+
+<!-- end return value --></p>
+<h5 class="tight">
+<font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5>
+<!-- begin discussion --><p>See <a href="../../../../Documentation/SGLocationService_h/Classes/SGLocationService/index.html#//simplegeo/doc/title:instm/SGLocationService/updateRecord:layer:properties:" logicalPath="//simplegeo/doc/title:instm/SGLocationService/updateRecord:layer:properties:">updateRecord:layer:properties:</a>
+<!-- end discussion -->
+</p>
 <p></p>
 <a name="HeaderDoc_props"></a>
 <h2>Properties</h2>
@@ -246,7 +737,7 @@ of delegates.
 
 <!-- end of footer -->
 </p>
-<p>&copy; SimpleGeo Last Updated: 12/17/2009
+<p>&copy; SimpleGeo Last Updated: 01/19/2010
 </p>
 </div>
 </body>

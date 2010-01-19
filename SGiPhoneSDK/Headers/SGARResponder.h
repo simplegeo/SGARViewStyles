@@ -1,6 +1,6 @@
 /*
 * SGARResponder.h
-* ARViewStyles
+* SGiPhoneSDK
 *
 * Created by Derek Smith on 10/13/09.
 * Copyright 2009 SimpleGeo. All rights reserved.

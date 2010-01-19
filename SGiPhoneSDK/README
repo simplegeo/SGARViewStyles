@@ -23,7 +23,6 @@ BUILD REQUIREMENTS:
 iPhone SDK 3.1
 
 Frameworks
-- Security
 - CoreLocation
 - Foundation
 - MapKit
@@ -156,6 +155,17 @@ They aren't very pretty at the moment.
 	
 ================================================================================
 CHANGES FROM PREVIOUS VERSIONS:
+
+Version 0.2.0
+- Added reverse geocoding.
+- Implemented the new SimpleGeo endpoints that allow multiple records to be
+added and retrieved.
+
+Version 0.1.9
+- SGLayer objects will now update records as they are recieved from the SGLocaitonService.
+- SGRecord defines a new property that stores user defined properties.
+- SGOAuth objects can be restored from a save point.
+- Nearby searchs can be done using a Geohash or a lat/lon coordinate paired with a radius.
 
 Version 0.1.8
 - First version.

@@ -34,6 +34,8 @@
  
  	NSString* type;
  	NSString* layer;
+    
+    NSMutableDictionary* userDefinedProperties;
 }
 
 /*!
@@ -78,6 +80,14 @@
 * @discussion When a new record object is created, the layer property is assigned the bundle identifier. 
 */
 @property (nonatomic, retain) NSString* layer;
+
+/*!
+* @property
+* @abstract Extra properties that are not defined, nor required by SimpleGeo.
+* @discussion This dictionary stores and updates properties (e.g. name, age, color) that are
+* not required by SimpleGeo. It is updated by @link updateRecordWithGeoJSONDictionary: updateRecordWithGeoJSONDictionary: @/link.
+*/
+@property (nonatomic, readonly) NSMutableDictionary* userDefinedProperties;
 
 /*!
 * @method updateRecordWithGeoJSONDictionary:

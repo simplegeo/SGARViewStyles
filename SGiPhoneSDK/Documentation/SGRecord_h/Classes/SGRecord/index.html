@@ -154,6 +154,9 @@ are encouraged to override this method to allow user-defined properties to be ex
 <dt><tt><a href="index.html#//simplegeo/occ/instp/SGRecord/type" target="_top">type</a></tt></dt>
 <dd><p>See <!-- a logicalPath="//simplegeo/ooc/instp/SGRecordAnnotation/type" -->SGRecordAnnotation<!-- /a --> 
 </p></dd>
+<dt><tt><a href="index.html#//simplegeo/occ/instp/SGRecord/userDefinedProperties" target="_top">userDefinedProperties</a></tt></dt>
+<dd><p>Extra properties that are not defined, nor required by SimpleGeo.
+</p></dd>
 </dl>
 <hr>
 <!-- headerDoc=instp;  uid=//simplegeo/occ/instp/SGRecord/creationTimeInterval;   name=SGRecord::creationTimeInterval --><a name="//simplegeo/occ/instp/SGRecord/creationTimeInterval"></a>
@@ -273,11 +276,34 @@ are encouraged to override this method to allow user-defined properties to be ex
     <span class="param">retain</span>) <!-- a logicalPath="//simplegeo/occ/cl/NSString //simplegeo/occ/tdef/NSString //simplegeo/occ/tag/NSString //simplegeo/occ/econst/NSString //simplegeo/occ/struct/NSString //simplegeo/occ/clconst/NSString //simplegeo/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --><span class="type">*</span> <!-- a logicalPath="//simplegeo/occ/econst/type //simplegeo/occ/data/type" --><span class="var">type</span><!-- /a -->; </pre>
 </div>
 <p></p>
+<hr>
+<!-- headerDoc=instp;  uid=//simplegeo/occ/instp/SGRecord/userDefinedProperties;   name=SGRecord::userDefinedProperties --><a name="//simplegeo/occ/instp/SGRecord/userDefinedProperties"></a>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="userDefinedProperties">userDefinedProperties</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --></p>
+<p>Extra properties that are not defined, nor required by SimpleGeo.
+<!-- end abstract --></p>
+<p></p>
+<div class="declaration_indent">
+<pre>@property (
+    <span class="param">nonatomic</span>,
+    <span class="param">readonly</span>) <!-- a logicalPath="//simplegeo/occ/cl/NSMutableDictionary //simplegeo/occ/tdef/NSMutableDictionary //simplegeo/occ/tag/NSMutableDictionary //simplegeo/occ/econst/NSMutableDictionary //simplegeo/occ/struct/NSMutableDictionary //simplegeo/occ/clconst/NSMutableDictionary //simplegeo/occ/intf/NSMutableDictionary" --><span class="type">NSMutableDictionary</span><!-- /a --><span class="type">*</span> <!-- a logicalPath="//simplegeo/occ/econst/userDefinedProperties //simplegeo/occ/data/userDefinedProperties" --><span class="var">userDefinedProperties</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight">
+<font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5>
+<!-- begin discussion --><p>This dictionary stores and updates properties (e.g. name, age, color) that are
+not required by SimpleGeo. It is updated by <a href="../../../../Documentation/SGRecord_h/Classes/SGRecord/index.html#//simplegeo/occ/instm/SGRecord/updateRecordWithGeoJSONDictionary:" logicalPath="//simplegeo/occ/instm/SGRecord/updateRecordWithGeoJSONDictionary:">updateRecordWithGeoJSONDictionary:</a>.
+<!-- end discussion -->
+</p>
+<p></p>
 <p><!-- start of footer -->
 
 <!-- end of footer -->
 </p>
-<p>&copy; SimpleGeo Last Updated: 12/17/2009
+<p>&copy; SimpleGeo Last Updated: 01/19/2010
 </p>
 </div>
 </body>

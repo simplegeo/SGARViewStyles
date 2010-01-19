@@ -1,6 +1,6 @@
 //
 // SGOAuth.h
-// ARViewStyles
+// SGiPhoneSDK
 //
 // Created by Derek Smith on 10/31/09.
 // Copyright 2009 SimpleGeo. All rights reserved.
@@ -38,6 +38,24 @@
  */
 @property (nonatomic, readonly) NSString* consumerKey;
 
+/*!
+ * @method resume
+ * @abstract ￼Initializes a new instance with the most recently used secret and consumer key.
+ * @result ￼ A new instance of SGOAuth.
+ */
++ (SGOAuth*) resume;
+
+/*!
+* @method save
+* @abstract Stores the token in the user's standard defaults. ￼
+*/
+- (void) save;
+
+/*!
+* @method unSave
+* @abstract Removes any token that is stored in the user's standard defaults.
+*/
+- (void) unSave;
 
 /*!
  * @method initWithKey:secret:

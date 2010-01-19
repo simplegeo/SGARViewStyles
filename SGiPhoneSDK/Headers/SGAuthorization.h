@@ -1,6 +1,6 @@
 /*
  * SGAuthorization.h
- * ARViewStyles
+ * SGiPhoneSDK
  *
  * Created by Derek Smith on 10/31/09.
  * Copyright 2009 SimpleGeo. All rights reserved.
@@ -15,6 +15,6 @@
  * protocol is to add authentication to an HTTP request. Currently, the only type of authentication that is supported by
  * SimpleGeo is OAuth.
  */
-@protocol SGAuthorization
+@protocol SGAuthorization <NSObject>
 
 @end

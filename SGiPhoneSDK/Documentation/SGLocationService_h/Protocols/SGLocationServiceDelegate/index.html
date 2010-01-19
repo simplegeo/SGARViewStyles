@@ -54,10 +54,10 @@ function hidetoc() {
 </td></tr></table>
 <hr>
 <p><!-- begin abstract --></p>
-<p>&#65532;Recieves notifications when <a href="../../../../Documentation/SGLocationService_h/Classes/SGLocationService/index.html#//simplegeo/occ/cl/SGLocationService" logicalPath="//simplegeo/occ/cl/SGLocationService">SGLocationService</a> returns from 
+<p>Recieves notifications when <a href="../../../../Documentation/SGLocationService_h/Classes/SGLocationService/index.html#//simplegeo/occ/cl/SGLocationService" logicalPath="//simplegeo/occ/cl/SGLocationService">SGLocationService</a> returns from 
 sending an HTTP request.
 <!-- end abstract --></p>
-<p><b>Declared In:</b> <a href="../../index.html" target="_top">SGLocationService.h</a><br></p>
+<p><b>Extends&nbsp;Protocol:</b> <!-- a logicalPath="//simplegeo/occ/intf/NSObject" -->NSObject<!-- /a --><br><b>Declared In:</b> <a href="../../index.html" target="_top">SGLocationService.h</a><br></p>
 <div class="declaration_indent">
 </div>
 <h5 class="tight">
@@ -79,10 +79,10 @@ for a specific guide to the GeoJSON objects that returned from SimpleGeo.
 <h2>Methods</h2>
 <dl>
 <dt><tt><a href="index.html#//simplegeo/occ/intfm/SGLocationServiceDelegate/locationService:failedForResponseId:error:" target="_top">-locationService:failedForResponseId:error:</a></tt></dt>
-<dd><p>&#65532;In the case that an HTTP request fails, this method is called.
+<dd><p>In the case that an HTTP request fails, this method is called.
 </p></dd>
 <dt><tt><a href="index.html#//simplegeo/occ/intfm/SGLocationServiceDelegate/locationService:succeededForResponseId:responseObject:" target="_top">-locationService:succeededForResponseId:responseObject:</a></tt></dt>
-<dd><p>&#65532;In the case that an HTTP request succeeds, this method is called.
+<dd><p>In the case that an HTTP request succeeds, this method is called.
 </p></dd>
 </dl>
 <hr>
@@ -92,7 +92,7 @@ for a specific guide to the GeoJSON objects that returned from SimpleGeo.
 </td></tr></table>
 <hr>
 <p><!-- begin abstract --></p>
-<p>&#65532;In the case that an HTTP request fails, this method is called.
+<p>In the case that an HTTP request fails, this method is called.
 <!-- end abstract --></p>
 <p></p>
 <div class="declaration_indent">
@@ -103,11 +103,11 @@ for a specific guide to the GeoJSON objects that returned from SimpleGeo.
 <div class="param_indent">
 <dl>
 <dt><code>service</code></dt>
-<dd><p>&#65532;The <a href="../../../../Documentation/SGLocationService_h/Classes/SGLocationService/index.html#//simplegeo/occ/cl/SGLocationService" logicalPath="//simplegeo/occ/cl/SGLocationService">SGLocationService</a>  that produced the error.</p></dd>
-<dt><code>requestId</code></dt>
-<dd><p>&#65532;The request id that was used to generate the error.</p></dd>
+<dd><p>The <a href="../../../../Documentation/SGLocationService_h/Classes/SGLocationService/index.html#//simplegeo/occ/cl/SGLocationService" logicalPath="//simplegeo/occ/cl/SGLocationService">SGLocationService</a>  that produced the error.</p></dd>
+<dt><code>requestId&#65532;The</code></dt>
+<dd><p>request id that was used to generate the error.</p></dd>
 <dt><code>error</code></dt>
-<dd><p>&#65532;The error that was generated.</p></dd>
+<dd><p>The error that was generated.</p></dd>
 </dl>
 </div>
 <p></p>
@@ -118,7 +118,7 @@ for a specific guide to the GeoJSON objects that returned from SimpleGeo.
 </td></tr></table>
 <hr>
 <p><!-- begin abstract --></p>
-<p>&#65532;In the case that an HTTP request succeeds, this method is called.
+<p>In the case that an HTTP request succeeds, this method is called.
 <!-- end abstract --></p>
 <p></p>
 <div class="declaration_indent">
@@ -128,10 +128,10 @@ for a specific guide to the GeoJSON objects that returned from SimpleGeo.
 <h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
 <div class="param_indent">
 <dl>
-<dt><code>service</code></dt>
-<dd><p>&#65532;The <a href="../../../../Documentation/SGLocationService_h/Classes/SGLocationService/index.html#//simplegeo/occ/cl/SGLocationService" logicalPath="//simplegeo/occ/cl/SGLocationService">SGLocationService</a>  recieved a successful HTTP response.</p></dd>
-<dt><code>requestId</code></dt>
-<dd><p>&#65532;The response id that was used to create the request.</p></dd>
+<dt><code>service&#65532;The</code></dt>
+<dd><p><a href="../../../../Documentation/SGLocationService_h/Classes/SGLocationService/index.html#//simplegeo/occ/cl/SGLocationService" logicalPath="//simplegeo/occ/cl/SGLocationService">SGLocationService</a>  recieved a successful HTTP response.</p></dd>
+<dt><code>requestId&#65532;The</code></dt>
+<dd><p>response id that was used to create the request.</p></dd>
 <dt><code>responseObject</code></dt>
 <dd><p>The response object.</p></dd>
 </dl>
@@ -139,7 +139,7 @@ for a specific guide to the GeoJSON objects that returned from SimpleGeo.
 <h5 class="tight">
 <font face="Lucida Grande,Helvetica,Arial">Discussion</font>
 </h5>
-<!-- begin discussion --><p>&#65532;It is up to the delegate to decide how to interpret the responseObject. The object can take on two identities, either
+<!-- begin discussion --><p>It is up to the delegate to decide how to interpret the responseObject. The object can take on two identities, either
 as a NSDictionary or as a NSArray. If the responseObject matches an instance of NSDictionary then the key/values of
 the NSDictionary will match that of the GeoJSON representation of the record that was either created, updated or retrieved.
 </p>
@@ -152,7 +152,7 @@ key-value pair matching the GeoJSON representaiton of a particular record.
 
 <!-- end of footer -->
 </p>
-<p>&copy; SimpleGeo Last Updated: 12/17/2009
+<p>&copy; SimpleGeo Last Updated: 01/19/2010
 </p>
 </div>
 </body>
