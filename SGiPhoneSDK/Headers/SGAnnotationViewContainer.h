@@ -26,6 +26,10 @@
     BOOL rotatable;
  
     SGARView* arView; 
+    
+    UIImage* normalImage;
+    UIImage* highlightedImage;
+    
  
 }
 
@@ -34,6 +38,23 @@
 * @abstract The @link //simplegeo/ooc/cl/SGARView SGARView @/link that controls the container.
 */
 @property (nonatomic, readonly) SGARView* arView;
+
+/*!
+ * @property
+ * @abstract The image that represents the container in its normal state.
+ * @discussion Setting this property will resize the container to the size
+ * of the image. If nil is passed, then the size will stay the same.
+ */
+@property (nonatomic, retain) UIImage* normalImage;
+
+/*!
+ * @property
+ * @abstract The image that represents the container in its highlighted state.
+ * @discussion When a container experiences a UIControlEventTouchDrageEnter control
+ * event, it will present this image. Set this proper to nil if you do not wish to have 
+ * the container highlighted.
+ */
+@property (nonatomic, retain) UIImage* highlightedImage;
 
 /*!
 * @method addRecordAnnotationViews:

@@ -82,4 +82,13 @@
 */
 + (NSString*) recordIdFromGeoJSONDictionary:(NSDictionary*)geoJSONDictionary;
 
+/*!
+ * @method layerFromGeoJSONDictionary:
+ * @abstract ￼Returns the @link //simplegeo/ooc/instp/SGRecordAnntation layer @/link for
+ * a given GeoJSON dictionary.
+ * @param geoJSONDictionary ￼
+ * @result ￼The layer for the GeoJSON dictionary.
+ */
++ (NSString*) layerFromGeoJSONDictionary:(NSDictionary*)geoJSONDictionary;
+
 @end

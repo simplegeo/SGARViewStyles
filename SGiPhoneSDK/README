@@ -156,6 +156,16 @@ They aren't very pretty at the moment.
 ================================================================================
 CHANGES FROM PREVIOUS VERSIONS:
 
+Version 0.2.3
+- Updated the default container images.
+- Updated SGRadar to present target images that are on the border of
+the radar. 
+- Update SGLayerMapView to load more records based on a time interval.
+- Added media as a filter type.
+
+Version 0.2.1
+- Allow filtering by types in nearby requests.
+
 Version 0.2.0
 - Added reverse geocoding.
 - Implemented the new SimpleGeo endpoints that allow multiple records to be

@@ -239,6 +239,12 @@ the container.</p></dd>
 <dt><tt><a href="index.html#//simplegeo/occ/instp/SGAnnotationViewContainer/arView" target="_top">arView</a></tt></dt>
 <dd><p>The <!-- a logicalPath="//simplegeo/ooc/cl/SGARView" -->SGARView<!-- /a -->  that controls the container.
 </p></dd>
+<dt><tt><a href="index.html#//simplegeo/occ/instp/SGAnnotationViewContainer/highlightedImage" target="_top">highlightedImage</a></tt></dt>
+<dd><p>The image that represents the container in its highlighted state.
+</p></dd>
+<dt><tt><a href="index.html#//simplegeo/occ/instp/SGAnnotationViewContainer/normalImage" target="_top">normalImage</a></tt></dt>
+<dd><p>The image that represents the container in its normal state.
+</p></dd>
 </dl>
 <hr>
 <!-- headerDoc=instp;  uid=//simplegeo/occ/instp/SGAnnotationViewContainer/arView;   name=SGAnnotationViewContainer::arView --><a name="//simplegeo/occ/instp/SGAnnotationViewContainer/arView"></a>
@@ -256,11 +262,58 @@ the container.</p></dd>
     <span class="param">readonly</span>) <a href="../../../../Documentation/SGARView_h/Classes/SGARView/index.html#//simplegeo/occ/cl/SGARView" logicalPath="//simplegeo/occ/cl/SGARView"><span class="type">SGARView</span></a><span class="type">*</span> <!-- a logicalPath="//simplegeo/occ/econst/arView //simplegeo/occ/data/arView" --><span class="var">arView</span><!-- /a -->; </pre>
 </div>
 <p></p>
+<hr>
+<!-- headerDoc=instp;  uid=//simplegeo/occ/instp/SGAnnotationViewContainer/highlightedImage;   name=SGAnnotationViewContainer::highlightedImage --><a name="//simplegeo/occ/instp/SGAnnotationViewContainer/highlightedImage"></a>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="highlightedImage">highlightedImage</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --></p>
+<p>The image that represents the container in its highlighted state.
+<!-- end abstract --></p>
+<p></p>
+<div class="declaration_indent">
+<pre>@property (
+    <span class="param">nonatomic</span>,
+    <span class="param">retain</span>) <!-- a logicalPath="//simplegeo/occ/cl/UIImage //simplegeo/occ/tdef/UIImage //simplegeo/occ/tag/UIImage //simplegeo/occ/econst/UIImage //simplegeo/occ/struct/UIImage //simplegeo/occ/clconst/UIImage //simplegeo/occ/intf/UIImage" --><span class="type">UIImage</span><!-- /a --><span class="type">*</span> <!-- a logicalPath="//simplegeo/occ/econst/highlightedImage //simplegeo/occ/data/highlightedImage" --><span class="var">highlightedImage</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight">
+<font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5>
+<!-- begin discussion --><p>When a container experiences a UIControlEventTouchDrageEnter control
+event, it will present this image. Set this proper to nil if you do not wish to have 
+the container highlighted.
+<!-- end discussion -->
+</p>
+<p></p>
+<hr>
+<!-- headerDoc=instp;  uid=//simplegeo/occ/instp/SGAnnotationViewContainer/normalImage;   name=SGAnnotationViewContainer::normalImage --><a name="//simplegeo/occ/instp/SGAnnotationViewContainer/normalImage"></a>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="normalImage">normalImage</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --></p>
+<p>The image that represents the container in its normal state.
+<!-- end abstract --></p>
+<p></p>
+<div class="declaration_indent">
+<pre>@property (
+    <span class="param">nonatomic</span>,
+    <span class="param">retain</span>) <!-- a logicalPath="//simplegeo/occ/cl/UIImage //simplegeo/occ/tdef/UIImage //simplegeo/occ/tag/UIImage //simplegeo/occ/econst/UIImage //simplegeo/occ/struct/UIImage //simplegeo/occ/clconst/UIImage //simplegeo/occ/intf/UIImage" --><span class="type">UIImage</span><!-- /a --><span class="type">*</span> <!-- a logicalPath="//simplegeo/occ/econst/normalImage //simplegeo/occ/data/normalImage" --><span class="var">normalImage</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight">
+<font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5>
+<!-- begin discussion --><p>Setting this property will resize the container to the size
+of the image. If nil is passed, then the size will stay the same.
+<!-- end discussion -->
+</p>
+<p></p>
 <p><!-- start of footer -->
 
 <!-- end of footer -->
 </p>
-<p>&copy; SimpleGeo Last Updated: 01/19/2010
+<p>&copy; SimpleGeo Last Updated: 01/21/2010
 </p>
 </div>
 </body>

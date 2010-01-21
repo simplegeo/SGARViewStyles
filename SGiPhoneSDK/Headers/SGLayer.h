@@ -18,8 +18,8 @@
 * @class SGLayer 
 * @abstract Updates and retrieves records that are within a layer.
 * @discussion A layer object has the ability to update and retrieve 
-* records that are already registered with the object. By setting 
-* @link shouldUpdateRegisteredRecords shouldUpdateRegisteredRecords @/link to YES, the layer will do its best
+* records that are already registered with the object. By adding the layer as a delegate
+* to the @link //simplegeo/ooc/cl/SGLocationService SGLocationService @/link, the layer will do its best
 * to update the record once information is recieved about it. If the layer
 * recieves a record that already isn't registered, it will call @link recordAnnotationFromGeoJSONDictionary: recordAnnotationFromGeoJSONDictionary: @/link.
 * If the record is already registered, then the layer object will attempt to call 
@@ -33,8 +33,6 @@
  
     NSString* layerId;
     
-    BOOL shouldUpdateRegisteredRecords;
-    
  
 }
 
@@ -44,13 +42,6 @@
 * used in naming a layer is a reverse URL. (e.g. "com.simplegeo.spatula").
 */
 @property (nonatomic, readonly) NSString* layerId;
-
-/*!
-* @property shouldUpdateRegisteredRecords
-* @abstract When the layer recieves notificaitons that a request has failed or
-* succeeded, it will attempt to update the record on its own.
-*/
-@property (nonatomic, readwrite) BOOL shouldUpdateRegisteredRecords;
 
 /*!
 * @method initWithLayerName:

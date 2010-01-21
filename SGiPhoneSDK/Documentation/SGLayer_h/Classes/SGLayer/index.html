@@ -63,8 +63,8 @@ function hidetoc() {
 <font face="Lucida Grande,Helvetica,Arial">Discussion</font>
 </h5>
 <!-- begin discussion --><p>A layer object has the ability to update and retrieve 
-records that are already registered with the object. By setting 
-<a href="../../../../Documentation/SGLayer_h/Classes/SGLayer/index.html#//simplegeo/occ/instp/SGLayer/shouldUpdateRegisteredRecords" logicalPath="//simplegeo/occ/instp/SGLayer/shouldUpdateRegisteredRecords">shouldUpdateRegisteredRecords</a>  to YES, the layer will do its best
+records that are already registered with the object. By adding the layer as a delegate
+to the <!-- a logicalPath="//simplegeo/ooc/cl/SGLocationService" -->SGLocationService<!-- /a --> , the layer will do its best
 to update the record once information is recieved about it. If the layer
 recieves a record that already isn't registered, it will call <a href="../../../../Documentation/SGLayer_h/Classes/SGLayer/index.html#//simplegeo/occ/instm/SGLayer/recordAnnotationFromGeoJSONDictionary:" logicalPath="//simplegeo/occ/instm/SGLayer/recordAnnotationFromGeoJSONDictionary:">recordAnnotationFromGeoJSONDictionary:</a> .
 If the record is already registered, then the layer object will attempt to call 
@@ -699,10 +699,6 @@ are notified with the initial request identifier and the proper NSError.
 <dd><p>The layerId is the name of the layer used in SimpleGeo. A common convention
 used in naming a layer is a reverse URL. (e.g. "com.simplegeo.spatula").
 </p></dd>
-<dt><tt><a href="index.html#//simplegeo/occ/instp/SGLayer/shouldUpdateRegisteredRecords" target="_top">shouldUpdateRegisteredRecords</a></tt></dt>
-<dd><p>When the layer recieves notificaitons that a request has failed or
-succeeded, it will attempt to update the record on its own.
-</p></dd>
 </dl>
 <hr>
 <!-- headerDoc=instp;  uid=//simplegeo/occ/instp/SGLayer/layerId;   name=SGLayer::layerId --><a name="//simplegeo/occ/instp/SGLayer/layerId"></a>
@@ -726,28 +722,11 @@ used in naming a layer is a reverse URL. (e.g. "com.simplegeo.spatula").
 <!-- begin discussion --><p>name of the layer.</p>
 <!-- end discussion -->
 <p></p>
-<hr>
-<!-- headerDoc=instp;  uid=//simplegeo/occ/instp/SGLayer/shouldUpdateRegisteredRecords;   name=SGLayer::shouldUpdateRegisteredRecords --><a name="//simplegeo/occ/instp/SGLayer/shouldUpdateRegisteredRecords"></a>
-<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
-<h3><a name="shouldUpdateRegisteredRecords">shouldUpdateRegisteredRecords</a></h3>
-</td></tr></table>
-<hr>
-<p><!-- begin abstract --></p>
-<p>When the layer recieves notificaitons that a request has failed or
-succeeded, it will attempt to update the record on its own.
-<!-- end abstract --></p>
-<p></p>
-<div class="declaration_indent">
-<pre>@property (
-    <span class="param">nonatomic</span>,
-    <span class="param">readwrite</span>) <!-- a logicalPath="//simplegeo/occ/cl/BOOL //simplegeo/occ/tdef/BOOL //simplegeo/occ/tag/BOOL //simplegeo/occ/econst/BOOL //simplegeo/occ/struct/BOOL //simplegeo/occ/clconst/BOOL //simplegeo/occ/intf/BOOL" --><span class="type">BOOL</span><!-- /a --> <!-- a logicalPath="//simplegeo/occ/econst/shouldUpdateRegisteredRecords //simplegeo/occ/data/shouldUpdateRegisteredRecords" --><span class="var">shouldUpdateRegisteredRecords</span><!-- /a -->; </pre>
-</div>
-<p></p>
 <p><!-- start of footer -->
 
 <!-- end of footer -->
 </p>
-<p>&copy; SimpleGeo Last Updated: 01/19/2010
+<p>&copy; SimpleGeo Last Updated: 01/21/2010
 </p>
 </div>
 </body>

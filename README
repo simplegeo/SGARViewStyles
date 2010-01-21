@@ -37,7 +37,6 @@ BUILD REQUIREMENTS:
 iPhone SDK 3.1
 
 Frameworks
-- Security
 - CoreLocation
 - Foundation
 - MapKit
@@ -92,6 +91,10 @@ is accessed to obtain the coordinate of the view.
 
 ================================================================================
 CHANGES FROM PREVIOUS VERSIONS:
+
+Version 0.9.0
+- Added icon and iTunesArtwork.
+- Updated the SDK to v0.2.3
 
 Version 0.8.1
 - Added more comments to the code.

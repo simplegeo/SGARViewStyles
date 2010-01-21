@@ -64,13 +64,16 @@ function hidetoc() {
 </h5>
 <!-- begin discussion --><p>&#65532;This is just a simple subclass of MKMapView which uses the records 
 for each registered layer as annotations. SGLayerMapView will automatically
-load more records from SimpleGeo when the view is animated. Just add <!-- a logicalPath="//simplegeo/ooc/cl/SGLayer" -->SGLayer<!-- /a --> 
-object to the map view. You can disable this feature
+load more records from SimpleGeo after the view is animated. In addition, the map will attempt to load more
+records based on the <a href="../../../../Documentation/SGLayerMapView_h/Classes/SGLayerMapView/index.html#//simplegeo/occ/instp/SGLayerMapView/reloadTimeInterval" logicalPath="//simplegeo/occ/instp/SGLayerMapView/reloadTimeInterval">reloadTimeInterval</a>  if no movement is created.
+Just add <!-- a logicalPath="//simplegeo/ooc/cl/SGLayer" -->SGLayer<!-- /a -->  object to the map view. You can disable this feature
 by calling <a href="../../../../Documentation/SGLayerMapView_h/Classes/SGLayerMapView/index.html#//simplegeo/occ/instm/SGLayerMapView/stopRetrieving" logicalPath="//simplegeo/occ/instm/SGLayerMapView/stopRetrieving">stopRetrieving</a>  since every record retrieval requires
-an HTTP request.
+an HTTP request. Also, the map will remove annotation as they move out of view. 
 </p>
-<p>The map view will build records based on the SGLayers <!-- a logicalPath="//simplegeo/ooc/instm/recordFromDicitonary:" -->recordFromDictionary:<!-- /a --> 
-method. Records are not automatically added to their layer when they are retrieved. In order to add retrieved records to their SGLayer object,
+<p>The map view will build records based on the SGLayers 
+<!-- a logicalPath="//simplegeo/ooc/instm/SGLayer/recordAnnotationFromGeoJSONDictionary:" -->recordAnnotationFromGeoJSONDictionary:<!-- /a --> 
+method. Records are not automatically added to their layer when they are retrieved. In order to add
+retrieved records to their SGLayer object,
 <!-- a logicalPath="addRetrievedRecrodsToLayer" -->addRetrievedRecrodsToLayer<!-- /a --> should be set to YES.
 <!-- end discussion -->
 </p>
@@ -80,7 +83,7 @@ method. Records are not automatically added to their layer when they are retriev
 <h2>Methods</h2>
 <dl>
 <dt><tt><a href="index.html#//simplegeo/occ/instm/SGLayerMapView/addLayer:" target="_top">-addLayer:</a></tt></dt>
-<dd><p>&#65532;Adds a layer to the map view.
+<dd><p>&#65532;Adds a layer to the map view. 
 </p></dd>
 <dt><tt><a href="index.html#//simplegeo/occ/instm/SGLayerMapView/addLayers:" target="_top">-addLayers:</a></tt></dt>
 <dd><p>&#65532;Adds an array of layers to be displayed in the map view.
@@ -105,7 +108,7 @@ method. Records are not automatically added to their layer when they are retriev
 </td></tr></table>
 <hr>
 <p><!-- begin abstract --></p>
-<p>&#65532;Adds a layer to the map view.
+<p>&#65532;Adds a layer to the map view. 
 <!-- end abstract --></p>
 <p></p>
 <div class="declaration_indent">
@@ -115,7 +118,8 @@ method. Records are not automatically added to their layer when they are retriev
 <div class="param_indent">
 <dl>
 <dt><code>layer</code></dt>
-<dd><p>&#65532;The layer.</p></dd>
+<dd><p>&#65532;The <!-- a logicalPath="//simplegeo/ooc/cl/SGLayer" -->SGLayer<!-- /a -->  to register
+with the map.</p></dd>
 </dl>
 </div>
 <p></p>
@@ -157,9 +161,16 @@ method. Records are not automatically added to their layer when they are retriev
 <div class="param_indent">
 <dl>
 <dt><code>layer</code></dt>
-<dd><p>&#65532;The layer.adddRetrievedRecrodsToLayer</p></dd>
+<dd><p>&#65532;The <!-- a logicalPath="//simplegeo/ooc/cl/SGLayer" -->SGLayer<!-- /a -->  to remove from the map.</p></dd>
 </dl>
 </div>
+<h5 class="tight">
+<font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5>
+<!-- begin discussion --><p>Remvoing a layer will also remove any annotation that are present
+on the map.
+<!-- end discussion -->
+</p>
 <p></p>
 <hr>
 <!-- headerDoc=instm;  uid=//simplegeo/occ/instm/SGLayerMapView/removeLayers:;   name=SGLayerMapView::removeLayers: --><a name="//simplegeo/occ/instm/SGLayerMapView/removeLayers:"></a>
@@ -213,11 +224,36 @@ method. Records are not automatically added to their layer when they are retriev
 <a name="HeaderDoc_props"></a>
 <h2>Properties</h2>
 <dl>
+<dt><tt><a href="index.html#//simplegeo/occ/instp/SGLayerMapView/addRetrievedRecordsToLayer" target="_top">addRetrievedRecordsToLayer</a></tt></dt>
+<dd><p>Determines whether or not to add retrieved records to
+each SGLayer object as they are loaded by the map.
+</p></dd>
 <dt><tt><a href="index.html#//simplegeo/occ/instp/SGLayerMapView/limit" target="_top">limit</a></tt></dt>
 <dd><p>The amount of records to retrieve each time the map view
 detects it needs to refresh its annotations.
 </p></dd>
+<dt><tt><a href="index.html#//simplegeo/occ/instp/SGLayerMapView/reloadTimeInterval" target="_top">reloadTimeInterval</a></tt></dt>
+<dd><p>The time interval (expressed in seconds) that tells the map to
+retrieve annotations when no movement has occurred.
+</p></dd>
 </dl>
+<hr>
+<!-- headerDoc=instp;  uid=//simplegeo/occ/instp/SGLayerMapView/addRetrievedRecordsToLayer;   name=SGLayerMapView::addRetrievedRecordsToLayer --><a name="//simplegeo/occ/instp/SGLayerMapView/addRetrievedRecordsToLayer"></a>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="addRetrievedRecordsToLayer">addRetrievedRecordsToLayer</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --></p>
+<p>Determines whether or not to add retrieved records to
+each SGLayer object as they are loaded by the map.
+<!-- end abstract --></p>
+<p></p>
+<div class="declaration_indent">
+<pre>@property (
+    <span class="param">nonatomic</span>,
+    <span class="param">assign</span>) <!-- a logicalPath="//simplegeo/occ/cl/BOOL //simplegeo/occ/tdef/BOOL //simplegeo/occ/tag/BOOL //simplegeo/occ/econst/BOOL //simplegeo/occ/struct/BOOL //simplegeo/occ/clconst/BOOL //simplegeo/occ/intf/BOOL" --><span class="type">BOOL</span><!-- /a --> <!-- a logicalPath="//simplegeo/occ/econst/addRetrievedRecordsToLayer //simplegeo/occ/data/addRetrievedRecordsToLayer" --><span class="var">addRetrievedRecordsToLayer</span><!-- /a -->; </pre>
+</div>
+<p></p>
 <hr>
 <!-- headerDoc=instp;  uid=//simplegeo/occ/instp/SGLayerMapView/limit;   name=SGLayerMapView::limit --><a name="//simplegeo/occ/instp/SGLayerMapView/limit"></a>
 <table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
@@ -235,11 +271,35 @@ detects it needs to refresh its annotations.
     <span class="param">assign</span>) <!-- a logicalPath="//simplegeo/occ/cl/NSInteger //simplegeo/occ/tdef/NSInteger //simplegeo/occ/tag/NSInteger //simplegeo/occ/econst/NSInteger //simplegeo/occ/struct/NSInteger //simplegeo/occ/clconst/NSInteger //simplegeo/occ/intf/NSInteger" --><span class="type">NSInteger</span><!-- /a --> <!-- a logicalPath="//simplegeo/occ/econst/limit //simplegeo/occ/data/limit" --><span class="var">limit</span><!-- /a -->; </pre>
 </div>
 <p></p>
+<hr>
+<!-- headerDoc=instp;  uid=//simplegeo/occ/instp/SGLayerMapView/reloadTimeInterval;   name=SGLayerMapView::reloadTimeInterval --><a name="//simplegeo/occ/instp/SGLayerMapView/reloadTimeInterval"></a>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="reloadTimeInterval">reloadTimeInterval</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --></p>
+<p>The time interval (expressed in seconds) that tells the map to
+retrieve annotations when no movement has occurred.
+<!-- end abstract --></p>
+<p></p>
+<div class="declaration_indent">
+<pre>@property (
+    <span class="param">nonatomic</span>,
+    <span class="param">assign</span>) <!-- a logicalPath="//simplegeo/occ/cl/NSTimeInterval //simplegeo/occ/tdef/NSTimeInterval //simplegeo/occ/tag/NSTimeInterval //simplegeo/occ/econst/NSTimeInterval //simplegeo/occ/struct/NSTimeInterval //simplegeo/occ/clconst/NSTimeInterval //simplegeo/occ/intf/NSTimeInterval" --><span class="type">NSTimeInterval</span><!-- /a --> <!-- a logicalPath="//simplegeo/occ/econst/reloadTimeInterval //simplegeo/occ/data/reloadTimeInterval" --><span class="var">reloadTimeInterval</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight">
+<font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5>
+<!-- begin discussion --><p>Set this value to a negative interval to not load any records
+when no animations have occurred.
+<!-- end discussion -->
+</p>
+<p></p>
 <p><!-- start of footer -->
 
 <!-- end of footer -->
 </p>
-<p>&copy; SimpleGeo Last Updated: 01/19/2010
+<p>&copy; SimpleGeo Last Updated: 01/21/2010
 </p>
 </div>
 </body>

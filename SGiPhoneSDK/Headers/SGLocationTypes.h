@@ -31,7 +31,10 @@
  * @defined kSGLocationType_Media
  * @abstract A media type.
  */
-#define kSGLoactionType_Media @"media"
+#define kSGLocationType_Media @"media"
+
+
+
 
 typedef NSString SGLocationType;
 

@@ -107,6 +107,10 @@ any user-defined property when updating and retrieving records.\
 <dd><p>&#65532;Converts <!-- a logicalPath="//simplegeo/ooc/intf/SGRecordAnnotation" -->SGRecordAnnotation<!-- /a -->  into a 
 valid GeoJSON dictionary.
 </p></dd>
+<dt><tt><a href="index.html#//simplegeo/occ/clm/SGGeoJSONEncoder/layerFromGeoJSONDictionary:" target="_top">+layerFromGeoJSONDictionary:</a></tt></dt>
+<dd><p>&#65532;Returns the <!-- a logicalPath="//simplegeo/ooc/instp/SGRecordAnntation" -->layer<!-- /a -->  for
+a given GeoJSON dictionary.
+</p></dd>
 <dt><tt><a href="index.html#//simplegeo/occ/clm/SGGeoJSONEncoder/recordIdFromGeoJSONDictionary:" target="_top">+recordIdFromGeoJSONDictionary:</a></tt></dt>
 <dd><p>&#65532;Returns the <!-- a logicalPath="//simplegeo/ooc/instp/SGRecordAnntation" -->recordId<!-- /a -->  for
 a given GeoJSON dictionary.
@@ -177,6 +181,32 @@ dictionary that is comprised of the keys: id, layer, type, created and expires.
 <!-- end discussion -->
 <p></p>
 <hr>
+<!-- headerDoc=clm;  uid=//simplegeo/occ/clm/SGGeoJSONEncoder/layerFromGeoJSONDictionary:;   name=SGGeoJSONEncoder::layerFromGeoJSONDictionary: --><a name="//simplegeo/occ/clm/SGGeoJSONEncoder/layerFromGeoJSONDictionary:"></a>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="layerFromGeoJSONDictionary:">layerFromGeoJSONDictionary:</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --></p>
+<p>&#65532;Returns the <!-- a logicalPath="//simplegeo/ooc/instp/SGRecordAnntation" -->layer<!-- /a --> for
+a given GeoJSON dictionary.
+<!-- end abstract --></p>
+<p></p>
+<div class="declaration_indent">
+<pre>+ (<!-- a logicalPath="//simplegeo/occ/cl/NSString //simplegeo/occ/tdef/NSString //simplegeo/occ/tag/NSString //simplegeo/occ/econst/NSString //simplegeo/occ/struct/NSString //simplegeo/occ/clconst/NSString //simplegeo/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --><span class="type">*</span>) <!-- a logicalPath="//simplegeo/occ/instm/layerFromGeoJSONDictionary //simplegeo/occ/clm/layerFromGeoJSONDictionary //simplegeo/occ/intfcm/layerFromGeoJSONDictionary //simplegeo/occ/intfm/layerFromGeoJSONDictionary //simplegeo/occ/func/layerFromGeoJSONDictionary //simplegeo/occ/ftmplt/layerFromGeoJSONDictionary //simplegeo/occ/defn/layerFromGeoJSONDictionary //simplegeo/occ/macro/layerFromGeoJSONDictionary" --><span class="function">layerFromGeoJSONDictionary</span><!-- /a -->:(<!-- a logicalPath="//simplegeo/occ/cl/NSDictionary //simplegeo/occ/tdef/NSDictionary //simplegeo/occ/tag/NSDictionary //simplegeo/occ/econst/NSDictionary //simplegeo/occ/struct/NSDictionary //simplegeo/occ/clconst/NSDictionary //simplegeo/occ/intf/NSDictionary" --><span class="type">NSDictionary</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//simplegeo/occ/econst/geoJSONDictionary //simplegeo/occ/data/geoJSONDictionary" --><span class="var">geoJSONDictionary</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt><code>geoJSONDictionary</code></dt>
+<dd><p>&#65532;</p></dd>
+</dl>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5>
+<p><!-- begin return value -->&#65532;The layer for the GeoJSON dictionary.
+
+<!-- end return value --></p>
+<p></p>
+<hr>
 <!-- headerDoc=clm;  uid=//simplegeo/occ/clm/SGGeoJSONEncoder/recordIdFromGeoJSONDictionary:;   name=SGGeoJSONEncoder::recordIdFromGeoJSONDictionary: --><a name="//simplegeo/occ/clm/SGGeoJSONEncoder/recordIdFromGeoJSONDictionary:"></a>
 <table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
 <h3><a name="recordIdFromGeoJSONDictionary:">recordIdFromGeoJSONDictionary:</a></h3>
@@ -206,7 +236,7 @@ a given GeoJSON dictionary.
 
 <!-- end of footer -->
 </p>
-<p>&copy; SimpleGeo Last Updated: 01/19/2010
+<p>&copy; SimpleGeo Last Updated: 01/21/2010
 </p>
 </div>
 </body>
