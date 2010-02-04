@@ -3,7 +3,7 @@
 // CCLocatorServices
 //
 // Created by Derek Smith on 9/30/09.
-// Copyright 2009 SimpleGeo. All rights reserved.
+// Copyright 2010 SimpleGeo. All rights reserved.
 //
 
 #import <MapKit/MapKit.h>
@@ -23,7 +23,7 @@
 * an HTTP request. Also, the map will remove annotation as they move out of view. 
 *
 * The map view will build records based on the SGLayers 
-* @link //simplegeo/ooc/instm/SGLayer/recordAnnotationFromGeoJSONDictionary: recordAnnotationFromGeoJSONDictionary: @/link
+* @link //simplegeo/ooc/instm/SGLayer/recordAnnotationFromGeoJSONObject: recordAnnotationFromGeoJSONObject: @/link
 * method. Records are not automatically added to their layer when they are retrieved. In order to add
 * retrieved records to their SGLayer object,
 * @link addRetrievedRecrodsToLayer addRetrievedRecrodsToLayer @/link should be set to YES.

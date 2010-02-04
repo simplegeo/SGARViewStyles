@@ -88,6 +88,7 @@
 		4A2426FE10DB13BE005D1CB1 /* README in Resources */ = {isa = PBXBuildFile; fileRef = 4A24269310DB13BE005D1CB1 /* README */; };
 		4A7C034E1108A4EE00919154 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A7C034C1108A4EE00919154 /* Icon.png */; };
 		4A7C034F1108A4EE00919154 /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A7C034D1108A4EE00919154 /* iTunesArtwork.png */; };
+		4A833D6C1118D18100B9FD7B /* Entitlements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4A833D6B1118D18100B9FD7B /* Entitlements.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -204,6 +205,7 @@
 		4A24270110DB154B005D1CB1 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
 		4A7C034C1108A4EE00919154 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		4A7C034D1108A4EE00919154 /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iTunesArtwork.png; sourceTree = "<group>"; };
+		4A833D6B1118D18100B9FD7B /* Entitlements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Entitlements.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -316,6 +318,7 @@
 				4A24255910DB1290005D1CB1 /* BakedData.plist */,
 				4A24255C10DB1290005D1CB1 /* Images */,
 				4A24258710DB1290005D1CB1 /* teapot.h */,
+				4A833D6B1118D18100B9FD7B /* Entitlements.plist */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -547,6 +550,7 @@
 				4A2426FE10DB13BE005D1CB1 /* README in Resources */,
 				4A7C034E1108A4EE00919154 /* Icon.png in Resources */,
 				4A7C034F1108A4EE00919154 /* iTunesArtwork.png in Resources */,
+				4A833D6C1118D18100B9FD7B /* Entitlements.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -576,6 +580,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_ENTITLEMENTS = Resources/Entitlements.plist;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Stumpkat, LLC";
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -595,6 +601,7 @@
 					SGiPhoneSDK,
 				);
 				PRODUCT_NAME = ARViewStyles;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "29910E5A-952F-4B82-800E-8F34E7140609";
 			};
 			name = Debug;
 		};

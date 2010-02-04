@@ -3,7 +3,7 @@
 //  LocationDemo
 //
 //  Created by Derek Smith on 8/10/09.
-//  Copyright 2009 SimpleGeo. All rights reserved.
+//  Copyright 2010 SimpleGeo. All rights reserved.
 //
 
 /*!

@@ -115,6 +115,12 @@ Headers
 	
 	SGSimpleGeo.h
 	Contains all the header files for the SDK.
+    
+    SGGeoJSONNSDictionary.h
+    A category to help access GeoJSON keys.
+    
+    SGGeoJSONNSArray.h
+    A category to help access GeoJSON keys.
  
 Images
 The default images used in the SDK. Feel free to override these with your own.
@@ -156,6 +162,17 @@ They aren't very pretty at the moment.
 ================================================================================
 CHANGES FROM PREVIOUS VERSIONS:
 
+Version 0.3.0
+- Upgraded SGLocationService to use version 0.1 of the SimpleGeo API
+- Models have been updated to reflect the new GeoJSON format returned
+from SimpleGeo queries
+- Added a new NSDictionary and NSArray category to help access key specific
+to GeoJSON format
+- Replaced updateRecordWithGeoJSONDictionary: with updateRecordWithGeoJSONObject:
+- Removed userDefinedProperties from SGRecordAnnotation and replaced it with
+properties
+- Reworked the SGGeoJSONEncoder
+
 Version 0.2.3
 - Updated the default container images.
 - Updated SGRadar to present target images that are on the border of
@@ -181,4 +198,4 @@ Version 0.1.8
 - First version.
 
 ================================================================================
-Copyright (C) 2009 SimpleGeo Inc. All rights reserved.
+Copyright (C) 2010 SimpleGeo Inc. All rights reserved.

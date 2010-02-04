@@ -3,92 +3,60 @@
 // SGiPhoneSDK
 //
 // Created by Derek Smith on 11/11/09.
-// Copyright 2009 SimpleGeo. All rights reserved.
+// Copyright 2010 SimpleGeo. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 
 #import "SGRecordAnnotation.h"
-
+#import "GeoJSON+NSArray.h"
+#import "GeoJSON+NSDictionary.h"
 
 /*!
 * @class SGGeoJSONEncoder 
-* @abstract Converts annotations into GeoJSON dictionaries.
-* @discussion Currently, SimpleGeo only supports a single type of GeoJSON, which is a Point.
-* SimpleGeo GeoJSON objects only represent records. All records have this JSON structure:
-*
-* {
-*  "coordinate" : (-83.012, 12.0),
-*  "type" : "Point",
-*  "properties" : {"id" : "some1212id",
-*                  "layer" : "com.simplegeo.test",
-*                  "type" : "object",
-*                  "expires" : 383729018239,
-*                  "created" : 383498483393}
-* }
-*
-* SimpleGeo GeoJSON objects allow user-defined properties. For instance:
-*
-* {
-*  "coordinate" : (-83.012, 12.0),
-*  "type" : "Point",
-*  "properties" : {"id" : "some1212id",
-*                  "layer" : "com.simplegeo.test",
-*                  "type" : "object",
-*                  "expires" : 383729018239,
-*                  "created" : 383498483393,
-*                  "name" : "Mr. Bean",
-*                  "hobby" : "dancing"}
-* } 
-*
-* The user-defined properties in the above example are name and hobby. SimpleGeo will store and fetch 
-* any user-defined property when updating and retrieving records.\
-*
-* For further information on GeoJSON See @link http://geojson.org/geojson-spec.html#point here @/link
+* @abstract Converts annotations into GeoJSONObjects and vice-versa.
+* @discussion Objects returned from SGLocationService are represented as GeoJSON object. A GeoJSON object
+* is just an NSDictionary with specific key/values. For further information on
+* GeoJSON See @link http://geojson.org/geojson-spec.html#point here @/link
 */
 @interface SGGeoJSONEncoder : NSObject {
 
 }
 
 /*!
-* @method geoJSONDictionaryForRecordAnnotation:
-* @abstract ￼Converts @link //simplegeo/ooc/intf/SGRecordAnnotation SGRecordAnnotation @/link into a 
-* valid GeoJSON dictionary.
-* @discussion ￼The only type supported at the moment is Point. The properties value is created by calling
-* @link //simplegeo/ooc/instm/SGRecordAnnotation/propertiesForRecord propertiesForRecord @/link
-* on the annotation record if it is implemented. If it is not, the method will create a default
-* dictionary that is comprised of the keys: id, layer, type, created and expires.
-* 
-* @param record ￼The record to convert to a GeoJSON dictionary.
-* @result ￼A GeoJSON dictionary.
+* @method recordsForGeoJSONObject:
+* @abstract ￼Returns a list of @link //simplegeo/ooc/intf/SGRecord SGRecord @/link
+* @param geojsonObject A valid GeoJSON object.
+* @result ￼An array of newly allocated records that were constructed from the GeoJSONObject.
 */
-+ (NSMutableDictionary*) geoJSONDictionaryForRecordAnnotation:(id<SGRecordAnnotation>)record;
++ (NSArray*) recordsForGeoJSONObject:(NSDictionary*)geojsonObject;
 
 /*!
-* @method geoJSONDictionaryForPoint:properties:
-* @abstract ￼Converts a coordinate and properties into a GeoJSON dictionary.
-* @param coord ￼The coordinate to add to the dictionary.
-* @param properties ￼The properties to add to the dictionary.
-* @result ￼The GeoJSON dictionary.
+* @method recordForGeoJSONObject:
+* @abstract ￼Creates a new //simplegeo/ooc/intf/SGRecord SGRecord @/link fromt a GeoJSON object.
+* @param geojsonObject ￼ A valid GeoJSON object.
+* @result ￼A new @link //simplegeo/ooc/intf/SGRecord SGRecord @/link created from the geoJSONObject.
 */
-+ (NSMutableDictionary*) geoJSONDictionaryForPoint:(CLLocationCoordinate2D)coord properties:(NSDictionary*)properties;
++ (id<SGRecordAnnotation>) recordForGeoJSONObject:(NSDictionary *)geojsonObject;
 
 /*!
-* @method recordIdFromGeoJSONDictionary:
-* @abstract ￼Returns the @link //simplegeo/ooc/instp/SGRecordAnntation recordId @/link for
-* a given GeoJSON dictionary.
-* @param geoJSONDictionary ￼
-* @result ￼The record id for the GeoJSON dictionary.
+* @method geoJSONObjectForRecordAnnotations:
+* @abstract ￼Returns a new GeoJSONObject that was constructed from the list of
+* @link //simplegeo/ooc/intf/SGRecordAnnotation SGRecordAnnotation @/link objects.
+* @param recordAnnotations The array of record annotations that help construct the GeoJSON object. ￼
+* @result A new GeoJSON object.
 */
-+ (NSString*) recordIdFromGeoJSONDictionary:(NSDictionary*)geoJSONDictionary;
++ (NSDictionary*) geoJSONObjectForRecordAnnotations:(NSArray*)recordAnnotations;
+
++ (NSDictionary*) geoJSONObjectForRecordAnnotation:(id<SGRecordAnnotation>)recordAnnotation;
 
 /*!
- * @method layerFromGeoJSONDictionary:
- * @abstract ￼Returns the @link //simplegeo/ooc/instp/SGRecordAnntation layer @/link for
- * a given GeoJSON dictionary.
- * @param geoJSONDictionary ￼
- * @result ￼The layer for the GeoJSON dictionary.
- */
-+ (NSString*) layerFromGeoJSONDictionary:(NSDictionary*)geoJSONDictionary;
+* @method layerNameFromLayerLink:
+* @abstract Returns the layer name from the layer link of a GeoJSON object.
+* @param layerLink ￼The link to the layer that stores a GeoJSON object.
+* @result ￼The layer that was obtained from the layer link.
+*/
++ (NSString*) layerNameFromLayerLink:(NSString*)layerLink;
 
+                                      
 @end

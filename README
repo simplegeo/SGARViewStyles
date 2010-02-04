@@ -92,6 +92,9 @@ is accessed to obtain the coordinate of the view.
 ================================================================================
 CHANGES FROM PREVIOUS VERSIONS:
 
+Version 0.9.1
+- Updated to v0.3.0 of the SDK
+
 Version 0.9.0
 - Added icon and iTunesArtwork.
 - Updated the SDK to v0.2.3

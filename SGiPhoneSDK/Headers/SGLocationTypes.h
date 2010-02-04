@@ -3,7 +3,7 @@
  * SgLocatorServices
  *
  * Created by Derek Smith on 9/15/09.
- * Copyright 2009 SimpleGeo. All rights reserved.
+ * Copyright 2010 SimpleGeo. All rights reserved.
  *
  */
 
@@ -28,12 +28,28 @@
 #define kSGLocationType_Object @"object"
 
 /*!
- * @defined kSGLocationType_Media
- * @abstract A media type.
+ * @defined kSGLocationType_Note
+ * @abstract A note media type.
  */
-#define kSGLocationType_Media @"media"
+#define kSGLocationType_Note @"note"
 
+/*!
+ * @defined kSGLocationType_Audio
+ * @abstract An audio media type.
+ */
+#define kSGLocationType_Audio @"audio"
 
+/*!
+ * @defined kSGLocationType_Video
+ * @abstract A video media type.
+ */
+#define kSGLocationType_Video @"video"
+
+/*!
+ * @defined kSGLocationType_Image
+ * @abstract An image media type.
+ */
+#define kSGLocationType_Image @"image"
 
 
 typedef NSString SGLocationType;

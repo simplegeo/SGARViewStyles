@@ -3,7 +3,7 @@
 // SGLocatorServices
 //
 // Created by Derek Smith on 9/15/09.
-// Copyright 2009 SimpleGeo. All rights reserved.
+// Copyright 2010 SimpleGeo. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -37,7 +37,7 @@
 * @link //simplegeo/ooc/intf/SGRecordAnnotation SGRecordAnnotation @/link. @link //simplegeo/ooc/cl/SGRecord SGRecord @/link is provided
 * as a standard class that implements the protocol. The advantage to using the second method is that everytime a response succeeds,
 * the delegate can use the responseObject that is passed in via @link locationService:succeededForResponseId:responseObject: locationService:succeededForResponseId:responseObject: @/link
-* to update the SGRecord by calling @link //simplegeo/ooc/instm/SGRecord/updateRecordWithGeoJSONDictionary: updateRecordWithGeoJSONDictionary: @/link.
+* to update the SGRecord by calling @link //simplegeo/ooc/instm/SGRecord/updateRecordWithGeoJSONObject: updateRecordWithGeoJSONObject: @/link.
 */
 @interface SGLocationService : NSObject {
 
@@ -255,6 +255,9 @@
 * You can use this value in @link SGLocationServiceDelegate delegate @/link. 
 */
 - (NSString*) reverseGeocode:(CLLocationCoordinate2D)coord;
+
+
+- (NSString*) layerInformation:(NSString*)layerName;
 
 
 @end

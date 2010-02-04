@@ -3,7 +3,7 @@
 // SGLocatorServices
 //
 // Created by Derek Smith on 8/17/09.
-// Copyright 2009 SimpleGeo. All rights reserved.
+// Copyright 2010 SimpleGeo. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -28,14 +28,17 @@
  
     double latitude;
     double longitude;
- 
-    NSTimeInterval creationTimeInterval;
-    NSTimeInterval expirationTimeInterval;
+
+    NSTimeInterval created;
+    NSTimeInterval expires;
  
  	NSString* type;
  	NSString* layer;
     
-    NSMutableDictionary* userDefinedProperties;
+    NSString* layerLink;
+    NSString* selfLink;
+    
+    NSMutableDictionary* properties;
 }
 
 /*!
@@ -58,15 +61,15 @@
 
 /*!
 * @property
-* @abstract See @link //simplegeo/ooc/instp/SGRecordAnnotation/creationTimeInterval SGRecordAnnotation @/link
+* @abstract See @link //simplegeo/ooc/instp/SGRecordAnnotation/created SGRecordAnnotation @/link
 */
-@property (nonatomic, assign) NSTimeInterval creationTimeInterval;
+@property (nonatomic, assign) NSTimeInterval created;
 
 /*!
 * @property
-* @abstract See @link //simplegeo/ooc/instp/SGRecordAnnotation/expirationTimeInterval SGRecordAnnotation @/link
+* @abstract See @link //simplegeo/ooc/instp/SGRecordAnnotation/expires SGRecordAnnotation @/link
 */
-@property (nonatomic, assign) NSTimeInterval expirationTimeInterval;
+@property (nonatomic, assign) NSTimeInterval expires;
 
 /*!
 * @property
@@ -83,29 +86,34 @@
 
 /*!
 * @property
+* @abstract A link to the layer where this record is kept.
+* @discussion The initial value is nil. When the object is updated from a GeoJSON object
+* recieved from SimpleGeo, this property will be set.
+*/
+@property (nonatomic, retain) NSString* layerLink;
+
+/*!
+ * @property
+ * @abstract A link to the record.
+ * @discussion The initial value is nil. When the object is updated from a GeoJSON object
+ * recieved from SimpleGeo, this property will be set.
+ */
+@property (nonatomic, retain) NSString* selfLink;
+
+/*!
+* @property
 * @abstract Extra properties that are not defined, nor required by SimpleGeo.
 * @discussion This dictionary stores and updates properties (e.g. name, age, color) that are
-* not required by SimpleGeo. It is updated by @link updateRecordWithGeoJSONDictionary: updateRecordWithGeoJSONDictionary: @/link.
+* not required by SimpleGeo. It is updated by @link updateRecordWithGeoJSONObject: updateRecordWithGeoJSONObject: @/link.
 */
-@property (nonatomic, readonly) NSMutableDictionary* userDefinedProperties;
+@property (nonatomic, retain) NSMutableDictionary* properties;
 
 /*!
-* @method updateRecordWithGeoJSONDictionary:
-* @abstract Updates the record with a dictionary. See @link //simplegeo/ooc/instm/SGRecordAnnotation/updateRecordWithGeoJSONDictionary: updateRecordWithGeoJSONDictionary: @/link. 
-* @discussion The default implementation will update all of the non-user defined properties including the coordinate. Subclasses
-* are encouraged to override this method to allow user-defined properties to be extracted from the dictionary. Be sure to call
-* [super updateRecordWithGeoJSONDictionary:dictionary] to allow this class to assign the non-user defined values to the record.
+* @method updateRecordWithGeoJSONObject:
+* @abstract Updates the record using the GeoJSONOBject. 
+* See @link //simplegeo/ooc/instm/SGRecordAnnotation/updateRecordWithGeoJSONObject: updateRecordWithGeoJSONObject: @/link. 
 */
-- (void) updateRecordWithGeoJSONDictionary:(NSDictionary*)dictionary;
-
-/*!
-* @method propertiesForRecord
-* @abstract Returns a dictionary representation of the non-user defined properites. See @link ￼//simplegeo/ooc/instm/SGRecordAnnotation/propertiesForRecord propertiesForRecord @/link. 
-* @discussion ￼The default implementaion will return a dictionary with id, layer, type, expires and created defined as keys with the
-* proper values attached to them. Be sure to call [super propertiesForRecord] to take advantage of this classes default implementation.
-* @result The dictionary representation of the properties for this record.
-*/
-- (NSDictionary*) propertiesForRecord;
+- (void) updateRecordWithGeoJSONObject:(NSDictionary*)dictionary;
 
 @end
 
