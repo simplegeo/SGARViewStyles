@@ -1,0 +1,343 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/1998/REC-html40-19980424/loose.dtd">
+<html>
+<head>
+<title>SGRadar</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf8">
+<meta name="generator" content="HeaderDoc">
+<meta name="xcode-display" content="render">
+<style><!--
+#tocMenu {
+		display: block;
+		position:fixed;
+		top:0px;
+		left:0px;
+		width:210px;
+		height:100%;
+		background:transparent;
+}
+#bodyText {
+		margin-left: 210px;
+}
+--></style>
+<script language="JavaScript" type="text/javascript"><!--
+function hidetoc() {
+	var origURL = parent.document.URL;
+	var contentURL = origURL.substring(origURL.indexOf('?')+1, origURL.length);
+	if (contentURL.length == origURL.length) {
+		jumpPos = origURL.substring(origURL.indexOf('#')+1, origURL.length);
+	}
+	if (contentURL == "hidetoc") {
+		var toc = document.getElementById('tocMenu');
+		var body = document.getElementById('bodyText');
+		if (toc && body) {
+			toc.style.display = 'none';
+			body.style.marginLeft = '0px';
+		}
+	}
+}
+--></script><style type="text/css"><!--.keyword {background:#ffffff; color:#761550;}.template {background:#ffffff; color:#761550;}.number {background: #ffffff; color:#0000ff;}.function {background:#ffffff; color:#000000;}.string {background: #ffffff; color:#891315;}.preprocessor {background:#ffffff; color:#236e25}.comment {background:#ffffff; color:#236e25}.char {background: #ffffff; color:#0000ff;}.var {background:#ffffff; color:#000000;}.type {background:#ffffff; color:#761550;}.param {background:#ffffff; color:#000000;}a:link {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #0000ff;}a:visited {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #0000ff;}a:visited:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}a:active {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}a:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}h4 {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: tiny; font-weight: bold;}body {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: 10pt;}.list_indent { margin-left: 40px; }.declaration_indent { margin-left: 40px; }.param_indent { margin-left: 40px; }.group_indent { margin-left: 40px; }.group_desc_indent { margin-left: 20px; }.warning_indent { margin-left: 40px; }.important_indent { margin-left: 40px; }.hd_tocAccess { font-style: italic; font-size: 10px; font-weight: normal; color: #303030; }--></style>
+</head>
+<body bgcolor="#ffffff" onload="hidetoc();">
+
+<!-- headerDoc=cl; uid=//simplegeo/occ/cl/SGRadar;  name=SGRadar-->
+<a name="//simplegeo/occ/cl/SGRadar"></a><div id="tocMenu">
+<iframe id="toc_content" name="toc_content" src="toc.html" width="210" height="100%" align="left" frameborder="0">This document set is best viewed in a browser that supports iFrames.</iframe>
+</div>
+<div id="bodyText">
+<!-- start of header -->
+
+<!-- end of header -->
+<a name="top"></a>
+<hr>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h1><a name="SGRadar">SGRadar</a></h1>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --></p>
+<p>A radar shows the current heading of the device based on the true north value gathered from
+CoreLocation. It is also the job of the radar to display the <!-- a logicalPath="//simplegeo/ooc/cl/SGRecordAnnotation" -->SGRecordAnnotations<!-- /a --> in
+the proper position based on their geographic coordinate and the current location of the device.
+<!-- end abstract --></p>
+<p><b>Superclass:</b> <!-- a logicalPath="//simplegeo/occ/cl/UIView" -->UIView<!-- /a --><br><b>Declared In:</b> <a href="../../index.html" target="_top">SGRadar.h</a><br></p>
+<div class="declaration_indent">
+</div>
+<h5 class="tight">
+<font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5>
+<!-- begin discussion --><p>&#65532;For every <!-- a logicalPath="//simplegeo/ooc/cl/SGAnnotationView" -->annotation view<!-- /a -->  that is registered with the <!-- a logicalPath="//simplegeo/ooc/cl/SGARView" -->SGARView<!-- /a --> ,
+the <!-- a logicalPath="//simplegeo/ooc/instp/SGAnnotationView/radarTargetButton" -->radarTargetButton<!-- /a -->  is added as a subview of this view.
+</p>
+<p>Both the heading and the radar can be represented by separate images. The default representation calls upon CoreGraphics to render the simple shapes.
+You can change the colors of the default representation by calling <a href="../../../../Documentation/SGRadar_h/Classes/SGRadar/index.html#//simplegeo/occ/instp/SGRadar/radarBorderColor" logicalPath="//simplegeo/occ/instp/SGRadar/radarBorderColor">radarBorderColor</a> , <a href="../../../../Documentation/SGRadar_h/Classes/SGRadar/index.html#//simplegeo/occ/instp/SGRadar/radarCircleColor" logicalPath="//simplegeo/occ/instp/SGRadar/radarCircleColor">radarCircleColor</a> 
+and <a href="../../../../Documentation/SGRadar_h/Classes/SGRadar/index.html#//simplegeo/occ/instp/SGRadar/headingColor" logicalPath="//simplegeo/occ/instp/SGRadar/headingColor">headingColor</a>. If no image is present in either 3 image views, the default representation will persist.
+<!-- end discussion -->
+</p>
+<p></p>
+<hr>
+<br><a name="HeaderDoc_methods"></a>
+<h2>Methods</h2>
+<dl>
+<dt><tt><a href="index.html#//simplegeo/occ/instm/SGRadar/drawRadarWithHeading:roll:" target="_top">-drawRadarWithHeading:roll:</a></tt></dt>
+<dd><p>This method is called whenever the radar needs to redisplayed.
+</p></dd>
+<dt><tt><a href="index.html#//simplegeo/occ/instm/SGRadar/labelForCardinalDirection:" target="_top">-labelForCardinalDirection:</a></tt></dt>
+<dd><p>&#65532;Returns the label associated with the <a href="../../../../Documentation/SGRadar_h/index.html#//simplegeo/c/tag/SGCardinalDirection" logicalPath="//simplegeo/c/tag/SGCardinalDirection">SGCardinalDirection</a> .
+</p></dd>
+</dl>
+<hr>
+<!-- headerDoc=instm;  uid=//simplegeo/occ/instm/SGRadar/drawRadarWithHeading:roll:;   name=SGRadar::drawRadarWithHeading:roll: --><a name="//simplegeo/occ/instm/SGRadar/drawRadarWithHeading:roll:"></a>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="drawRadarWithHeading:roll:">drawRadarWithHeading:roll:</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --></p>
+<p>This method is called whenever the radar needs to redisplayed.
+<!-- end abstract --></p>
+<p></p>
+<div class="declaration_indent">
+<pre>- (<!-- a logicalPath="//simplegeo/occ/cl/void //simplegeo/occ/tdef/void //simplegeo/occ/tag/void //simplegeo/occ/econst/void //simplegeo/occ/struct/void //simplegeo/occ/clconst/void //simplegeo/occ/intf/void" --><span class="type">void</span><!-- /a -->) <!-- a logicalPath="//simplegeo/occ/instm/drawRadarWithHeading //simplegeo/occ/clm/drawRadarWithHeading //simplegeo/occ/intfcm/drawRadarWithHeading //simplegeo/occ/intfm/drawRadarWithHeading //simplegeo/occ/func/drawRadarWithHeading //simplegeo/occ/ftmplt/drawRadarWithHeading //simplegeo/occ/defn/drawRadarWithHeading //simplegeo/occ/macro/drawRadarWithHeading" --><span class="function">drawRadarWithHeading</span><!-- /a -->:(<!-- a logicalPath="//simplegeo/occ/cl/double //simplegeo/occ/tdef/double //simplegeo/occ/tag/double //simplegeo/occ/econst/double //simplegeo/occ/struct/double //simplegeo/occ/clconst/double //simplegeo/occ/intf/double" --><span class="type">double</span><!-- /a -->)<span class="param">heading</span> <!-- a logicalPath="//simplegeo/occ/instm/roll //simplegeo/occ/clm/roll //simplegeo/occ/intfcm/roll //simplegeo/occ/intfm/roll //simplegeo/occ/func/roll //simplegeo/occ/ftmplt/roll //simplegeo/occ/defn/roll //simplegeo/occ/macro/roll" --><span class="function">roll</span><!-- /a -->:(<!-- a logicalPath="//simplegeo/occ/cl/double //simplegeo/occ/tdef/double //simplegeo/occ/tag/double //simplegeo/occ/econst/double //simplegeo/occ/struct/double //simplegeo/occ/clconst/double //simplegeo/occ/intf/double" --><span class="type">double</span><!-- /a -->)<!-- a logicalPath="//simplegeo/occ/econst/roll //simplegeo/occ/data/roll" --><span class="var">roll</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt><code>heading</code></dt>
+<dd><p>&#65532;</p></dd>
+<dt><code>roll</code></dt>
+<dd><p>&#65532;</p></dd>
+</dl>
+</div>
+<h5 class="tight">
+<font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5>
+<!-- begin discussion --><p>Since the radar's orientation depends upon the heading and z axis orientation of the device,
+the view must be updated constantly. 
+<!-- end discussion -->
+</p>
+<p></p>
+<hr>
+<!-- headerDoc=instm;  uid=//simplegeo/occ/instm/SGRadar/labelForCardinalDirection:;   name=SGRadar::labelForCardinalDirection: --><a name="//simplegeo/occ/instm/SGRadar/labelForCardinalDirection:"></a>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="labelForCardinalDirection:">labelForCardinalDirection:</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --></p>
+<p>&#65532;Returns the label associated with the <a href="../../../../Documentation/SGRadar_h/index.html#//simplegeo/c/tag/SGCardinalDirection" logicalPath="//simplegeo/c/tag/SGCardinalDirection">SGCardinalDirection</a>.
+<!-- end abstract --></p>
+<p></p>
+<div class="declaration_indent">
+<pre>- (<!-- a logicalPath="//simplegeo/occ/cl/UILabel //simplegeo/occ/tdef/UILabel //simplegeo/occ/tag/UILabel //simplegeo/occ/econst/UILabel //simplegeo/occ/struct/UILabel //simplegeo/occ/clconst/UILabel //simplegeo/occ/intf/UILabel" --><span class="type">UILabel</span><!-- /a --><span class="type">*</span>) <!-- a logicalPath="//simplegeo/occ/instm/labelForCardinalDirection //simplegeo/occ/clm/labelForCardinalDirection //simplegeo/occ/intfcm/labelForCardinalDirection //simplegeo/occ/intfm/labelForCardinalDirection //simplegeo/occ/func/labelForCardinalDirection //simplegeo/occ/ftmplt/labelForCardinalDirection //simplegeo/occ/defn/labelForCardinalDirection //simplegeo/occ/macro/labelForCardinalDirection" --><span class="function">labelForCardinalDirection</span><!-- /a -->:(<a href="../../../../Documentation/SGRadar_h/index.html#//simplegeo/c/tag/SGCardinalDirection" logicalPath="//simplegeo/occ/cl/SGCardinalDirection //simplegeo/occ/tdef/SGCardinalDirection //simplegeo/occ/tag/SGCardinalDirection"><span class="type">SGCardinalDirection</span></a>)<!-- a logicalPath="//simplegeo/occ/econst/direction //simplegeo/occ/data/direction" --><span class="var">direction</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt><code>direction</code></dt>
+<dd><p>&#65532;The direction of the desired label.</p></dd>
+</dl>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5>
+<p><!-- begin return value -->&#65532;The label.
+
+<!-- end return value --></p>
+<p></p>
+<a name="HeaderDoc_props"></a>
+<h2>Properties</h2>
+<dl>
+<dt><tt><a href="index.html#//simplegeo/occ/instp/SGRadar/cardinalDirectionOffset" target="_top">cardinalDirectionOffset</a></tt></dt>
+<dd><p>The amount of pixel separation between a cardinal direction label and the radar image. A negative value will
+decrease the distance while a postivie value with increase the distance.
+</p></dd>
+<dt><tt><a href="index.html#//simplegeo/occ/instp/SGRadar/currentLocationImageView" target="_top">currentLocationImageView</a></tt></dt>
+<dd><p>The image view that represents the the devices current location.
+</p></dd>
+<dt><tt><a href="index.html#//simplegeo/occ/instp/SGRadar/headingColor" target="_top">headingColor</a></tt></dt>
+<dd><p>The color of the header circular segment. The default RGBA value is 1.0, 1.0, 1.0, 0.7.
+</p></dd>
+<dt><tt><a href="index.html#//simplegeo/occ/instp/SGRadar/headingImageView" target="_top">headingImageView</a></tt></dt>
+<dd><p>The image view that contains the image used for the heading.
+</p></dd>
+<dt><tt><a href="index.html#//simplegeo/occ/instp/SGRadar/radarBackgroundImageView" target="_top">radarBackgroundImageView</a></tt></dt>
+<dd><p>The background image view of the radar.
+</p></dd>
+<dt><tt><a href="index.html#//simplegeo/occ/instp/SGRadar/radarBorderColor" target="_top">radarBorderColor</a></tt></dt>
+<dd><p>The border color of the circular radar. The default RGBA value is 0.6, 0.6, 0.6, 0,7. 
+</p></dd>
+<dt><tt><a href="index.html#//simplegeo/occ/instp/SGRadar/radarCircleColor" target="_top">radarCircleColor</a></tt></dt>
+<dd><p>The color of the radar. The default RGBA value is 0.0, 0.0, 0.0, 0.7.
+</p></dd>
+<dt><tt><a href="index.html#//simplegeo/occ/instp/SGRadar/rotatable" target="_top">rotatable</a></tt></dt>
+<dd><p>Determines whether the radar rotates with the device. This is determined by the roll parameter in
+<a href="../../../../Documentation/SGRadar_h/Classes/SGRadar/index.html#//simplegeo/occ/instm/SGRadar/drawRadarWithHeading:roll:" logicalPath="//simplegeo/occ/instm/SGRadar/drawRadarWithHeading:roll:">drawRadarWithHeading:roll:</a> .
+</p></dd>
+<dt><tt><a href="index.html#//simplegeo/occ/instp/SGRadar/shouldShowCardinalDirections" target="_top">shouldShowCardinalDirections</a></tt></dt>
+<dd><p>Set this to YES to show all of the cardinal direction labels. Otherwise; NO. The default
+is YES.
+</p></dd>
+</dl>
+<hr>
+<!-- headerDoc=instp;  uid=//simplegeo/occ/instp/SGRadar/cardinalDirectionOffset;   name=SGRadar::cardinalDirectionOffset --><a name="//simplegeo/occ/instp/SGRadar/cardinalDirectionOffset"></a>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="cardinalDirectionOffset">cardinalDirectionOffset</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --></p>
+<p>The amount of pixel separation between a cardinal direction label and the radar image. A negative value will
+decrease the distance while a postivie value with increase the distance.
+<!-- end abstract --></p>
+<p></p>
+<div class="declaration_indent">
+<pre>@property (
+    <span class="param">nonatomic</span>,
+    <span class="param">assign</span>) <!-- a logicalPath="//simplegeo/occ/cl/CGFloat //simplegeo/occ/tdef/CGFloat //simplegeo/occ/tag/CGFloat //simplegeo/occ/econst/CGFloat //simplegeo/occ/struct/CGFloat //simplegeo/occ/clconst/CGFloat //simplegeo/occ/intf/CGFloat" --><span class="type">CGFloat</span><!-- /a --> <!-- a logicalPath="//simplegeo/occ/econst/cardinalDirectionOffset //simplegeo/occ/data/cardinalDirectionOffset" --><span class="var">cardinalDirectionOffset</span><!-- /a -->; </pre>
+</div>
+<p></p>
+<hr>
+<!-- headerDoc=instp;  uid=//simplegeo/occ/instp/SGRadar/currentLocationImageView;   name=SGRadar::currentLocationImageView --><a name="//simplegeo/occ/instp/SGRadar/currentLocationImageView"></a>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="currentLocationImageView">currentLocationImageView</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --></p>
+<p>The image view that represents the the devices current location.
+<!-- end abstract --></p>
+<p></p>
+<div class="declaration_indent">
+<pre>@property (
+    <span class="param">nonatomic</span>,
+    <span class="param">readonly</span>) <!-- a logicalPath="//simplegeo/occ/cl/UIImageView //simplegeo/occ/tdef/UIImageView //simplegeo/occ/tag/UIImageView //simplegeo/occ/econst/UIImageView //simplegeo/occ/struct/UIImageView //simplegeo/occ/clconst/UIImageView //simplegeo/occ/intf/UIImageView" --><span class="type">UIImageView</span><!-- /a --><span class="type">*</span> <!-- a logicalPath="//simplegeo/occ/econst/currentLocationImageView //simplegeo/occ/data/currentLocationImageView" --><span class="var">currentLocationImageView</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight">
+<font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5>
+<!-- begin discussion --><p>The default image is a white plus sign.
+<!-- end discussion -->
+</p>
+<p></p>
+<hr>
+<!-- headerDoc=instp;  uid=//simplegeo/occ/instp/SGRadar/headingColor;   name=SGRadar::headingColor --><a name="//simplegeo/occ/instp/SGRadar/headingColor"></a>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="headingColor">headingColor</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --></p>
+<p>The color of the header circular segment. The default RGBA value is 1.0, 1.0, 1.0, 0.7.
+<!-- end abstract --></p>
+<p></p>
+<div class="declaration_indent">
+<pre>@property (
+    <span class="param">nonatomic</span>,
+    <span class="param">retain</span>) <!-- a logicalPath="//simplegeo/occ/cl/UIColor //simplegeo/occ/tdef/UIColor //simplegeo/occ/tag/UIColor //simplegeo/occ/econst/UIColor //simplegeo/occ/struct/UIColor //simplegeo/occ/clconst/UIColor //simplegeo/occ/intf/UIColor" --><span class="type">UIColor</span><!-- /a --><span class="type">*</span> <!-- a logicalPath="//simplegeo/occ/econst/headingColor //simplegeo/occ/data/headingColor" --><span class="var">headingColor</span><!-- /a -->; </pre>
+</div>
+<p></p>
+<hr>
+<!-- headerDoc=instp;  uid=//simplegeo/occ/instp/SGRadar/headingImageView;   name=SGRadar::headingImageView --><a name="//simplegeo/occ/instp/SGRadar/headingImageView"></a>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="headingImageView">headingImageView</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --></p>
+<p>The image view that contains the image used for the heading.
+<!-- end abstract --></p>
+<p></p>
+<div class="declaration_indent">
+<pre>@property (
+    <span class="param">nonatomic</span>,
+    <span class="param">readonly</span>) <!-- a logicalPath="//simplegeo/occ/cl/UIImageView //simplegeo/occ/tdef/UIImageView //simplegeo/occ/tag/UIImageView //simplegeo/occ/econst/UIImageView //simplegeo/occ/struct/UIImageView //simplegeo/occ/clconst/UIImageView //simplegeo/occ/intf/UIImageView" --><span class="type">UIImageView</span><!-- /a --><span class="type">*</span> <!-- a logicalPath="//simplegeo/occ/econst/headingImageView //simplegeo/occ/data/headingImageView" --><span class="var">headingImageView</span><!-- /a -->; </pre>
+</div>
+<p></p>
+<hr>
+<!-- headerDoc=instp;  uid=//simplegeo/occ/instp/SGRadar/radarBackgroundImageView;   name=SGRadar::radarBackgroundImageView --><a name="//simplegeo/occ/instp/SGRadar/radarBackgroundImageView"></a>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="radarBackgroundImageView">radarBackgroundImageView</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --></p>
+<p>The background image view of the radar.
+<!-- end abstract --></p>
+<p></p>
+<div class="declaration_indent">
+<pre>@property (
+    <span class="param">nonatomic</span>,
+    <span class="param">readonly</span>) <!-- a logicalPath="//simplegeo/occ/cl/UIImageView //simplegeo/occ/tdef/UIImageView //simplegeo/occ/tag/UIImageView //simplegeo/occ/econst/UIImageView //simplegeo/occ/struct/UIImageView //simplegeo/occ/clconst/UIImageView //simplegeo/occ/intf/UIImageView" --><span class="type">UIImageView</span><!-- /a --><span class="type">*</span> <!-- a logicalPath="//simplegeo/occ/econst/radarBackgroundImageView //simplegeo/occ/data/radarBackgroundImageView" --><span class="var">radarBackgroundImageView</span><!-- /a -->; </pre>
+</div>
+<p></p>
+<hr>
+<!-- headerDoc=instp;  uid=//simplegeo/occ/instp/SGRadar/radarBorderColor;   name=SGRadar::radarBorderColor --><a name="//simplegeo/occ/instp/SGRadar/radarBorderColor"></a>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="radarBorderColor">radarBorderColor</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --></p>
+<p>The border color of the circular radar. The default RGBA value is 0.6, 0.6, 0.6, 0,7. 
+<!-- end abstract --></p>
+<p></p>
+<div class="declaration_indent">
+<pre>@property (
+    <span class="param">nonatomic</span>,
+    <span class="param">retain</span>) <!-- a logicalPath="//simplegeo/occ/cl/UIColor //simplegeo/occ/tdef/UIColor //simplegeo/occ/tag/UIColor //simplegeo/occ/econst/UIColor //simplegeo/occ/struct/UIColor //simplegeo/occ/clconst/UIColor //simplegeo/occ/intf/UIColor" --><span class="type">UIColor</span><!-- /a --><span class="type">*</span> <!-- a logicalPath="//simplegeo/occ/econst/radarBorderColor //simplegeo/occ/data/radarBorderColor" --><span class="var">radarBorderColor</span><!-- /a -->; </pre>
+</div>
+<p></p>
+<hr>
+<!-- headerDoc=instp;  uid=//simplegeo/occ/instp/SGRadar/radarCircleColor;   name=SGRadar::radarCircleColor --><a name="//simplegeo/occ/instp/SGRadar/radarCircleColor"></a>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="radarCircleColor">radarCircleColor</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --></p>
+<p>The color of the radar. The default RGBA value is 0.0, 0.0, 0.0, 0.7.
+<!-- end abstract --></p>
+<p></p>
+<div class="declaration_indent">
+<pre>@property (
+    <span class="param">nonatomic</span>,
+    <span class="param">retain</span>) <!-- a logicalPath="//simplegeo/occ/cl/UIColor //simplegeo/occ/tdef/UIColor //simplegeo/occ/tag/UIColor //simplegeo/occ/econst/UIColor //simplegeo/occ/struct/UIColor //simplegeo/occ/clconst/UIColor //simplegeo/occ/intf/UIColor" --><span class="type">UIColor</span><!-- /a --><span class="type">*</span> <!-- a logicalPath="//simplegeo/occ/econst/radarCircleColor //simplegeo/occ/data/radarCircleColor" --><span class="var">radarCircleColor</span><!-- /a -->; </pre>
+</div>
+<p></p>
+<hr>
+<!-- headerDoc=instp;  uid=//simplegeo/occ/instp/SGRadar/rotatable;   name=SGRadar::rotatable --><a name="//simplegeo/occ/instp/SGRadar/rotatable"></a>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="rotatable">rotatable</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --></p>
+<p>Determines whether the radar rotates with the device. This is determined by the roll parameter in
+<a href="../../../../Documentation/SGRadar_h/Classes/SGRadar/index.html#//simplegeo/occ/instm/SGRadar/drawRadarWithHeading:roll:" logicalPath="//simplegeo/occ/instm/SGRadar/drawRadarWithHeading:roll:">drawRadarWithHeading:roll:</a>.
+<!-- end abstract --></p>
+<p></p>
+<div class="declaration_indent">
+<pre>@property (
+    <span class="param">nonatomic</span>,
+    <span class="param">assign</span>) <!-- a logicalPath="//simplegeo/occ/cl/BOOL //simplegeo/occ/tdef/BOOL //simplegeo/occ/tag/BOOL //simplegeo/occ/econst/BOOL //simplegeo/occ/struct/BOOL //simplegeo/occ/clconst/BOOL //simplegeo/occ/intf/BOOL" --><span class="type">BOOL</span><!-- /a --> <!-- a logicalPath="//simplegeo/occ/econst/rotatable //simplegeo/occ/data/rotatable" --><span class="var">rotatable</span><!-- /a -->; </pre>
+</div>
+<p></p>
+<hr>
+<!-- headerDoc=instp;  uid=//simplegeo/occ/instp/SGRadar/shouldShowCardinalDirections;   name=SGRadar::shouldShowCardinalDirections --><a name="//simplegeo/occ/instp/SGRadar/shouldShowCardinalDirections"></a>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="shouldShowCardinalDirections">shouldShowCardinalDirections</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --></p>
+<p>Set this to YES to show all of the cardinal direction labels. Otherwise; NO. The default
+is YES.
+<!-- end abstract --></p>
+<p></p>
+<div class="declaration_indent">
+<pre>@property (
+    <span class="param">nonatomic</span>,
+    <span class="param">assign</span>) <!-- a logicalPath="//simplegeo/occ/cl/BOOL //simplegeo/occ/tdef/BOOL //simplegeo/occ/tag/BOOL //simplegeo/occ/econst/BOOL //simplegeo/occ/struct/BOOL //simplegeo/occ/clconst/BOOL //simplegeo/occ/intf/BOOL" --><span class="type">BOOL</span><!-- /a --> <!-- a logicalPath="//simplegeo/occ/econst/shouldShowCardinalDirections //simplegeo/occ/data/shouldShowCardinalDirections" --><span class="var">shouldShowCardinalDirections</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight">
+<font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5>
+<!-- begin discussion --><p>To hide individual labels, use <a href="../../../../Documentation/SGRadar_h/Classes/SGRadar/index.html#//simplegeo/occ/instm/SGRadar/labelForCardinalDirection:" logicalPath="//simplegeo/occ/instm/SGRadar/labelForCardinalDirection:">labelForCardinalDirection</a>.
+<!-- end discussion -->
+</p>
+<p></p>
+<p><!-- start of footer -->
+
+<!-- end of footer -->
+</p>
+<p>&copy; SimpleGeo Last Updated: 02/09/2010
+</p>
+</div>
+</body>
+</html>

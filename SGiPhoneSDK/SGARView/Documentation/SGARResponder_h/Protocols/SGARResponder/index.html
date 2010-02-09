@@ -1,0 +1,287 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/1998/REC-html40-19980424/loose.dtd">
+<html>
+<head>
+<title>SGARResponder</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf8">
+<meta name="generator" content="HeaderDoc">
+<meta name="xcode-display" content="render">
+<style><!--
+#tocMenu {
+		display: block;
+		position:fixed;
+		top:0px;
+		left:0px;
+		width:210px;
+		height:100%;
+		background:transparent;
+}
+#bodyText {
+		margin-left: 210px;
+}
+--></style>
+<script language="JavaScript" type="text/javascript"><!--
+function hidetoc() {
+	var origURL = parent.document.URL;
+	var contentURL = origURL.substring(origURL.indexOf('?')+1, origURL.length);
+	if (contentURL.length == origURL.length) {
+		jumpPos = origURL.substring(origURL.indexOf('#')+1, origURL.length);
+	}
+	if (contentURL == "hidetoc") {
+		var toc = document.getElementById('tocMenu');
+		var body = document.getElementById('bodyText');
+		if (toc && body) {
+			toc.style.display = 'none';
+			body.style.marginLeft = '0px';
+		}
+	}
+}
+--></script><style type="text/css"><!--.keyword {background:#ffffff; color:#761550;}.template {background:#ffffff; color:#761550;}.number {background: #ffffff; color:#0000ff;}.function {background:#ffffff; color:#000000;}.string {background: #ffffff; color:#891315;}.preprocessor {background:#ffffff; color:#236e25}.comment {background:#ffffff; color:#236e25}.char {background: #ffffff; color:#0000ff;}.var {background:#ffffff; color:#000000;}.type {background:#ffffff; color:#761550;}.param {background:#ffffff; color:#000000;}a:link {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #0000ff;}a:visited {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #0000ff;}a:visited:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}a:active {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}a:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}h4 {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: tiny; font-weight: bold;}body {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: 10pt;}.list_indent { margin-left: 40px; }.declaration_indent { margin-left: 40px; }.param_indent { margin-left: 40px; }.group_indent { margin-left: 40px; }.group_desc_indent { margin-left: 20px; }.warning_indent { margin-left: 40px; }.important_indent { margin-left: 40px; }.hd_tocAccess { font-style: italic; font-size: 10px; font-weight: normal; color: #303030; }--></style>
+</head>
+<body bgcolor="#ffffff" onload="hidetoc();">
+
+<!-- headerDoc=intf; uid=//simplegeo/occ/intf/SGARResponder;  name=SGARResponder-->
+<a name="//simplegeo/occ/intf/SGARResponder"></a><div id="tocMenu">
+<iframe id="toc_content" name="toc_content" src="toc.html" width="210" height="100%" align="left" frameborder="0">This document set is best viewed in a browser that supports iFrames.</iframe>
+</div>
+<div id="bodyText">
+<!-- start of header -->
+
+<!-- end of header -->
+<a name="top"></a>
+<hr>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h1><a name="SGARResponder">SGARResponder</a></h1>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --></p>
+<p>Defines&#65532; the protocol for objects to respond to gesture and touch events created in the <!-- a logicalPath="//simplegeo/ooc/cl/SGARView" -->SGARView<!-- /a -->.
+<!-- end abstract --></p>
+<p><b>Extends&nbsp;Protocol:</b> <!-- a logicalPath="//simplegeo/occ/intf/NSObject" -->NSObject<!-- /a --><br><b>Declared In:</b> <a href="../../index.html" target="_top">SGARResponder.h</a><br></p>
+<div class="declaration_indent">
+</div>
+<h5 class="tight">
+<font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5>
+<!-- begin discussion --><p>There are essentially two different enviornments where touch evenets can be generated, the augmented reality enviornment and the 
+normal UIResponder chain. In order to loop in the AR envoirnment with the UIResponder chain, pre-calculations of touch events need to be
+acknowledged by the the AR view before they can be released onto the normal UIResponder chain. This protocol attempts to provides callback
+notifications when gestures are created within the AR envoirnment.
+</p>
+<p>SGARResponders are registered with <!-- a logicalPath="//simplegeo/ooc/cl/SGARView" -->SGARView<!-- /a -->  via
+<!-- a logicalPath="//simplegeo/ooc/instm/SGARView/addResponder:" -->addResponder:<!-- /a -->.
+<!-- end discussion -->
+</p>
+<p></p>
+<hr>
+<br><a name="HeaderDoc_methods"></a>
+<h2>Methods</h2>
+<dl>
+<dt><tt><a href="index.html#//simplegeo/occ/intfm/SGARResponder/doubleTap:" target="_top">-doubleTap:</a></tt></dt>
+<dd><p>&#65532;Notifies the reciever when a double touch event has occurred.
+</p></dd>
+<dt><tt><a href="index.html#//simplegeo/occ/intfm/SGARResponder/moveEndedAtPoint:" target="_top">-moveEndedAtPoint:</a></tt></dt>
+<dd><p>Notifies the reicever when a drag events finishs.
+</p></dd>
+<dt><tt><a href="index.html#//simplegeo/occ/intfm/SGARResponder/moveFromPoint:toPoint:" target="_top">-moveFromPoint:toPoint:</a></tt></dt>
+<dd><p>Notifies the reciever when a drag event occurs.
+</p></dd>
+<dt><tt><a href="index.html#//simplegeo/occ/intfm/SGARResponder/pinchAtPoint:andPoint:withDistance:" target="_top">-pinchAtPoint:andPoint:withDistance:</a></tt></dt>
+<dd><p>Notifies the reciever when a pinch event occurs.
+</p></dd>
+<dt><tt><a href="index.html#//simplegeo/occ/intfm/SGARResponder/pullAtPoint:andPoint:withDistance:" target="_top">-pullAtPoint:andPoint:withDistance:</a></tt></dt>
+<dd><p>Notifies the reciever when a pull event occurs.
+</p></dd>
+<dt><tt><a href="index.html#//simplegeo/occ/intfm/SGARResponder/singleTap:" target="_top">-singleTap:</a></tt></dt>
+<dd><p>Notifies the reciever when a single touch event has occurred.
+</p></dd>
+<dt><tt><a href="index.html#//simplegeo/occ/intfm/SGARResponder/singleTapAtPoint:andPoint:" target="_top">-singleTapAtPoint:andPoint:</a></tt></dt>
+<dd><p>Notifies the reciever when a single touch event occurs at two points.
+</p></dd>
+<dt><tt><a href="index.html#//simplegeo/occ/intfm/SGARResponder/viewDidShake" target="_top">-viewDidShake</a></tt></dt>
+<dd><p>Notifies the reciever when the view is shaken.
+</p></dd>
+</dl>
+<hr>
+<!-- headerDoc=intfm;  uid=//simplegeo/occ/intfm/SGARResponder/doubleTap:;   name=SGARResponder::doubleTap: --><a name="//simplegeo/occ/intfm/SGARResponder/doubleTap:"></a>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="doubleTap:">doubleTap:</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --></p>
+<p>&#65532;Notifies the reciever when a double touch event has occurred.
+<!-- end abstract --></p>
+<p></p>
+<div class="declaration_indent">
+<pre>- (<!-- a logicalPath="//simplegeo/occ/cl/void //simplegeo/occ/tdef/void //simplegeo/occ/tag/void //simplegeo/occ/econst/void //simplegeo/occ/struct/void //simplegeo/occ/clconst/void //simplegeo/occ/intf/void" --><span class="type">void</span><!-- /a -->) <!-- a logicalPath="//simplegeo/occ/instm/doubleTap //simplegeo/occ/clm/doubleTap //simplegeo/occ/intfcm/doubleTap //simplegeo/occ/intfm/doubleTap //simplegeo/occ/func/doubleTap //simplegeo/occ/ftmplt/doubleTap //simplegeo/occ/defn/doubleTap //simplegeo/occ/macro/doubleTap" --><span class="function">doubleTap</span><!-- /a -->:(<!-- a logicalPath="//simplegeo/occ/cl/CGPoint //simplegeo/occ/tdef/CGPoint //simplegeo/occ/tag/CGPoint //simplegeo/occ/econst/CGPoint //simplegeo/occ/struct/CGPoint //simplegeo/occ/clconst/CGPoint //simplegeo/occ/intf/CGPoint" --><span class="type">CGPoint</span><!-- /a -->)<!-- a logicalPath="//simplegeo/occ/econst/point //simplegeo/occ/data/point" --><span class="var">point</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt><code>point</code></dt>
+<dd><p>&#65532;The point at which the touch event occurred.</p></dd>
+</dl>
+</div>
+<p></p>
+<hr>
+<!-- headerDoc=intfm;  uid=//simplegeo/occ/intfm/SGARResponder/moveEndedAtPoint:;   name=SGARResponder::moveEndedAtPoint: --><a name="//simplegeo/occ/intfm/SGARResponder/moveEndedAtPoint:"></a>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="moveEndedAtPoint:">moveEndedAtPoint:</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --></p>
+<p>Notifies the reicever when a drag events finishs.
+<!-- end abstract --></p>
+<p></p>
+<div class="declaration_indent">
+<pre>- (<!-- a logicalPath="//simplegeo/occ/cl/void //simplegeo/occ/tdef/void //simplegeo/occ/tag/void //simplegeo/occ/econst/void //simplegeo/occ/struct/void //simplegeo/occ/clconst/void //simplegeo/occ/intf/void" --><span class="type">void</span><!-- /a -->) <!-- a logicalPath="//simplegeo/occ/instm/moveEndedAtPoint //simplegeo/occ/clm/moveEndedAtPoint //simplegeo/occ/intfcm/moveEndedAtPoint //simplegeo/occ/intfm/moveEndedAtPoint //simplegeo/occ/func/moveEndedAtPoint //simplegeo/occ/ftmplt/moveEndedAtPoint //simplegeo/occ/defn/moveEndedAtPoint //simplegeo/occ/macro/moveEndedAtPoint" --><span class="function">moveEndedAtPoint</span><!-- /a -->:(<!-- a logicalPath="//simplegeo/occ/cl/CGPoint //simplegeo/occ/tdef/CGPoint //simplegeo/occ/tag/CGPoint //simplegeo/occ/econst/CGPoint //simplegeo/occ/struct/CGPoint //simplegeo/occ/clconst/CGPoint //simplegeo/occ/intf/CGPoint" --><span class="type">CGPoint</span><!-- /a -->)<!-- a logicalPath="//simplegeo/occ/econst/point //simplegeo/occ/data/point" --><span class="var">point</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt><code>point</code></dt>
+<dd><p>&#65532;The point at which the drag event was completed.</p></dd>
+</dl>
+</div>
+<p></p>
+<hr>
+<!-- headerDoc=intfm;  uid=//simplegeo/occ/intfm/SGARResponder/moveFromPoint:toPoint:;   name=SGARResponder::moveFromPoint:toPoint: --><a name="//simplegeo/occ/intfm/SGARResponder/moveFromPoint:toPoint:"></a>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="moveFromPoint:toPoint:">moveFromPoint:toPoint:</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --></p>
+<p>Notifies the reciever when a drag event occurs.
+<!-- end abstract --></p>
+<p></p>
+<div class="declaration_indent">
+<pre>- (<!-- a logicalPath="//simplegeo/occ/cl/void //simplegeo/occ/tdef/void //simplegeo/occ/tag/void //simplegeo/occ/econst/void //simplegeo/occ/struct/void //simplegeo/occ/clconst/void //simplegeo/occ/intf/void" --><span class="type">void</span><!-- /a -->) <!-- a logicalPath="//simplegeo/occ/instm/moveFromPoint //simplegeo/occ/clm/moveFromPoint //simplegeo/occ/intfcm/moveFromPoint //simplegeo/occ/intfm/moveFromPoint //simplegeo/occ/func/moveFromPoint //simplegeo/occ/ftmplt/moveFromPoint //simplegeo/occ/defn/moveFromPoint //simplegeo/occ/macro/moveFromPoint" --><span class="function">moveFromPoint</span><!-- /a -->:(<!-- a logicalPath="//simplegeo/occ/cl/CGPoint //simplegeo/occ/tdef/CGPoint //simplegeo/occ/tag/CGPoint //simplegeo/occ/econst/CGPoint //simplegeo/occ/struct/CGPoint //simplegeo/occ/clconst/CGPoint //simplegeo/occ/intf/CGPoint" --><span class="type">CGPoint</span><!-- /a -->)<span class="param">fromPoint</span> <!-- a logicalPath="//simplegeo/occ/instm/toPoint //simplegeo/occ/clm/toPoint //simplegeo/occ/intfcm/toPoint //simplegeo/occ/intfm/toPoint //simplegeo/occ/func/toPoint //simplegeo/occ/ftmplt/toPoint //simplegeo/occ/defn/toPoint //simplegeo/occ/macro/toPoint" --><span class="function">toPoint</span><!-- /a -->:(<!-- a logicalPath="//simplegeo/occ/cl/CGPoint //simplegeo/occ/tdef/CGPoint //simplegeo/occ/tag/CGPoint //simplegeo/occ/econst/CGPoint //simplegeo/occ/struct/CGPoint //simplegeo/occ/clconst/CGPoint //simplegeo/occ/intf/CGPoint" --><span class="type">CGPoint</span><!-- /a -->)<!-- a logicalPath="//simplegeo/occ/econst/toPoint //simplegeo/occ/data/toPoint" --><span class="var">toPoint</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt><code>fromPoint</code></dt>
+<dd><p>&#65532;The start point of the drag.</p></dd>
+<dt><code>toPoint</code></dt>
+<dd><p>&#65532;The end point of the drag.</p></dd>
+</dl>
+</div>
+<p></p>
+<hr>
+<!-- headerDoc=intfm;  uid=//simplegeo/occ/intfm/SGARResponder/pinchAtPoint:andPoint:withDistance:;   name=SGARResponder::pinchAtPoint:andPoint:withDistance: --><a name="//simplegeo/occ/intfm/SGARResponder/pinchAtPoint:andPoint:withDistance:"></a>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="pinchAtPoint:andPoint:withDistance:">pinchAtPoint:andPoint:withDistance:</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --></p>
+<p>Notifies the reciever when a pinch event occurs.
+<!-- end abstract --></p>
+<p></p>
+<div class="declaration_indent">
+<pre>- (<!-- a logicalPath="//simplegeo/occ/cl/void //simplegeo/occ/tdef/void //simplegeo/occ/tag/void //simplegeo/occ/econst/void //simplegeo/occ/struct/void //simplegeo/occ/clconst/void //simplegeo/occ/intf/void" --><span class="type">void</span><!-- /a -->) <!-- a logicalPath="//simplegeo/occ/instm/pinchAtPoint //simplegeo/occ/clm/pinchAtPoint //simplegeo/occ/intfcm/pinchAtPoint //simplegeo/occ/intfm/pinchAtPoint //simplegeo/occ/func/pinchAtPoint //simplegeo/occ/ftmplt/pinchAtPoint //simplegeo/occ/defn/pinchAtPoint //simplegeo/occ/macro/pinchAtPoint" --><span class="function">pinchAtPoint</span><!-- /a -->:(<!-- a logicalPath="//simplegeo/occ/cl/CGPoint //simplegeo/occ/tdef/CGPoint //simplegeo/occ/tag/CGPoint //simplegeo/occ/econst/CGPoint //simplegeo/occ/struct/CGPoint //simplegeo/occ/clconst/CGPoint //simplegeo/occ/intf/CGPoint" --><span class="type">CGPoint</span><!-- /a -->)<span class="param">pointOne</span> <!-- a logicalPath="//simplegeo/occ/instm/andPoint //simplegeo/occ/clm/andPoint //simplegeo/occ/intfcm/andPoint //simplegeo/occ/intfm/andPoint //simplegeo/occ/func/andPoint //simplegeo/occ/ftmplt/andPoint //simplegeo/occ/defn/andPoint //simplegeo/occ/macro/andPoint" --><span class="function">andPoint</span><!-- /a -->:(<!-- a logicalPath="//simplegeo/occ/cl/CGPoint //simplegeo/occ/tdef/CGPoint //simplegeo/occ/tag/CGPoint //simplegeo/occ/econst/CGPoint //simplegeo/occ/struct/CGPoint //simplegeo/occ/clconst/CGPoint //simplegeo/occ/intf/CGPoint" --><span class="type">CGPoint</span><!-- /a -->)<span class="param">pointTwo</span> 
+        <!-- a logicalPath="//simplegeo/occ/instm/withDistance //simplegeo/occ/clm/withDistance //simplegeo/occ/intfcm/withDistance //simplegeo/occ/intfm/withDistance //simplegeo/occ/func/withDistance //simplegeo/occ/ftmplt/withDistance //simplegeo/occ/defn/withDistance //simplegeo/occ/macro/withDistance" --><span class="function">withDistance</span><!-- /a -->:(<!-- a logicalPath="//simplegeo/occ/cl/CGFloat //simplegeo/occ/tdef/CGFloat //simplegeo/occ/tag/CGFloat //simplegeo/occ/econst/CGFloat //simplegeo/occ/struct/CGFloat //simplegeo/occ/clconst/CGFloat //simplegeo/occ/intf/CGFloat" --><span class="type">CGFloat</span><!-- /a -->)<!-- a logicalPath="//simplegeo/occ/econst/distance //simplegeo/occ/data/distance" --><span class="var">distance</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt><code>pointOne</code></dt>
+<dd><p>&#65532;One of the two points at which the touch event occurred.</p></dd>
+<dt><code>pointTwo</code></dt>
+<dd><p>&#65532;The other point at which the touch event occurred.</p></dd>
+<dt><code>distance</code></dt>
+<dd><p>&#65532;The distance between the two points. Why? For convience.</p></dd>
+</dl>
+</div>
+<p></p>
+<hr>
+<!-- headerDoc=intfm;  uid=//simplegeo/occ/intfm/SGARResponder/pullAtPoint:andPoint:withDistance:;   name=SGARResponder::pullAtPoint:andPoint:withDistance: --><a name="//simplegeo/occ/intfm/SGARResponder/pullAtPoint:andPoint:withDistance:"></a>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="pullAtPoint:andPoint:withDistance:">pullAtPoint:andPoint:withDistance:</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --></p>
+<p>Notifies the reciever when a pull event occurs.
+<!-- end abstract --></p>
+<p></p>
+<div class="declaration_indent">
+<pre>- (<!-- a logicalPath="//simplegeo/occ/cl/void //simplegeo/occ/tdef/void //simplegeo/occ/tag/void //simplegeo/occ/econst/void //simplegeo/occ/struct/void //simplegeo/occ/clconst/void //simplegeo/occ/intf/void" --><span class="type">void</span><!-- /a -->) <!-- a logicalPath="//simplegeo/occ/instm/pullAtPoint //simplegeo/occ/clm/pullAtPoint //simplegeo/occ/intfcm/pullAtPoint //simplegeo/occ/intfm/pullAtPoint //simplegeo/occ/func/pullAtPoint //simplegeo/occ/ftmplt/pullAtPoint //simplegeo/occ/defn/pullAtPoint //simplegeo/occ/macro/pullAtPoint" --><span class="function">pullAtPoint</span><!-- /a -->:(<!-- a logicalPath="//simplegeo/occ/cl/CGPoint //simplegeo/occ/tdef/CGPoint //simplegeo/occ/tag/CGPoint //simplegeo/occ/econst/CGPoint //simplegeo/occ/struct/CGPoint //simplegeo/occ/clconst/CGPoint //simplegeo/occ/intf/CGPoint" --><span class="type">CGPoint</span><!-- /a -->)<span class="param">pointOne</span> <!-- a logicalPath="//simplegeo/occ/instm/andPoint //simplegeo/occ/clm/andPoint //simplegeo/occ/intfcm/andPoint //simplegeo/occ/intfm/andPoint //simplegeo/occ/func/andPoint //simplegeo/occ/ftmplt/andPoint //simplegeo/occ/defn/andPoint //simplegeo/occ/macro/andPoint" --><span class="function">andPoint</span><!-- /a -->:(<!-- a logicalPath="//simplegeo/occ/cl/CGPoint //simplegeo/occ/tdef/CGPoint //simplegeo/occ/tag/CGPoint //simplegeo/occ/econst/CGPoint //simplegeo/occ/struct/CGPoint //simplegeo/occ/clconst/CGPoint //simplegeo/occ/intf/CGPoint" --><span class="type">CGPoint</span><!-- /a -->)<span class="param">pointTwo</span> 
+        <!-- a logicalPath="//simplegeo/occ/instm/withDistance //simplegeo/occ/clm/withDistance //simplegeo/occ/intfcm/withDistance //simplegeo/occ/intfm/withDistance //simplegeo/occ/func/withDistance //simplegeo/occ/ftmplt/withDistance //simplegeo/occ/defn/withDistance //simplegeo/occ/macro/withDistance" --><span class="function">withDistance</span><!-- /a -->:(<!-- a logicalPath="//simplegeo/occ/cl/CGFloat //simplegeo/occ/tdef/CGFloat //simplegeo/occ/tag/CGFloat //simplegeo/occ/econst/CGFloat //simplegeo/occ/struct/CGFloat //simplegeo/occ/clconst/CGFloat //simplegeo/occ/intf/CGFloat" --><span class="type">CGFloat</span><!-- /a -->)<!-- a logicalPath="//simplegeo/occ/econst/distance //simplegeo/occ/data/distance" --><span class="var">distance</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt><code>pointOne</code></dt>
+<dd><p>&#65532;One of the two points at which the touch event occurred.</p></dd>
+<dt><code>pointTwo</code></dt>
+<dd><p>&#65532;The other point at which the touch event occurred.</p></dd>
+<dt><code>distance</code></dt>
+<dd><p>&#65532;The distance between the two points. Why? Because I can.</p></dd>
+</dl>
+</div>
+<p></p>
+<hr>
+<!-- headerDoc=intfm;  uid=//simplegeo/occ/intfm/SGARResponder/singleTap:;   name=SGARResponder::singleTap: --><a name="//simplegeo/occ/intfm/SGARResponder/singleTap:"></a>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="singleTap:">singleTap:</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --></p>
+<p>Notifies the reciever when a single touch event has occurred.
+<!-- end abstract --></p>
+<p></p>
+<div class="declaration_indent">
+<pre>- (<!-- a logicalPath="//simplegeo/occ/cl/void //simplegeo/occ/tdef/void //simplegeo/occ/tag/void //simplegeo/occ/econst/void //simplegeo/occ/struct/void //simplegeo/occ/clconst/void //simplegeo/occ/intf/void" --><span class="type">void</span><!-- /a -->) <!-- a logicalPath="//simplegeo/occ/instm/singleTap //simplegeo/occ/clm/singleTap //simplegeo/occ/intfcm/singleTap //simplegeo/occ/intfm/singleTap //simplegeo/occ/func/singleTap //simplegeo/occ/ftmplt/singleTap //simplegeo/occ/defn/singleTap //simplegeo/occ/macro/singleTap" --><span class="function">singleTap</span><!-- /a -->:(<!-- a logicalPath="//simplegeo/occ/cl/CGPoint //simplegeo/occ/tdef/CGPoint //simplegeo/occ/tag/CGPoint //simplegeo/occ/econst/CGPoint //simplegeo/occ/struct/CGPoint //simplegeo/occ/clconst/CGPoint //simplegeo/occ/intf/CGPoint" --><span class="type">CGPoint</span><!-- /a -->)<!-- a logicalPath="//simplegeo/occ/econst/point //simplegeo/occ/data/point" --><span class="var">point</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt><code>point</code></dt>
+<dd><p>&#65532;The point at which the touch event occurred.</p></dd>
+</dl>
+</div>
+<p></p>
+<hr>
+<!-- headerDoc=intfm;  uid=//simplegeo/occ/intfm/SGARResponder/singleTapAtPoint:andPoint:;   name=SGARResponder::singleTapAtPoint:andPoint: --><a name="//simplegeo/occ/intfm/SGARResponder/singleTapAtPoint:andPoint:"></a>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="singleTapAtPoint:andPoint:">singleTapAtPoint:andPoint:</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --></p>
+<p>Notifies the reciever when a single touch event occurs at two points.
+<!-- end abstract --></p>
+<p></p>
+<div class="declaration_indent">
+<pre>- (<!-- a logicalPath="//simplegeo/occ/cl/void //simplegeo/occ/tdef/void //simplegeo/occ/tag/void //simplegeo/occ/econst/void //simplegeo/occ/struct/void //simplegeo/occ/clconst/void //simplegeo/occ/intf/void" --><span class="type">void</span><!-- /a -->) <!-- a logicalPath="//simplegeo/occ/instm/singleTapAtPoint //simplegeo/occ/clm/singleTapAtPoint //simplegeo/occ/intfcm/singleTapAtPoint //simplegeo/occ/intfm/singleTapAtPoint //simplegeo/occ/func/singleTapAtPoint //simplegeo/occ/ftmplt/singleTapAtPoint //simplegeo/occ/defn/singleTapAtPoint //simplegeo/occ/macro/singleTapAtPoint" --><span class="function">singleTapAtPoint</span><!-- /a -->:(<!-- a logicalPath="//simplegeo/occ/cl/CGPoint //simplegeo/occ/tdef/CGPoint //simplegeo/occ/tag/CGPoint //simplegeo/occ/econst/CGPoint //simplegeo/occ/struct/CGPoint //simplegeo/occ/clconst/CGPoint //simplegeo/occ/intf/CGPoint" --><span class="type">CGPoint</span><!-- /a -->)<span class="param">pointOne</span> <!-- a logicalPath="//simplegeo/occ/instm/andPoint //simplegeo/occ/clm/andPoint //simplegeo/occ/intfcm/andPoint //simplegeo/occ/intfm/andPoint //simplegeo/occ/func/andPoint //simplegeo/occ/ftmplt/andPoint //simplegeo/occ/defn/andPoint //simplegeo/occ/macro/andPoint" --><span class="function">andPoint</span><!-- /a -->:(<!-- a logicalPath="//simplegeo/occ/cl/CGPoint //simplegeo/occ/tdef/CGPoint //simplegeo/occ/tag/CGPoint //simplegeo/occ/econst/CGPoint //simplegeo/occ/struct/CGPoint //simplegeo/occ/clconst/CGPoint //simplegeo/occ/intf/CGPoint" --><span class="type">CGPoint</span><!-- /a -->)<!-- a logicalPath="//simplegeo/occ/econst/pointTwo //simplegeo/occ/data/pointTwo" --><span class="var">pointTwo</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt><code>pointOne</code></dt>
+<dd><p>&#65532;One of the two points at which the touch event occurred.</p></dd>
+<dt><code>pointTwo</code></dt>
+<dd><p>&#65532;The other point at which the touch event occurred.</p></dd>
+</dl>
+</div>
+<p></p>
+<hr>
+<!-- headerDoc=intfm;  uid=//simplegeo/occ/intfm/SGARResponder/viewDidShake;   name=SGARResponder::viewDidShake --><a name="//simplegeo/occ/intfm/SGARResponder/viewDidShake"></a>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="viewDidShake">viewDidShake</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --></p>
+<p>Notifies the reciever when the view is shaken.
+<!-- end abstract --></p>
+<p></p>
+<div class="declaration_indent">
+<pre>- (<!-- a logicalPath="//simplegeo/occ/cl/void //simplegeo/occ/tdef/void //simplegeo/occ/tag/void //simplegeo/occ/econst/void //simplegeo/occ/struct/void //simplegeo/occ/clconst/void //simplegeo/occ/intf/void" --><span class="type">void</span><!-- /a -->) <!-- a logicalPath="//simplegeo/occ/econst/viewDidShake //simplegeo/occ/data/viewDidShake" --><span class="var">viewDidShake</span><!-- /a -->; </pre>
+</div>
+<p></p>
+<p><!-- start of footer -->
+
+<!-- end of footer -->
+</p>
+<p>&copy; SimpleGeo Last Updated: 02/09/2010
+</p>
+</div>
+</body>
+</html>

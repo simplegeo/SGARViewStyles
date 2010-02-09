@@ -1,0 +1,507 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/1998/REC-html40-19980424/loose.dtd">
+<html>
+<head>
+<title>SGARView</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf8">
+<meta name="generator" content="HeaderDoc">
+<meta name="xcode-display" content="render">
+<style><!--
+#tocMenu {
+		display: block;
+		position:fixed;
+		top:0px;
+		left:0px;
+		width:210px;
+		height:100%;
+		background:transparent;
+}
+#bodyText {
+		margin-left: 210px;
+}
+--></style>
+<script language="JavaScript" type="text/javascript"><!--
+function hidetoc() {
+	var origURL = parent.document.URL;
+	var contentURL = origURL.substring(origURL.indexOf('?')+1, origURL.length);
+	if (contentURL.length == origURL.length) {
+		jumpPos = origURL.substring(origURL.indexOf('#')+1, origURL.length);
+	}
+	if (contentURL == "hidetoc") {
+		var toc = document.getElementById('tocMenu');
+		var body = document.getElementById('bodyText');
+		if (toc && body) {
+			toc.style.display = 'none';
+			body.style.marginLeft = '0px';
+		}
+	}
+}
+--></script><style type="text/css"><!--.keyword {background:#ffffff; color:#761550;}.template {background:#ffffff; color:#761550;}.number {background: #ffffff; color:#0000ff;}.function {background:#ffffff; color:#000000;}.string {background: #ffffff; color:#891315;}.preprocessor {background:#ffffff; color:#236e25}.comment {background:#ffffff; color:#236e25}.char {background: #ffffff; color:#0000ff;}.var {background:#ffffff; color:#000000;}.type {background:#ffffff; color:#761550;}.param {background:#ffffff; color:#000000;}a:link {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #0000ff;}a:visited {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #0000ff;}a:visited:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}a:active {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}a:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}h4 {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: tiny; font-weight: bold;}body {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: 10pt;}.list_indent { margin-left: 40px; }.declaration_indent { margin-left: 40px; }.param_indent { margin-left: 40px; }.group_indent { margin-left: 40px; }.group_desc_indent { margin-left: 20px; }.warning_indent { margin-left: 40px; }.important_indent { margin-left: 40px; }.hd_tocAccess { font-style: italic; font-size: 10px; font-weight: normal; color: #303030; }--></style>
+</head>
+<body bgcolor="#ffffff" onload="hidetoc();">
+
+<!-- headerDoc=cl; uid=//simplegeo/occ/cl/SGARView;  name=SGARView-->
+<a name="//simplegeo/occ/cl/SGARView"></a><div id="tocMenu">
+<iframe id="toc_content" name="toc_content" src="toc.html" width="210" height="100%" align="left" frameborder="0">This document set is best viewed in a browser that supports iFrames.</iframe>
+</div>
+<div id="bodyText">
+<!-- start of header -->
+
+<!-- end of header -->
+<a name="top"></a>
+<hr>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h1><a name="SGARView">SGARView</a></h1>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --></p>
+<p>Displays <!-- a logicalPath="//simplegeo/ooc/intf/SGAnnotation" -->SGAnnotations<!-- /a --> in an augmented reality enviornment.
+<!-- end abstract --></p>
+<p><b>Superclass:</b> <!-- a logicalPath="//simplegeo/occ/cl/UIView" -->UIView<!-- /a --><br><b>Declared In:</b> <a href="../../index.html" target="_top">SGARView.h</a><br></p>
+<div class="declaration_indent">
+</div>
+<h5 class="tight">
+<font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5>
+<!-- begin discussion --><p>The main intention of this class is to be used as the cameraOverlayView for <!-- a logicalPath="UIImagePickerController" -->UIImagePickerController<!-- /a --> 
+when the camera source type is selected. You can easily create this as a subview of another view and still achieve the same effect if 
+you wish.
+</p>
+<p>The SRARView is responsible for rendering the entire augmented reality scene. The view asks the <a href="../../../../Documentation/SGARView_h/Protocols/SGARViewDataSource/index.html#//simplegeo/occ/intf/SGARViewDataSource" logicalPath="//simplegeo/occ/intf/SGARViewDataSource">data source</a>
+for the annotations and their corresponding views.
+<!-- end discussion -->
+</p>
+<p></p>
+<hr>
+<br><a name="HeaderDoc_methods"></a>
+<h2>Methods</h2>
+<dl>
+<dt><tt><a href="index.html#//simplegeo/occ/instm/SGARView/addContainer:" target="_top">-addContainer:</a></tt></dt>
+<dd><p>&#65532;Adds a new conatiner as a subview of the <!-- a logicalPath="//simplegeo/ooc/cl/SGARView" -->SGARView<!-- /a --> .
+</p></dd>
+<dt><tt><a href="index.html#//simplegeo/occ/instm/SGARView/addResponder:" target="_top">-addResponder:</a></tt></dt>
+<dd><p>&#65532;Adds a <!-- a logicalPath="//simplegeo/ooc/cl/SGARResponder" -->responder<!-- /a -->  to the responder chain to be notified of incoming
+touch events and gestures.
+</p></dd>
+<dt><tt><a href="index.html#//simplegeo/occ/instm/SGARView/clear" target="_top">-clear</a></tt></dt>
+<dd><p>&#65532; Resets the view sending a release call to all annotation views.
+</p></dd>
+<dt><tt><a href="index.html#//simplegeo/occ/instm/SGARView/dequeueReuseableAnnotationViewWithIdentifier:" target="_top">-dequeueReuseableAnnotationViewWithIdentifier:</a></tt></dt>
+<dd><p>&#65532;Returns an unused, pre-allocate <a href="../../../../Documentation/SGAnnotationView_h/Classes/SGAnnotationView/index.html#//simplegeo/occ/cl/SGAnnotationView" logicalPath="//simplegeo/occ/cl/SGAnnotationView">SGAnnotationView</a>  view if one is available.
+</p></dd>
+<dt><tt><a href="index.html#//simplegeo/occ/instm/SGARView/getContainers" target="_top">-getContainers</a></tt></dt>
+<dd><p>&#65532; Returns all <!-- a logicalPath="//simplegeo/ooc/cl/SGAnnotationViewContainer" -->SGAnnotationViewContainers<!-- /a -->  that are currently
+registered with the <!-- a logicalPath="//simplegeo/ooc/cl/SGARView" -->SGARView<!-- /a --> .
+</p></dd>
+<dt><tt><a href="index.html#//simplegeo/occ/instm/SGARView/reloadData" target="_top">-reloadData</a></tt></dt>
+<dd><p>&#65532; Removes all annotation views from the envoirnment and loads in a new data set from <a href="../../../../Documentation/SGARView_h/Classes/SGARView/index.html#//simplegeo/occ/instp/SGARView/dataSource" logicalPath="//simplegeo/occ/instp/SGARView/dataSource">dataSource</a> .
+</p></dd>
+<dt><tt><a href="index.html#//simplegeo/occ/instm/SGARView/removeContainer:" target="_top">-removeContainer:</a></tt></dt>
+<dd><p>Remove the conatiner from its superview and unregister it from touch events.
+</p></dd>
+<dt><tt><a href="index.html#//simplegeo/occ/instm/SGARView/removeResponder:" target="_top">-removeResponder:</a></tt></dt>
+<dd><p>&#65532;Removes the a <!-- a logicalPath="//simplegeo/ooc/cl/SGARResponder" -->responder<!-- /a -->  from the responder chain.
+</p></dd>
+<dt><tt><a href="index.html#//simplegeo/occ/instm/SGARView/startAnimation" target="_top">-startAnimation</a></tt></dt>
+<dd><p>&#65532; Begins rendering the AR enviornment.
+</p></dd>
+<dt><tt><a href="index.html#//simplegeo/occ/instm/SGARView/stopAnimation" target="_top">-stopAnimation</a></tt></dt>
+<dd><p>&#65532; Stops rendering the augment reality view.
+</p></dd>
+</dl>
+<hr>
+<!-- headerDoc=instm;  uid=//simplegeo/occ/instm/SGARView/addContainer:;   name=SGARView::addContainer: --><a name="//simplegeo/occ/instm/SGARView/addContainer:"></a>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="addContainer:">addContainer:</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --></p>
+<p>&#65532;Adds a new conatiner as a subview of the <!-- a logicalPath="//simplegeo/ooc/cl/SGARView" -->SGARView<!-- /a -->.
+<!-- end abstract --></p>
+<p></p>
+<div class="declaration_indent">
+<pre>- (<!-- a logicalPath="//simplegeo/occ/cl/void //simplegeo/occ/tdef/void //simplegeo/occ/tag/void //simplegeo/occ/econst/void //simplegeo/occ/struct/void //simplegeo/occ/clconst/void //simplegeo/occ/intf/void" --><span class="type">void</span><!-- /a -->) <!-- a logicalPath="//simplegeo/occ/instm/addContainer //simplegeo/occ/clm/addContainer //simplegeo/occ/intfcm/addContainer //simplegeo/occ/intfm/addContainer //simplegeo/occ/func/addContainer //simplegeo/occ/ftmplt/addContainer //simplegeo/occ/defn/addContainer //simplegeo/occ/macro/addContainer" --><span class="function">addContainer</span><!-- /a -->:(<a href="../../../../Documentation/SGAnnotationViewContainer_h/Classes/SGAnnotationViewContainer/index.html#//simplegeo/occ/cl/SGAnnotationViewContainer" logicalPath="//simplegeo/occ/cl/SGAnnotationViewContainer"><span class="type">SGAnnotationViewContainer</span></a><span class="type">*</span>)<!-- a logicalPath="//simplegeo/occ/econst/container //simplegeo/occ/data/container" --><span class="var">container</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt><code>container</code></dt>
+<dd><p>&#65532;The @//simplegeo/ooc/cl/SGAnnotationViewContainer SGAnnotationViewContainer .</p></dd>
+</dl>
+</div>
+<h5 class="tight">
+<font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5>
+<!-- begin discussion --><p>If the container has served its purpose, call <a href="../../../../Documentation/SGARView_h/Classes/SGARView/index.html#//simplegeo/occ/instm/SGARView/removeContainer:" logicalPath="//simplegeo/occ/instm/SGARView/removeContainer:">removeContainer:</a> to remove it from its
+superview. If the view is hidden or transparent in some way, it is still liable for touch events.
+<!-- end discussion -->
+</p>
+<p></p>
+<hr>
+<!-- headerDoc=instm;  uid=//simplegeo/occ/instm/SGARView/addResponder:;   name=SGARView::addResponder: --><a name="//simplegeo/occ/instm/SGARView/addResponder:"></a>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="addResponder:">addResponder:</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --></p>
+<p>&#65532;Adds a <!-- a logicalPath="//simplegeo/ooc/cl/SGARResponder" -->responder<!-- /a --> to the responder chain to be notified of incoming
+touch events and gestures.
+<!-- end abstract --></p>
+<p></p>
+<div class="declaration_indent">
+<pre>- (<!-- a logicalPath="//simplegeo/occ/cl/void //simplegeo/occ/tdef/void //simplegeo/occ/tag/void //simplegeo/occ/econst/void //simplegeo/occ/struct/void //simplegeo/occ/clconst/void //simplegeo/occ/intf/void" --><span class="type">void</span><!-- /a -->) <!-- a logicalPath="//simplegeo/occ/instm/addResponder //simplegeo/occ/clm/addResponder //simplegeo/occ/intfcm/addResponder //simplegeo/occ/intfm/addResponder //simplegeo/occ/func/addResponder //simplegeo/occ/ftmplt/addResponder //simplegeo/occ/defn/addResponder //simplegeo/occ/macro/addResponder" --><span class="function">addResponder</span><!-- /a -->:(<!-- a logicalPath="//simplegeo/occ/cl/id //simplegeo/occ/tdef/id //simplegeo/occ/tag/id //simplegeo/occ/econst/id //simplegeo/occ/struct/id //simplegeo/occ/clconst/id //simplegeo/occ/intf/id" --><span class="type">id</span><!-- /a -->&lt;<span class="param">SGARResponder</span>&gt;)<!-- a logicalPath="//simplegeo/occ/econst/responder //simplegeo/occ/data/responder" --><span class="var">responder</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt><code>responder</code></dt>
+<dd><p>&#65532;The responder to add.</p></dd>
+</dl>
+</div>
+<p></p>
+<hr>
+<!-- headerDoc=instm;  uid=//simplegeo/occ/instm/SGARView/clear;   name=SGARView::clear --><a name="//simplegeo/occ/instm/SGARView/clear"></a>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="clear">clear</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --></p>
+<p>&#65532; Resets the view sending a release call to all annotation views.
+<!-- end abstract --></p>
+<p></p>
+<div class="declaration_indent">
+<pre>- (<!-- a logicalPath="//simplegeo/occ/cl/void //simplegeo/occ/tdef/void //simplegeo/occ/tag/void //simplegeo/occ/econst/void //simplegeo/occ/struct/void //simplegeo/occ/clconst/void //simplegeo/occ/intf/void" --><span class="type">void</span><!-- /a -->) <!-- a logicalPath="//simplegeo/occ/econst/clear //simplegeo/occ/data/clear" --><span class="var">clear</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight">
+<font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5>
+<!-- begin discussion --><p>This is much different then <a href="../../../../Documentation/SGARView_h/Classes/SGARView/index.html#//simplegeo/occ/instm/SGARView/reloadData" logicalPath="//simplegeo/occ/instm/SGARView/reloadData">reloadData</a> . It does not go through the entire
+process of asking the <a href="../../../../Documentation/SGARView_h/Classes/SGARView/index.html#//simplegeo/occ/instp/SGARView/dataSource" logicalPath="//simplegeo/occ/instp/SGARView/dataSource">dataSource</a> for new annotations. It assumes that you no longer
+want to display anything in the AR enviornment and that your only desire is to have a blank camera view.
+<!-- end discussion -->
+</p>
+<p></p>
+<hr>
+<!-- headerDoc=instm;  uid=//simplegeo/occ/instm/SGARView/dequeueReuseableAnnotationViewWithIdentifier:;   name=SGARView::dequeueReuseableAnnotationViewWithIdentifier: --><a name="//simplegeo/occ/instm/SGARView/dequeueReuseableAnnotationViewWithIdentifier:"></a>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="dequeueReuseableAnnotationViewWithIdentifier:">dequeueReuseableAnnotationViewWithIdentifier:</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --></p>
+<p>&#65532;Returns an unused, pre-allocate <a href="../../../../Documentation/SGAnnotationView_h/Classes/SGAnnotationView/index.html#//simplegeo/occ/cl/SGAnnotationView" logicalPath="//simplegeo/occ/cl/SGAnnotationView">SGAnnotationView</a> view if one is available.
+<!-- end abstract --></p>
+<p></p>
+<div class="declaration_indent">
+<pre>- (<a href="../../../../Documentation/SGAnnotationView_h/Classes/SGAnnotationView/index.html#//simplegeo/occ/cl/SGAnnotationView" logicalPath="//simplegeo/occ/cl/SGAnnotationView"><span class="type">SGAnnotationView</span></a><span class="type">*</span>) 
+        <!-- a logicalPath="//simplegeo/occ/instm/dequeueReuseableAnnotationViewWithIdentifier //simplegeo/occ/clm/dequeueReuseableAnnotationViewWithIdentifier //simplegeo/occ/intfcm/dequeueReuseableAnnotationViewWithIdentifier //simplegeo/occ/intfm/dequeueReuseableAnnotationViewWithIdentifier //simplegeo/occ/func/dequeueReuseableAnnotationViewWithIdentifier //simplegeo/occ/ftmplt/dequeueReuseableAnnotationViewWithIdentifier //simplegeo/occ/defn/dequeueReuseableAnnotationViewWithIdentifier //simplegeo/occ/macro/dequeueReuseableAnnotationViewWithIdentifier" --><span class="function">dequeueReuseableAnnotationViewWithIdentifier</span><!-- /a -->:(<!-- a logicalPath="//simplegeo/occ/cl/NSString //simplegeo/occ/tdef/NSString //simplegeo/occ/tag/NSString //simplegeo/occ/econst/NSString //simplegeo/occ/struct/NSString //simplegeo/occ/clconst/NSString //simplegeo/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//simplegeo/occ/econst/viewId //simplegeo/occ/data/viewId" --><span class="var">viewId</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt><code>viewId</code></dt>
+<dd><p>&#65532;The identifier associated with the desired annotation view.</p></dd>
+</dl>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5>
+<p><!-- begin return value -->&#65532;An unused object view; otherwise nil if there are none.
+
+<!-- end return value --></p>
+<h5 class="tight">
+<font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5>
+<!-- begin discussion --><p>This methods behaves identically to that of UITableView's dequeue method. After a call
+to <a href="../../../../Documentation/SGARView_h/Classes/SGARView/index.html#//simplegeo/occ/instm/SGARView/reloadData" logicalPath="//simplegeo/occ/instm/SGARView/reloadData">reloadData</a>, the view will remove all views from the enviornment and
+prepare them all for reuse.
+<!-- end discussion -->
+</p>
+<p></p>
+<hr>
+<!-- headerDoc=instm;  uid=//simplegeo/occ/instm/SGARView/getContainers;   name=SGARView::getContainers --><a name="//simplegeo/occ/instm/SGARView/getContainers"></a>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="getContainers">getContainers</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --></p>
+<p>&#65532; Returns all <!-- a logicalPath="//simplegeo/ooc/cl/SGAnnotationViewContainer" -->SGAnnotationViewContainers<!-- /a -->  that are currently
+registered with the <!-- a logicalPath="//simplegeo/ooc/cl/SGARView" -->SGARView<!-- /a -->.
+<!-- end abstract --></p>
+<p></p>
+<div class="declaration_indent">
+<pre>- (<!-- a logicalPath="//simplegeo/occ/cl/NSArray //simplegeo/occ/tdef/NSArray //simplegeo/occ/tag/NSArray //simplegeo/occ/econst/NSArray //simplegeo/occ/struct/NSArray //simplegeo/occ/clconst/NSArray //simplegeo/occ/intf/NSArray" --><span class="type">NSArray</span><!-- /a --><span class="type">*</span>) <!-- a logicalPath="//simplegeo/occ/econst/getContainers //simplegeo/occ/data/getContainers" --><span class="var">getContainers</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5>
+<p><!-- begin return value -->&#65532; An array of <!-- a logicalPath="//simplegeo/ooc/cl/SGAnnotationViewContainer" -->SGAnnotationViewContainers<!-- /a -->.
+
+<!-- end return value --></p>
+<p></p>
+<hr>
+<!-- headerDoc=instm;  uid=//simplegeo/occ/instm/SGARView/reloadData;   name=SGARView::reloadData --><a name="//simplegeo/occ/instm/SGARView/reloadData"></a>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="reloadData">reloadData</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --></p>
+<p>&#65532; Removes all annotation views from the envoirnment and loads in a new data set from <a href="../../../../Documentation/SGARView_h/Classes/SGARView/index.html#//simplegeo/occ/instp/SGARView/dataSource" logicalPath="//simplegeo/occ/instp/SGARView/dataSource">dataSource</a>.
+<!-- end abstract --></p>
+<p></p>
+<div class="declaration_indent">
+<pre>- (<!-- a logicalPath="//simplegeo/occ/cl/void //simplegeo/occ/tdef/void //simplegeo/occ/tag/void //simplegeo/occ/econst/void //simplegeo/occ/struct/void //simplegeo/occ/clconst/void //simplegeo/occ/intf/void" --><span class="type">void</span><!-- /a -->) <!-- a logicalPath="//simplegeo/occ/econst/reloadData //simplegeo/occ/data/reloadData" --><span class="var">reloadData</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight">
+<font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5>
+<!-- begin discussion --><p>Once reloadData is called, all annotaiton views are sent <!-- a logicalPath="//simplegeo/ooc/instm/SGAnnotationView/prepareForReuse" -->prepareForReuses<!-- /a -->.
+The views are then awaiting to be dequeue and resused.
+<!-- end discussion -->
+</p>
+<p></p>
+<hr>
+<!-- headerDoc=instm;  uid=//simplegeo/occ/instm/SGARView/removeContainer:;   name=SGARView::removeContainer: --><a name="//simplegeo/occ/instm/SGARView/removeContainer:"></a>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="removeContainer:">removeContainer:</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --></p>
+<p>Remove the conatiner from its superview and unregister it from touch events.
+<!-- end abstract --></p>
+<p></p>
+<div class="declaration_indent">
+<pre>- (<!-- a logicalPath="//simplegeo/occ/cl/void //simplegeo/occ/tdef/void //simplegeo/occ/tag/void //simplegeo/occ/econst/void //simplegeo/occ/struct/void //simplegeo/occ/clconst/void //simplegeo/occ/intf/void" --><span class="type">void</span><!-- /a -->) <!-- a logicalPath="//simplegeo/occ/instm/removeContainer //simplegeo/occ/clm/removeContainer //simplegeo/occ/intfcm/removeContainer //simplegeo/occ/intfm/removeContainer //simplegeo/occ/func/removeContainer //simplegeo/occ/ftmplt/removeContainer //simplegeo/occ/defn/removeContainer //simplegeo/occ/macro/removeContainer" --><span class="function">removeContainer</span><!-- /a -->:(<a href="../../../../Documentation/SGAnnotationViewContainer_h/Classes/SGAnnotationViewContainer/index.html#//simplegeo/occ/cl/SGAnnotationViewContainer" logicalPath="//simplegeo/occ/cl/SGAnnotationViewContainer"><span class="type">SGAnnotationViewContainer</span></a><span class="type">*</span>)<!-- a logicalPath="//simplegeo/occ/econst/container //simplegeo/occ/data/container" --><span class="var">container</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt><code>container</code></dt>
+<dd><p>&#65532;The @//simplegeo/ooc/cl/SGAnnotationViewContainer SGAnnotationViewContainer  to remove.</p></dd>
+</dl>
+</div>
+<p></p>
+<hr>
+<!-- headerDoc=instm;  uid=//simplegeo/occ/instm/SGARView/removeResponder:;   name=SGARView::removeResponder: --><a name="//simplegeo/occ/instm/SGARView/removeResponder:"></a>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="removeResponder:">removeResponder:</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --></p>
+<p>&#65532;Removes the a <!-- a logicalPath="//simplegeo/ooc/cl/SGARResponder" -->responder<!-- /a --> from the responder chain.
+<!-- end abstract --></p>
+<p></p>
+<div class="declaration_indent">
+<pre>- (<!-- a logicalPath="//simplegeo/occ/cl/void //simplegeo/occ/tdef/void //simplegeo/occ/tag/void //simplegeo/occ/econst/void //simplegeo/occ/struct/void //simplegeo/occ/clconst/void //simplegeo/occ/intf/void" --><span class="type">void</span><!-- /a -->) <!-- a logicalPath="//simplegeo/occ/instm/removeResponder //simplegeo/occ/clm/removeResponder //simplegeo/occ/intfcm/removeResponder //simplegeo/occ/intfm/removeResponder //simplegeo/occ/func/removeResponder //simplegeo/occ/ftmplt/removeResponder //simplegeo/occ/defn/removeResponder //simplegeo/occ/macro/removeResponder" --><span class="function">removeResponder</span><!-- /a -->:(<!-- a logicalPath="//simplegeo/occ/cl/id //simplegeo/occ/tdef/id //simplegeo/occ/tag/id //simplegeo/occ/econst/id //simplegeo/occ/struct/id //simplegeo/occ/clconst/id //simplegeo/occ/intf/id" --><span class="type">id</span><!-- /a -->&lt;<span class="param">SGARResponder</span>&gt;)<!-- a logicalPath="//simplegeo/occ/econst/responder //simplegeo/occ/data/responder" --><span class="var">responder</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt><code>responder</code></dt>
+<dd><p>&#65532;The responder to remove.</p></dd>
+</dl>
+</div>
+<p></p>
+<hr>
+<!-- headerDoc=instm;  uid=//simplegeo/occ/instm/SGARView/startAnimation;   name=SGARView::startAnimation --><a name="//simplegeo/occ/instm/SGARView/startAnimation"></a>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="startAnimation">startAnimation</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --></p>
+<p>&#65532; Begins rendering the AR enviornment.
+<!-- end abstract --></p>
+<p></p>
+<div class="declaration_indent">
+<pre>- (<!-- a logicalPath="//simplegeo/occ/cl/void //simplegeo/occ/tdef/void //simplegeo/occ/tag/void //simplegeo/occ/econst/void //simplegeo/occ/struct/void //simplegeo/occ/clconst/void //simplegeo/occ/intf/void" --><span class="type">void</span><!-- /a -->) <!-- a logicalPath="//simplegeo/occ/econst/startAnimation //simplegeo/occ/data/startAnimation" --><span class="var">startAnimation</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight">
+<font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5>
+<!-- begin discussion --><p>&#65532; See <a href="../../../../Documentation/SGARView_h/Classes/SGARView/index.html#//simplegeo/occ/instm/SGARView/stopAnimation" logicalPath="//simplegeo/occ/instm/SGARView/stopAnimation">stopAnimation</a>
+<!-- end discussion -->
+</p>
+<p></p>
+<hr>
+<!-- headerDoc=instm;  uid=//simplegeo/occ/instm/SGARView/stopAnimation;   name=SGARView::stopAnimation --><a name="//simplegeo/occ/instm/SGARView/stopAnimation"></a>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="stopAnimation">stopAnimation</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --></p>
+<p>&#65532; Stops rendering the augment reality view.
+<!-- end abstract --></p>
+<p></p>
+<div class="declaration_indent">
+<pre>- (<!-- a logicalPath="//simplegeo/occ/cl/void //simplegeo/occ/tdef/void //simplegeo/occ/tag/void //simplegeo/occ/econst/void //simplegeo/occ/struct/void //simplegeo/occ/clconst/void //simplegeo/occ/intf/void" --><span class="type">void</span><!-- /a -->) <!-- a logicalPath="//simplegeo/occ/econst/stopAnimation //simplegeo/occ/data/stopAnimation" --><span class="var">stopAnimation</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight">
+<font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5>
+<!-- begin discussion --><p>&#65532; You can use both this method and <a href="../../../../Documentation/SGARView_h/Classes/SGARView/index.html#//simplegeo/occ/instm/SGARView/startAnimation" logicalPath="//simplegeo/occ/instm/SGARView/startAnimation">startAnimation</a>  to create
+a freeze frame wihin the augmented reality or just to stop the rendering process altogether.
+You must call <a href="../../../../Documentation/SGARView_h/Classes/SGARView/index.html#//simplegeo/occ/instm/SGARView/clear" logicalPath="//simplegeo/occ/instm/SGARView/clear">clear</a> in order to reset the entire view.
+<!-- end discussion -->
+</p>
+<p></p>
+<a name="HeaderDoc_props"></a>
+<h2>Properties</h2>
+<dl>
+<dt><tt><a href="index.html#//simplegeo/occ/instp/SGARView/dataSource" target="_top">dataSource</a></tt></dt>
+<dd><p>See <a href="../../../../Documentation/SGARView_h/Protocols/SGARViewDataSource/index.html#//simplegeo/occ/intf/SGARViewDataSource" logicalPath="//simplegeo/occ/intf/SGARViewDataSource">data source</a> 
+</p></dd>
+<dt><tt><a href="index.html#//simplegeo/occ/instp/SGARView/enableGridLines" target="_top">enableGridLines</a></tt></dt>
+<dd><p>YES if gridlines should be drawn. Otherwize; NO. The default is NO.
+</p></dd>
+<dt><tt><a href="index.html#//simplegeo/occ/instp/SGARView/enableWalking" target="_top">enableWalking</a></tt></dt>
+<dd><p>Allows a user to move around in the AR view.
+</p></dd>
+<dt><tt><a href="index.html#//simplegeo/occ/instp/SGARView/gridLineColor" target="_top">gridLineColor</a></tt></dt>
+<dd><p>The color of the grid lines.
+</p></dd>
+<dt><tt><a href="index.html#//simplegeo/occ/instp/SGARView/locationManager" target="_top">locationManager</a></tt></dt>
+<dd><p>The location manager that is used for obtaining the heading and location of the device.
+</p></dd>
+<dt><tt><a href="index.html#//simplegeo/occ/instp/SGARView/movableStack" target="_top">movableStack</a></tt></dt>
+<dd><p>The <!-- a logicalPath="//simplegeo/ooc/cl/SGMovableStack" -->movable stack<!-- /a -->  that is present when a drag event
+is produced over a <!-- a logicalPath="//simplegeo/ooc/cl/SGAnnotationView" -->annotation view<!-- /a -->  within the AR enviornment.
+</p></dd>
+<dt><tt><a href="index.html#//simplegeo/occ/instp/SGARView/radar" target="_top">radar</a></tt></dt>
+<dd><p>The <!-- a logicalPath="//simplegeo/ooc/cl/SGRadar" -->radar<!-- /a -->  that is associated with the AR view.
+</p></dd>
+</dl>
+<hr>
+<!-- headerDoc=instp;  uid=//simplegeo/occ/instp/SGARView/dataSource;   name=SGARView::dataSource --><a name="//simplegeo/occ/instp/SGARView/dataSource"></a>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="dataSource">dataSource</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --></p>
+<p>See <a href="../../../../Documentation/SGARView_h/Protocols/SGARViewDataSource/index.html#//simplegeo/occ/intf/SGARViewDataSource" logicalPath="//simplegeo/occ/intf/SGARViewDataSource">data source</a>
+<!-- end abstract --></p>
+<p></p>
+<div class="declaration_indent">
+<pre>@property (
+    <span class="param">nonatomic</span>,
+    <span class="param">assign</span>) <!-- a logicalPath="//simplegeo/occ/cl/id //simplegeo/occ/tdef/id //simplegeo/occ/tag/id //simplegeo/occ/econst/id //simplegeo/occ/struct/id //simplegeo/occ/clconst/id //simplegeo/occ/intf/id" --><span class="type">id</span><!-- /a -->&lt;<span class="template">SGARViewDataSource</span>&gt; <!-- a logicalPath="//simplegeo/occ/econst/dataSource //simplegeo/occ/data/dataSource" --><span class="var">dataSource</span><!-- /a -->; </pre>
+</div>
+<p></p>
+<hr>
+<!-- headerDoc=instp;  uid=//simplegeo/occ/instp/SGARView/enableGridLines;   name=SGARView::enableGridLines --><a name="//simplegeo/occ/instp/SGARView/enableGridLines"></a>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="enableGridLines">enableGridLines</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --></p>
+<p>YES if gridlines should be drawn. Otherwize; NO. The default is NO.
+<!-- end abstract --></p>
+<p></p>
+<div class="declaration_indent">
+<pre>@property (
+    <span class="param">nonatomic</span>,
+    <span class="param">assign</span>) <!-- a logicalPath="//simplegeo/occ/cl/BOOL //simplegeo/occ/tdef/BOOL //simplegeo/occ/tag/BOOL //simplegeo/occ/econst/BOOL //simplegeo/occ/struct/BOOL //simplegeo/occ/clconst/BOOL //simplegeo/occ/intf/BOOL" --><span class="type">BOOL</span><!-- /a --> <!-- a logicalPath="//simplegeo/occ/econst/enableGridLines //simplegeo/occ/data/enableGridLines" --><span class="var">enableGridLines</span><!-- /a -->; </pre>
+</div>
+<p></p>
+<hr>
+<!-- headerDoc=instp;  uid=//simplegeo/occ/instp/SGARView/enableWalking;   name=SGARView::enableWalking --><a name="//simplegeo/occ/instp/SGARView/enableWalking"></a>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="enableWalking">enableWalking</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --></p>
+<p>Allows a user to move around in the AR view.
+<!-- end abstract --></p>
+<p></p>
+<div class="declaration_indent">
+<pre>@property (
+    <span class="param">nonatomic</span>,
+    <span class="param">assign</span>) <!-- a logicalPath="//simplegeo/occ/cl/BOOL //simplegeo/occ/tdef/BOOL //simplegeo/occ/tag/BOOL //simplegeo/occ/econst/BOOL //simplegeo/occ/struct/BOOL //simplegeo/occ/clconst/BOOL //simplegeo/occ/intf/BOOL" --><span class="type">BOOL</span><!-- /a --> <!-- a logicalPath="//simplegeo/occ/econst/enableWalking //simplegeo/occ/data/enableWalking" --><span class="var">enableWalking</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight">
+<font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5>
+<!-- begin discussion --><p>The notion of walking just means that the user is able to create touch events that will move them
+in the direction at which they are facing in the AR enviornment. For example, if a user is facing North and they create a pinch
+gesture, they will decrease the distance between their current position in the AR view to the records that
+are displayed directly North of them. The change in position is reflected both in the AR enviornment and also in the <a href="../../../../Documentation/SGARView_h/Classes/SGARView/index.html#//simplegeo/occ/instp/SGARView/radar" logicalPath="//simplegeo/occ/instp/SGARView/radar">radar</a> .
+</p>
+<p>The following gestures will generate the effect: pinch =&gt; forward, pull =&gt; backward, double tap =&gt; move forward 3 meters, and single tap =&gt; move
+backward 3 meters.
+<!-- end discussion -->
+</p>
+<p></p>
+<hr>
+<!-- headerDoc=instp;  uid=//simplegeo/occ/instp/SGARView/gridLineColor;   name=SGARView::gridLineColor --><a name="//simplegeo/occ/instp/SGARView/gridLineColor"></a>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="gridLineColor">gridLineColor</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --></p>
+<p>The color of the grid lines.
+<!-- end abstract --></p>
+<p></p>
+<div class="declaration_indent">
+<pre>@property (
+    <span class="param">nonatomic</span>,
+    <span class="param">retain</span>) <!-- a logicalPath="//simplegeo/occ/cl/UIColor //simplegeo/occ/tdef/UIColor //simplegeo/occ/tag/UIColor //simplegeo/occ/econst/UIColor //simplegeo/occ/struct/UIColor //simplegeo/occ/clconst/UIColor //simplegeo/occ/intf/UIColor" --><span class="type">UIColor</span><!-- /a --><span class="type">*</span> <!-- a logicalPath="//simplegeo/occ/econst/gridLineColor //simplegeo/occ/data/gridLineColor" --><span class="var">gridLineColor</span><!-- /a -->; </pre>
+</div>
+<p></p>
+<hr>
+<!-- headerDoc=instp;  uid=//simplegeo/occ/instp/SGARView/locationManager;   name=SGARView::locationManager --><a name="//simplegeo/occ/instp/SGARView/locationManager"></a>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="locationManager">locationManager</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --></p>
+<p>The location manager that is used for obtaining the heading and location of the device.
+<!-- end abstract --></p>
+<p></p>
+<div class="declaration_indent">
+<pre>@property (
+    <span class="param">nonatomic</span>,
+    <span class="param">readonly</span>) <!-- a logicalPath="//simplegeo/occ/cl/CLLocationManager //simplegeo/occ/tdef/CLLocationManager //simplegeo/occ/tag/CLLocationManager //simplegeo/occ/econst/CLLocationManager //simplegeo/occ/struct/CLLocationManager //simplegeo/occ/clconst/CLLocationManager //simplegeo/occ/intf/CLLocationManager" --><span class="type">CLLocationManager</span><!-- /a --><span class="type">*</span> <!-- a logicalPath="//simplegeo/occ/econst/locationManager //simplegeo/occ/data/locationManager" --><span class="var">locationManager</span><!-- /a -->; </pre>
+</div>
+<p></p>
+<hr>
+<!-- headerDoc=instp;  uid=//simplegeo/occ/instp/SGARView/movableStack;   name=SGARView::movableStack --><a name="//simplegeo/occ/instp/SGARView/movableStack"></a>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="movableStack">movableStack</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --></p>
+<p>The <!-- a logicalPath="//simplegeo/ooc/cl/SGMovableStack" -->movable stack<!-- /a -->  that is present when a drag event
+is produced over a <!-- a logicalPath="//simplegeo/ooc/cl/SGAnnotationView" -->annotation view<!-- /a --> within the AR enviornment.
+<!-- end abstract --></p>
+<p></p>
+<div class="declaration_indent">
+<pre>@property (
+    <span class="param">nonatomic</span>,
+    <span class="param">retain</span>) <a href="../../../../Documentation/SGMovableStack_h/Classes/SGMovableStack/index.html#//simplegeo/occ/cl/SGMovableStack" logicalPath="//simplegeo/occ/cl/SGMovableStack"><span class="type">SGMovableStack</span></a><span class="type">*</span> <!-- a logicalPath="//simplegeo/occ/econst/movableStack //simplegeo/occ/data/movableStack" --><span class="var">movableStack</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight">
+<font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5>
+<!-- begin discussion --><p>If a movable to stack is present, it will be added as a subview of <!-- a logicalPath="//simplegeo/ooc/cl/SGARView" -->SGARView<!-- /a -->. Set
+this property to nil in order to not allow views to be collected.
+<!-- end discussion -->
+</p>
+<p></p>
+<hr>
+<!-- headerDoc=instp;  uid=//simplegeo/occ/instp/SGARView/radar;   name=SGARView::radar --><a name="//simplegeo/occ/instp/SGARView/radar"></a>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="radar">radar</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --></p>
+<p>The <!-- a logicalPath="//simplegeo/ooc/cl/SGRadar" -->radar<!-- /a --> that is associated with the AR view.
+<!-- end abstract --></p>
+<p></p>
+<div class="declaration_indent">
+<pre>@property (
+    <span class="param">nonatomic</span>,
+    <span class="param">retain</span>) <a href="../../../../Documentation/SGRadar_h/Classes/SGRadar/index.html#//simplegeo/occ/cl/SGRadar" logicalPath="//simplegeo/occ/cl/SGRadar"><span class="type">SGRadar</span></a><span class="type">*</span> <!-- a logicalPath="//simplegeo/occ/econst/radar //simplegeo/occ/data/radar" --><span class="var">radar</span><!-- /a -->; </pre>
+</div>
+<p></p>
+<p><!-- start of footer -->
+
+<!-- end of footer -->
+</p>
+<p>&copy; SimpleGeo Last Updated: 02/09/2010
+</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,329 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/1998/REC-html40-19980424/loose.dtd">
+<html>
+<head>
+<title>SGARNavigationViewController</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf8">
+<meta name="generator" content="HeaderDoc">
+<meta name="xcode-display" content="render">
+<style><!--
+#tocMenu {
+		display: block;
+		position:fixed;
+		top:0px;
+		left:0px;
+		width:210px;
+		height:100%;
+		background:transparent;
+}
+#bodyText {
+		margin-left: 210px;
+}
+--></style>
+<script language="JavaScript" type="text/javascript"><!--
+function hidetoc() {
+	var origURL = parent.document.URL;
+	var contentURL = origURL.substring(origURL.indexOf('?')+1, origURL.length);
+	if (contentURL.length == origURL.length) {
+		jumpPos = origURL.substring(origURL.indexOf('#')+1, origURL.length);
+	}
+	if (contentURL == "hidetoc") {
+		var toc = document.getElementById('tocMenu');
+		var body = document.getElementById('bodyText');
+		if (toc && body) {
+			toc.style.display = 'none';
+			body.style.marginLeft = '0px';
+		}
+	}
+}
+--></script><style type="text/css"><!--.keyword {background:#ffffff; color:#761550;}.template {background:#ffffff; color:#761550;}.number {background: #ffffff; color:#0000ff;}.function {background:#ffffff; color:#000000;}.string {background: #ffffff; color:#891315;}.preprocessor {background:#ffffff; color:#236e25}.comment {background:#ffffff; color:#236e25}.char {background: #ffffff; color:#0000ff;}.var {background:#ffffff; color:#000000;}.type {background:#ffffff; color:#761550;}.param {background:#ffffff; color:#000000;}a:link {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #0000ff;}a:visited {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #0000ff;}a:visited:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}a:active {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}a:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}h4 {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: tiny; font-weight: bold;}body {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: 10pt;}.list_indent { margin-left: 40px; }.declaration_indent { margin-left: 40px; }.param_indent { margin-left: 40px; }.group_indent { margin-left: 40px; }.group_desc_indent { margin-left: 20px; }.warning_indent { margin-left: 40px; }.important_indent { margin-left: 40px; }.hd_tocAccess { font-style: italic; font-size: 10px; font-weight: normal; color: #303030; }--></style>
+</head>
+<body bgcolor="#ffffff" onload="hidetoc();">
+
+<!-- headerDoc=cl; uid=//simplegeo/occ/cl/SGARNavigationViewController;  name=SGARNavigationViewController-->
+<a name="//simplegeo/occ/cl/SGARNavigationViewController"></a><div id="tocMenu">
+<iframe id="toc_content" name="toc_content" src="toc.html" width="210" height="100%" align="left" frameborder="0">This document set is best viewed in a browser that supports iFrames.</iframe>
+</div>
+<div id="bodyText">
+<!-- start of header -->
+
+<!-- end of header -->
+<a name="top"></a>
+<hr>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h1><a name="SGARNavigationViewController">SGARNavigationViewController</a></h1>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --></p>
+<p>A subclass of UIImagePickerController that assigns an instance of <!-- a logicalPath="//simplegeo/ooc/cl/SGARView" -->SGARView<!-- /a -->
+to the cameraOverlayView property.
+<!-- end abstract --></p>
+<p><b>Conforms&nbsp;to:</b> <a href="../../../../Documentation/SGARView_h/Protocols/SGARViewDataSource/index.html#//simplegeo/occ/intf/SGARViewDataSource" logicalPath="//simplegeo/occ/intf/SGARViewDataSource">SGARViewDataSource</a>, <!-- a logicalPath="//simplegeo/occ/intf/UINavigationControllerDelegate" -->UINavigationControllerDelegate<!-- /a --><br><b>Superclass:</b> <!-- a logicalPath="//simplegeo/occ/cl/UIImagePickerController" -->UIImagePickerController<!-- /a --><br><b>Declared In:</b> <a href="../../index.html" target="_top">SGARNavigationViewController.h</a><br></p>
+<div class="declaration_indent">
+</div>
+<h5 class="tight">
+<font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5>
+<!-- begin discussion --><p>&#65532; As opposed to creating your own UIImagePickerController and overlaying the AR view, this class creates an
+easier avenue to display <!-- a logicalPath="//simplegeo/ooc/cl/SGRecordAnnotation" -->SGRecordAnnotations<!-- /a --> . This class implements
+<!-- a logicalPath="//simplegeo/ooc/intf/SGARViewDataSource" -->SGARViewDataSource<!-- /a -->  and provides data in the AR view a little differently.
+</p>
+<p>This subclass of UIImagePickerViewController will verify that the UIImagePickerControllerSourceTypeCamera is available on
+the device once the view has been loaded. If the camera source type is unavailble, then the view controller will revert
+to UIImagePickerControllerSourceTypePhotoLibrary. Using the UIImagePickerControllerSourceTypePhotoLibrary does not stop the
+create of the AR enviornment. You can still access the <a href="../../../../Documentation/SGARNavigationViewController_h/Classes/SGARNavigationViewController/index.html#//simplegeo/occ/instp/SGARNavigationViewController/arView" logicalPath="//simplegeo/occ/instp/SGARNavigationViewController/arView">arView</a> . This might be advantageous if the desire
+is to display <a href="../../../../Documentation/SGARNavigationViewController_h/Classes/SGARNavigationViewController/index.html#//simplegeo/occ/instp/SGARNavigationViewController/arView" logicalPath="//simplegeo/occ/instp/SGARNavigationViewController/arView">arView</a>  over a selected image. The arView will not be a subview of any view so it would
+have to be added manually.
+</p>
+<p>The methods from <a href="../../../../Documentation/SGARNavigationViewController_h/Protocols/SGARNavigationViewControllerDataSource/index.html#//simplegeo/occ/intf/SGARNavigationViewControllerDataSource" logicalPath="//simplegeo/occ/intf/SGARNavigationViewControllerDataSource">SGARNavigationViewControllerDataSource</a> 
+will create a bucket list. The data structure will then be used to feed the AR view through the proper delegate callbacks. To
+control which bucket is being displayed make sure to call <a href="../../../../Documentation/SGARNavigationViewController_h/Classes/SGARNavigationViewController/index.html#//simplegeo/occ/instm/SGARNavigationViewController/reloadBucketAtIndex:" logicalPath="//simplegeo/occ/instm/SGARNavigationViewController/reloadBucketAtIndex:">reloadBucketAtIndex:</a> . Only a single
+bucket is displayed at any given time in the AR view. There is no limitation to the amount of annotations a bucket can have.
+</p>
+<p>There is one minor "gotcha". If you want to access the navigation bar directly, you have to use <a href="../../../../Documentation/SGARNavigationViewController_h/Classes/SGARNavigationViewController/index.html#//simplegeo/occ/instm/SGARNavigationViewController/navBar" logicalPath="//simplegeo/occ/instm/SGARNavigationViewController/navBar">navBar</a>. All other calls to
+the navigation view controller that involve the navigation bar (e.g. setNagivationBarHidden:) will be routed to the proper one. This little tweak
+is needed in order to display a navigation bar properly in the view.
+The overlay view also has its own navigation bar and toolbar. Even though this navigation view controller
+creates its own bars, you can still access them by calling the usual barrage of methods (e.g. setToolbarItems:animated:). The default is
+that both bars have a black, translucent tint color. 
+<!-- end discussion -->
+</p>
+<p></p>
+<hr>
+<br><a name="HeaderDoc_methods"></a>
+<h2>Methods</h2>
+<dl>
+<dt><tt><a href="index.html#//simplegeo/occ/instm/SGARNavigationViewController/amountOfBuckets" target="_top">-amountOfBuckets</a></tt></dt>
+<dd><p>&#65532; Returns the amount of buckets that are registered.
+</p></dd>
+<dt><tt><a href="index.html#//simplegeo/occ/instm/SGARNavigationViewController/close" target="_top">-close</a></tt></dt>
+<dd><p>&#65532; Stops animating the <a href="../../../../Documentation/SGARNavigationViewController_h/Classes/SGARNavigationViewController/index.html#//simplegeo/occ/instp/SGARNavigationViewController/arView" logicalPath="//simplegeo/occ/instp/SGARNavigationViewController/arView">AR view</a>  and calls dismissModalViewController: on itself.
+</p></dd>
+<dt><tt><a href="index.html#//simplegeo/occ/instm/SGARNavigationViewController/loadNextBucket" target="_top">-loadNextBucket</a></tt></dt>
+<dd><p>&#65532;Loads the next bucket of record annotations that were imported with <a href="../../../../Documentation/SGARNavigationViewController_h/Classes/SGARNavigationViewController/index.html#//simplegeo/occ/instm/SGARNavigationViewController/reloadAllBuckets" logicalPath="//simplegeo/occ/instm/SGARNavigationViewController/reloadAllBuckets">reloadAllBuckets</a> .
+</p></dd>
+<dt><tt><a href="index.html#//simplegeo/occ/instm/SGARNavigationViewController/loadPreviousBucket" target="_top">-loadPreviousBucket</a></tt></dt>
+<dd><p>&#65532; Loads the previous bucket of record annotations that were imported with <a href="../../../../Documentation/SGARNavigationViewController_h/Classes/SGARNavigationViewController/index.html#//simplegeo/occ/instm/SGARNavigationViewController/reloadAllBuckets" logicalPath="//simplegeo/occ/instm/SGARNavigationViewController/reloadAllBuckets">reloadAllBuckets</a> .
+</p></dd>
+<dt><tt><a href="index.html#//simplegeo/occ/instm/SGARNavigationViewController/navBar" target="_top">-navBar</a></tt></dt>
+<dd><p>&#65532; This is the actual navigation bar used by this view controller.
+</p></dd>
+<dt><tt><a href="index.html#//simplegeo/occ/instm/SGARNavigationViewController/reloadAllBuckets" target="_top">-reloadAllBuckets</a></tt></dt>
+<dd><p>&#65532; Runs through the entire process of collecting and displaying <!-- a logicalPath="//simplegeo/ooc/cl/SGRecordAnnotation" -->record annotations<!-- /a --> 
+in the <a href="../../../../Documentation/SGARNavigationViewController_h/Classes/SGARNavigationViewController/index.html#//simplegeo/occ/instp/SGARNavigationViewController/arView" logicalPath="//simplegeo/occ/instp/SGARNavigationViewController/arView">arView</a> .
+</p></dd>
+<dt><tt><a href="index.html#//simplegeo/occ/instm/SGARNavigationViewController/reloadBucketAtIndex:" target="_top">-reloadBucketAtIndex:</a></tt></dt>
+<dd><p>&#65532;Reloads a specific bucket.
+</p></dd>
+</dl>
+<hr>
+<!-- headerDoc=instm;  uid=//simplegeo/occ/instm/SGARNavigationViewController/amountOfBuckets;   name=SGARNavigationViewController::amountOfBuckets --><a name="//simplegeo/occ/instm/SGARNavigationViewController/amountOfBuckets"></a>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="amountOfBuckets">amountOfBuckets</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --></p>
+<p>&#65532; Returns the amount of buckets that are registered.
+<!-- end abstract --></p>
+<p></p>
+<div class="declaration_indent">
+<pre>- (<!-- a logicalPath="//simplegeo/occ/cl/NSInteger //simplegeo/occ/tdef/NSInteger //simplegeo/occ/tag/NSInteger //simplegeo/occ/econst/NSInteger //simplegeo/occ/struct/NSInteger //simplegeo/occ/clconst/NSInteger //simplegeo/occ/intf/NSInteger" --><span class="type">NSInteger</span><!-- /a -->) <!-- a logicalPath="//simplegeo/occ/econst/amountOfBuckets //simplegeo/occ/data/amountOfBuckets" --><span class="var">amountOfBuckets</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5>
+<p><!-- begin return value -->&#65532; The amount of buckets.
+
+<!-- end return value --></p>
+<p></p>
+<hr>
+<!-- headerDoc=instm;  uid=//simplegeo/occ/instm/SGARNavigationViewController/close;   name=SGARNavigationViewController::close --><a name="//simplegeo/occ/instm/SGARNavigationViewController/close"></a>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="close">close</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --></p>
+<p>&#65532; Stops animating the <a href="../../../../Documentation/SGARNavigationViewController_h/Classes/SGARNavigationViewController/index.html#//simplegeo/occ/instp/SGARNavigationViewController/arView" logicalPath="//simplegeo/occ/instp/SGARNavigationViewController/arView">AR view</a> and calls dismissModalViewController: on itself.
+<!-- end abstract --></p>
+<p></p>
+<div class="declaration_indent">
+<pre>- (<!-- a logicalPath="//simplegeo/occ/cl/void //simplegeo/occ/tdef/void //simplegeo/occ/tag/void //simplegeo/occ/econst/void //simplegeo/occ/struct/void //simplegeo/occ/clconst/void //simplegeo/occ/intf/void" --><span class="type">void</span><!-- /a -->) <!-- a logicalPath="//simplegeo/occ/econst/close //simplegeo/occ/data/close" --><span class="var">close</span><!-- /a -->; </pre>
+</div>
+<p></p>
+<hr>
+<!-- headerDoc=instm;  uid=//simplegeo/occ/instm/SGARNavigationViewController/loadNextBucket;   name=SGARNavigationViewController::loadNextBucket --><a name="//simplegeo/occ/instm/SGARNavigationViewController/loadNextBucket"></a>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="loadNextBucket">loadNextBucket</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --></p>
+<p>&#65532;Loads the next bucket of record annotations that were imported with <a href="../../../../Documentation/SGARNavigationViewController_h/Classes/SGARNavigationViewController/index.html#//simplegeo/occ/instm/SGARNavigationViewController/reloadAllBuckets" logicalPath="//simplegeo/occ/instm/SGARNavigationViewController/reloadAllBuckets">reloadAllBuckets</a>.
+<!-- end abstract --></p>
+<p></p>
+<div class="declaration_indent">
+<pre>- (<!-- a logicalPath="//simplegeo/occ/cl/BOOL //simplegeo/occ/tdef/BOOL //simplegeo/occ/tag/BOOL //simplegeo/occ/econst/BOOL //simplegeo/occ/struct/BOOL //simplegeo/occ/clconst/BOOL //simplegeo/occ/intf/BOOL" --><span class="type">BOOL</span><!-- /a -->) <!-- a logicalPath="//simplegeo/occ/econst/loadNextBucket //simplegeo/occ/data/loadNextBucket" --><span class="var">loadNextBucket</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5>
+<p><!-- begin return value -->&#65532;YES if there is an available bucket. Otherwise, NO.
+
+<!-- end return value --></p>
+<p></p>
+<hr>
+<!-- headerDoc=instm;  uid=//simplegeo/occ/instm/SGARNavigationViewController/loadPreviousBucket;   name=SGARNavigationViewController::loadPreviousBucket --><a name="//simplegeo/occ/instm/SGARNavigationViewController/loadPreviousBucket"></a>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="loadPreviousBucket">loadPreviousBucket</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --></p>
+<p>&#65532; Loads the previous bucket of record annotations that were imported with <a href="../../../../Documentation/SGARNavigationViewController_h/Classes/SGARNavigationViewController/index.html#//simplegeo/occ/instm/SGARNavigationViewController/reloadAllBuckets" logicalPath="//simplegeo/occ/instm/SGARNavigationViewController/reloadAllBuckets">reloadAllBuckets</a>.
+<!-- end abstract --></p>
+<p></p>
+<div class="declaration_indent">
+<pre>- (<!-- a logicalPath="//simplegeo/occ/cl/BOOL //simplegeo/occ/tdef/BOOL //simplegeo/occ/tag/BOOL //simplegeo/occ/econst/BOOL //simplegeo/occ/struct/BOOL //simplegeo/occ/clconst/BOOL //simplegeo/occ/intf/BOOL" --><span class="type">BOOL</span><!-- /a -->) <!-- a logicalPath="//simplegeo/occ/econst/loadPreviousBucket //simplegeo/occ/data/loadPreviousBucket" --><span class="var">loadPreviousBucket</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5>
+<p><!-- begin return value -->&#65532; YES if there is an available bucket. Otherwise, NO.
+
+<!-- end return value --></p>
+<p></p>
+<hr>
+<!-- headerDoc=instm;  uid=//simplegeo/occ/instm/SGARNavigationViewController/navBar;   name=SGARNavigationViewController::navBar --><a name="//simplegeo/occ/instm/SGARNavigationViewController/navBar"></a>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="navBar">navBar</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --></p>
+<p>&#65532; This is the actual navigation bar used by this view controller.
+<!-- end abstract --></p>
+<p></p>
+<div class="declaration_indent">
+<pre>- (<!-- a logicalPath="//simplegeo/occ/cl/UINavigationBar //simplegeo/occ/tdef/UINavigationBar //simplegeo/occ/tag/UINavigationBar //simplegeo/occ/econst/UINavigationBar //simplegeo/occ/struct/UINavigationBar //simplegeo/occ/clconst/UINavigationBar //simplegeo/occ/intf/UINavigationBar" --><span class="type">UINavigationBar</span><!-- /a --><span class="type">*</span>) <!-- a logicalPath="//simplegeo/occ/econst/navBar //simplegeo/occ/data/navBar" --><span class="var">navBar</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5>
+<p><!-- begin return value -->&#65532; The navigation bar that is displayed by this navigation view controller.
+
+<!-- end return value --></p>
+<h5 class="tight">
+<font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5>
+<!-- begin discussion --><p>&#65532; If you attempt to access the navigationBar via "nvc.navigationBar", you will not
+access the proper navigation bar. See <a href="../../../../Documentation/SGARNavigationViewController_h/Classes/SGARNavigationViewController/index.html#//simplegeo/occ/cl/SGARNavigationViewController" logicalPath="//simplegeo/occ/cl/SGARNavigationViewController">SGARNavigationViewController</a>for a more detailed discussion.
+<!-- end discussion -->
+</p>
+<p></p>
+<hr>
+<!-- headerDoc=instm;  uid=//simplegeo/occ/instm/SGARNavigationViewController/reloadAllBuckets;   name=SGARNavigationViewController::reloadAllBuckets --><a name="//simplegeo/occ/instm/SGARNavigationViewController/reloadAllBuckets"></a>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="reloadAllBuckets">reloadAllBuckets</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --></p>
+<p>&#65532; Runs through the entire process of collecting and displaying <!-- a logicalPath="//simplegeo/ooc/cl/SGRecordAnnotation" -->record annotations<!-- /a --> 
+in the <a href="../../../../Documentation/SGARNavigationViewController_h/Classes/SGARNavigationViewController/index.html#//simplegeo/occ/instp/SGARNavigationViewController/arView" logicalPath="//simplegeo/occ/instp/SGARNavigationViewController/arView">arView</a>.
+<!-- end abstract --></p>
+<p></p>
+<div class="declaration_indent">
+<pre>- (<!-- a logicalPath="//simplegeo/occ/cl/void //simplegeo/occ/tdef/void //simplegeo/occ/tag/void //simplegeo/occ/econst/void //simplegeo/occ/struct/void //simplegeo/occ/clconst/void //simplegeo/occ/intf/void" --><span class="type">void</span><!-- /a -->) <!-- a logicalPath="//simplegeo/occ/econst/reloadAllBuckets //simplegeo/occ/data/reloadAllBuckets" --><span class="var">reloadAllBuckets</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight">
+<font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5>
+<!-- begin discussion --><p>If any record annotations have been registered with the <a href="../../../../Documentation/SGARNavigationViewController_h/Classes/SGARNavigationViewController/index.html#//simplegeo/occ/cl/SGARNavigationViewController" logicalPath="//simplegeo/occ/cl/SGARNavigationViewController">SGARNavigationViewController</a>,
+they will be released.
+<!-- end discussion -->
+</p>
+<p></p>
+<hr>
+<!-- headerDoc=instm;  uid=//simplegeo/occ/instm/SGARNavigationViewController/reloadBucketAtIndex:;   name=SGARNavigationViewController::reloadBucketAtIndex: --><a name="//simplegeo/occ/instm/SGARNavigationViewController/reloadBucketAtIndex:"></a>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="reloadBucketAtIndex:">reloadBucketAtIndex:</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --></p>
+<p>&#65532;Reloads a specific bucket.
+<!-- end abstract --></p>
+<p></p>
+<div class="declaration_indent">
+<pre>- (<!-- a logicalPath="//simplegeo/occ/cl/void //simplegeo/occ/tdef/void //simplegeo/occ/tag/void //simplegeo/occ/econst/void //simplegeo/occ/struct/void //simplegeo/occ/clconst/void //simplegeo/occ/intf/void" --><span class="type">void</span><!-- /a -->) <!-- a logicalPath="//simplegeo/occ/instm/reloadBucketAtIndex //simplegeo/occ/clm/reloadBucketAtIndex //simplegeo/occ/intfcm/reloadBucketAtIndex //simplegeo/occ/intfm/reloadBucketAtIndex //simplegeo/occ/func/reloadBucketAtIndex //simplegeo/occ/ftmplt/reloadBucketAtIndex //simplegeo/occ/defn/reloadBucketAtIndex //simplegeo/occ/macro/reloadBucketAtIndex" --><span class="function">reloadBucketAtIndex</span><!-- /a -->:(<!-- a logicalPath="//simplegeo/occ/cl/NSInteger //simplegeo/occ/tdef/NSInteger //simplegeo/occ/tag/NSInteger //simplegeo/occ/econst/NSInteger //simplegeo/occ/struct/NSInteger //simplegeo/occ/clconst/NSInteger //simplegeo/occ/intf/NSInteger" --><span class="type">NSInteger</span><!-- /a -->)<!-- a logicalPath="//simplegeo/occ/econst/bucketIndex //simplegeo/occ/data/bucketIndex" --><span class="var">bucketIndex</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt><code>bucketIndex</code></dt>
+<dd><p>&#65532;The index of the bucket to reload.</p></dd>
+</dl>
+</div>
+<p></p>
+<a name="HeaderDoc_props"></a>
+<h2>Properties</h2>
+<dl>
+<dt><tt><a href="index.html#//simplegeo/occ/instp/SGARNavigationViewController/arView" target="_top">arView</a></tt></dt>
+<dd><p>The <!-- a logicalPath="//simplegeo/ooc/cl/SGARView" -->SGARView<!-- /a -->  that is assigned to the cameraOverlayView property.
+</p></dd>
+<dt><tt><a href="index.html#//simplegeo/occ/instp/SGARNavigationViewController/bucketIndex" target="_top">bucketIndex</a></tt></dt>
+<dd><p>The current bucket index that is being used to populate the <a href="../../../../Documentation/SGARNavigationViewController_h/Classes/SGARNavigationViewController/index.html#//simplegeo/occ/instp/SGARNavigationViewController/arView" logicalPath="//simplegeo/occ/instp/SGARNavigationViewController/arView">arView</a> .
+</p></dd>
+<dt><tt><a href="index.html#//simplegeo/occ/instp/SGARNavigationViewController/dataSource" target="_top">dataSource</a></tt></dt>
+<dd><p>The //simplegeo/ooc/cl/SGARNavigationViewControllerDataSource data source  that populates the <a href="../../../../Documentation/SGARNavigationViewController_h/Classes/SGARNavigationViewController/index.html#//simplegeo/occ/instp/SGARNavigationViewController/arView" logicalPath="//simplegeo/occ/instp/SGARNavigationViewController/arView">arView</a> .
+</p></dd>
+</dl>
+<hr>
+<!-- headerDoc=instp;  uid=//simplegeo/occ/instp/SGARNavigationViewController/arView;   name=SGARNavigationViewController::arView --><a name="//simplegeo/occ/instp/SGARNavigationViewController/arView"></a>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="arView">arView</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --></p>
+<p>The <!-- a logicalPath="//simplegeo/ooc/cl/SGARView" -->SGARView<!-- /a --> that is assigned to the cameraOverlayView property.
+<!-- end abstract --></p>
+<p></p>
+<div class="declaration_indent">
+<pre>@property (
+    <span class="param">nonatomic</span>,
+    <span class="param">readonly</span>) <a href="../../../../Documentation/SGARView_h/Classes/SGARView/index.html#//simplegeo/occ/cl/SGARView" logicalPath="//simplegeo/occ/cl/SGARView"><span class="type">SGARView</span></a><span class="type">*</span> <!-- a logicalPath="//simplegeo/occ/econst/arView //simplegeo/occ/data/arView" --><span class="var">arView</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight">
+<font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5>
+<!-- begin discussion --><p>You can call <!-- a logicalPath="cameraOverlayView" -->cameraOverlayView<!-- /a --> and still access the the same view.
+<!-- end discussion -->
+</p>
+<p></p>
+<hr>
+<!-- headerDoc=instp;  uid=//simplegeo/occ/instp/SGARNavigationViewController/bucketIndex;   name=SGARNavigationViewController::bucketIndex --><a name="//simplegeo/occ/instp/SGARNavigationViewController/bucketIndex"></a>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="bucketIndex">bucketIndex</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --></p>
+<p>The current bucket index that is being used to populate the <a href="../../../../Documentation/SGARNavigationViewController_h/Classes/SGARNavigationViewController/index.html#//simplegeo/occ/instp/SGARNavigationViewController/arView" logicalPath="//simplegeo/occ/instp/SGARNavigationViewController/arView">arView</a>.
+<!-- end abstract --></p>
+<p></p>
+<div class="declaration_indent">
+<pre>@property (
+    <span class="param">nonatomic</span>,
+    <span class="param">readonly</span>) <!-- a logicalPath="//simplegeo/occ/cl/NSInteger //simplegeo/occ/tdef/NSInteger //simplegeo/occ/tag/NSInteger //simplegeo/occ/econst/NSInteger //simplegeo/occ/struct/NSInteger //simplegeo/occ/clconst/NSInteger //simplegeo/occ/intf/NSInteger" --><span class="type">NSInteger</span><!-- /a --> <!-- a logicalPath="//simplegeo/occ/econst/bucketIndex //simplegeo/occ/data/bucketIndex" --><span class="var">bucketIndex</span><!-- /a -->; </pre>
+</div>
+<p></p>
+<hr>
+<!-- headerDoc=instp;  uid=//simplegeo/occ/instp/SGARNavigationViewController/dataSource;   name=SGARNavigationViewController::dataSource --><a name="//simplegeo/occ/instp/SGARNavigationViewController/dataSource"></a>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="dataSource">dataSource</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --></p>
+<p>The //simplegeo/ooc/cl/SGARNavigationViewControllerDataSource data source  that populates the <a href="../../../../Documentation/SGARNavigationViewController_h/Classes/SGARNavigationViewController/index.html#//simplegeo/occ/instp/SGARNavigationViewController/arView" logicalPath="//simplegeo/occ/instp/SGARNavigationViewController/arView">arView</a>.
+<!-- end abstract --></p>
+<p></p>
+<div class="declaration_indent">
+<pre>@property (
+    <span class="param">nonatomic</span>,
+    <span class="param">assign</span>) <!-- a logicalPath="//simplegeo/occ/cl/id //simplegeo/occ/tdef/id //simplegeo/occ/tag/id //simplegeo/occ/econst/id //simplegeo/occ/struct/id //simplegeo/occ/clconst/id //simplegeo/occ/intf/id" --><span class="type">id</span><!-- /a -->&lt;<span class="template">SGARNavigationViewControllerDataSource</span>&gt; <!-- a logicalPath="//simplegeo/occ/econst/dataSource //simplegeo/occ/data/dataSource" --><span class="var">dataSource</span><!-- /a -->; </pre>
+</div>
+<p></p>
+<p><!-- start of footer -->
+
+<!-- end of footer -->
+</p>
+<p>&copy; SimpleGeo Last Updated: 02/09/2010
+</p>
+</div>
+</body>
+</html>
