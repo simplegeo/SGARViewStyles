@@ -1437,7 +1437,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CODE_SIGN_ENTITLEMENTS = Resources/Entitlements.plist;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Stumpkat, LLC";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Crash Media, Inc";
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -1462,7 +1462,7 @@
 					SGARView,
 				);
 				PRODUCT_NAME = ARViewStyles;
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "29910E5A-952F-4B82-800E-8F34E7140609";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "3D0FD98B-0F66-4EFD-85AC-38B68650CA58";
 			};
 			name = Debug;
 		};

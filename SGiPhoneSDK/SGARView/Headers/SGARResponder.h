@@ -24,65 +24,65 @@
 @optional
 
 /*!
-* @method singleTap:
+* @method ARSingleTap:
 * @abstract Notifies the reciever when a single touch event has occurred.
 * @param point ￼The point at which the touch event occurred.
 */
-- (void) singleTap:(CGPoint)point;
+- (void) ARSingleTap:(CGPoint)point;
 
 /*!
-* @method doubleTap:
+* @method ARDoubleTap:
 * @abstract ￼Notifies the reciever when a double touch event has occurred.
 * @param point ￼The point at which the touch event occurred.
 */
-- (void) doubleTap:(CGPoint)point;
+- (void) ARDoubleTap:(CGPoint)point;
 
 
 /*!
-* @method singleTapAtPoint:andPoint:
+* @method ARSingleTapAtPoint:andPoint:
 * @abstract Notifies the reciever when a single touch event occurs at two points.
 * @param pointOne ￼One of the two points at which the touch event occurred.
 * @param pointTwo ￼The other point at which the touch event occurred.
 */
-- (void) singleTapAtPoint:(CGPoint)pointOne andPoint:(CGPoint)pointTwo;
+- (void) ARSingleTapAtPoint:(CGPoint)pointOne andPoint:(CGPoint)pointTwo;
 
 /*!
-* @method pinchAtPoint:andPoint:withDistance:
+* @method ARPinchAtPoint:andPoint:withDistance:
 * @abstract Notifies the reciever when a pinch event occurs.
 * @param pointOne ￼One of the two points at which the touch event occurred.
 * @param pointTwo ￼The other point at which the touch event occurred.
 * @param distance ￼The distance between the two points. Why? For convience.
 */
-- (void) pinchAtPoint:(CGPoint)pointOne andPoint:(CGPoint)pointTwo withDistance:(CGFloat)distance;
+- (void) ARPinchAtPoint:(CGPoint)pointOne andPoint:(CGPoint)pointTwo withDistance:(CGFloat)distance;
 
 /*!
-* @method pullAtPoint:andPoint:withDistance:
+* @method ARPullAtPoint:andPoint:withDistance:
 * @abstract Notifies the reciever when a pull event occurs.
 * @param pointOne ￼One of the two points at which the touch event occurred.
 * @param pointTwo ￼The other point at which the touch event occurred.
 * @param distance ￼The distance between the two points. Why? Because I can.
 */
-- (void) pullAtPoint:(CGPoint)pointOne andPoint:(CGPoint)pointTwo withDistance:(CGFloat)distance;
+- (void) ARPullAtPoint:(CGPoint)pointOne andPoint:(CGPoint)pointTwo withDistance:(CGFloat)distance;
 
 /*!
-* @method moveFromPoint:toPoint:
+* @method ARMoveFromPoint:toPoint:
 * @abstract Notifies the reciever when a drag event occurs.
 * @param fromPoint ￼The start point of the drag.
 * @param toPoint ￼The end point of the drag.
 */
-- (void) moveFromPoint:(CGPoint)fromPoint toPoint:(CGPoint)toPoint;
+- (void) ARMoveFromPoint:(CGPoint)fromPoint toPoint:(CGPoint)toPoint;
 
 /*!
-* @method moveEndedAtPoint:
+* @method ARMoveEndedAtPoint:
 * @abstract Notifies the reicever when a drag events finishs.
 * @param point ￼The point at which the drag event was completed.
 */
-- (void) moveEndedAtPoint:(CGPoint)point;
+- (void) ARMoveEndedAtPoint:(CGPoint)point;
 
 /*!
-* @method viewDidShake
+* @method ARViewDidShake
 * @abstract Notifies the reciever when the view is shaken.
 */
-- (void) viewDidShake;
+- (void) ARViewDidShake;
 
 @end

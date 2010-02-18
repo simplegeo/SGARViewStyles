@@ -1,4 +1,4 @@
-SGClient v0.3.0
+SGClient v0.3.1
 
 ================================================================================
 ABSTRACT:
@@ -90,6 +90,9 @@ Headers
 
 ================================================================================
 CHANGES FROM PREVIOUS VERSIONS:
+
+Version 0.3.1
+- Restructured project.
 
 Version 0.3.0
 - Upgraded SGLocationService to use version 0.1 of the SimpleGeo API
