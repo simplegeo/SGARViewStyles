@@ -6,6 +6,8 @@
 //  Copyright 2010 SimpleGeo. All rights reserved.
 //
 
+#import <MapKit/MapKit.h>
+
 /*!
 * @enum Inspector Styles
 * @abstract ￼The style of the view when it is being inspected.
