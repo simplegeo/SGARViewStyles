@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MapKit/MapKit.h>
 
-#import "SGRecord.h"
 #import "SGARView.h"
 
 @protocol SGARNavigationViewControllerDataSource;
@@ -153,7 +153,7 @@
 * then no annotation view will be displayed for the annotation.
 */
 - (SGAnnotationView*) viewController:(SGARNavigationViewController*)nvc
-                   viewForAnnotation:(id<SGAnnotation>)annotation 
+                   viewForAnnotation:(id<MKAnnotation>)annotation 
                        atBucketIndex:(NSInteger)bucketIndex;
 
 /*!

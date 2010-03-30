@@ -74,7 +74,7 @@ static double delta = 0.000005;
  * everytime it is accessed in the AR view; which is essentially everytime
  * it needs to be drawn.
  */
-- (id<SGAnnotation>) annotation
+- (id<MKAnnotation>) annotation
 {
     SGSimpleAnnotation* simpleAnnotation = (SGSimpleAnnotation*)[super annotation];
     

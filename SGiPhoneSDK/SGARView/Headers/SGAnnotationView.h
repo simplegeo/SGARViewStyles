@@ -75,7 +75,7 @@ typedef NSInteger SGPinColor;
 */
 @interface SGAnnotationView : UIView {
 
-    id<SGAnnotation> annotation;
+    id<MKAnnotation> annotation;
     
     NSString* resuseIdentifier;
     
@@ -110,7 +110,8 @@ typedef NSInteger SGPinColor;
     SGPinColor pinColor;
     UIButton* radarTargetButton;
     
-    BOOL isBeingInspected;    
+    BOOL isBeingInspected;
+    
     
 }
 
@@ -118,7 +119,7 @@ typedef NSInteger SGPinColor;
 * @property
 * @abstract The source of the view's location in the AR enviornment.
 */
-@property (nonatomic, assign) id<SGAnnotation> annotation;
+@property (nonatomic, assign) id<MKAnnotation> annotation;
 
 /*!
 * @property
@@ -243,6 +244,7 @@ typedef NSInteger SGPinColor;
 * @abstract If YES, the view can be added to the @link //simplegeo/ooc/cl/SGMovableStack SGMovableStack @/link. Otherwise, NO.
 */
 @property (nonatomic, assign) BOOL isCapturable;
+
 
 
 /*!

@@ -6,7 +6,6 @@
 //  Copyright 2010 SimpleGeo. All rights reserved.
 //
 
-#import "CLLocationAdditions.h"
 #import "GeoJSON+NSArray.h"
 #import "GeoJSON+NSDictionary.h"
 #import "NSArrayAdditions.h"

@@ -10,5 +10,6 @@
 #ifdef __OBJC__
     #import <Foundation/Foundation.h>
     #import <UIKit/UIKit.h>
+    #import <MapKit/MapKit.h>
     #import "SimpleGeo.h"
 #endif

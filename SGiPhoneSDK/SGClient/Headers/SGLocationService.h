@@ -251,6 +251,18 @@
 - (NSString*) retrieveRecordHistory:(NSString*)recordId layer:(NSString*)layer;
 
 #pragma mark -
+#pragma mark Layer
+
+/*!
+ * @method layerInformation:
+ * @abstract ￼Retrieves information for a given layer.
+ * @param layerName ￼The layer.
+ * @result A response id that is used to identifier the return value from SimpleGeo. 
+ * You can use this value in @link SGLocationServiceDelegate delegate @/link. 
+ */
+- (NSString*) layerInformation:(NSString*)layerName;
+
+#pragma mark -
 #pragma mark Nearby
  
 /*!
@@ -269,6 +281,28 @@
                                  limit:(NSInteger)limit;
 
 /*!
+* @method retrieveRecordsForGeohash:layers:types:limit:
+* @abstract Gets records that are located in a specific geohash andand within 
+* a given interval. To make use of our time based index,
+* the difference between start and end must not be greater than 60 minutes.
+* @param geohash The geohash that should be searched.
+* @param layers An array of layer ids that will help filter the search.
+* @param types An array of types that will help filter the search.
+* @param start An Epoch timestamp that is the beginning of the time interval in seconds.
+* @param end An Epoch timestamp that is the end of the time interval in seconds.
+* @param limit The amount of records to obtain. 
+* @result A response id that is used to identifier the return value from SimpleGeo. 
+* You can use this value in @link SGLocationServiceDelegate delegate @/link.
+*/
+- (NSString*) retrieveRecordsForGeohash:(SGGeohash)geohash 
+                                 layers:(NSArray*)layers
+                                  types:(NSArray*)types
+                                  limit:(NSInteger)limitend
+                                  start:(double)start
+                                 end:(double)end;
+
+
+/*!
 * @method retrieveRecordsForCoordinate:radius:layers:types:limit:
 * @abstract Get records that are located within a radius of coordinate.
 * @param coord The origin of the radius.
@@ -285,6 +319,32 @@
                                     types:(NSArray*)types
                                     limit:(NSInteger)limit;
 
+/*!
+* @method retrieveRecordsForCoordinate:radius:layers:types:limit:
+* @abstract Get records that are located within a radius of a coordinate and within
+* a given interval. To make use of our time based index, the difference between
+* start and end must not be greater than 60 minutes.
+* @param coord The origin of the radius.
+* @param radius The radius of the search space. (km)
+* @param layers An array of layer ids that will help filter the search.
+* @param types An array of types that will help filter the search.
+* @param limit￼The amount of records to obtain. 
+* @param start An Epoch timestamp that is the beginning of the time interval in seconds.
+* @param end An Epoch timestamp that is the end of the time interval in seconds.
+* @result A response id that is used to identifier the return value from SimpleGeo. 
+* You can use this value in @link SGLocationServiceDelegate delegate @/link. 
+*/
+- (NSString*) retrieveRecordsForCoordinate:(CLLocationCoordinate2D)coord
+                                    radius:(double)radius
+                                    layers:(NSArray*)layers
+                                     types:(NSArray*)types
+                                     limit:(NSInteger)limit
+                                     start:(double)start
+                                    end:(double)end;
+
+
+#pragma mark -
+#pragma mark Features
 
 /*!
 * @method reverseGeocode:
@@ -303,15 +363,33 @@
 */
 - (NSString*) reverseGeocode:(CLLocationCoordinate2D)coord;
 
-
 /*!
-* @method layerInformation:
-* @abstract ￼Retrieves information for a given layer.
-* @param layerName ￼The layer.
+* @method densityForCoordinate:day:hour:
+* @abstract Returns a GeoJSON Feature that contains SpotRank data for a specific point.
+* @discussion ￼See @link http://www.skyhookwireless.com/spotrank/index.php SpotRank @/link for
+* information about the data set. If @link hour hour @/link is not specified, then a collection of
+* of tiles, bounding boxes with density data, will be returned for the entire day.
+* @param coord ￼The desired location.
+* @param day See the defined SpotRank days in @link //simplegeo/ooc/intf/SGLocationTypes SGLocationTypes @/link.
+* (e.g. @"mon")￼. Default is nil.s
+* @param hour ￼An integer value between 0 and 24. The timezone depends on the location of the coord. Deafault is 12.
 * @result A response id that is used to identifier the return value from SimpleGeo. 
 * You can use this value in @link SGLocationServiceDelegate delegate @/link. 
 */
-- (NSString*) layerInformation:(NSString*)layerName;
+- (NSString*) densityForCoordinate:(CLLocationCoordinate2D)coord day:(NSString*)day hour:(int)hour;
+
+/*!
+* @method densityForCoordinate:day:hour:
+* @abstract Returns a GeoJSON FeatureCollection that contains SpotRank data for a specific point. 
+* @discussion ￼See @link http://www.skyhookwireless.com/spotrank/index.php SpotRank @/link for
+* information about the data set. The data returned is a collection of tiles, bounding boxes with density data.
+* @param coord ￼The desired location.
+* @param day See the defined SpotRank days in @link //simplegeo/ooc/intf/SGLocationTypes SGLocationTypes @/link.
+* (e.g. @"mon")￼. Default is nil.s
+* @result A response id that is used to identifier the return value from SimpleGeo. 
+* You can use this value in @link SGLocationServiceDelegate delegate @/link. 
+*/
+- (NSString*) densityForCoordinate:(CLLocationCoordinate2D)coord day:(NSString*)day;
 
 @end
 

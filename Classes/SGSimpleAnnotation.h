@@ -32,7 +32,7 @@
 //  Created by Derek Smith.
 //
 
-@interface SGSimpleAnnotation : NSObject <SGAnnotation> {
+@interface SGSimpleAnnotation : NSObject <MKAnnotation> {
 
     NSString* title;
     NSString* subtitle;

@@ -217,6 +217,25 @@
 - (NSString*) retrieveRecordsForGeohash:(SGGeohash)region types:(NSArray*)types limit:(NSInteger)limit;
 
 /*!
+* @method retrieveRecordsForGeohash:types:limit:
+* @abstract Retrieves records within the given geohash from SimpleGeo and within a given
+* interval. To make use of our time based index, the difference between start 
+* and end must not be greater than 60 minutes.
+* @param geohash The geohash to search in.
+* @param types The types of objects to retrieve. ￼
+* @param limit The amount of objects to retrieve.
+* @param start An Epoch timestamp that is the beginning of the time interval in seconds.
+* @param end An Epoch timestamp that is the end of the time interval in seconds.
+* @result ￼ A request identifier that can be used to analyze the response object returned to
+* the @link //simplegeo/ooc/intf/SGLocationServiceDelegate SGLocationServiceDelegate @/link
+*/
+- (NSString*) retrieveRecordsForGeohash:(SGGeohash)region 
+                                  types:(NSArray*)types
+                                  limit:(NSInteger)limit
+                                  start:(double)start
+                                    end:(double)end;
+
+/*!
 * @method retrieveRecordsForCoordinate:radius:types:limit:
 * @abstract ￼Retrieves records within from an origin with a desired radius from SimpleGeo.
 * @param coord The lat/lon coordinates that declare the origin of the search space.
@@ -230,5 +249,27 @@
                                     radius:(double)radius
                                      types:(NSArray*)types
                                      limit:(NSInteger)limit;
+
+/*!
+* @method retrieveRecordsForCoordinate:radius:types:limit:
+* @abstract ￼Retrieves records within from an origin with a desired radius from 
+* SimpleGeo and within a given interval. To make use of our time based index,
+* the difference between start and end must not be greater than 60 minutes.
+* @param coord The lat/lon coordinates that declare the origin of the search space.
+* @param radius The radius of the circle.
+* @param types The types of objects to retrieve. ￼
+* @param limit The amount of objects to retrieve.
+* @param start An Epoch timestamp that is the beginning of the time interval in seconds.
+* @param end An Epoch timestamp that is the end of the time interval in seconds.
+* @result ￼ A request identifier that can be used to analyze the response object returned to
+* the @link //simplegeo/ooc/intf/SGLocationServiceDelegate SGLocationServiceDelegate @/link
+*/
+- (NSString*) retrieveRecordsForCoordinate:(CLLocationCoordinate2D)coord 
+                                    radius:(double)radius
+                                     types:(NSArray*)types
+                                     limit:(NSInteger)limit
+                                     start:(double)start
+                                       end:(double)end;
+
 
 @end

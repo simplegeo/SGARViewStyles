@@ -124,6 +124,14 @@ They aren't very pretty at the moment.
 ================================================================================
 CHANGES FROM PREVIOUS VERSIONS:
 
+Version 0.3.4
+- Touch events will now return the nearest SGAnnotationView in the
+AR environment
+
+Version 0.3.3
+- Fixed an issue where touch events weren't being triggered
+for SGAnnotationViews within the AR environment
+
 Version 0.3.2
 - Prefixed all methods in the SGARResponder with AR.
 

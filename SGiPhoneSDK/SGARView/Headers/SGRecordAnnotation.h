@@ -1,5 +1,5 @@
 //
-//  CLLocationAdditions.h
+//  SGRecordAnnotation.h
 //  SGClient
 //
 //  Copyright (c) 2009-2010, SimpleGeo
@@ -29,15 +29,20 @@
 //  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, 
 //  EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 //
+//  Created by Derek Smith.
 //
 
-#import <CoreLocation/CoreLocation.h>
+#import <MapKit/MapKit.h>
 
-
-@interface CLLocation (SGLocatorService)
-
-- (BOOL) isEqualToLocation:(CLLocation*)location;
-
-- (double) getBearingFromCoordinate:(CLLocationCoordinate2D)coord;
+/*!
+* @protocol SGAnnotation
+* @abstract Just a simple re-definition of MKAnnotation for the sake of notation.
+* @discussion In order for an object to become displayable in an @link //simplegeo/ooc/cl/SGARView SGARView @/link,
+* the object must implement this protocol. Each object serves as a data source for a view within the AR enviornment.
+* The AR view requires, at a minimum, a lat/long coordinate in order
+* to display an object. @link //simplegeo/ooc/cl/SGRecordAnnotationView SGRecordAnnotationViews @/link will use title and subtitle
+* properties if they are provided.
+*/
+@protocol SGAnnotation <MKAnnotation>
 
 @end

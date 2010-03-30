@@ -8,6 +8,8 @@
 
 #import <CoreLocation/CoreLocation.h>
 
+#import <MapKit/MapKit.h>
+
 @class SGAnnotationView;
 @class SGRadar;
 @class SGMovableStack;
@@ -208,7 +210,7 @@
  * @param annotation The annotation that nee￼ds a view.
  * @result ￼The view for the annotation.
  */
-- (SGAnnotationView*) arView:(SGARView*)arView viewForAnnotation:(id<SGAnnotation>)annotation;
+- (SGAnnotationView*) arView:(SGARView*)arView viewForAnnotation:(id<MKAnnotation>)annotation;
 
 @optional
 

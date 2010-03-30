@@ -51,6 +51,8 @@
 #import "SGKettleAnnotationView.h"
 #import "SGPersonAnnotationView.h"
 
+#import "SimpleGeo.h"
+
 #define DEGREES_TO_RADIANS(__ANGLE__) ((__ANGLE__) / 180.0 * M_PI)
 
 #define AMOUNT_OF_LOCATIONS             50          // Total amount of locations to use.
@@ -349,7 +351,7 @@ typedef NSInteger SGARStyle;
 //////////////////////////////////////////////////////////////////////////////////////////////// 
 
 - (SGAnnotationView*) viewController:(SGARNavigationViewController*)nvc
-                   viewForAnnotation:(id<SGRecordAnnotation>)annotation 
+                   viewForAnnotation:(id<MKAnnotation>)annotation 
                        atBucketIndex:(NSInteger)bucketIndex
 {
     // Use the annotation views that are specific to the style.
