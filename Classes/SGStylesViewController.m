@@ -179,7 +179,7 @@ typedef NSInteger SGARStyle;
 
 - (void) stackLeftContainer:(id)c
 {
-    // Remove the unhighlight the container
+    // Unhighlight the container
     SGAnnotationViewContainer* container = (SGAnnotationViewContainer*)c;
     [container setBackgroundImage:[UIImage imageNamed:@"SafeSign.png"] forState:UIControlStateNormal];    
 }
