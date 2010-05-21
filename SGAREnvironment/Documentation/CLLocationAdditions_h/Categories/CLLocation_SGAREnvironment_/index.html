@@ -1,0 +1,169 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/1998/REC-html40-19980424/loose.dtd">
+<html>
+<head>
+<title>CLLocation(SGAREnvironment)</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf8">
+<meta name="generator" content="HeaderDoc">
+<meta name="xcode-display" content="render">
+<style><!--
+#tocMenu {
+		display: block;
+		position:fixed;
+		top:0px;
+		left:0px;
+		width:210px;
+		height:100%;
+		background:transparent;
+}
+#bodyText {
+		margin-left: 210px;
+}
+--></style>
+<script language="JavaScript" type="text/javascript"><!--
+function hidetoc() {
+	var origURL = parent.document.URL;
+	var contentURL = origURL.substring(origURL.indexOf('?')+1, origURL.length);
+	if (contentURL.length == origURL.length) {
+		jumpPos = origURL.substring(origURL.indexOf('#')+1, origURL.length);
+	}
+	if (contentURL == "hidetoc") {
+		var toc = document.getElementById('tocMenu');
+		var body = document.getElementById('bodyText');
+		if (toc && body) {
+			toc.style.display = 'none';
+			body.style.marginLeft = '0px';
+		}
+	}
+}
+--></script><style type="text/css"><!--.keyword {background:#ffffff; color:#761550;}.template {background:#ffffff; color:#761550;}.number {background: #ffffff; color:#0000ff;}.function {background:#ffffff; color:#000000;}.string {background: #ffffff; color:#891315;}.preprocessor {background:#ffffff; color:#236e25}.comment {background:#ffffff; color:#236e25}.char {background: #ffffff; color:#0000ff;}.var {background:#ffffff; color:#000000;}.type {background:#ffffff; color:#761550;}.param {background:#ffffff; color:#000000;}a:link {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #0000ff;}a:visited {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #0000ff;}a:visited:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}a:active {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}a:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}h4 {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: tiny; font-weight: bold;}body {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: 10pt;}.list_indent { margin-left: 40px; }.declaration_indent { margin-left: 40px; }.param_indent { margin-left: 40px; }.group_indent { margin-left: 40px; }.group_desc_indent { margin-left: 20px; }.warning_indent { margin-left: 40px; }.important_indent { margin-left: 40px; }.hd_tocAccess { font-style: italic; font-size: 10px; font-weight: normal; color: #303030; }--></style>
+</head>
+<body bgcolor="#ffffff" onload="hidetoc();">
+
+<!-- headerDoc=cat; uid=//simplegeo/occ/cat/CLLocation(SGAREnvironment);  name=CLLocation(SGAREnvironment)-->
+<a name="//simplegeo/occ/cat/CLLocation(SGAREnvironment)"></a><div id="tocMenu">
+<iframe id="toc_content" name="toc_content" src="toc.html" width="210" height="100%" align="left" frameborder="0">This document set is best viewed in a browser that supports iFrames.</iframe>
+</div>
+<div id="bodyText">
+<!-- start of header -->
+
+<!-- end of header -->
+<a name="top"></a>
+<hr>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h1><a name="CLLocation(SGAREnvironment)">CLLocation(SGAREnvironment)</a></h1>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --></p>
+<p>Helper methods for CLLocation objects.
+<!-- end abstract --></p>
+<p><b>Extends&nbsp;Class:</b> <!-- a logicalPath="//simplegeo/occ/cl/CLLocation" -->CLLocation<!-- /a --><br><b>Declared In:</b> <a href="../../index.html" target="_top">CLLocationAdditions.h</a><br></p>
+<div class="declaration_indent">
+</div>
+<p></p>
+<hr>
+<br><a name="HeaderDoc_methods"></a>
+<h2>Methods</h2>
+<dl>
+<dt><tt><a href="index.html#//simplegeo/occ/instm/CLLocation(SGAREnvironment)/distanceToLocation:" target="_top">-distanceToLocation:</a></tt></dt>
+<dd><p>Wraps the internal distance calculation method due
+to deprecated versions in the iPhone sSDKs.
+</p></dd>
+<dt><tt><a href="index.html#//simplegeo/occ/instm/CLLocation(SGAREnvironment)/getBearingFromCoordinate:" target="_top">-getBearingFromCoordinate:</a></tt></dt>
+<dd><p>Returns the bearing of the CLLocation object to the
+passed in coordinate.
+</p></dd>
+<dt><tt><a href="index.html#//simplegeo/occ/instm/CLLocation(SGAREnvironment)/isEqualToLocation:" target="_top">-isEqualToLocation:</a></tt></dt>
+<dd><p>Compares the lat/lon properties of each object to
+eachother.
+</p></dd>
+</dl>
+<hr>
+<!-- headerDoc=instm;  uid=//simplegeo/occ/instm/CLLocation(SGAREnvironment)/distanceToLocation:;   name=CLLocation(SGAREnvironment)::distanceToLocation: --><a name="//simplegeo/occ/instm/CLLocation(SGAREnvironment)/distanceToLocation:"></a>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="distanceToLocation:">distanceToLocation:</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --></p>
+<p>Wraps the internal distance calculation method due
+to deprecated versions in the iPhone sSDKs.
+<!-- end abstract --></p>
+<p></p>
+<div class="declaration_indent">
+<pre>- (<!-- a logicalPath="//simplegeo/occ/cl/double //simplegeo/occ/tdef/double //simplegeo/occ/tag/double //simplegeo/occ/econst/double //simplegeo/occ/struct/double //simplegeo/occ/clconst/double //simplegeo/occ/intf/double" --><span class="type">double</span><!-- /a -->) <!-- a logicalPath="//simplegeo/occ/instm/distanceToLocation //simplegeo/occ/clm/distanceToLocation //simplegeo/occ/intfcm/distanceToLocation //simplegeo/occ/intfm/distanceToLocation //simplegeo/occ/func/distanceToLocation //simplegeo/occ/ftmplt/distanceToLocation //simplegeo/occ/defn/distanceToLocation //simplegeo/occ/macro/distanceToLocation" --><span class="function">distanceToLocation</span><!-- /a -->:(<!-- a logicalPath="//simplegeo/occ/cl/CLLocation //simplegeo/occ/tdef/CLLocation //simplegeo/occ/tag/CLLocation //simplegeo/occ/econst/CLLocation //simplegeo/occ/struct/CLLocation //simplegeo/occ/clconst/CLLocation //simplegeo/occ/intf/CLLocation" --><span class="type">CLLocation</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//simplegeo/occ/econst/location //simplegeo/occ/data/location" --><span class="var">location</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt><code>location</code></dt>
+<dd><p>The location to determine the distance from.</p></dd>
+</dl>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5>
+<p><!-- begin return value -->The distance of the CLLocation object to the passed in
+location.
+
+<!-- end return value --></p>
+<p></p>
+<hr>
+<!-- headerDoc=instm;  uid=//simplegeo/occ/instm/CLLocation(SGAREnvironment)/getBearingFromCoordinate:;   name=CLLocation(SGAREnvironment)::getBearingFromCoordinate: --><a name="//simplegeo/occ/instm/CLLocation(SGAREnvironment)/getBearingFromCoordinate:"></a>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="getBearingFromCoordinate:">getBearingFromCoordinate:</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --></p>
+<p>Returns the bearing of the CLLocation object to the
+passed in coordinate.
+<!-- end abstract --></p>
+<p></p>
+<div class="declaration_indent">
+<pre>- (<!-- a logicalPath="//simplegeo/occ/cl/double //simplegeo/occ/tdef/double //simplegeo/occ/tag/double //simplegeo/occ/econst/double //simplegeo/occ/struct/double //simplegeo/occ/clconst/double //simplegeo/occ/intf/double" --><span class="type">double</span><!-- /a -->) <!-- a logicalPath="//simplegeo/occ/instm/getBearingFromCoordinate //simplegeo/occ/clm/getBearingFromCoordinate //simplegeo/occ/intfcm/getBearingFromCoordinate //simplegeo/occ/intfm/getBearingFromCoordinate //simplegeo/occ/func/getBearingFromCoordinate //simplegeo/occ/ftmplt/getBearingFromCoordinate //simplegeo/occ/defn/getBearingFromCoordinate //simplegeo/occ/macro/getBearingFromCoordinate" --><span class="function">getBearingFromCoordinate</span><!-- /a -->:(<!-- a logicalPath="//simplegeo/occ/cl/CLLocationCoordinate2D //simplegeo/occ/tdef/CLLocationCoordinate2D //simplegeo/occ/tag/CLLocationCoordinate2D //simplegeo/occ/econst/CLLocationCoordinate2D //simplegeo/occ/struct/CLLocationCoordinate2D //simplegeo/occ/clconst/CLLocationCoordinate2D //simplegeo/occ/intf/CLLocationCoordinate2D" --><span class="type">CLLocationCoordinate2D</span><!-- /a -->)<!-- a logicalPath="//simplegeo/occ/econst/coord //simplegeo/occ/data/coord" --><span class="var">coord</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt><code>coord</code></dt>
+<dd><p>The lat/lon coordinate that will be used to determine
+the bearing.</p></dd>
+</dl>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5>
+<p><!-- begin return value -->The bearing &#65532;of the location object to the passed in
+coordinate.
+
+<!-- end return value --></p>
+<p></p>
+<hr>
+<!-- headerDoc=instm;  uid=//simplegeo/occ/instm/CLLocation(SGAREnvironment)/isEqualToLocation:;   name=CLLocation(SGAREnvironment)::isEqualToLocation: --><a name="//simplegeo/occ/instm/CLLocation(SGAREnvironment)/isEqualToLocation:"></a>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="isEqualToLocation:">isEqualToLocation:</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --></p>
+<p>Compares the lat/lon properties of each object to
+eachother.
+<!-- end abstract --></p>
+<p></p>
+<div class="declaration_indent">
+<pre>- (<!-- a logicalPath="//simplegeo/occ/cl/BOOL //simplegeo/occ/tdef/BOOL //simplegeo/occ/tag/BOOL //simplegeo/occ/econst/BOOL //simplegeo/occ/struct/BOOL //simplegeo/occ/clconst/BOOL //simplegeo/occ/intf/BOOL" --><span class="type">BOOL</span><!-- /a -->) <!-- a logicalPath="//simplegeo/occ/instm/isEqualToLocation //simplegeo/occ/clm/isEqualToLocation //simplegeo/occ/intfcm/isEqualToLocation //simplegeo/occ/intfm/isEqualToLocation //simplegeo/occ/func/isEqualToLocation //simplegeo/occ/ftmplt/isEqualToLocation //simplegeo/occ/defn/isEqualToLocation //simplegeo/occ/macro/isEqualToLocation" --><span class="function">isEqualToLocation</span><!-- /a -->:(<!-- a logicalPath="//simplegeo/occ/cl/CLLocation //simplegeo/occ/tdef/CLLocation //simplegeo/occ/tag/CLLocation //simplegeo/occ/econst/CLLocation //simplegeo/occ/struct/CLLocation //simplegeo/occ/clconst/CLLocation //simplegeo/occ/intf/CLLocation" --><span class="type">CLLocation</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//simplegeo/occ/econst/location //simplegeo/occ/data/location" --><span class="var">location</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt><code>location</code></dt>
+<dd><p>The location object to comapre to.</p></dd>
+</dl>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5>
+<p><!-- begin return value -->YES if the locations are equal. Otherwise, NO.
+
+<!-- end return value --></p>
+<p></p>
+<p><!-- start of footer -->
+
+<!-- end of footer -->
+</p>
+<p>&copy; SimpleGeo Last Updated: 05/20/2010
+</p>
+</div>
+</body>
+</html>
