@@ -51,8 +51,6 @@
 #import "SGKettleAnnotationView.h"
 #import "SGPersonAnnotationView.h"
 
-#import "SimpleGeo.h"
-
 #define DEGREES_TO_RADIANS(__ANGLE__) ((__ANGLE__) / 180.0 * M_PI)
 
 #define AMOUNT_OF_LOCATIONS             50          // Total amount of locations to use.

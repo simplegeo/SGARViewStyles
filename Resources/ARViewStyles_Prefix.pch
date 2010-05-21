@@ -11,5 +11,7 @@
     #import <Foundation/Foundation.h>
     #import <UIKit/UIKit.h>
     #import <MapKit/MapKit.h>
-    #import "SimpleGeo.h"
+    #import "SGAREnvironment.h"
 #endif
+
+#define SGLog NSLog

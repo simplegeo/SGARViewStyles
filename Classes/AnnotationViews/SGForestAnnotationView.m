@@ -72,7 +72,7 @@
  * Since we know that this method is called everytime in order to properly
  * display the view in the AR environment, we can update the label here.
  */
-- (id<SGAnnotation>) annotation
+- (id<MKAnnotation>) annotation
 {
     self.detailedLabel.text = [NSString stringWithFormat:@"%.1fm", self.distance / 10.0];
     

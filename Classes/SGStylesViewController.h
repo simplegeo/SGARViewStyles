@@ -37,8 +37,6 @@
 
 #import "SGGargoyleAnnotationView.h"
 
-#import "SimpleGeo.h"
-
 @interface SGStylesViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, SGAnnotationViewDelegate> {
 
     @private

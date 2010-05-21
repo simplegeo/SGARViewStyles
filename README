@@ -91,6 +91,9 @@ is accessed to obtain the coordinate of the view.
 
 ================================================================================
 CHANGES FROM PREVIOUS VERSIONS:
+Version 0.9.4
+- Upgraded to use the public release of the AREnvironment
+
 Version 0.9.3
 - Added license
 
