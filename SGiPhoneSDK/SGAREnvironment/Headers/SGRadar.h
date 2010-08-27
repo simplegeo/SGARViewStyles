@@ -32,8 +32,6 @@
 //  Created by Derek Smith.
 //
 
-#import <UIKit/UIKit.h>
-
 #import "SGAnnotationView.h"
 #import "SGHeadingView.h"
 
@@ -159,6 +157,13 @@ typedef NSInteger SGCardinalDirection;
 * this radar is in charge of displaying.
 */
 @property (nonatomic, retain) NSMutableArray* annotationViews;
+
+
+/*!
+* @property ￼
+* @abstract
+*/
+@property (nonatomic, assign) CGPoint walkingOffset;
 
 /*!
 * @method addAnnotationViews:

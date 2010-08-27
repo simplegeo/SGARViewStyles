@@ -1,5 +1,5 @@
 //
-//  CLLocationAdditions.h
+//  SGPinAnnotationView.h
 //  SGAREnvironment
 //
 //  Copyright (c) 2009-2010, SimpleGeo
@@ -32,40 +32,26 @@
 //  Created by Derek Smith.
 //
 
-/*!
-* @category
-* @abstract Helper methods for CLLocation objects.
-*/
-@interface CLLocation (SGAREnvironment)
+#import "SGAnnotationView.h"
+
+enum SGPinColor {
+    kSGPinColor_Red,
+    kSGPinColor_Blue
+};
+
+typedef NSInteger SGPinColor;
+
+@interface SGPinAnnotationView : SGAnnotationView {
+        
+    SGPinColor pinColor;
+
+}
 
 /*!
-* @method isEqualToLocation:
-* @abstract Compares the lat/lon properties of each object to
-* eachother.
-* @param location The location object to comapre to.
-* @result YES if the locations are equal. Otherwise, NO.
-*/
-- (BOOL) isEqualToLocation:(CLLocation*)location;
-
-/*!
-* @method getBearingFromCoordinate:
-* @abstract Returns the bearing of the CLLocation object to the
-* passed in coordinate.
-* @param coord The lat/lon coordinate that will be used to determine
-* the bearing.
-* @result The bearing ￼of the location object to the passed in
-* coordinate.
-*/
-- (double) getBearingFromCoordinate:(CLLocationCoordinate2D)coord;
-
-/*!
-* @method distanceToLocation:
-* @abstract Wraps the internal distance calculation method due
-* to deprecated versions in the iPhone sSDKs.
-* @param location The location to determine the distance from.
-* @result The distance of the CLLocation object to the passed in
-* location.
-*/
-- (double) distanceToLocation:(CLLocation*)location;
+ * @property
+ * @abstract The pin color to use when the view is in target mode and @link targetType targetType @/link is set
+ * @link kSGAnnotationViewTargetType_Pin kSGAnnotationViewTargetType_Pin @/link. The default is @link kSGPinColor_Red kSGPinColor_Red @/link.
+ */
+@property (nonatomic, assign) SGPinColor pinColor;
 
 @end

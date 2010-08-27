@@ -64,12 +64,12 @@ function hidetoc() {
 </h5>
 <!-- begin discussion --><p>SGAnnotationViews are the only views that can be rendered in the <!-- a logicalPath="//simplegeo/ooc/cl/SGARView" -->SGARView<!-- /a --> .
 The annotation view has two different modes, when it is being inspected and when it is not being inspected. You can toggle through
-inspection modes by calling <a href="../../../../Documentation/SGAnnotationView_h/Classes/SGAnnotationView/index.html#//simplegeo/occ/instm/SGAnnotationView/inspectView:" logicalPath="//simplegeo/occ/instm/SGAnnotationView/inspectView:">inspectView:</a> . When an annotation view is created it calls <a href="../../../../Documentation/SGAnnotationView_h/Classes/SGAnnotationView/index.html#//simplegeo/occ/instm/SGAnnotationView/inspectView:" logicalPath="//simplegeo/occ/instm/SGAnnotationView/inspectView:">inspectView:</a> 
-on itself with the value NO. When NO is specifed the view enters into target mode. If YES is passed into <a href="../../../../Documentation/SGAnnotationView_h/Classes/SGAnnotationView/index.html#//simplegeo/occ/instm/SGAnnotationView/inspectView:" logicalPath="//simplegeo/occ/instm/SGAnnotationView/inspectView:">inspectView:</a> , the view switches
+inspection modes by calling <!-- a logicalPath="inspectView:" -->inspectView:<!-- /a --> . When an annotation view is created it calls <!-- a logicalPath="inspectView:" -->inspectView:<!-- /a --> 
+on itself with the value NO. When NO is specifed the view enters into target mode. If YES is passed into <!-- a logicalPath="inspectView:" -->inspectView:<!-- /a --> , the view switches
 to inspect mode.
 Target mode is intended to be just a target in in the AR enviornment; something that allows the user to inspect further by generating a touch event. When
 a touch event occurs on an annotation view, <a href="../../../../Documentation/SGAnnotationView_h/Protocols/SGAnnotationViewDelegate/index.html#//simplegeo/occ/intfm/SGAnnotationViewDelegate/shouldInspectAnnotationView:" logicalPath="//simplegeo/occ/intfm/SGAnnotationViewDelegate/shouldInspectAnnotationView:">shouldInspectAnntationView:</a>  is called. Anytime throughout the life-cycle of
-the view, you can call <a href="../../../../Documentation/SGAnnotationView_h/Classes/SGAnnotationView/index.html#//simplegeo/occ/instm/SGAnnotationView/inspectView:" logicalPath="//simplegeo/occ/instm/SGAnnotationView/inspectView:">inspectView:</a>  and it will change its subviews properly, independent of its enviornment.
+the view, you can call <!-- a logicalPath="inspectView:" -->inspectView:<!-- /a -->  and it will change its subviews properly, independent of its enviornment.
 A SGAnnotationView has two display enviornments. The first is within the augmented reality view. The second is as a UIView was intended, using CoreAnimation. When the view is within
 the AR enviornment, the orign within the <!-- a logicalPath="frame" -->frame<!-- /a -->  is ignored. The AR enviornment must place the view based on its relative position of the device and
 the coordinate obtained from <a href="../../../../Documentation/SGAnnotationView_h/Classes/SGAnnotationView/index.html#//simplegeo/occ/instp/SGAnnotationView/annotation" logicalPath="//simplegeo/occ/instp/SGAnnotationView/annotation">annotation</a> . When the annotation view is rendered as a UIView, in most cases,
@@ -81,58 +81,17 @@ it will be a subview of <!-- a logicalPath="SGARView" -->SGARView<!-- /a -->.
 <br><a name="HeaderDoc_methods"></a>
 <h2>Methods</h2>
 <dl>
-<dt><tt><a href="index.html#//simplegeo/doc/title:instm/SGAnnotationView/close" target="_top">-close</a></tt></dt>
-<dd><p>Only works in inspector mode. Returns the view back to target mode.
-</p></dd>
 <dt><tt><a href="index.html#//simplegeo/occ/instm/SGAnnotationView/drawAnnotationView" target="_top">-drawAnnotationView</a></tt></dt>
 <dd><p>&#65532;The current implementation of this method does nothing. If <a href="../../../../Documentation/SGAnnotationView_h/Classes/SGAnnotationView/index.html#//simplegeo/occ/instp/SGAnnotationView/enableOpenGL" logicalPath="//simplegeo/occ/instp/SGAnnotationView/enableOpenGL">enableOpenGL</a>  is set to YES, then
 this method will be called everytime the AR enviornment needs to render the view. 
 </p></dd>
-<dt><tt><a href="index.html#//simplegeo/occ/instm/SGAnnotationView/initAtPoint:reuseIdentifier:" target="_top">-initAtPoint:reuseIdentifier:</a></tt></dt>
+<dt><tt><a href="index.html#//simplegeo/occ/instm/SGAnnotationView/initWithFrame:reuseIdentifier:" target="_top">-initWithFrame:reuseIdentifier:</a></tt></dt>
 <dd><p>Initialize a new annotation view.
-</p></dd>
-<dt><tt><a href="index.html#//simplegeo/occ/instm/SGAnnotationView/inspectView:" target="_top">-inspectView:</a></tt></dt>
-<dd><p>Changes the inspection type of the view.
 </p></dd>
 <dt><tt><a href="index.html#//simplegeo/occ/instm/SGAnnotationView/prepareForReuse" target="_top">-prepareForReuse</a></tt></dt>
 <dd><p>Called when the view is removed from the reuse queue.
 </p></dd>
-<dt><tt><a href="index.html#//simplegeo/occ/instm/SGAnnotationView/setContainerImage:" target="_top">-setContainerImage:</a></tt></dt>
-<dd><p>Only works in inspector mode. Returns the view back to target mode.
-</p></dd>
-<dt><tt><a href="index.html#//simplegeo/occ/instm/SGAnnotationView/setContainerImage:_DONTLINK_0" target="_top">-setContainerImage:</a></tt></dt>
-<dd><p>&#65532;The UIImage that will be displayed when this view is added to an instance of <!-- a logicalPath="//simplegeo/ooc/cl/SGAnnotationViewContainer" -->SGAnnotationViewContainer<!-- /a --> .
-The default image is the UIImage representation of the current layout of the annotaiton view.
-</p></dd>
 </dl>
-<hr>
-<!-- headerDoc=title:instm;  uid=//simplegeo/doc/title:instm/SGAnnotationView/close;   name=SGAnnotationView::close --><a name="//simplegeo/doc/title:instm/SGAnnotationView/close"></a>
-<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
-<h3><a name="close">close</a></h3>
-</td></tr></table>
-<hr>
-<p><!-- begin abstract --></p>
-<p>Only works in inspector mode. Returns the view back to target mode.
-<!-- end abstract --></p>
-<p></p>
-<b>See Also:</b><div class="list_indent"><dl>
-<dt>
-<a href="../../../../Documentation/SGAnnotationView_h/Classes/SGAnnotationView/index.html#//simplegeo/occ/instm/SGAnnotationView/setContainerImage:" logicalPath="//simplegeo/occ/instm/SGAnnotationView/setContainerImage:"><p>setContainerImage:</p></a>
-</dt>
-<dd></dd>
-</dl></div>
-<div class="declaration_indent">
-<pre>- (<!-- a logicalPath="//simplegeo/occ/cl/void //simplegeo/occ/tdef/void //simplegeo/occ/tag/void //simplegeo/occ/econst/void //simplegeo/occ/struct/void //simplegeo/occ/clconst/void //simplegeo/occ/intf/void" --><span class="type">void</span><!-- /a -->) <!-- a logicalPath="//simplegeo/occ/instm/setContainerImage //simplegeo/occ/clm/setContainerImage //simplegeo/occ/intfcm/setContainerImage //simplegeo/occ/intfm/setContainerImage //simplegeo/occ/func/setContainerImage //simplegeo/occ/ftmplt/setContainerImage //simplegeo/occ/defn/setContainerImage //simplegeo/occ/macro/setContainerImage" --><span class="function">setContainerImage</span><!-- /a -->:(<!-- a logicalPath="//simplegeo/occ/cl/UIImage //simplegeo/occ/tdef/UIImage //simplegeo/occ/tag/UIImage //simplegeo/occ/econst/UIImage //simplegeo/occ/struct/UIImage //simplegeo/occ/clconst/UIImage //simplegeo/occ/intf/UIImage" --><span class="type">UIImage</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//simplegeo/occ/econst/image //simplegeo/occ/data/image" --><span class="var">image</span><!-- /a -->; </pre>
-</div>
-<h5 class="tight">
-<font face="Lucida Grande,Helvetica,Arial">Discussion</font>
-</h5>
-<!-- begin discussion --><p>&#65532;If the annotation view is a subview of the AR view, it will <!-- a logicalPath="//apple_ref/ooc/instm/UIView/removeFromSuperview:" -->removeFromSuperview:<!-- /a --> 
-and call <a href="../../../../Documentation/SGAnnotationView_h/Classes/SGAnnotationView/index.html#//simplegeo/occ/instm/SGAnnotationView/inspectView:" logicalPath="//simplegeo/occ/instm/SGAnnotationView/inspectView:">inspectView:</a> with NO. The annotation view should then return back to target mode join back with
-its brothers.
-<!-- end discussion -->
-</p>
-<p></p>
 <hr>
 <!-- headerDoc=instm;  uid=//simplegeo/occ/instm/SGAnnotationView/drawAnnotationView;   name=SGAnnotationView::drawAnnotationView --><a name="//simplegeo/occ/instm/SGAnnotationView/drawAnnotationView"></a>
 <table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
@@ -149,9 +108,9 @@ this method will be called everytime the AR enviornment needs to render the view
 </div>
 <p></p>
 <hr>
-<!-- headerDoc=instm;  uid=//simplegeo/occ/instm/SGAnnotationView/initAtPoint:reuseIdentifier:;   name=SGAnnotationView::initAtPoint:reuseIdentifier: --><a name="//simplegeo/occ/instm/SGAnnotationView/initAtPoint:reuseIdentifier:"></a>
+<!-- headerDoc=instm;  uid=//simplegeo/occ/instm/SGAnnotationView/initWithFrame:reuseIdentifier:;   name=SGAnnotationView::initWithFrame:reuseIdentifier: --><a name="//simplegeo/occ/instm/SGAnnotationView/initWithFrame:reuseIdentifier:"></a>
 <table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
-<h3><a name="initAtPoint:reuseIdentifier:">initAtPoint:reuseIdentifier:</a></h3>
+<h3><a name="initWithFrame:reuseIdentifier:">initWithFrame:reuseIdentifier:</a></h3>
 </td></tr></table>
 <hr>
 <p><!-- begin abstract --></p>
@@ -159,13 +118,13 @@ this method will be called everytime the AR enviornment needs to render the view
 <!-- end abstract --></p>
 <p></p>
 <div class="declaration_indent">
-<pre>- (<!-- a logicalPath="//simplegeo/occ/cl/id //simplegeo/occ/tdef/id //simplegeo/occ/tag/id //simplegeo/occ/econst/id //simplegeo/occ/struct/id //simplegeo/occ/clconst/id //simplegeo/occ/intf/id" --><span class="type">id</span><!-- /a -->) <!-- a logicalPath="//simplegeo/occ/instm/initAtPoint //simplegeo/occ/clm/initAtPoint //simplegeo/occ/intfcm/initAtPoint //simplegeo/occ/intfm/initAtPoint //simplegeo/occ/func/initAtPoint //simplegeo/occ/ftmplt/initAtPoint //simplegeo/occ/defn/initAtPoint //simplegeo/occ/macro/initAtPoint" --><span class="function">initAtPoint</span><!-- /a -->:(<!-- a logicalPath="//simplegeo/occ/cl/CGPoint //simplegeo/occ/tdef/CGPoint //simplegeo/occ/tag/CGPoint //simplegeo/occ/econst/CGPoint //simplegeo/occ/struct/CGPoint //simplegeo/occ/clconst/CGPoint //simplegeo/occ/intf/CGPoint" --><span class="type">CGPoint</span><!-- /a -->)<span class="param">pt</span> <!-- a logicalPath="//simplegeo/occ/instm/reuseIdentifier //simplegeo/occ/clm/reuseIdentifier //simplegeo/occ/intfcm/reuseIdentifier //simplegeo/occ/intfm/reuseIdentifier //simplegeo/occ/func/reuseIdentifier //simplegeo/occ/ftmplt/reuseIdentifier //simplegeo/occ/defn/reuseIdentifier //simplegeo/occ/macro/reuseIdentifier" --><span class="function">reuseIdentifier</span><!-- /a -->:(<!-- a logicalPath="//simplegeo/occ/cl/NSString //simplegeo/occ/tdef/NSString //simplegeo/occ/tag/NSString //simplegeo/occ/econst/NSString //simplegeo/occ/struct/NSString //simplegeo/occ/clconst/NSString //simplegeo/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//simplegeo/occ/econst/identifier //simplegeo/occ/data/identifier" --><span class="var">identifier</span><!-- /a -->; </pre>
+<pre>- (<!-- a logicalPath="//simplegeo/occ/cl/id //simplegeo/occ/tdef/id //simplegeo/occ/tag/id //simplegeo/occ/econst/id //simplegeo/occ/struct/id //simplegeo/occ/clconst/id //simplegeo/occ/intf/id" --><span class="type">id</span><!-- /a -->) <!-- a logicalPath="//simplegeo/occ/instm/initWithFrame //simplegeo/occ/clm/initWithFrame //simplegeo/occ/intfcm/initWithFrame //simplegeo/occ/intfm/initWithFrame //simplegeo/occ/func/initWithFrame //simplegeo/occ/ftmplt/initWithFrame //simplegeo/occ/defn/initWithFrame //simplegeo/occ/macro/initWithFrame" --><span class="function">initWithFrame</span><!-- /a -->:(<!-- a logicalPath="//simplegeo/occ/cl/CGRect //simplegeo/occ/tdef/CGRect //simplegeo/occ/tag/CGRect //simplegeo/occ/econst/CGRect //simplegeo/occ/struct/CGRect //simplegeo/occ/clconst/CGRect //simplegeo/occ/intf/CGRect" --><span class="type">CGRect</span><!-- /a -->)<span class="param">frame</span> <!-- a logicalPath="//simplegeo/occ/instm/reuseIdentifier //simplegeo/occ/clm/reuseIdentifier //simplegeo/occ/intfcm/reuseIdentifier //simplegeo/occ/intfm/reuseIdentifier //simplegeo/occ/func/reuseIdentifier //simplegeo/occ/ftmplt/reuseIdentifier //simplegeo/occ/defn/reuseIdentifier //simplegeo/occ/macro/reuseIdentifier" --><span class="function">reuseIdentifier</span><!-- /a -->:(<!-- a logicalPath="//simplegeo/occ/cl/NSString //simplegeo/occ/tdef/NSString //simplegeo/occ/tag/NSString //simplegeo/occ/econst/NSString //simplegeo/occ/struct/NSString //simplegeo/occ/clconst/NSString //simplegeo/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//simplegeo/occ/econst/identifier //simplegeo/occ/data/identifier" --><span class="var">identifier</span><!-- /a -->; </pre>
 </div>
 <h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
 <div class="param_indent">
 <dl>
-<dt><code>pt</code></dt>
-<dd><p>The origin of the view when it is not being drawn in the AR enviornment.</p></dd>
+<dt><code>frame</code></dt>
+<dd><p>The frame of the view.</p></dd>
 <dt><code>identifier</code></dt>
 <dd><p>&#65532;The identifier for the view.</p></dd>
 </dl>
@@ -174,27 +133,6 @@ this method will be called everytime the AR enviornment needs to render the view
 <p><!-- begin return value -->A new instance of SGAnnotationView.
 
 <!-- end return value --></p>
-<p></p>
-<hr>
-<!-- headerDoc=instm;  uid=//simplegeo/occ/instm/SGAnnotationView/inspectView:;   name=SGAnnotationView::inspectView: --><a name="//simplegeo/occ/instm/SGAnnotationView/inspectView:"></a>
-<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
-<h3><a name="inspectView:">inspectView:</a></h3>
-</td></tr></table>
-<hr>
-<p><!-- begin abstract --></p>
-<p>Changes the inspection type of the view.
-<!-- end abstract --></p>
-<p></p>
-<div class="declaration_indent">
-<pre>- (<!-- a logicalPath="//simplegeo/occ/cl/void //simplegeo/occ/tdef/void //simplegeo/occ/tag/void //simplegeo/occ/econst/void //simplegeo/occ/struct/void //simplegeo/occ/clconst/void //simplegeo/occ/intf/void" --><span class="type">void</span><!-- /a -->) <!-- a logicalPath="//simplegeo/occ/instm/inspectView //simplegeo/occ/clm/inspectView //simplegeo/occ/intfcm/inspectView //simplegeo/occ/intfm/inspectView //simplegeo/occ/func/inspectView //simplegeo/occ/ftmplt/inspectView //simplegeo/occ/defn/inspectView //simplegeo/occ/macro/inspectView" --><span class="function">inspectView</span><!-- /a -->:(<!-- a logicalPath="//simplegeo/occ/cl/BOOL //simplegeo/occ/tdef/BOOL //simplegeo/occ/tag/BOOL //simplegeo/occ/econst/BOOL //simplegeo/occ/struct/BOOL //simplegeo/occ/clconst/BOOL //simplegeo/occ/intf/BOOL" --><span class="type">BOOL</span><!-- /a -->)<!-- a logicalPath="//simplegeo/occ/econst/inspect //simplegeo/occ/data/inspect" --><span class="var">inspect</span><!-- /a -->; </pre>
-</div>
-<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
-<div class="param_indent">
-<dl>
-<dt><code>inspect</code></dt>
-<dd><p>&#65532;YES will put the view in inspect mode. NO wil put the view in target mode.</p></dd>
-</dl>
-</div>
 <p></p>
 <hr>
 <!-- headerDoc=instm;  uid=//simplegeo/occ/instm/SGAnnotationView/prepareForReuse;   name=SGAnnotationView::prepareForReuse --><a name="//simplegeo/occ/instm/SGAnnotationView/prepareForReuse"></a>
@@ -217,56 +155,6 @@ and use it to put the view in a specific state.
 <!-- end discussion -->
 </p>
 <p></p>
-<hr>
-<!-- headerDoc=instm;  uid=//simplegeo/occ/instm/SGAnnotationView/setContainerImage:;   name=SGAnnotationView::setContainerImage: --><a name="//simplegeo/occ/instm/SGAnnotationView/setContainerImage:"></a>
-<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
-<h3><a name="setContainerImage:">setContainerImage:</a></h3>
-</td></tr></table>
-<hr>
-<p><!-- begin abstract --></p>
-<p>Only works in inspector mode. Returns the view back to target mode.
-<!-- end abstract --></p>
-<p></p>
-<b>See Also:</b><div class="list_indent"><dl>
-<dt>
-<a href="../../../../Documentation/SGAnnotationView_h/Classes/SGAnnotationView/index.html#//simplegeo/doc/title:instm/SGAnnotationView/close" logicalPath="//simplegeo/doc/title:instm/SGAnnotationView/close"><p>close</p></a>
-</dt>
-<dd></dd>
-</dl></div>
-<div class="declaration_indent">
-<pre>- (<!-- a logicalPath="//simplegeo/occ/cl/void //simplegeo/occ/tdef/void //simplegeo/occ/tag/void //simplegeo/occ/econst/void //simplegeo/occ/struct/void //simplegeo/occ/clconst/void //simplegeo/occ/intf/void" --><span class="type">void</span><!-- /a -->) <!-- a logicalPath="//simplegeo/occ/instm/setContainerImage //simplegeo/occ/clm/setContainerImage //simplegeo/occ/intfcm/setContainerImage //simplegeo/occ/intfm/setContainerImage //simplegeo/occ/func/setContainerImage //simplegeo/occ/ftmplt/setContainerImage //simplegeo/occ/defn/setContainerImage //simplegeo/occ/macro/setContainerImage" --><span class="function">setContainerImage</span><!-- /a -->:(<!-- a logicalPath="//simplegeo/occ/cl/UIImage //simplegeo/occ/tdef/UIImage //simplegeo/occ/tag/UIImage //simplegeo/occ/econst/UIImage //simplegeo/occ/struct/UIImage //simplegeo/occ/clconst/UIImage //simplegeo/occ/intf/UIImage" --><span class="type">UIImage</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//simplegeo/occ/econst/image //simplegeo/occ/data/image" --><span class="var">image</span><!-- /a -->; </pre>
-</div>
-<h5 class="tight">
-<font face="Lucida Grande,Helvetica,Arial">Discussion</font>
-</h5>
-<!-- begin discussion --><p>&#65532;If the annotation view is a subview of the AR view, it will <!-- a logicalPath="//apple_ref/ooc/instm/UIView/removeFromSuperview:" -->removeFromSuperview:<!-- /a --> 
-and call <a href="../../../../Documentation/SGAnnotationView_h/Classes/SGAnnotationView/index.html#//simplegeo/occ/instm/SGAnnotationView/inspectView:" logicalPath="//simplegeo/occ/instm/SGAnnotationView/inspectView:">inspectView:</a> with NO. The annotation view should then return back to target mode join back with
-its brothers.
-<!-- end discussion -->
-</p>
-<p></p>
-<hr>
-<!-- headerDoc=instm;  uid=//simplegeo/occ/instm/SGAnnotationView/setContainerImage:_DONTLINK_0;   name=SGAnnotationView::setContainerImage: --><a name="//simplegeo/occ/instm/SGAnnotationView/setContainerImage:_DONTLINK_0"></a>
-<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
-<h3><a name="setContainerImage:">setContainerImage:</a></h3>
-</td></tr></table>
-<hr>
-<p><!-- begin abstract --></p>
-<p>&#65532;The UIImage that will be displayed when this view is added to an instance of <!-- a logicalPath="//simplegeo/ooc/cl/SGAnnotationViewContainer" -->SGAnnotationViewContainer<!-- /a -->.
-The default image is the UIImage representation of the current layout of the annotaiton view.
-<!-- end abstract --></p>
-<p></p>
-<div class="declaration_indent">
-<pre>- (<!-- a logicalPath="//simplegeo/occ/cl/void //simplegeo/occ/tdef/void //simplegeo/occ/tag/void //simplegeo/occ/econst/void //simplegeo/occ/struct/void //simplegeo/occ/clconst/void //simplegeo/occ/intf/void" --><span class="type">void</span><!-- /a -->) <!-- a logicalPath="//simplegeo/occ/instm/setContainerImage //simplegeo/occ/clm/setContainerImage //simplegeo/occ/intfcm/setContainerImage //simplegeo/occ/intfm/setContainerImage //simplegeo/occ/func/setContainerImage //simplegeo/occ/ftmplt/setContainerImage //simplegeo/occ/defn/setContainerImage //simplegeo/occ/macro/setContainerImage" --><span class="function">setContainerImage</span><!-- /a -->:(<!-- a logicalPath="//simplegeo/occ/cl/UIImage //simplegeo/occ/tdef/UIImage //simplegeo/occ/tag/UIImage //simplegeo/occ/econst/UIImage //simplegeo/occ/struct/UIImage //simplegeo/occ/clconst/UIImage //simplegeo/occ/intf/UIImage" --><span class="type">UIImage</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//simplegeo/occ/econst/image //simplegeo/occ/data/image" --><span class="var">image</span><!-- /a -->; </pre>
-</div>
-<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
-<div class="param_indent">
-<dl>
-<dt><code>image</code></dt>
-<dd><p>&#65532;</p></dd>
-</dl>
-</div>
-<p></p>
 <a name="HeaderDoc_props"></a>
 <h2>Properties</h2>
 <dl>
@@ -280,11 +168,6 @@ The default image is the UIImage representation of the current layout of the ann
 <dd><p>The bearing of the view calculated from the <!-- a logicalPath="//simplegeo/ooc/instn/SGAnnotation" -->annotation<!-- /a --> 
 and the device's current location. Bearing is expressed in radians.
 </p></dd>
-<dt><tt><a href="index.html#//simplegeo/occ/instp/SGAnnotationView/closeButton" target="_top">closeButton</a></tt></dt>
-<dd><p>A close button that is used when <!-- a logicalPath="inspectoryType" -->inspectorType<!-- /a -->  is not
-in <!-- a logicalPath="kSGAnnotationViewInspectorType_Custom" -->kSGAnnotationViewInspectorType_Custom<!-- /a -->  and
-the view is in inspect mode.
-</p></dd>
 <dt><tt><a href="index.html#//simplegeo/occ/instp/SGAnnotationView/containerImage" target="_top">containerImage</a></tt></dt>
 <dd><p>The image used to display in a 
 <!-- a logicalPath="//simplegeo/ooc/cl/SGAnnotationViewContainer" -->SGAnnotationViewContainer<!-- /a -->  when the view
@@ -292,11 +175,6 @@ has reached the top of the stack.
 </p></dd>
 <dt><tt><a href="index.html#//simplegeo/occ/instp/SGAnnotationView/delegate" target="_top">delegate</a></tt></dt>
 <dd><p>The delegate that recieves inspection and close notifications.
-</p></dd>
-<dt><tt><a href="index.html#//simplegeo/occ/instp/SGAnnotationView/detailedLabel" target="_top">detailedLabel</a></tt></dt>
-<dd><p>A detailed label that is used when <a href="../../../../Documentation/SGAnnotationView_h/Classes/SGAnnotationView/index.html#//simplegeo/occ/instp/SGAnnotationView/inspectorType" logicalPath="//simplegeo/occ/instp/SGAnnotationView/inspectorType">inspectorType</a>  is not
-<!-- a logicalPath="kSGAnnotationViewInspectorType_Custom" -->kSGAnnotationViewInspectoryType_Custom<!-- /a -->  and
-the view is in inspect mode.
 </p></dd>
 <dt><tt><a href="index.html#//simplegeo/occ/instp/SGAnnotationView/distance" target="_top">distance</a></tt></dt>
 <dd><p>The distance of the view calculated from the <!-- a logicalPath="//simplegeo/ooc/instn/SGAnnotation" -->annotation<!-- /a --> 
@@ -306,12 +184,6 @@ and the device's current location. Distance is expressed in meters.
 <dd><p>Ignores the UIView components of the view, and calls <a href="../../../../Documentation/SGAnnotationView_h/Classes/SGAnnotationView/index.html#//simplegeo/occ/instm/SGAnnotationView/drawAnnotationView" logicalPath="//simplegeo/occ/instm/SGAnnotationView/drawAnnotationView">drawAnnotationView</a> 
 when it needs to be rendered in the AR enviornment.
 </p></dd>
-<dt><tt><a href="index.html#//simplegeo/occ/instp/SGAnnotationView/inspectorType" target="_top">inspectorType</a></tt></dt>
-<dd><p>The style of the view when it is being inspected.
-</p></dd>
-<dt><tt><a href="index.html#//simplegeo/occ/instp/SGAnnotationView/isBeingInspected" target="_top">isBeingInspected</a></tt></dt>
-<dd><p>If YES, the the view is in inspect mode. Otherwise; NO.
-</p></dd>
 <dt><tt><a href="index.html#//simplegeo/occ/instp/SGAnnotationView/isCapturable" target="_top">isCapturable</a></tt></dt>
 <dd><p>If YES, the view can be added to the <!-- a logicalPath="//simplegeo/ooc/cl/SGMovableStack" -->SGMovableStack<!-- /a --> . Otherwise, NO.
 </p></dd>
@@ -319,27 +191,9 @@ when it needs to be rendered in the AR enviornment.
 <dd><p>If YES, the view is either added to a <!-- a logicalPath="//simplegeo/ooc/cl/SGMovableStack" -->SGMovableStack<!-- /a -->  or
 a <!-- a logicalPath="//simplegeo/ooc/cl/SGAnnotationViewContainer" -->SGAnnotationViewContainer<!-- /a --> . Otherwise, NO.
 </p></dd>
-<dt><tt><a href="index.html#//simplegeo/occ/instp/SGAnnotationView/isSelected" target="_top">isSelected</a></tt></dt>
-<dd><p>If YES, the view is in a selected state which was either set a UITouchEvent or explicity through
-the setter. Otherwise, NO.
-</p></dd>
-<dt><tt><a href="index.html#//simplegeo/occ/instp/SGAnnotationView/messageLabel" target="_top">messageLabel</a></tt></dt>
-<dd><p>A title label that is used when <!-- a logicalPath="inspectoryType" -->inspectorType<!-- /a -->  is not
-in <!-- a logicalPath="kSGAnnotationViewInspectorType_Custom" -->kSGAnnotationViewInspectorType_Custom<!-- /a -->  and
-the view is in inspect mode.
-</p></dd>
 <dt><tt><a href="index.html#//simplegeo/occ/instp/SGAnnotationView/needNewTexture" target="_top">needNewTexture</a></tt></dt>
 <dd><p>Determines whether or not a new texture needs to be
 generated for this view.
-</p></dd>
-<dt><tt><a href="index.html#//simplegeo/occ/instp/SGAnnotationView/photoImageView" target="_top">photoImageView</a></tt></dt>
-<dd><p>A title label that is used when <!-- a logicalPath="inspectoryType" -->inspectorType<!-- /a -->  is not
-in <!-- a logicalPath="kSGAnnotationViewInspectorType_Custom" -->kSGAnnotationViewInspectorType_Custom<!-- /a -->  and
-the view is in inspect mode.
-</p></dd>
-<dt><tt><a href="index.html#//simplegeo/occ/instp/SGAnnotationView/pinColor" target="_top">pinColor</a></tt></dt>
-<dd><p>The pin color to use when the view is in target mode and <a href="../../../../Documentation/SGAnnotationView_h/Classes/SGAnnotationView/index.html#//simplegeo/occ/instp/SGAnnotationView/targetType" logicalPath="//simplegeo/occ/instp/SGAnnotationView/targetType">targetType</a>  is set
-<!-- a logicalPath="kSGAnnotationViewTargetType_Pin" -->kSGAnnotationViewTargetType_Pin<!-- /a --> . The default is <!-- a logicalPath="kSGPinColor_Red" -->kSGPinColor_Red<!-- /a --> .
 </p></dd>
 <dt><tt><a href="index.html#//simplegeo/occ/instp/SGAnnotationView/point" target="_top">point</a></tt></dt>
 <dd><p>The point at which the <a href="../../../../Documentation/SGAnnotationView_h/Classes/SGAnnotationView/index.html#//simplegeo/occ/instp/SGAnnotationView/texture" logicalPath="//simplegeo/occ/instp/SGAnnotationView/texture">texture</a>  is drawn
@@ -352,19 +206,11 @@ in the OpenGL environment.
 <dd><p>Use this identifier to dequeue unused annotation views from <!-- a logicalPath="//simplegeo/ooc/cl/SGARView" -->SGARView<!-- /a --> .
 </p></dd>
 <dt><tt><a href="index.html#//simplegeo/occ/instp/SGAnnotationView/targetImageView" target="_top">targetImageView</a></tt></dt>
-<dd><p>The image that is shown when the <a href="../../../../Documentation/SGAnnotationView_h/Classes/SGAnnotationView/index.html#//simplegeo/occ/instp/SGAnnotationView/targetType" logicalPath="//simplegeo/occ/instp/SGAnnotationView/targetType">targetType</a>  is set to
+<dd><p>The image that is shown when the <!-- a logicalPath="targetType" -->targetType<!-- /a -->  is set to
 <!-- a logicalPath="kSGAnnotationViewTargetType_Glass" -->kSGAnnotationViewTargetType_Glass<!-- /a --> .
-</p></dd>
-<dt><tt><a href="index.html#//simplegeo/occ/instp/SGAnnotationView/targetType" target="_top">targetType</a></tt></dt>
-<dd><p>The style of the view when it is not being inspected.
 </p></dd>
 <dt><tt><a href="index.html#//simplegeo/occ/instp/SGAnnotationView/texture" target="_top">texture</a></tt></dt>
 <dd><p>The texture that represents this view.
-</p></dd>
-<dt><tt><a href="index.html#//simplegeo/occ/instp/SGAnnotationView/titleLabel" target="_top">titleLabel</a></tt></dt>
-<dd><p>A title label that is used when <!-- a logicalPath="inspectoryType" -->inspectorType<!-- /a -->  is not
-in <!-- a logicalPath="kSGAnnotationViewInspectorType_Custom" -->kSGAnnotationViewInspectorType_Custom<!-- /a -->  and
-the view is in inspect mode.
 </p></dd>
 </dl>
 <hr>
@@ -396,7 +242,7 @@ the view is in inspect mode.
 <div class="declaration_indent">
 <pre>@property (
     <span class="param">nonatomic</span>,
-    <span class="param">assign</span>) <!-- a logicalPath="//simplegeo/occ/cl/id //simplegeo/occ/tdef/id //simplegeo/occ/tag/id //simplegeo/occ/econst/id //simplegeo/occ/struct/id //simplegeo/occ/clconst/id //simplegeo/occ/intf/id" --><span class="type">id</span><!-- /a -->&lt;<span class="template">MKAnnotation</span>&gt; <!-- a logicalPath="//simplegeo/occ/econst/annotation //simplegeo/occ/data/annotation" --><span class="var">annotation</span><!-- /a -->; </pre>
+    <span class="param">retain</span>) <!-- a logicalPath="//simplegeo/occ/cl/id //simplegeo/occ/tdef/id //simplegeo/occ/tag/id //simplegeo/occ/econst/id //simplegeo/occ/struct/id //simplegeo/occ/clconst/id //simplegeo/occ/intf/id" --><span class="type">id</span><!-- /a -->&lt;<span class="template">MKAnnotation</span>&gt; <!-- a logicalPath="//simplegeo/occ/econst/annotation //simplegeo/occ/data/annotation" --><span class="var">annotation</span><!-- /a -->; </pre>
 </div>
 <p></p>
 <hr>
@@ -415,31 +261,6 @@ and the device's current location. Bearing is expressed in radians.
     <span class="param">nonatomic</span>,
     <span class="param">assign</span>) <!-- a logicalPath="//simplegeo/occ/cl/double //simplegeo/occ/tdef/double //simplegeo/occ/tag/double //simplegeo/occ/econst/double //simplegeo/occ/struct/double //simplegeo/occ/clconst/double //simplegeo/occ/intf/double" --><span class="type">double</span><!-- /a --> <!-- a logicalPath="//simplegeo/occ/econst/bearing //simplegeo/occ/data/bearing" --><span class="var">bearing</span><!-- /a -->; </pre>
 </div>
-<p></p>
-<hr>
-<!-- headerDoc=instp;  uid=//simplegeo/occ/instp/SGAnnotationView/closeButton;   name=SGAnnotationView::closeButton --><a name="//simplegeo/occ/instp/SGAnnotationView/closeButton"></a>
-<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
-<h3><a name="closeButton">closeButton</a></h3>
-</td></tr></table>
-<hr>
-<p><!-- begin abstract --></p>
-<p>A close button that is used when <!-- a logicalPath="inspectoryType" -->inspectorType<!-- /a -->  is not
-in <!-- a logicalPath="kSGAnnotationViewInspectorType_Custom" -->kSGAnnotationViewInspectorType_Custom<!-- /a --> and
-the view is in inspect mode.
-<!-- end abstract --></p>
-<p></p>
-<div class="declaration_indent">
-<pre>@property (
-    <span class="param">nonatomic</span>,
-    <span class="param">retain</span>,
-    <span class="param">readonly</span>) <!-- a logicalPath="//simplegeo/occ/cl/UIButton //simplegeo/occ/tdef/UIButton //simplegeo/occ/tag/UIButton //simplegeo/occ/econst/UIButton //simplegeo/occ/struct/UIButton //simplegeo/occ/clconst/UIButton //simplegeo/occ/intf/UIButton" --><span class="type">UIButton</span><!-- /a --><span class="type">*</span> <!-- a logicalPath="//simplegeo/occ/econst/closeButton //simplegeo/occ/data/closeButton" --><span class="var">closeButton</span><!-- /a -->; </pre>
-</div>
-<h5 class="tight">
-<font face="Lucida Grande,Helvetica,Arial">Discussion</font>
-</h5>
-<!-- begin discussion --><p>The default position is in the upper left-hand corner of the view.
-<!-- end discussion -->
-</p>
 <p></p>
 <hr>
 <!-- headerDoc=instp;  uid=//simplegeo/occ/instp/SGAnnotationView/containerImage;   name=SGAnnotationView::containerImage --><a name="//simplegeo/occ/instp/SGAnnotationView/containerImage"></a>
@@ -473,25 +294,6 @@ has reached the top of the stack.
 <pre>@property (
     <span class="param">nonatomic</span>,
     <span class="param">assign</span>) <!-- a logicalPath="//simplegeo/occ/cl/id //simplegeo/occ/tdef/id //simplegeo/occ/tag/id //simplegeo/occ/econst/id //simplegeo/occ/struct/id //simplegeo/occ/clconst/id //simplegeo/occ/intf/id" --><span class="type">id</span><!-- /a -->&lt;<span class="template">SGAnnotationViewDelegate</span>&gt; <!-- a logicalPath="//simplegeo/occ/econst/delegate //simplegeo/occ/data/delegate" --><span class="var">delegate</span><!-- /a -->; </pre>
-</div>
-<p></p>
-<hr>
-<!-- headerDoc=instp;  uid=//simplegeo/occ/instp/SGAnnotationView/detailedLabel;   name=SGAnnotationView::detailedLabel --><a name="//simplegeo/occ/instp/SGAnnotationView/detailedLabel"></a>
-<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
-<h3><a name="detailedLabel">detailedLabel</a></h3>
-</td></tr></table>
-<hr>
-<p><!-- begin abstract --></p>
-<p>A detailed label that is used when <a href="../../../../Documentation/SGAnnotationView_h/Classes/SGAnnotationView/index.html#//simplegeo/occ/instp/SGAnnotationView/inspectorType" logicalPath="//simplegeo/occ/instp/SGAnnotationView/inspectorType">inspectorType</a>  is not
-<!-- a logicalPath="kSGAnnotationViewInspectorType_Custom" -->kSGAnnotationViewInspectoryType_Custom<!-- /a --> and
-the view is in inspect mode.
-<!-- end abstract --></p>
-<p></p>
-<div class="declaration_indent">
-<pre>@property (
-    <span class="param">nonatomic</span>,
-    <span class="param">retain</span>,
-    <span class="param">readonly</span>) <!-- a logicalPath="//simplegeo/occ/cl/UILabel //simplegeo/occ/tdef/UILabel //simplegeo/occ/tag/UILabel //simplegeo/occ/econst/UILabel //simplegeo/occ/struct/UILabel //simplegeo/occ/clconst/UILabel //simplegeo/occ/intf/UILabel" --><span class="type">UILabel</span><!-- /a --><span class="type">*</span> <!-- a logicalPath="//simplegeo/occ/econst/detailedLabel //simplegeo/occ/data/detailedLabel" --><span class="var">detailedLabel</span><!-- /a -->; </pre>
 </div>
 <p></p>
 <hr>
@@ -529,38 +331,6 @@ when it needs to be rendered in the AR enviornment.
 </div>
 <p></p>
 <hr>
-<!-- headerDoc=instp;  uid=//simplegeo/occ/instp/SGAnnotationView/inspectorType;   name=SGAnnotationView::inspectorType --><a name="//simplegeo/occ/instp/SGAnnotationView/inspectorType"></a>
-<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
-<h3><a name="inspectorType">inspectorType</a></h3>
-</td></tr></table>
-<hr>
-<p><!-- begin abstract --></p>
-<p>The style of the view when it is being inspected.
-<!-- end abstract --></p>
-<p></p>
-<div class="declaration_indent">
-<pre>@property (
-    <span class="param">nonatomic</span>,
-    <span class="param">assign</span>) <a href="../../../../Documentation/SGAnnotationView_h/index.html#//simplegeo/c/tag/SGAnnotationViewInspectorType" logicalPath="//simplegeo/occ/cl/SGAnnotationViewInspectorType //simplegeo/occ/tdef/SGAnnotationViewInspectorType //simplegeo/occ/tag/SGAnnotationViewInspectorType"><span class="type">SGAnnotationViewInspectorType</span></a> <!-- a logicalPath="//simplegeo/occ/econst/inspectorType //simplegeo/occ/data/inspectorType" --><span class="var">inspectorType</span><!-- /a -->; </pre>
-</div>
-<p></p>
-<hr>
-<!-- headerDoc=instp;  uid=//simplegeo/occ/instp/SGAnnotationView/isBeingInspected;   name=SGAnnotationView::isBeingInspected --><a name="//simplegeo/occ/instp/SGAnnotationView/isBeingInspected"></a>
-<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
-<h3><a name="isBeingInspected">isBeingInspected</a></h3>
-</td></tr></table>
-<hr>
-<p><!-- begin abstract --></p>
-<p>If YES, the the view is in inspect mode. Otherwise; NO.
-<!-- end abstract --></p>
-<p></p>
-<div class="declaration_indent">
-<pre>@property (
-    <span class="param">nonatomic</span>,
-    <span class="param">readonly</span>) <!-- a logicalPath="//simplegeo/occ/cl/BOOL //simplegeo/occ/tdef/BOOL //simplegeo/occ/tag/BOOL //simplegeo/occ/econst/BOOL //simplegeo/occ/struct/BOOL //simplegeo/occ/clconst/BOOL //simplegeo/occ/intf/BOOL" --><span class="type">BOOL</span><!-- /a --> <!-- a logicalPath="//simplegeo/occ/econst/isBeingInspected //simplegeo/occ/data/isBeingInspected" --><span class="var">isBeingInspected</span><!-- /a -->; </pre>
-</div>
-<p></p>
-<hr>
 <!-- headerDoc=instp;  uid=//simplegeo/occ/instp/SGAnnotationView/isCapturable;   name=SGAnnotationView::isCapturable --><a name="//simplegeo/occ/instp/SGAnnotationView/isCapturable"></a>
 <table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
 <h3><a name="isCapturable">isCapturable</a></h3>
@@ -594,42 +364,6 @@ a <!-- a logicalPath="//simplegeo/ooc/cl/SGAnnotationViewContainer" -->SGAnnotat
 </div>
 <p></p>
 <hr>
-<!-- headerDoc=instp;  uid=//simplegeo/occ/instp/SGAnnotationView/isSelected;   name=SGAnnotationView::isSelected --><a name="//simplegeo/occ/instp/SGAnnotationView/isSelected"></a>
-<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
-<h3><a name="isSelected">isSelected</a></h3>
-</td></tr></table>
-<hr>
-<p><!-- begin abstract --></p>
-<p>If YES, the view is in a selected state which was either set a UITouchEvent or explicity through
-the setter. Otherwise, NO.
-<!-- end abstract --></p>
-<p></p>
-<div class="declaration_indent">
-<pre>@property (
-    <span class="param">nonatomic</span>,
-    <span class="param">assign</span>) <!-- a logicalPath="//simplegeo/occ/cl/BOOL //simplegeo/occ/tdef/BOOL //simplegeo/occ/tag/BOOL //simplegeo/occ/econst/BOOL //simplegeo/occ/struct/BOOL //simplegeo/occ/clconst/BOOL //simplegeo/occ/intf/BOOL" --><span class="type">BOOL</span><!-- /a --> <!-- a logicalPath="//simplegeo/occ/econst/isSelected //simplegeo/occ/data/isSelected" --><span class="var">isSelected</span><!-- /a -->; </pre>
-</div>
-<p></p>
-<hr>
-<!-- headerDoc=instp;  uid=//simplegeo/occ/instp/SGAnnotationView/messageLabel;   name=SGAnnotationView::messageLabel --><a name="//simplegeo/occ/instp/SGAnnotationView/messageLabel"></a>
-<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
-<h3><a name="messageLabel">messageLabel</a></h3>
-</td></tr></table>
-<hr>
-<p><!-- begin abstract --></p>
-<p>A title label that is used when <!-- a logicalPath="inspectoryType" -->inspectorType<!-- /a -->  is not
-in <!-- a logicalPath="kSGAnnotationViewInspectorType_Custom" -->kSGAnnotationViewInspectorType_Custom<!-- /a --> and
-the view is in inspect mode.
-<!-- end abstract --></p>
-<p></p>
-<div class="declaration_indent">
-<pre>@property (
-    <span class="param">nonatomic</span>,
-    <span class="param">retain</span>,
-    <span class="param">readonly</span>) <!-- a logicalPath="//simplegeo/occ/cl/UILabel //simplegeo/occ/tdef/UILabel //simplegeo/occ/tag/UILabel //simplegeo/occ/econst/UILabel //simplegeo/occ/struct/UILabel //simplegeo/occ/clconst/UILabel //simplegeo/occ/intf/UILabel" --><span class="type">UILabel</span><!-- /a --><span class="type">*</span> <!-- a logicalPath="//simplegeo/occ/econst/messageLabel //simplegeo/occ/data/messageLabel" --><span class="var">messageLabel</span><!-- /a -->; </pre>
-</div>
-<p></p>
-<hr>
 <!-- headerDoc=instp;  uid=//simplegeo/occ/instp/SGAnnotationView/needNewTexture;   name=SGAnnotationView::needNewTexture --><a name="//simplegeo/occ/instp/SGAnnotationView/needNewTexture"></a>
 <table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
 <h3><a name="needNewTexture">needNewTexture</a></h3>
@@ -644,42 +378,6 @@ generated for this view.
 <pre>@property (
     <span class="param">nonatomic</span>,
     <span class="param">assign</span>) <!-- a logicalPath="//simplegeo/occ/cl/BOOL //simplegeo/occ/tdef/BOOL //simplegeo/occ/tag/BOOL //simplegeo/occ/econst/BOOL //simplegeo/occ/struct/BOOL //simplegeo/occ/clconst/BOOL //simplegeo/occ/intf/BOOL" --><span class="type">BOOL</span><!-- /a --> <!-- a logicalPath="//simplegeo/occ/econst/needNewTexture //simplegeo/occ/data/needNewTexture" --><span class="var">needNewTexture</span><!-- /a -->; </pre>
-</div>
-<p></p>
-<hr>
-<!-- headerDoc=instp;  uid=//simplegeo/occ/instp/SGAnnotationView/photoImageView;   name=SGAnnotationView::photoImageView --><a name="//simplegeo/occ/instp/SGAnnotationView/photoImageView"></a>
-<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
-<h3><a name="photoImageView">photoImageView</a></h3>
-</td></tr></table>
-<hr>
-<p><!-- begin abstract --></p>
-<p>A title label that is used when <!-- a logicalPath="inspectoryType" -->inspectorType<!-- /a -->  is not
-in <!-- a logicalPath="kSGAnnotationViewInspectorType_Custom" -->kSGAnnotationViewInspectorType_Custom<!-- /a --> and
-the view is in inspect mode.
-<!-- end abstract --></p>
-<p></p>
-<div class="declaration_indent">
-<pre>@property (
-    <span class="param">nonatomic</span>,
-    <span class="param">retain</span>,
-    <span class="param">readonly</span>) <!-- a logicalPath="//simplegeo/occ/cl/UIImageView //simplegeo/occ/tdef/UIImageView //simplegeo/occ/tag/UIImageView //simplegeo/occ/econst/UIImageView //simplegeo/occ/struct/UIImageView //simplegeo/occ/clconst/UIImageView //simplegeo/occ/intf/UIImageView" --><span class="type">UIImageView</span><!-- /a --><span class="type">*</span> <!-- a logicalPath="//simplegeo/occ/econst/photoImageView //simplegeo/occ/data/photoImageView" --><span class="var">photoImageView</span><!-- /a -->; </pre>
-</div>
-<p></p>
-<hr>
-<!-- headerDoc=instp;  uid=//simplegeo/occ/instp/SGAnnotationView/pinColor;   name=SGAnnotationView::pinColor --><a name="//simplegeo/occ/instp/SGAnnotationView/pinColor"></a>
-<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
-<h3><a name="pinColor">pinColor</a></h3>
-</td></tr></table>
-<hr>
-<p><!-- begin abstract --></p>
-<p>The pin color to use when the view is in target mode and <a href="../../../../Documentation/SGAnnotationView_h/Classes/SGAnnotationView/index.html#//simplegeo/occ/instp/SGAnnotationView/targetType" logicalPath="//simplegeo/occ/instp/SGAnnotationView/targetType">targetType</a>  is set
-<!-- a logicalPath="kSGAnnotationViewTargetType_Pin" -->kSGAnnotationViewTargetType_Pin<!-- /a --> . The default is <!-- a logicalPath="kSGPinColor_Red" -->kSGPinColor_Red<!-- /a -->.
-<!-- end abstract --></p>
-<p></p>
-<div class="declaration_indent">
-<pre>@property (
-    <span class="param">nonatomic</span>,
-    <span class="param">assign</span>) <!-- a logicalPath="//simplegeo/occ/cl/SGPinColor //simplegeo/occ/tdef/SGPinColor //simplegeo/occ/tag/SGPinColor //simplegeo/occ/econst/SGPinColor //simplegeo/occ/struct/SGPinColor //simplegeo/occ/clconst/SGPinColor //simplegeo/occ/intf/SGPinColor" --><span class="type">SGPinColor</span><!-- /a --> <!-- a logicalPath="//simplegeo/occ/econst/pinColor //simplegeo/occ/data/pinColor" --><span class="var">pinColor</span><!-- /a -->; </pre>
 </div>
 <p></p>
 <hr>
@@ -747,7 +445,7 @@ on the <!-- a logicalPath="//simplegeo/ooc/cl/SG3DOverlayView" -->SG3DOverlayVie
 </td></tr></table>
 <hr>
 <p><!-- begin abstract --></p>
-<p>The image that is shown when the <a href="../../../../Documentation/SGAnnotationView_h/Classes/SGAnnotationView/index.html#//simplegeo/occ/instp/SGAnnotationView/targetType" logicalPath="//simplegeo/occ/instp/SGAnnotationView/targetType">targetType</a>  is set to
+<p>The image that is shown when the <!-- a logicalPath="targetType" -->targetType<!-- /a -->  is set to
 <!-- a logicalPath="kSGAnnotationViewTargetType_Glass" -->kSGAnnotationViewTargetType_Glass<!-- /a -->.
 <!-- end abstract --></p>
 <p></p>
@@ -756,22 +454,6 @@ on the <!-- a logicalPath="//simplegeo/ooc/cl/SG3DOverlayView" -->SG3DOverlayVie
     <span class="param">nonatomic</span>,
     <span class="param">retain</span>,
     <span class="param">readonly</span>) <!-- a logicalPath="//simplegeo/occ/cl/UIImageView //simplegeo/occ/tdef/UIImageView //simplegeo/occ/tag/UIImageView //simplegeo/occ/econst/UIImageView //simplegeo/occ/struct/UIImageView //simplegeo/occ/clconst/UIImageView //simplegeo/occ/intf/UIImageView" --><span class="type">UIImageView</span><!-- /a --><span class="type">*</span> <!-- a logicalPath="//simplegeo/occ/econst/targetImageView //simplegeo/occ/data/targetImageView" --><span class="var">targetImageView</span><!-- /a -->; </pre>
-</div>
-<p></p>
-<hr>
-<!-- headerDoc=instp;  uid=//simplegeo/occ/instp/SGAnnotationView/targetType;   name=SGAnnotationView::targetType --><a name="//simplegeo/occ/instp/SGAnnotationView/targetType"></a>
-<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
-<h3><a name="targetType">targetType</a></h3>
-</td></tr></table>
-<hr>
-<p><!-- begin abstract --></p>
-<p>The style of the view when it is not being inspected.
-<!-- end abstract --></p>
-<p></p>
-<div class="declaration_indent">
-<pre>@property (
-    <span class="param">nonatomic</span>,
-    <span class="param">assign</span>) <a href="../../../../Documentation/SGAnnotationView_h/index.html#//simplegeo/c/tag/SGAnnotationViewTargetType" logicalPath="//simplegeo/occ/cl/SGAnnotationViewTargetType //simplegeo/occ/tdef/SGAnnotationViewTargetType //simplegeo/occ/tag/SGAnnotationViewTargetType"><span class="type">SGAnnotationViewTargetType</span></a> <!-- a logicalPath="//simplegeo/occ/econst/targetType //simplegeo/occ/data/targetType" --><span class="var">targetType</span><!-- /a -->; </pre>
 </div>
 <p></p>
 <hr>
@@ -787,33 +469,14 @@ on the <!-- a logicalPath="//simplegeo/ooc/cl/SG3DOverlayView" -->SG3DOverlayVie
 <div class="declaration_indent">
 <pre>@property (
     <span class="param">nonatomic</span>,
-    <span class="param">readonly</span>) <a href="../../../../Documentation/SGTexture_h/Classes/SGTexture/index.html#//simplegeo/occ/cl/SGTexture" logicalPath="//simplegeo/occ/cl/SGTexture"><span class="type">SGTexture</span></a><span class="type">*</span> <!-- a logicalPath="//simplegeo/occ/econst/texture //simplegeo/occ/data/texture" --><span class="var">texture</span><!-- /a -->; </pre>
-</div>
-<p></p>
-<hr>
-<!-- headerDoc=instp;  uid=//simplegeo/occ/instp/SGAnnotationView/titleLabel;   name=SGAnnotationView::titleLabel --><a name="//simplegeo/occ/instp/SGAnnotationView/titleLabel"></a>
-<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
-<h3><a name="titleLabel">titleLabel</a></h3>
-</td></tr></table>
-<hr>
-<p><!-- begin abstract --></p>
-<p>A title label that is used when <!-- a logicalPath="inspectoryType" -->inspectorType<!-- /a -->  is not
-in <!-- a logicalPath="kSGAnnotationViewInspectorType_Custom" -->kSGAnnotationViewInspectorType_Custom<!-- /a --> and
-the view is in inspect mode.
-<!-- end abstract --></p>
-<p></p>
-<div class="declaration_indent">
-<pre>@property (
-    <span class="param">nonatomic</span>,
-    <span class="param">retain</span>,
-    <span class="param">readonly</span>) <!-- a logicalPath="//simplegeo/occ/cl/UILabel //simplegeo/occ/tdef/UILabel //simplegeo/occ/tag/UILabel //simplegeo/occ/econst/UILabel //simplegeo/occ/struct/UILabel //simplegeo/occ/clconst/UILabel //simplegeo/occ/intf/UILabel" --><span class="type">UILabel</span><!-- /a --><span class="type">*</span> <!-- a logicalPath="//simplegeo/occ/econst/titleLabel //simplegeo/occ/data/titleLabel" --><span class="var">titleLabel</span><!-- /a -->; </pre>
+    <span class="param">readonly</span>) <!-- a logicalPath="//simplegeo/occ/cl/SGTexture //simplegeo/occ/tdef/SGTexture //simplegeo/occ/tag/SGTexture //simplegeo/occ/econst/SGTexture //simplegeo/occ/struct/SGTexture //simplegeo/occ/clconst/SGTexture //simplegeo/occ/intf/SGTexture" --><span class="type">SGTexture</span><!-- /a --><span class="type">*</span> <!-- a logicalPath="//simplegeo/occ/econst/texture //simplegeo/occ/data/texture" --><span class="var">texture</span><!-- /a -->; </pre>
 </div>
 <p></p>
 <p><!-- start of footer -->
 
 <!-- end of footer -->
 </p>
-<p>&copy; SimpleGeo Last Updated: 05/21/2010
+<p>&copy; SimpleGeo Last Updated: 08/27/2010
 </p>
 </div>
 </body>

@@ -93,7 +93,16 @@ touch events and gestures.
 registered with the <!-- a logicalPath="//simplegeo/ooc/cl/SGARView" -->SGARView<!-- /a --> .
 </p></dd>
 <dt><tt><a href="index.html#//simplegeo/occ/instm/SGARView/reloadData" target="_top">-reloadData</a></tt></dt>
-<dd><p>&#65532; Removes all annotation views from the envoirnment and loads in a new data set from <a href="../../../../Documentation/SGARView_h/Classes/SGARView/index.html#//simplegeo/occ/instp/SGARView/dataSource" logicalPath="//simplegeo/occ/instp/SGARView/dataSource">dataSource</a> .
+<dd><p>&#65532; Removes all annotation views from the envoirnment and loads in a new data set from <a href="../../../../Documentation/SGARView_h/Classes/SGARView/index.html#//simplegeo/occ/instp/SGARView/dataSource" logicalPath="//simplegeo/occ/instp/SGARView/dataSource">dataSource</a> 
+using the devices current location.
+</p></dd>
+<dt><tt><a href="index.html#//simplegeo/doc/title:instm/SGARView/reloadData" target="_top">-reloadData</a></tt></dt>
+<dd><p>&#65532; Removes all annotation views from the envoirnment and loads in a new data set from <a href="../../../../Documentation/SGARView_h/Classes/SGARView/index.html#//simplegeo/occ/instp/SGARView/dataSource" logicalPath="//simplegeo/occ/instp/SGARView/dataSource">dataSource</a> 
+using the location passed in.
+</p></dd>
+<dt><tt><a href="index.html#//simplegeo/occ/instm/SGARView/reloadDataForLocation:" target="_top">-reloadDataForLocation:</a></tt></dt>
+<dd><p>&#65532; Removes all annotation views from the envoirnment and loads in a new data set from <a href="../../../../Documentation/SGARView_h/Classes/SGARView/index.html#//simplegeo/occ/instp/SGARView/dataSource" logicalPath="//simplegeo/occ/instp/SGARView/dataSource">dataSource</a> 
+using the location passed in.
 </p></dd>
 <dt><tt><a href="index.html#//simplegeo/occ/instm/SGARView/removeContainer:" target="_top">-removeContainer:</a></tt></dt>
 <dd><p>Remove the conatiner from its superview and unregister it from touch events.
@@ -174,7 +183,7 @@ touch events and gestures.
 <h5 class="tight">
 <font face="Lucida Grande,Helvetica,Arial">Discussion</font>
 </h5>
-<!-- begin discussion --><p>This is much different then <a href="../../../../Documentation/SGARView_h/Classes/SGARView/index.html#//simplegeo/occ/instm/SGARView/reloadData" logicalPath="//simplegeo/occ/instm/SGARView/reloadData">reloadData</a> . It does not go through the entire
+<!-- begin discussion --><p>This is much different then <a href="../../../../Documentation/SGARView_h/Classes/SGARView/index.html#//simplegeo/doc/title:instm/SGARView/reloadData" logicalPath="//simplegeo/doc/title:instm/SGARView/reloadData">reloadData</a> . It does not go through the entire
 process of asking the <a href="../../../../Documentation/SGARView_h/Classes/SGARView/index.html#//simplegeo/occ/instp/SGARView/dataSource" logicalPath="//simplegeo/occ/instp/SGARView/dataSource">dataSource</a> for new annotations. It assumes that you no longer
 want to display anything in the AR enviornment and that your only desire is to have a blank camera view.
 <!-- end discussion -->
@@ -209,7 +218,7 @@ want to display anything in the AR enviornment and that your only desire is to h
 <font face="Lucida Grande,Helvetica,Arial">Discussion</font>
 </h5>
 <!-- begin discussion --><p>This methods behaves identically to that of UITableView's dequeue method. After a call
-to <a href="../../../../Documentation/SGARView_h/Classes/SGARView/index.html#//simplegeo/occ/instm/SGARView/reloadData" logicalPath="//simplegeo/occ/instm/SGARView/reloadData">reloadData</a>, the view will remove all views from the enviornment and
+to <a href="../../../../Documentation/SGARView_h/Classes/SGARView/index.html#//simplegeo/doc/title:instm/SGARView/reloadData" logicalPath="//simplegeo/doc/title:instm/SGARView/reloadData">reloadData</a>, the view will remove all views from the enviornment and
 prepare them all for reuse.
 <!-- end discussion -->
 </p>
@@ -240,7 +249,8 @@ registered with the <!-- a logicalPath="//simplegeo/ooc/cl/SGARView" -->SGARView
 </td></tr></table>
 <hr>
 <p><!-- begin abstract --></p>
-<p>&#65532; Removes all annotation views from the envoirnment and loads in a new data set from <a href="../../../../Documentation/SGARView_h/Classes/SGARView/index.html#//simplegeo/occ/instp/SGARView/dataSource" logicalPath="//simplegeo/occ/instp/SGARView/dataSource">dataSource</a>.
+<p>&#65532; Removes all annotation views from the envoirnment and loads in a new data set from <a href="../../../../Documentation/SGARView_h/Classes/SGARView/index.html#//simplegeo/occ/instp/SGARView/dataSource" logicalPath="//simplegeo/occ/instp/SGARView/dataSource">dataSource</a>
+using the devices current location.
 <!-- end abstract --></p>
 <p></p>
 <div class="declaration_indent">
@@ -249,7 +259,77 @@ registered with the <!-- a logicalPath="//simplegeo/ooc/cl/SGARView" -->SGARView
 <h5 class="tight">
 <font face="Lucida Grande,Helvetica,Arial">Discussion</font>
 </h5>
-<!-- begin discussion --><p>Once reloadData is called, all annotaiton views are sent <!-- a logicalPath="//simplegeo/ooc/instm/SGAnnotationView/prepareForReuse" -->prepareForReuses<!-- /a -->.
+<!-- begin discussion --><p>Once reloadData is called, all annotaiton views are sent <!-- a logicalPath="//simplegeo/ooc/instm/SGAnnotationView/prepareForReuse" -->prepareForReuse<!-- /a -->.
+The views are then awaiting to be dequeue and resused.
+<!-- end discussion -->
+</p>
+<p></p>
+<hr>
+<!-- headerDoc=title:instm;  uid=//simplegeo/doc/title:instm/SGARView/reloadData;   name=SGARView::reloadData --><a name="//simplegeo/doc/title:instm/SGARView/reloadData"></a>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="reloadData">reloadData</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --></p>
+<p>&#65532; Removes all annotation views from the envoirnment and loads in a new data set from <a href="../../../../Documentation/SGARView_h/Classes/SGARView/index.html#//simplegeo/occ/instp/SGARView/dataSource" logicalPath="//simplegeo/occ/instp/SGARView/dataSource">dataSource</a>
+using the location passed in.
+<!-- end abstract --></p>
+<p></p>
+<b>See Also:</b><div class="list_indent"><dl>
+<dt>
+<a href="../../../../Documentation/SGARView_h/Classes/SGARView/index.html#//simplegeo/occ/instm/SGARView/reloadDataForLocation:" logicalPath="//simplegeo/occ/instm/SGARView/reloadDataForLocation:"><p>reloadDataForLocation:</p></a>
+</dt>
+<dd></dd>
+</dl></div>
+<div class="declaration_indent">
+<pre>- (<!-- a logicalPath="//simplegeo/occ/cl/void //simplegeo/occ/tdef/void //simplegeo/occ/tag/void //simplegeo/occ/econst/void //simplegeo/occ/struct/void //simplegeo/occ/clconst/void //simplegeo/occ/intf/void" --><span class="type">void</span><!-- /a -->) <!-- a logicalPath="//simplegeo/occ/instm/reloadDataForLocation //simplegeo/occ/clm/reloadDataForLocation //simplegeo/occ/intfcm/reloadDataForLocation //simplegeo/occ/intfm/reloadDataForLocation //simplegeo/occ/func/reloadDataForLocation //simplegeo/occ/ftmplt/reloadDataForLocation //simplegeo/occ/defn/reloadDataForLocation //simplegeo/occ/macro/reloadDataForLocation" --><span class="function">reloadDataForLocation</span><!-- /a -->:(<!-- a logicalPath="//simplegeo/occ/cl/CLLocation //simplegeo/occ/tdef/CLLocation //simplegeo/occ/tag/CLLocation //simplegeo/occ/econst/CLLocation //simplegeo/occ/struct/CLLocation //simplegeo/occ/clconst/CLLocation //simplegeo/occ/intf/CLLocation" --><span class="type">CLLocation</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//simplegeo/occ/econst/location //simplegeo/occ/data/location" --><span class="var">location</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt><code>location</code></dt>
+<dd><p>The location to load data for.</p></dd>
+</dl>
+</div>
+<h5 class="tight">
+<font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5>
+<!-- begin discussion --><p>Once reloadData is called, all annotaiton views are sent <!-- a logicalPath="//simplegeo/ooc/instm/SGAnnotationView/prepareForReuse" -->prepareForReuse<!-- /a -->.
+The views are then awaiting to be dequeue and resused.
+<!-- end discussion -->
+</p>
+<p></p>
+<hr>
+<!-- headerDoc=instm;  uid=//simplegeo/occ/instm/SGARView/reloadDataForLocation:;   name=SGARView::reloadDataForLocation: --><a name="//simplegeo/occ/instm/SGARView/reloadDataForLocation:"></a>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="reloadDataForLocation:">reloadDataForLocation:</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --></p>
+<p>&#65532; Removes all annotation views from the envoirnment and loads in a new data set from <a href="../../../../Documentation/SGARView_h/Classes/SGARView/index.html#//simplegeo/occ/instp/SGARView/dataSource" logicalPath="//simplegeo/occ/instp/SGARView/dataSource">dataSource</a>
+using the location passed in.
+<!-- end abstract --></p>
+<p></p>
+<b>See Also:</b><div class="list_indent"><dl>
+<dt>
+<a href="../../../../Documentation/SGARView_h/Classes/SGARView/index.html#//simplegeo/doc/title:instm/SGARView/reloadData" logicalPath="//simplegeo/doc/title:instm/SGARView/reloadData"><p>reloadData</p></a>
+</dt>
+<dd></dd>
+</dl></div>
+<div class="declaration_indent">
+<pre>- (<!-- a logicalPath="//simplegeo/occ/cl/void //simplegeo/occ/tdef/void //simplegeo/occ/tag/void //simplegeo/occ/econst/void //simplegeo/occ/struct/void //simplegeo/occ/clconst/void //simplegeo/occ/intf/void" --><span class="type">void</span><!-- /a -->) <!-- a logicalPath="//simplegeo/occ/instm/reloadDataForLocation //simplegeo/occ/clm/reloadDataForLocation //simplegeo/occ/intfcm/reloadDataForLocation //simplegeo/occ/intfm/reloadDataForLocation //simplegeo/occ/func/reloadDataForLocation //simplegeo/occ/ftmplt/reloadDataForLocation //simplegeo/occ/defn/reloadDataForLocation //simplegeo/occ/macro/reloadDataForLocation" --><span class="function">reloadDataForLocation</span><!-- /a -->:(<!-- a logicalPath="//simplegeo/occ/cl/CLLocation //simplegeo/occ/tdef/CLLocation //simplegeo/occ/tag/CLLocation //simplegeo/occ/econst/CLLocation //simplegeo/occ/struct/CLLocation //simplegeo/occ/clconst/CLLocation //simplegeo/occ/intf/CLLocation" --><span class="type">CLLocation</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//simplegeo/occ/econst/location //simplegeo/occ/data/location" --><span class="var">location</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt><code>location</code></dt>
+<dd><p>The location to load data for.</p></dd>
+</dl>
+</div>
+<h5 class="tight">
+<font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5>
+<!-- begin discussion --><p>Once reloadData is called, all annotaiton views are sent <!-- a logicalPath="//simplegeo/ooc/instm/SGAnnotationView/prepareForReuse" -->prepareForReuse<!-- /a -->.
 The views are then awaiting to be dequeue and resused.
 <!-- end discussion -->
 </p>
@@ -474,7 +554,7 @@ is produced over a <!-- a logicalPath="//simplegeo/ooc/cl/SGAnnotationView" -->a
 <div class="declaration_indent">
 <pre>@property (
     <span class="param">nonatomic</span>,
-    <span class="param">retain</span>) <a href="../../../../Documentation/SGMovableStack_h/Classes/SGMovableStack/index.html#//simplegeo/occ/cl/SGMovableStack" logicalPath="//simplegeo/occ/cl/SGMovableStack"><span class="type">SGMovableStack</span></a><span class="type">*</span> <!-- a logicalPath="//simplegeo/occ/econst/movableStack //simplegeo/occ/data/movableStack" --><span class="var">movableStack</span><!-- /a -->; </pre>
+    <span class="param">retain</span>) <!-- a logicalPath="//simplegeo/occ/cl/SGMovableStack //simplegeo/occ/tdef/SGMovableStack //simplegeo/occ/tag/SGMovableStack //simplegeo/occ/econst/SGMovableStack //simplegeo/occ/struct/SGMovableStack //simplegeo/occ/clconst/SGMovableStack //simplegeo/occ/intf/SGMovableStack" --><span class="type">SGMovableStack</span><!-- /a --><span class="type">*</span> <!-- a logicalPath="//simplegeo/occ/econst/movableStack //simplegeo/occ/data/movableStack" --><span class="var">movableStack</span><!-- /a -->; </pre>
 </div>
 <h5 class="tight">
 <font face="Lucida Grande,Helvetica,Arial">Discussion</font>
@@ -497,7 +577,7 @@ this property to nil in order to not allow views to be collected.
 <div class="declaration_indent">
 <pre>@property (
     <span class="param">nonatomic</span>,
-    <span class="param">retain</span>) <a href="../../../../Documentation/SGRadar_h/Classes/SGRadar/index.html#//simplegeo/occ/cl/SGRadar" logicalPath="//simplegeo/occ/cl/SGRadar"><span class="type">SGRadar</span></a><span class="type">*</span> <!-- a logicalPath="//simplegeo/occ/econst/radar //simplegeo/occ/data/radar" --><span class="var">radar</span><!-- /a -->; </pre>
+    <span class="param">retain</span>) <!-- a logicalPath="//simplegeo/occ/cl/SGRadar //simplegeo/occ/tdef/SGRadar //simplegeo/occ/tag/SGRadar //simplegeo/occ/econst/SGRadar //simplegeo/occ/struct/SGRadar //simplegeo/occ/clconst/SGRadar //simplegeo/occ/intf/SGRadar" --><span class="type">SGRadar</span><!-- /a --><span class="type">*</span> <!-- a logicalPath="//simplegeo/occ/econst/radar //simplegeo/occ/data/radar" --><span class="var">radar</span><!-- /a -->; </pre>
 </div>
 <p></p>
 <hr>
@@ -531,7 +611,7 @@ for the walking offset to be applied to the environment when the proper control 
 
 <!-- end of footer -->
 </p>
-<p>&copy; SimpleGeo Last Updated: 05/21/2010
+<p>&copy; SimpleGeo Last Updated: 08/27/2010
 </p>
 </div>
 </body>
