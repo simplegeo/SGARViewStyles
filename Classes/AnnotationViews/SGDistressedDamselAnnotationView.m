@@ -37,30 +37,25 @@
 @interface SGDistressedDamselAnnotationView (Private)
 
 - (UIImage*) imageForDamsel:(SGDamsel)desiredDamsel;
+- (void) assignDamsel;
 
 @end
 
-
 @implementation SGDistressedDamselAnnotationView
 
-- (id) initAtPoint:(CGPoint)pt reuseIdentifier:(NSString *)identifier
+- (id) initWithFrame:(CGRect)frame reuseIdentifier:(NSString *)identifier
 {
-    if(self = [super initAtPoint:pt reuseIdentifier:identifier]) {
-        
-        self.targetType = kSGAnnotationViewTargetType_Glass;
-        self.inspectorType = kSGAnnotationViewInspectorType_Standard;
-             
+    if(self = [super initWithFrame:frame reuseIdentifier:identifier]) {             
         [self.radarTargetButton setImage:[UIImage imageNamed:@"YellowExclamationMark.png"] forState:UIControlStateNormal];
+        [self.closeButton addTarget:self action:@selector(closeView:) forControlEvents:UIControlEventTouchUpInside];
         
         self.titleLabel.text = @"Help!!!";
         self.titleLabel.textColor = [UIColor redColor];
         
         // Put the view at ~eye-level
-        self.altitude = 1.734;
+        self.altitude = 1.7344;
         
-        showingStats = NO;
-        
-        [self prepareForReuse];
+        [self assignDamsel];
     }
     
     return self;
@@ -69,24 +64,19 @@
 - (void) prepareForReuse
 {
     [super prepareForReuse];
-    
-    // Reset the damsel
-    damsel = rand() % kSGDamsel_Amount;
-    self.targetImageView.image = [self imageForDamsel:damsel];
+    [self assignDamsel];
 }
 
-- (void) showStats
+- (void) assignDamsel
 {
-    showingStats = !showingStats;
-    [self inspectView:showingStats];
+    damsel = rand() % kSGDamsel_Amount;
+    self.targetImageView.image = [self imageForDamsel:damsel];    
 }
 
 - (UIImage*) imageForDamsel:(SGDamsel)desiredDamsel
 {
     NSString* damselImageName = @"";
-    
-    switch (desiredDamsel) {
-            
+    switch (desiredDamsel) {            
         case kSGDamsel_Meg:
             damselImageName = @"Meg.png";
             break;
@@ -103,8 +93,13 @@
             break;
     }
     
-    
     return [UIImage imageNamed:damselImageName];
+}
+
+- (void) layoutSubviews
+{
+    [super layoutSubviews];
+    self.closeButton.hidden = YES;
 }
 
 @end

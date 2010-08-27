@@ -32,8 +32,6 @@
 //  Created by Derek Smith.
 //
 
-#import "SGAnnotationView.h"
-
 /*
  * The different types of forest creatures.
  */
@@ -57,15 +55,11 @@ enum SGForestCreature {
 
 typedef NSInteger SGForestCreature;
 
-@interface SGForestAnnotationView : SGAnnotationView {
-
-    BOOL big;
+@interface SGForestAnnotationView : SGGlassAnnotationView {
     
     @private
     NSInteger forestCreature;
     UIImage* creatureImage;
 }
-
-@property (nonatomic, assign) BOOL big;
 
 @end

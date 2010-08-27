@@ -49,8 +49,9 @@
 {
     SGStylesViewController* viewController = [[SGStylesViewController alloc] init];
     [window addSubview:viewController.view];
-    
     [window makeKeyAndVisible];
+    
+    [UIApplication sharedApplication].statusBarHidden = NO;
 }
 
 - (void) dealloc

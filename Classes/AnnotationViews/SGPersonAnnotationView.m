@@ -34,14 +34,11 @@
 
 #import "SGPersonAnnotationView.h"
 
-
 @implementation SGPersonAnnotationView
 
-- (id) initAtPoint:(CGPoint)pt reuseIdentifier:(NSString *)identifier
+- (id) initWithFrame:(CGRect)frame reuseIdentifier:(NSString *)identifier
 {
-    if(self = [super initAtPoint:pt reuseIdentifier:identifier]) {
-
-        
+    if(self = [super initWithFrame:frame reuseIdentifier:identifier]) {
         UIImage* mashRadarImage = [UIImage imageNamed:@"MashRadar.png"];
         
         [self.radarTargetButton setImage:mashRadarImage forState:UIControlStateNormal];

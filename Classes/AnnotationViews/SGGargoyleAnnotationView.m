@@ -43,12 +43,9 @@ static double delta = 0.000005;
 
 @synthesize anchorManager;
 
-- (id) initAtPoint:(CGPoint)point reuseIdentifier:(NSString*)reuseIdentifier
+- (id) initWithFrame:(CGRect)frame reuseIdentifier:(NSString*)indentifier
 {
-    if(self = [super initAtPoint:point reuseIdentifier:reuseIdentifier]) {
-        
-        self.targetType = kSGAnnotationViewTargetType_Custom;
-        
+    if(self = [super initWithFrame:frame reuseIdentifier:indentifier]) {
         UIImageView* gargoyleImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Gargoyle.png"]];
         [self addSubview:gargoyleImageView];
         self.frame = CGRectMake(0.0, 0.0,
@@ -81,25 +78,21 @@ static double delta = 0.000005;
     // Increment the gargoyle so it moves around the scene. 
     // We have to do it using lat/long.
     if(anchorManager) {
-        
         CLLocationCoordinate2D newCoord = {simpleAnnotation.coordinate.latitude + (up ? -delta : delta),
                                             simpleAnnotation.coordinate.longitude + (left ? -delta : delta)};
         simpleAnnotation.coordinate = newCoord;
         
         // Make sure that the gargolye does not go out of
         // bounds.
-        double anchorDistance = [anchorManager.location getDistanceFrom:[[[CLLocation alloc] initWithLatitude:simpleAnnotation.coordinate.latitude
+        double anchorDistance = [anchorManager.location distanceFromLocation:[[[CLLocation alloc] initWithLatitude:simpleAnnotation.coordinate.latitude
                                                                              longitude:simpleAnnotation.coordinate.longitude] autorelease]];
         
         // Views do not get drawn if they are above the maximum, in this case
         // the max is 100m. So we stop short so we don't get stuck in a boundary.
         if(anchorDistance > 99.0) {
-         
             left = !left;
             up = !up;
-            
         }
-        
     }   
     
     return simpleAnnotation;

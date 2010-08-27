@@ -32,9 +32,6 @@
 //  Created by Derek Smith.
 //
 
-#import "SGAnnotationView.h"
-
-
 @interface SGKettleAnnotationView : SGAnnotationView {
     
     /* Axes of rotation */

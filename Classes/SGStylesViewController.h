@@ -42,7 +42,8 @@
     @private
     UITableView* stylesTableView;
     
-    SGARNavigationViewController* arNavController;
+    SGARViewController* arViewController;
+    UINavigationController* arNavigationController;
     
     CLLocationManager* locationManager;
     

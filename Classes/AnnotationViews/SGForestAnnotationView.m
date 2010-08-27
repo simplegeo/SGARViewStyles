@@ -41,20 +41,14 @@
 
 @end
 
-
 @implementation SGForestAnnotationView
 
-@dynamic big;
-
-- (id) initAtPoint:(CGPoint)pt reuseIdentifier:(NSString *)identifier
+- (id) initWithFrame:(CGRect)frame reuseIdentifier:(NSString *)identifier
 {
-    if(self = [super initAtPoint:pt reuseIdentifier:identifier]) {
-        
-        self.inspectorType = kSGAnnotationViewInspectorType_Photo;
-        
-        [self prepareForReuse];
-        
-        [self setBig:NO];
+    if(self = [super initWithFrame:frame reuseIdentifier:identifier]) {
+        [self makeCreature];
+        self.inspectionMode = NO;        
+        [self.closeButton addTarget:self action:@selector(closeView:) forControlEvents:UIControlEventTouchUpInside];
     }
     
     return self;
@@ -65,58 +59,25 @@
 #pragma mark Accessor methods 
 //////////////////////////////////////////////////////////////////////////////////////////////// 
 
-/*
- * We want to be able to update the detailedLabel with the correct
- * distance of the device's location to the annotation.
- *
- * Since we know that this method is called everytime in order to properly
- * display the view in the AR environment, we can update the label here.
- */
-- (id<MKAnnotation>) annotation
+- (void) setInspectionMode:(BOOL)mode
 {
-    self.detailedLabel.text = [NSString stringWithFormat:@"%.1fm", self.distance / 10.0];
-    
-    // Calling this method will assure the label is reload
-    // with the proper text in the AR environment.
-    [self setNeedsLayout];
-    
-    // Make sure to return the annotation associated with this view.
-    return [super annotation];
-}
-
-- (void) setBig:(BOOL)newBig
-{
-    big = newBig;
-    
-    self.closeButton.hidden = !big;
-    
-    if(big) {
-     
+    if(mode) {
         self.photoImageView.image = creatureImage;
         self.targetImageView.image = nil;
-        self.inspectorType = kSGAnnotationViewInspectorType_Photo;
-        
+        self.closeButton.hidden = NO;
     } else {
-        
         self.photoImageView.image = nil;
         self.targetImageView.image = creatureImage;
-        self.inspectorType = kSGAnnotationViewInspectorType_Message;
+        self.closeButton.hidden = YES;
     }
     
-    [self setNeedsLayout];
-}
-
-- (BOOL) big
-{
-    return big;
+    [super setInspectionMode:YES];
 }
 
 - (void) prepareForReuse
 {
     [super prepareForReuse];
-        
-    [self makeCreature];
-    [self inspectView:YES];        
+    [self makeCreature];       
 }
 
 - (void) makeCreature
@@ -136,7 +97,6 @@
     // Layout the title label differently becuase the default implementation
     // will indent it based on the size of the targetImageView.
     self.titleLabel.text = [@"The " stringByAppendingString:creatureName];
-    
     self.messageLabel.text = [NSString stringWithFormat:@"This is a %@. A what? A %@. A what? A %@. Oh a %@!",
                               creatureName, creatureName, creatureName, creatureName];
 }
@@ -188,6 +148,14 @@
     }
 
     return imageFile;
+}
+
+- (void) closeView:(id)button
+{
+    self.closeButton.hidden = YES;
+    self.isCaptured = NO;
+    [self setInspectionMode:NO];
+    [self removeFromSuperview];
 }
 
 @end

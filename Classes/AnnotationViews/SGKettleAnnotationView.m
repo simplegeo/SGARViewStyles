@@ -48,19 +48,16 @@
 
 @end
 
-
 @implementation SGKettleAnnotationView
 
-- (id) initAtPoint:(CGPoint)pt reuseIdentifier:(NSString *)identifier
+- (id) initWithFrame:(CGRect)frame reuseIdentifier:(NSString *)identifier
 {
-    if(self = [super initAtPoint:pt reuseIdentifier:identifier]) {
-        
+    if(self = [super initWithFrame:frame reuseIdentifier:identifier]) {
         self.enableOpenGL = YES;
         self.isCapturable = NO;
         glEnable(GL_NORMALIZE);
         
         [self resetGround];
-                    
     }
     
     return self;
@@ -69,7 +66,6 @@
 - (void) prepareForReuse
 {
     [super prepareForReuse];
-    
     [self resetGround];
 }
 
@@ -92,22 +88,18 @@
 - (void) drawAnnotationView
 {
     glPushMatrix();
-    
     glEnable(GL_DEPTH_TEST);
     
     glVertexPointer(3 ,GL_FLOAT, 0, teapot_vertices);
     glNormalPointer(GL_FLOAT, 0, teapot_normals);    
-    
 	glScalef(kTeapotScale, kTeapotScale, kTeapotScale);
     
     rotation++;
     glRotatef(rotation, x, y, z);
-            
 	for(int i = 0; i < num_teapot_indices; i += new_teapot_indicies[i] + 1)
 		glDrawElements(GL_TRIANGLE_STRIP, new_teapot_indicies[i], GL_UNSIGNED_SHORT, &new_teapot_indicies[i+1]);
         
     glDisable(GL_DEPTH_TEST);
-    
     glPopMatrix();
 }
 

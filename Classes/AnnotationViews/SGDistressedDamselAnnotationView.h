@@ -47,14 +47,9 @@ enum SGDamsel {
 
 typedef NSInteger SGDamsel;
 
-@interface SGDistressedDamselAnnotationView : SGAnnotationView {
+@interface SGDistressedDamselAnnotationView : SGGlassAnnotationView {
 
-    SGDamsel damsel;
-    
-    @private
-    BOOL showingStats;
+    SGDamsel damsel;    
 }
-
-- (void) showStats;
 
 @end

@@ -34,9 +34,6 @@
 
 #import "SGAnnotationView.h"
 
-#import <CoreLocation/CoreLocation.h>
-
-
 @interface SGGargoyleAnnotationView : SGAnnotationView {
 
     // We want reference to the location manager so

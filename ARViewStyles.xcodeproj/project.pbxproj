@@ -65,22 +65,23 @@
 		4A2425B310DB1290005D1CB1 /* Tuqui.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A24258410DB1290005D1CB1 /* Tuqui.png */; };
 		4A2425B410DB1290005D1CB1 /* TuquiMini.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A24258510DB1290005D1CB1 /* TuquiMini.png */; };
 		4A2425B510DB1290005D1CB1 /* YellowExclamationMark.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A24258610DB1290005D1CB1 /* YellowExclamationMark.png */; };
+		4A2D9760121A030C00D1F656 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A2D975F121A030C00D1F656 /* AVFoundation.framework */; };
+		4A6462BA122807C9008B1339 /* SGBluePin.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A64627E122807C9008B1339 /* SGBluePin.png */; };
+		4A6462BB122807C9008B1339 /* SGBottomInspectorBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A64627F122807C9008B1339 /* SGBottomInspectorBackground.png */; };
+		4A6462BC122807C9008B1339 /* SGCloseButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A646280122807C9008B1339 /* SGCloseButton.png */; };
+		4A6462BD122807C9008B1339 /* SGDefaultContainer.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A646281122807C9008B1339 /* SGDefaultContainer.png */; };
+		4A6462BE122807C9008B1339 /* SGDefaultProfilePicture.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A646282122807C9008B1339 /* SGDefaultProfilePicture.png */; };
+		4A6462BF122807C9008B1339 /* SGDefaultRadarBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A646283122807C9008B1339 /* SGDefaultRadarBackground.png */; };
+		4A6462C0122807C9008B1339 /* SGDefaultRadarCurrentLocation.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A646284122807C9008B1339 /* SGDefaultRadarCurrentLocation.png */; };
+		4A6462C1122807C9008B1339 /* SGDefaultRadarTargetImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A646285122807C9008B1339 /* SGDefaultRadarTargetImage.png */; };
+		4A6462C2122807C9008B1339 /* SGDefaultSelectedContainer.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A646286122807C9008B1339 /* SGDefaultSelectedContainer.png */; };
+		4A6462C3122807C9008B1339 /* SGGlassTargetBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A646287122807C9008B1339 /* SGGlassTargetBackground.png */; };
+		4A6462C4122807C9008B1339 /* SGMiddleInspectorBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A646288122807C9008B1339 /* SGMiddleInspectorBackground.png */; };
+		4A6462C5122807C9008B1339 /* SGRedPin.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A646289122807C9008B1339 /* SGRedPin.png */; };
+		4A6462C6122807C9008B1339 /* SGTopInspectorBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A64628A122807C9008B1339 /* SGTopInspectorBackground.png */; };
 		4A7C034E1108A4EE00919154 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A7C034C1108A4EE00919154 /* Icon.png */; };
 		4A7C034F1108A4EE00919154 /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A7C034D1108A4EE00919154 /* iTunesArtwork.png */; };
 		4A930EBB119DE7A90034828D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A930EBA119DE7A90034828D /* CoreGraphics.framework */; };
-		4A9B8ED611A73EE70044D956 /* SGBluePin.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A9B8E8211A73EE70044D956 /* SGBluePin.png */; };
-		4A9B8ED711A73EE70044D956 /* SGBottomInspectorBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A9B8E8311A73EE70044D956 /* SGBottomInspectorBackground.png */; };
-		4A9B8ED811A73EE70044D956 /* SGCloseButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A9B8E8411A73EE70044D956 /* SGCloseButton.png */; };
-		4A9B8ED911A73EE70044D956 /* SGDefaultContainer.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A9B8E8511A73EE70044D956 /* SGDefaultContainer.png */; };
-		4A9B8EDA11A73EE70044D956 /* SGDefaultProfilePicture.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A9B8E8611A73EE70044D956 /* SGDefaultProfilePicture.png */; };
-		4A9B8EDB11A73EE70044D956 /* SGDefaultRadarBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A9B8E8711A73EE70044D956 /* SGDefaultRadarBackground.png */; };
-		4A9B8EDC11A73EE70044D956 /* SGDefaultRadarCurrentLocation.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A9B8E8811A73EE70044D956 /* SGDefaultRadarCurrentLocation.png */; };
-		4A9B8EDD11A73EE70044D956 /* SGDefaultRadarTargetImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A9B8E8911A73EE70044D956 /* SGDefaultRadarTargetImage.png */; };
-		4A9B8EDE11A73EE70044D956 /* SGDefaultSelectedContainer.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A9B8E8A11A73EE70044D956 /* SGDefaultSelectedContainer.png */; };
-		4A9B8EDF11A73EE70044D956 /* SGGlassTargetBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A9B8E8B11A73EE70044D956 /* SGGlassTargetBackground.png */; };
-		4A9B8EE011A73EE70044D956 /* SGMiddleInspectorBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A9B8E8C11A73EE70044D956 /* SGMiddleInspectorBackground.png */; };
-		4A9B8EE111A73EE70044D956 /* SGRedPin.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A9B8E8D11A73EE70044D956 /* SGRedPin.png */; };
-		4A9B8EE211A73EE70044D956 /* SGTopInspectorBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A9B8E8E11A73EE70044D956 /* SGTopInspectorBackground.png */; };
 		4AF8581A11A5B84A00B97ADA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AF8581911A5B84A00B97ADA /* Foundation.framework */; };
 		4AF8582611A5B86B00B97ADA /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AF8582511A5B86B00B97ADA /* QuartzCore.framework */; };
 		4AF8583111A5BB2200B97ADA /* Entitlements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4A833D6B1118D18100B9FD7B /* Entitlements.plist */; };
@@ -157,45 +158,48 @@
 		4A24258710DB1290005D1CB1 /* teapot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = teapot.h; sourceTree = "<group>"; };
 		4A2425C410DB138B005D1CB1 /* ARViewStyles_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARViewStyles_Prefix.pch; sourceTree = "<group>"; };
 		4A24270110DB154B005D1CB1 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
+		4A2D975F121A030C00D1F656 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		4A646269122807C9008B1339 /* CLLocationAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLLocationAdditions.h; sourceTree = "<group>"; };
+		4A64626A122807C9008B1339 /* SG3DOverlayEnvironment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SG3DOverlayEnvironment.h; sourceTree = "<group>"; };
+		4A64626B122807C9008B1339 /* SG3DOverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SG3DOverlayView.h; sourceTree = "<group>"; };
+		4A64626C122807C9008B1339 /* SGAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGAnnotationView.h; sourceTree = "<group>"; };
+		4A64626D122807C9008B1339 /* SGAnnotationViewContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGAnnotationViewContainer.h; sourceTree = "<group>"; };
+		4A64626E122807C9008B1339 /* SGAREnvironment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGAREnvironment.h; sourceTree = "<group>"; };
+		4A64626F122807C9008B1339 /* SGARResponder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGARResponder.h; sourceTree = "<group>"; };
+		4A646270122807C9008B1339 /* SGARView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGARView.h; sourceTree = "<group>"; };
+		4A646271122807C9008B1339 /* SGARViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGARViewController.h; sourceTree = "<group>"; };
+		4A646272122807C9008B1339 /* SGControlEvents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGControlEvents.h; sourceTree = "<group>"; };
+		4A646273122807C9008B1339 /* SGEnvironmentConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGEnvironmentConstants.h; sourceTree = "<group>"; };
+		4A646274122807C9008B1339 /* SGGlassAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGGlassAnnotationView.h; sourceTree = "<group>"; };
+		4A646275122807C9008B1339 /* SGHeadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGHeadingView.h; sourceTree = "<group>"; };
+		4A646276122807C9008B1339 /* SGMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGMath.h; sourceTree = "<group>"; };
+		4A646277122807C9008B1339 /* SGMetrics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGMetrics.h; sourceTree = "<group>"; };
+		4A646278122807C9008B1339 /* SGMovableStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGMovableStack.h; sourceTree = "<group>"; };
+		4A646279122807C9008B1339 /* SGPinAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGPinAnnotationView.h; sourceTree = "<group>"; };
+		4A64627A122807C9008B1339 /* SGRadar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGRadar.h; sourceTree = "<group>"; };
+		4A64627B122807C9008B1339 /* SGTexture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGTexture.h; sourceTree = "<group>"; };
+		4A64627C122807C9008B1339 /* UIImageAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIImageAdditions.h; sourceTree = "<group>"; };
+		4A64627E122807C9008B1339 /* SGBluePin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SGBluePin.png; sourceTree = "<group>"; };
+		4A64627F122807C9008B1339 /* SGBottomInspectorBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SGBottomInspectorBackground.png; sourceTree = "<group>"; };
+		4A646280122807C9008B1339 /* SGCloseButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SGCloseButton.png; sourceTree = "<group>"; };
+		4A646281122807C9008B1339 /* SGDefaultContainer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SGDefaultContainer.png; sourceTree = "<group>"; };
+		4A646282122807C9008B1339 /* SGDefaultProfilePicture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SGDefaultProfilePicture.png; sourceTree = "<group>"; };
+		4A646283122807C9008B1339 /* SGDefaultRadarBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SGDefaultRadarBackground.png; sourceTree = "<group>"; };
+		4A646284122807C9008B1339 /* SGDefaultRadarCurrentLocation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SGDefaultRadarCurrentLocation.png; sourceTree = "<group>"; };
+		4A646285122807C9008B1339 /* SGDefaultRadarTargetImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SGDefaultRadarTargetImage.png; sourceTree = "<group>"; };
+		4A646286122807C9008B1339 /* SGDefaultSelectedContainer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SGDefaultSelectedContainer.png; sourceTree = "<group>"; };
+		4A646287122807C9008B1339 /* SGGlassTargetBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SGGlassTargetBackground.png; sourceTree = "<group>"; };
+		4A646288122807C9008B1339 /* SGMiddleInspectorBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SGMiddleInspectorBackground.png; sourceTree = "<group>"; };
+		4A646289122807C9008B1339 /* SGRedPin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SGRedPin.png; sourceTree = "<group>"; };
+		4A64628A122807C9008B1339 /* SGTopInspectorBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SGTopInspectorBackground.png; sourceTree = "<group>"; };
+		4A64628C122807C9008B1339 /* libSGAREnvironment.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libSGAREnvironment.a; sourceTree = "<group>"; };
+		4A64628E122807C9008B1339 /* libSGAREnvironment.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libSGAREnvironment.a; sourceTree = "<group>"; };
+		4A64628F122807C9008B1339 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		4A646290122807C9008B1339 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
 		4A7C034C1108A4EE00919154 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		4A7C034D1108A4EE00919154 /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iTunesArtwork.png; sourceTree = "<group>"; };
 		4A833D6B1118D18100B9FD7B /* Entitlements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Entitlements.plist; sourceTree = "<group>"; };
 		4A930EBA119DE7A90034828D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		4A9B8E6F11A73EE70044D956 /* CLLocationAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLLocationAdditions.h; sourceTree = "<group>"; };
-		4A9B8E7011A73EE70044D956 /* SG3DOverlayEnvironment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SG3DOverlayEnvironment.h; sourceTree = "<group>"; };
-		4A9B8E7111A73EE70044D956 /* SG3DOverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SG3DOverlayView.h; sourceTree = "<group>"; };
-		4A9B8E7211A73EE70044D956 /* SGAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGAnnotationView.h; sourceTree = "<group>"; };
-		4A9B8E7311A73EE70044D956 /* SGAnnotationViewContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGAnnotationViewContainer.h; sourceTree = "<group>"; };
-		4A9B8E7411A73EE70044D956 /* SGAREnvironment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGAREnvironment.h; sourceTree = "<group>"; };
-		4A9B8E7511A73EE70044D956 /* SGARNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGARNavigationViewController.h; sourceTree = "<group>"; };
-		4A9B8E7611A73EE70044D956 /* SGARResponder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGARResponder.h; sourceTree = "<group>"; };
-		4A9B8E7711A73EE70044D956 /* SGARView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGARView.h; sourceTree = "<group>"; };
-		4A9B8E7811A73EE70044D956 /* SGControlEvents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGControlEvents.h; sourceTree = "<group>"; };
-		4A9B8E7911A73EE70044D956 /* SGEnvironmentConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGEnvironmentConstants.h; sourceTree = "<group>"; };
-		4A9B8E7A11A73EE70044D956 /* SGHeadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGHeadingView.h; sourceTree = "<group>"; };
-		4A9B8E7B11A73EE70044D956 /* SGMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGMath.h; sourceTree = "<group>"; };
-		4A9B8E7C11A73EE70044D956 /* SGMetrics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGMetrics.h; sourceTree = "<group>"; };
-		4A9B8E7D11A73EE70044D956 /* SGMovableStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGMovableStack.h; sourceTree = "<group>"; };
-		4A9B8E7E11A73EE70044D956 /* SGRadar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGRadar.h; sourceTree = "<group>"; };
-		4A9B8E7F11A73EE70044D956 /* SGTexture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGTexture.h; sourceTree = "<group>"; };
-		4A9B8E8011A73EE70044D956 /* UIImageAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIImageAdditions.h; sourceTree = "<group>"; };
-		4A9B8E8211A73EE70044D956 /* SGBluePin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SGBluePin.png; sourceTree = "<group>"; };
-		4A9B8E8311A73EE70044D956 /* SGBottomInspectorBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SGBottomInspectorBackground.png; sourceTree = "<group>"; };
-		4A9B8E8411A73EE70044D956 /* SGCloseButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SGCloseButton.png; sourceTree = "<group>"; };
-		4A9B8E8511A73EE70044D956 /* SGDefaultContainer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SGDefaultContainer.png; sourceTree = "<group>"; };
-		4A9B8E8611A73EE70044D956 /* SGDefaultProfilePicture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SGDefaultProfilePicture.png; sourceTree = "<group>"; };
-		4A9B8E8711A73EE70044D956 /* SGDefaultRadarBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SGDefaultRadarBackground.png; sourceTree = "<group>"; };
-		4A9B8E8811A73EE70044D956 /* SGDefaultRadarCurrentLocation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SGDefaultRadarCurrentLocation.png; sourceTree = "<group>"; };
-		4A9B8E8911A73EE70044D956 /* SGDefaultRadarTargetImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SGDefaultRadarTargetImage.png; sourceTree = "<group>"; };
-		4A9B8E8A11A73EE70044D956 /* SGDefaultSelectedContainer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SGDefaultSelectedContainer.png; sourceTree = "<group>"; };
-		4A9B8E8B11A73EE70044D956 /* SGGlassTargetBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SGGlassTargetBackground.png; sourceTree = "<group>"; };
-		4A9B8E8C11A73EE70044D956 /* SGMiddleInspectorBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SGMiddleInspectorBackground.png; sourceTree = "<group>"; };
-		4A9B8E8D11A73EE70044D956 /* SGRedPin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SGRedPin.png; sourceTree = "<group>"; };
-		4A9B8E8E11A73EE70044D956 /* SGTopInspectorBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SGTopInspectorBackground.png; sourceTree = "<group>"; };
-		4A9B8E9011A73EE70044D956 /* libSGAREnvironment.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libSGAREnvironment.a; sourceTree = "<group>"; };
-		4A9B8E9211A73EE70044D956 /* libSGAREnvironment.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libSGAREnvironment.a; sourceTree = "<group>"; };
-		4A9B8E9311A73EE70044D956 /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
-		4A9B8E9411A73EE70044D956 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
 		4AF8581911A5B84A00B97ADA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4AF8582511A5B86B00B97ADA /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -212,6 +216,7 @@
 				4A930EBB119DE7A90034828D /* CoreGraphics.framework in Frameworks */,
 				4AF8581A11A5B84A00B97ADA /* Foundation.framework in Frameworks */,
 				4AF8582611A5B86B00B97ADA /* QuartzCore.framework in Frameworks */,
+				4A2D9760121A030C00D1F656 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,6 +263,7 @@
 				4A083E3B119DE5190029856D /* OpenGLES.framework */,
 				4A083E3D119DE5190029856D /* UIKit.framework */,
 				4AF8581911A5B84A00B97ADA /* Foundation.framework */,
+				4A2D975F121A030C00D1F656 /* AVFoundation.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -358,86 +364,88 @@
 			path = Images;
 			sourceTree = "<group>";
 		};
-		4A9B8DFA11A73EE70044D956 /* SGiPhoneSDK */ = {
+		4A64621D122807C9008B1339 /* SGAREnvironment */ = {
 			isa = PBXGroup;
 			children = (
-				4A9B8DFB11A73EE70044D956 /* SGAREnvironment */,
-			);
-			path = SGiPhoneSDK;
-			sourceTree = "<group>";
-		};
-		4A9B8DFB11A73EE70044D956 /* SGAREnvironment */ = {
-			isa = PBXGroup;
-			children = (
-				4A9B8E6E11A73EE70044D956 /* Headers */,
-				4A9B8E8111A73EE70044D956 /* Images */,
-				4A9B8E8F11A73EE70044D956 /* iphoneos */,
-				4A9B8E9111A73EE70044D956 /* iphonesimulator */,
-				4A9B8E9311A73EE70044D956 /* LICENSE.txt */,
-				4A9B8E9411A73EE70044D956 /* README */,
+				4A646268122807C9008B1339 /* Headers */,
+				4A64627D122807C9008B1339 /* Images */,
+				4A64628B122807C9008B1339 /* iphoneos */,
+				4A64628D122807C9008B1339 /* iphonesimulator */,
+				4A64628F122807C9008B1339 /* LICENSE */,
+				4A646290122807C9008B1339 /* README */,
 			);
 			path = SGAREnvironment;
 			sourceTree = "<group>";
 		};
-		4A9B8E6E11A73EE70044D956 /* Headers */ = {
+		4A646268122807C9008B1339 /* Headers */ = {
 			isa = PBXGroup;
 			children = (
-				4A9B8E6F11A73EE70044D956 /* CLLocationAdditions.h */,
-				4A9B8E7011A73EE70044D956 /* SG3DOverlayEnvironment.h */,
-				4A9B8E7111A73EE70044D956 /* SG3DOverlayView.h */,
-				4A9B8E7211A73EE70044D956 /* SGAnnotationView.h */,
-				4A9B8E7311A73EE70044D956 /* SGAnnotationViewContainer.h */,
-				4A9B8E7411A73EE70044D956 /* SGAREnvironment.h */,
-				4A9B8E7511A73EE70044D956 /* SGARNavigationViewController.h */,
-				4A9B8E7611A73EE70044D956 /* SGARResponder.h */,
-				4A9B8E7711A73EE70044D956 /* SGARView.h */,
-				4A9B8E7811A73EE70044D956 /* SGControlEvents.h */,
-				4A9B8E7911A73EE70044D956 /* SGEnvironmentConstants.h */,
-				4A9B8E7A11A73EE70044D956 /* SGHeadingView.h */,
-				4A9B8E7B11A73EE70044D956 /* SGMath.h */,
-				4A9B8E7C11A73EE70044D956 /* SGMetrics.h */,
-				4A9B8E7D11A73EE70044D956 /* SGMovableStack.h */,
-				4A9B8E7E11A73EE70044D956 /* SGRadar.h */,
-				4A9B8E7F11A73EE70044D956 /* SGTexture.h */,
-				4A9B8E8011A73EE70044D956 /* UIImageAdditions.h */,
+				4A646269122807C9008B1339 /* CLLocationAdditions.h */,
+				4A64626A122807C9008B1339 /* SG3DOverlayEnvironment.h */,
+				4A64626B122807C9008B1339 /* SG3DOverlayView.h */,
+				4A64626C122807C9008B1339 /* SGAnnotationView.h */,
+				4A64626D122807C9008B1339 /* SGAnnotationViewContainer.h */,
+				4A64626E122807C9008B1339 /* SGAREnvironment.h */,
+				4A64626F122807C9008B1339 /* SGARResponder.h */,
+				4A646270122807C9008B1339 /* SGARView.h */,
+				4A646271122807C9008B1339 /* SGARViewController.h */,
+				4A646272122807C9008B1339 /* SGControlEvents.h */,
+				4A646273122807C9008B1339 /* SGEnvironmentConstants.h */,
+				4A646274122807C9008B1339 /* SGGlassAnnotationView.h */,
+				4A646275122807C9008B1339 /* SGHeadingView.h */,
+				4A646276122807C9008B1339 /* SGMath.h */,
+				4A646277122807C9008B1339 /* SGMetrics.h */,
+				4A646278122807C9008B1339 /* SGMovableStack.h */,
+				4A646279122807C9008B1339 /* SGPinAnnotationView.h */,
+				4A64627A122807C9008B1339 /* SGRadar.h */,
+				4A64627B122807C9008B1339 /* SGTexture.h */,
+				4A64627C122807C9008B1339 /* UIImageAdditions.h */,
 			);
 			path = Headers;
 			sourceTree = "<group>";
 		};
-		4A9B8E8111A73EE70044D956 /* Images */ = {
+		4A64627D122807C9008B1339 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				4A9B8E8211A73EE70044D956 /* SGBluePin.png */,
-				4A9B8E8311A73EE70044D956 /* SGBottomInspectorBackground.png */,
-				4A9B8E8411A73EE70044D956 /* SGCloseButton.png */,
-				4A9B8E8511A73EE70044D956 /* SGDefaultContainer.png */,
-				4A9B8E8611A73EE70044D956 /* SGDefaultProfilePicture.png */,
-				4A9B8E8711A73EE70044D956 /* SGDefaultRadarBackground.png */,
-				4A9B8E8811A73EE70044D956 /* SGDefaultRadarCurrentLocation.png */,
-				4A9B8E8911A73EE70044D956 /* SGDefaultRadarTargetImage.png */,
-				4A9B8E8A11A73EE70044D956 /* SGDefaultSelectedContainer.png */,
-				4A9B8E8B11A73EE70044D956 /* SGGlassTargetBackground.png */,
-				4A9B8E8C11A73EE70044D956 /* SGMiddleInspectorBackground.png */,
-				4A9B8E8D11A73EE70044D956 /* SGRedPin.png */,
-				4A9B8E8E11A73EE70044D956 /* SGTopInspectorBackground.png */,
+				4A64627E122807C9008B1339 /* SGBluePin.png */,
+				4A64627F122807C9008B1339 /* SGBottomInspectorBackground.png */,
+				4A646280122807C9008B1339 /* SGCloseButton.png */,
+				4A646281122807C9008B1339 /* SGDefaultContainer.png */,
+				4A646282122807C9008B1339 /* SGDefaultProfilePicture.png */,
+				4A646283122807C9008B1339 /* SGDefaultRadarBackground.png */,
+				4A646284122807C9008B1339 /* SGDefaultRadarCurrentLocation.png */,
+				4A646285122807C9008B1339 /* SGDefaultRadarTargetImage.png */,
+				4A646286122807C9008B1339 /* SGDefaultSelectedContainer.png */,
+				4A646287122807C9008B1339 /* SGGlassTargetBackground.png */,
+				4A646288122807C9008B1339 /* SGMiddleInspectorBackground.png */,
+				4A646289122807C9008B1339 /* SGRedPin.png */,
+				4A64628A122807C9008B1339 /* SGTopInspectorBackground.png */,
 			);
 			path = Images;
 			sourceTree = "<group>";
 		};
-		4A9B8E8F11A73EE70044D956 /* iphoneos */ = {
+		4A64628B122807C9008B1339 /* iphoneos */ = {
 			isa = PBXGroup;
 			children = (
-				4A9B8E9011A73EE70044D956 /* libSGAREnvironment.a */,
+				4A64628C122807C9008B1339 /* libSGAREnvironment.a */,
 			);
 			path = iphoneos;
 			sourceTree = "<group>";
 		};
-		4A9B8E9111A73EE70044D956 /* iphonesimulator */ = {
+		4A64628D122807C9008B1339 /* iphonesimulator */ = {
 			isa = PBXGroup;
 			children = (
-				4A9B8E9211A73EE70044D956 /* libSGAREnvironment.a */,
+				4A64628E122807C9008B1339 /* libSGAREnvironment.a */,
 			);
 			path = iphonesimulator;
+			sourceTree = "<group>";
+		};
+		4A9B8DFA11A73EE70044D956 /* SGiPhoneSDK */ = {
+			isa = PBXGroup;
+			children = (
+				4A64621D122807C9008B1339 /* SGAREnvironment */,
+			);
+			path = SGiPhoneSDK;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -533,19 +541,19 @@
 				4A7C034E1108A4EE00919154 /* Icon.png in Resources */,
 				4A7C034F1108A4EE00919154 /* iTunesArtwork.png in Resources */,
 				4AF8583111A5BB2200B97ADA /* Entitlements.plist in Resources */,
-				4A9B8ED611A73EE70044D956 /* SGBluePin.png in Resources */,
-				4A9B8ED711A73EE70044D956 /* SGBottomInspectorBackground.png in Resources */,
-				4A9B8ED811A73EE70044D956 /* SGCloseButton.png in Resources */,
-				4A9B8ED911A73EE70044D956 /* SGDefaultContainer.png in Resources */,
-				4A9B8EDA11A73EE70044D956 /* SGDefaultProfilePicture.png in Resources */,
-				4A9B8EDB11A73EE70044D956 /* SGDefaultRadarBackground.png in Resources */,
-				4A9B8EDC11A73EE70044D956 /* SGDefaultRadarCurrentLocation.png in Resources */,
-				4A9B8EDD11A73EE70044D956 /* SGDefaultRadarTargetImage.png in Resources */,
-				4A9B8EDE11A73EE70044D956 /* SGDefaultSelectedContainer.png in Resources */,
-				4A9B8EDF11A73EE70044D956 /* SGGlassTargetBackground.png in Resources */,
-				4A9B8EE011A73EE70044D956 /* SGMiddleInspectorBackground.png in Resources */,
-				4A9B8EE111A73EE70044D956 /* SGRedPin.png in Resources */,
-				4A9B8EE211A73EE70044D956 /* SGTopInspectorBackground.png in Resources */,
+				4A6462BA122807C9008B1339 /* SGBluePin.png in Resources */,
+				4A6462BB122807C9008B1339 /* SGBottomInspectorBackground.png in Resources */,
+				4A6462BC122807C9008B1339 /* SGCloseButton.png in Resources */,
+				4A6462BD122807C9008B1339 /* SGDefaultContainer.png in Resources */,
+				4A6462BE122807C9008B1339 /* SGDefaultProfilePicture.png in Resources */,
+				4A6462BF122807C9008B1339 /* SGDefaultRadarBackground.png in Resources */,
+				4A6462C0122807C9008B1339 /* SGDefaultRadarCurrentLocation.png in Resources */,
+				4A6462C1122807C9008B1339 /* SGDefaultRadarTargetImage.png in Resources */,
+				4A6462C2122807C9008B1339 /* SGDefaultSelectedContainer.png in Resources */,
+				4A6462C3122807C9008B1339 /* SGGlassTargetBackground.png in Resources */,
+				4A6462C4122807C9008B1339 /* SGMiddleInspectorBackground.png in Resources */,
+				4A6462C5122807C9008B1339 /* SGRedPin.png in Resources */,
+				4A6462C6122807C9008B1339 /* SGTopInspectorBackground.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -583,12 +591,11 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Resources/ARViewStyles_Prefix.pch;
-				HEADER_SEARCH_PATHS = "$(SRCROOT)/SGiPhoneSDK/SGAREnvironment/Headers";
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "Resources/ARViewStyles-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
-					"$(SRCROOT)/SGiPhoneSDK/SGAREnvironment/$(PLATFORM_NAME)",
-					"\"$(SRCROOT)/SGAREnvironment/iphoneos\"",
-					"\"$(SRCROOT)/SGAREnvironment/iphonesimulator\"",
+					"$(inherited)",
+					"\"$(SRCROOT)/SGiPhoneSDK/SGAREnvironment/iphoneos\"",
 					"\"$(SRCROOT)/SGiPhoneSDK/SGAREnvironment/iphonesimulator\"",
 				);
 				OTHER_LDFLAGS = (
@@ -599,7 +606,7 @@
 				);
 				PRODUCT_NAME = ARViewStyles;
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
-				SDKROOT = iphoneos3.1;
+				SDKROOT = iphoneos4.0;
 			};
 			name = Debug;
 		};
@@ -612,12 +619,11 @@
 				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Resources/ARViewStyles_Prefix.pch;
-				HEADER_SEARCH_PATHS = "$(SRCROOT)/SGiPhoneSDK/SGAREnvironment/Headers";
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "Resources/ARViewStyles-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
-					"$(SRCROOT)/SGiPhoneSDK/SGAREnvironment/$(PLATFORM_NAME)",
-					"\"$(SRCROOT)/SGAREnvironment/iphoneos\"",
-					"\"$(SRCROOT)/SGAREnvironment/iphonesimulator\"",
+					"$(inherited)",
+					"\"$(SRCROOT)/SGiPhoneSDK/SGAREnvironment/iphoneos\"",
 					"\"$(SRCROOT)/SGiPhoneSDK/SGAREnvironment/iphonesimulator\"",
 				);
 				OTHER_LDFLAGS = (
@@ -628,7 +634,7 @@
 				);
 				PRODUCT_NAME = ARViewStyles;
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
-				SDKROOT = iphoneos3.1;
+				SDKROOT = iphoneos4.0;
 			};
 			name = Release;
 		};

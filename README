@@ -43,6 +43,7 @@ Frameworks
 - OpenGLES
 - CoreGraphics
 - UIKit
+- AVFoundation
 
 ================================================================================
 RUNTIME REQUIREMENTS:
