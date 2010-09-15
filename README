@@ -48,7 +48,7 @@ Frameworks
 ================================================================================
 RUNTIME REQUIREMENTS:
 
-iPhone OS 3.1
+iPhone OS 4.0
 iPhone 3GS (Nothing particularly exciting happens when running it in the simulator)
 
 ================================================================================
@@ -92,6 +92,9 @@ is accessed to obtain the coordinate of the view.
 
 ================================================================================
 CHANGES FROM PREVIOUS VERSIONS:
+Version 0.9.5
+- Merged the iOS 4.0 version of the SGAREnvironment library into the project
+
 Version 0.9.4
 - Upgraded to use the public release of the AREnvironment
 

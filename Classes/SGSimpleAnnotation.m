@@ -39,12 +39,9 @@
 
 @synthesize title, subtitle, coordinate;
 
-- (id) initWithLocation:(CLLocationCoordinate2D)coord andDictionary:(NSDictionary*)dictionary
+- (id) initWithLocation:(CLLocationCoordinate2D)coord
 {
     if(self = [super init]) {
-        
-        self.title = [dictionary objectForKey:@"title"];
-        self.subtitle = [dictionary objectForKey:@"subtitle"];
         coordinate = coord;
     }
     

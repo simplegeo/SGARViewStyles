@@ -44,6 +44,6 @@
 @property (nonatomic, retain) NSString* subtitle;
 @property (nonatomic, assign) CLLocationCoordinate2D coordinate;
 
-- (id) initWithLocation:(CLLocationCoordinate2D)coord andDictionary:(NSDictionary*)dictionary;
+- (id) initWithLocation:(CLLocationCoordinate2D)coord;
 
 @end

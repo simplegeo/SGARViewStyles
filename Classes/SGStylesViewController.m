@@ -51,8 +51,6 @@
 #import "SGKettleAnnotationView.h"
 #import "SGPersonAnnotationView.h"
 
-#define DEGREES_TO_RADIANS(__ANGLE__) ((__ANGLE__) / 180.0 * M_PI)
-
 #define AMOUNT_OF_LOCATIONS             50          // Total amount of locations to use.
 
 /*
@@ -73,7 +71,7 @@ typedef NSInteger SGARStyle;
 
 @interface SGStylesViewController (Private) <SGARViewControllerDataSource, CLLocationManagerDelegate, SGARResponder>
 
-- (void) createLocationPointsBasedOnLocation:(CLLocation*)location;
+- (NSMutableArray*) createLocationPointsBasedOnLocation:(CLLocation*)location amount:(NSInteger)amount;
 
 - (void) configureDefaultStyle;
 - (void) configureForestStyle;
@@ -128,7 +126,6 @@ typedef NSInteger SGARStyle;
         locationManager.delegate = self;
         [locationManager startUpdatingLocation];        
         
-        locationPoints = [[NSMutableArray alloc] init];        
         annotations = [[NSMutableArray alloc] init];
         
         currentStyle = kSGARStyle_Default;
@@ -223,7 +220,7 @@ typedef NSInteger SGARStyle;
     
     arViewController.arView.movableStack.maxStackAmount = 1;
     
-    [self configureDefaultStyle];
+    [self configureDefaultStyle];    
 }
 
 - (void) viewDidAppear:(BOOL)animated
@@ -231,7 +228,6 @@ typedef NSInteger SGARStyle;
     [super viewDidAppear:animated];
     
     [self presentModalViewController:arNavigationController animated:NO];
-    [self reloadAnnotations];
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////
@@ -239,16 +235,14 @@ typedef NSInteger SGARStyle;
 #pragma mark CLLocationManager delegate methods 
 //////////////////////////////////////////////////////////////////////////////////////////////// 
 
-- (void) locationManager:(CLLocationManager*)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation
+- (void) locationManager:(CLLocationManager*)manager didUpdateToLocation:(CLLocation*)newLocation fromLocation:(CLLocation*)oldLocation
 {
     // Only use the first locations as a basis to build the random points.
-    if(!oldLocation) {
-        [self createLocationPointsBasedOnLocation:newLocation];
-        [self reloadAnnotations];    
-    }
+    if(!oldLocation)
+        [self reloadAnnotations];
 }
 
--  (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
+-  (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError*)error
 {
     // Don't really care if the location manager fails.
     ;
@@ -434,29 +428,9 @@ typedef NSInteger SGARStyle;
 {
     [annotations removeAllObjects];
     
-    NSBundle* mainBundle = [NSBundle mainBundle];
-    NSString* plistPath = [mainBundle pathForResource:@"BakedData" ofType:@"plist"];
-    
-    NSArray* bakedData = [NSArray arrayWithContentsOfFile:plistPath];
-    
-    int amountOfLocations = [locationPoints count];
-    amountOfLocations = numberOfAnnotations < amountOfLocations && numberOfAnnotations > 0 ? numberOfAnnotations : amountOfLocations;
-    
-    NSDictionary* dataDictionary;
-    SGSimpleAnnotation* annotation;
-    CLLocation* location;
-    for(int i = 0; i < [bakedData count]; i++) {
-        if(i < amountOfLocations) {
-            location = [locationPoints objectAtIndex:i];
-            dataDictionary = [bakedData objectAtIndex:i];
-
-            annotation = [[[SGSimpleAnnotation alloc] initWithLocation:location.coordinate
-                                                         andDictionary:dataDictionary] autorelease];
-            
-            [annotations addObject:annotation];
-        } else
-            break;        
-    }
+    NSArray* locations = [self createLocationPointsBasedOnLocation:locationManager.location amount:numberOfAnnotations];
+    for(CLLocation* location in locations)
+        [annotations addObject:[[[SGSimpleAnnotation alloc] initWithLocation:location.coordinate] autorelease]];
     
     [arViewController reloadAllBuckets];
 }
@@ -679,27 +653,27 @@ typedef NSInteger SGARStyle;
     UILabel* label = nil;
     SGRadar* radar = arViewController.arView.radar;
     for(SGCardinalDirection direction = 0; direction < 4; direction++) {
-        
         label = [radar labelForCardinalDirection:direction];
         label.font = font;
         label.textColor = color;
     }
 }    
 
-- (void) createLocationPointsBasedOnLocation:(CLLocation*)location
+- (NSArray*) createLocationPointsBasedOnLocation:(CLLocation*)location amount:(NSInteger)amount
 {
-    [locationPoints removeAllObjects];
-
+    NSMutableArray* locations = [NSMutableArray array];
     double latitude;
     double longitude;
-    for(int i = 0; i < AMOUNT_OF_LOCATIONS; i++) {
+    for(int i = 0; i < amount; i++) {
         latitude = ((rand() % 100) * 0.00001) * ((rand() % 2 ? -1.0 : 1.0)) + location.coordinate.latitude;
         longitude = ((rand() % 100) * 0.00001) * ((rand() % 2 ? -1.0 : 1.0)) + location.coordinate.longitude;
-        
-        [locationPoints addObject:[[[CLLocation alloc] initWithLatitude:latitude
+                
+        [locations addObject:[[[CLLocation alloc] initWithLatitude:latitude
                                                              longitude:longitude] 
                                             autorelease]];
     }
+    
+    return locations;
 }
 
 - (void) resetAREnvironment
@@ -750,7 +724,6 @@ typedef NSInteger SGARStyle;
 - (void) dealloc
 {
     [arViewController release];
-    [locationPoints release];
     [annotations release];
     [stylesTableView release];
     
