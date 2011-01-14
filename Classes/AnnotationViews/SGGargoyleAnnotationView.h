@@ -32,7 +32,7 @@
 //  Created by Derek Smith.
 //
 
-#import "SGAnnotationView.h"
+#import <SimpleGeoAR/SGAnnotationView.h>
 
 @interface SGGargoyleAnnotationView : SGAnnotationView {
 

@@ -12,7 +12,7 @@
     #import <UIKit/UIKit.h>
     #import <MapKit/MapKit.h>
     #import <CoreLocation/CoreLocation.h>
-    #import "SGAREnvironment.h"
+    #import <SimpleGeoAR/SGAREnvironment.h>
 #endif
 
 #define SGLog NSLog

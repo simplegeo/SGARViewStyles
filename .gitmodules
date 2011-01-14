@@ -1,0 +1,3 @@
+[submodule "ext/SimpleGeoAR.framework"]
+	path = ext/SimpleGeoAR.framework
+	url = git://github.com/simplegeo/SGAREnvironment.git
