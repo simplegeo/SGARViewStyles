@@ -104,7 +104,7 @@ typedef NSInteger SGARStyle;
 
         arViewController = [[SGARViewController alloc] init];
 
-#if __IPHONE_4_0 >= __IPHONE_OS_VERSION_MAX_ALLOWED
+#if __IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_4_0
 
         arNavigationController = [[UINavigationController alloc] initWithRootViewController:arViewController];
 
